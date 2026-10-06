@@ -249,9 +249,9 @@ HelmX was built by BS Computer Science students at the University of the Punjab 
 
 | Member | GitHub |
 |---|---|
+| Usman Azfar | [@Usman-Azfar](https://github.com/Usman-Azfar) |
 | Hamza Ahmad | [@HamzaAhmad536](https://github.com/HamzaAhmad536) |
 | Abdul Hannan | [@Rao-Abdul-Hannan](https://github.com/Rao-Abdul-Hannan) |
-| Usman Azfar | [@Usman-Azfar](https://github.com/Usman-Azfar) |
 | Awais Imtiaz | — |
 <!-- TODO: add Awais Imtiaz's GitHub profile and the project supervisor -->
 
