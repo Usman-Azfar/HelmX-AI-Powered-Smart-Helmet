@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+  engineType = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
+model Order {
+  id                   String      @id @default(cuid())
+  email                String
+  amountMinor          Int
+  currency             String      @default("PKR")
+  status               OrderStatus @default(PENDING)
+  stripeSessionId      String?     @unique
+  stripePaymentIntentId String?     @unique
+  cartItems            Json
+  selectedStorage      String?
+  paidAt               DateTime?
+  createdAt            DateTime    @default(now())
+  updatedAt            DateTime    @updatedAt
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    String   @default("new")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
