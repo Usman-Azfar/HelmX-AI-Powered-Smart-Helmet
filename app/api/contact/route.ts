@@ -9,7 +9,8 @@ import { prisma } from "@/lib/prisma"
 import { escapeHtml, sendSmtpEmail } from "@/lib/email"
 import { isValidEmail } from "@/lib/validation"
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "support@helmx.com"
+// Falls back to the sending account so notifications never go to an address we don't own.
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || process.env.SMTP_USER || ""
 
 const LIMITS = { name: 100, subject: 200, message: 5000 } as const
 

@@ -227,15 +227,21 @@ Open <http://localhost:3000>. To receive payment webhooks locally, run `stripe l
 
 ### Environment variables
 
-| Variable | Purpose |
-|---|---|
-| `DATABASE_URL` | PostgreSQL connection string (`POSTGRES_URL` from Vercel Postgres is used if this is unset) |
-| `STRIPE_SECRET_KEY` | Stripe secret key (`sk_...`) |
-| `STRIPE_WEBHOOK_SECRET` | Webhook signing secret (`whsec_...`) |
-| `NEXT_PUBLIC_APP_URL` | Public base URL used for Stripe redirects |
-| `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS` | Outgoing mail server |
-| `EMAIL_FROM` *(optional)* | Sender address |
-| `ADMIN_EMAIL` *(optional)* | Receives contact-form notifications |
+| Variable | Required | Purpose | Default / example |
+|---|---|---|---|
+| `DATABASE_URL` | ✅ | PostgreSQL connection string | `POSTGRES_URL` (set by Vercel Postgres) is used if this is unset |
+| `STRIPE_SECRET_KEY` | ✅ | Stripe secret key | `sk_test_...` |
+| `STRIPE_WEBHOOK_SECRET` | ✅ | Verifies that webhook calls really come from Stripe | `whsec_...` |
+| `SMTP_HOST` | ✅ | Outgoing mail server | `smtp.gmail.com` |
+| `SMTP_USER` | ✅ | Mail account that sends emails | `you@gmail.com` |
+| `SMTP_PASS` | ✅ | Password for that account (for Gmail, an [App Password](https://myaccount.google.com/apppasswords)) | |
+| `SMTP_PORT` | | Mail server port | `465` |
+| `SMTP_SECURE` | | Use TLS (`true` for port 465, `false` for 587) | `true` |
+| `EMAIL_FROM` | | Sender name and address shown in emails | `SMTP_USER`, e.g. `HelmX <you@gmail.com>` |
+| `ADMIN_EMAIL` | | Receives contact-form notifications | `SMTP_USER` |
+| `NEXT_PUBLIC_APP_URL` | | Public site URL used for Stripe redirects | the URL the request came from |
+
+Without the database, checkout and the contact form return an error. Without SMTP, everything still works but no emails are sent.
 
 ### Scripts
 
