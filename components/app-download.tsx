@@ -46,7 +46,7 @@ export function AppDownload() {
             >
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm text-primary transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
                 <Smartphone className="h-4 w-4 animate-pulse" />
-                Available Now
+                Coming Soon
               </div>
 
               <h2 className="mb-4 text-balance text-4xl font-bold md:text-5xl">
@@ -82,15 +82,9 @@ export function AppDownload() {
                 ))}
               </div>
 
-              <Button
-                size="lg"
-                className="group relative overflow-hidden bg-primary hover:bg-primary/90 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 transition-all"
-              >
-                <span className="relative z-10">
-                  <Download className="mr-2 inline h-5 w-5" />
-                  Download from Play Store
-                </span>
-                <div className="absolute inset-0 -z-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+              <Button size="lg" disabled aria-disabled="true" className="bg-primary disabled:opacity-80">
+                <Download className="mr-2 inline h-5 w-5" />
+                Coming soon on Play Store
               </Button>
             </div>
 
@@ -106,36 +100,6 @@ export function AppDownload() {
                   sizes="400px"
                   className="relative h-[500px] w-auto rounded-3xl shadow-2xl"
                 />
-                <div
-                  className={`absolute -left-4 top-20 rounded-lg border border-border/40 bg-card/90 p-3 shadow-lg backdrop-blur-sm transition-all duration-700 delay-700 hover:scale-110 ${
-                    isVisible ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
-                  }`}
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-green-500">
-                      <Star className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold">4.8 Rating</p>
-                      <p className="text-xs text-muted-foreground">1K+ Reviews</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className={`absolute -right-4 bottom-32 rounded-lg border border-border/40 bg-card/90 p-3 shadow-lg backdrop-blur-sm transition-all duration-700 delay-1000 hover:scale-110 ${
-                    isVisible ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
-                  }`}
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500">
-                      <Users className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold">5K+ Users</p>
-                      <p className="text-xs text-muted-foreground">Active Now</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

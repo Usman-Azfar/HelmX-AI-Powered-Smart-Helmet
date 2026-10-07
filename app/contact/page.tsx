@@ -93,10 +93,10 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm font-medium text-muted-foreground">Phone</p>
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+923000000000"
                       className="text-foreground hover:text-primary transition-colors"
                     >
-                      +1 (234) 567-890
+                      0300 0000000
                     </a>
                   </div>
                 </div>
@@ -111,8 +111,8 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm font-medium text-muted-foreground">Location</p>
                     <p className="text-foreground">
-                      123 Tech Street<br />
-                      Innovation City, IC 12345
+                      PUCIT, University of the Punjab<br />
+                      Lahore, Pakistan
                     </p>
                   </div>
                 </div>
