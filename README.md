@@ -15,7 +15,9 @@ Final Year Project · BS Computer Science · University of the Punjab
 ![Stripe](https://img.shields.io/badge/Stripe-Checkout-635BFF?logo=stripe&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-3D-000000?logo=threedotjs&logoColor=white)
 
-<img src="docs/screenshots/01-hero.png" alt="HelmX landing page" width="100%" />
+### [🌐 Live Demo: helmx-silk.vercel.app](https://helmx-silk.vercel.app/)
+
+<a href="https://helmx-silk.vercel.app/"><img src="docs/screenshots/01-hero.png" alt="HelmX landing page" width="100%" /></a>
 
 </div>
 
@@ -44,6 +46,8 @@ This repository branch contains the **HelmX web platform**, the public face of t
 - **configure their own helmet** part by part with a live 3D preview and an instant price quote,
 - **pay securely** through Stripe and receive an emailed receipt,
 - **contact the team** through a validated, rate-limited contact form.
+
+**Try it live:** <https://helmx-silk.vercel.app/>. The landing page and 3D configurator are fully interactive.
 
 > Other HelmX modules, such as the Android companion app and the drowsiness-detection system, are developed on separate branches of this repository.
 
