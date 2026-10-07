@@ -23,8 +23,42 @@ Final Year Project · BS Computer Science · University of the Punjab
 
 ---
 
+## Try the live demo
+
+**🌐 <https://helmx-silk.vercel.app/>**
+
+The live site is fully working: real database, real emails, and Stripe payments in **test mode**. You can place a complete order without any money being charged.
+
+| Page | Link | What to try |
+|---|---|---|
+| Home | [helmx-silk.vercel.app](https://helmx-silk.vercel.app/) | Scroll through the seven features and the technology stack |
+| Configurator | [/buy](https://helmx-silk.vercel.app/buy) | Drag to rotate the 3D helmet, add or remove parts, pick storage, and watch the quote update |
+| Contact | [/contact](https://helmx-silk.vercel.app/contact) | Send a message and get a confirmation email |
+
+### Place a test order
+
+1. Open the [configurator](https://helmx-silk.vercel.app/buy) and choose your parts and storage.
+2. Enter **your own email address** (the receipt is sent there) and click **Pay with Stripe**.
+3. On the Stripe checkout page, pay with Stripe's test card:
+
+   | Field | Value |
+   |---|---|
+   | Card number | `4242 4242 4242 4242` |
+   | Expiry | any future date, e.g. `12/34` |
+   | CVC | any 3 digits, e.g. `123` |
+   | Name / postal code | anything |
+
+4. You return to the **Payment Successful** page, and an itemised **receipt email** arrives within a minute. Check your spam folder if it doesn't show up.
+
+> **No real money is charged.** Payments run in Stripe's sandbox, which only accepts test cards. Real cards are declined.
+>
+> To see a declined payment, use `4000 0000 0000 0002`. To try cancelling, click the back arrow on the Stripe page.
+
+---
+
 ## Table of contents
 
+- [Try the live demo](#try-the-live-demo)
 - [About the project](#about-the-project)
 - [Key features](#key-features)
 - [Screenshots](#screenshots)
@@ -47,7 +81,7 @@ This repository branch contains the **HelmX web platform**, the public face of t
 - **pay securely** through Stripe and receive an emailed receipt,
 - **contact the team** through a validated, rate-limited contact form.
 
-**Try it live:** <https://helmx-silk.vercel.app/>. The landing page and 3D configurator are fully interactive.
+**Try it live:** <https://helmx-silk.vercel.app/>. See [how to try the live demo](#try-the-live-demo).
 
 > Other HelmX modules, such as the Android companion app and the drowsiness-detection system, are developed on separate branches of this repository.
 
