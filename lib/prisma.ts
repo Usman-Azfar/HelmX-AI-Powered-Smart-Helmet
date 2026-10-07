@@ -9,7 +9,10 @@ const globalForPrisma = globalThis as unknown as {
   pgPool?: Pool
 }
 
-const pgPool = globalForPrisma.pgPool ?? new Pool({ connectionString: process.env.DATABASE_URL })
+// POSTGRES_URL is the direct connection string Vercel's Postgres integrations provide.
+const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_URL
+
+const pgPool = globalForPrisma.pgPool ?? new Pool({ connectionString })
 
 export const prisma = globalForPrisma.prisma ?? new PrismaClient({ adapter: new PrismaPg(pgPool) })
 

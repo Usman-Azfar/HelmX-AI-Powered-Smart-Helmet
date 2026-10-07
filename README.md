@@ -195,7 +195,7 @@ Open <http://localhost:3000>. To receive payment webhooks locally, run `stripe l
 
 | Variable | Purpose |
 |---|---|
-| `DATABASE_URL` | PostgreSQL connection string |
+| `DATABASE_URL` | PostgreSQL connection string (`POSTGRES_URL` from Vercel Postgres is used if this is unset) |
 | `STRIPE_SECRET_KEY` | Stripe secret key (`sk_...`) |
 | `STRIPE_WEBHOOK_SECRET` | Webhook signing secret (`whsec_...`) |
 | `NEXT_PUBLIC_APP_URL` | Public base URL used for Stripe redirects |
