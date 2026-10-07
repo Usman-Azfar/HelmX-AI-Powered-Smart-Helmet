@@ -296,7 +296,7 @@ HelmX was built by BS Computer Science students at the University of the Punjab 
 | Usman Azfar | [@Usman-Azfar](https://github.com/Usman-Azfar) |
 | Hamza Ahmad | [@HamzaAhmad536](https://github.com/HamzaAhmad536) |
 | Abdul Hannan | [@Rao-Abdul-Hannan](https://github.com/Rao-Abdul-Hannan) |
-| Awais Imtiaz | — |
+| Awais Imtiaz |  [@Awais-Imtiaz](https://github.com/Awais-Imtiaz) |
 
 **Supervisor:** Dr. Tayyaba Tariq, Assistant Professor, Department of Computer Science, PUCIT, University of the Punjab
 
