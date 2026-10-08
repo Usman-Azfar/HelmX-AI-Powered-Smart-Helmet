@@ -1,0 +1,55 @@
+# ---- Gradle / Android build output ----
+.gradle/
+.kotlin/
+build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+/app/release/
+/app/debug/
+
+# ---- IDE ----
+.idea/
+*.iml
+.vscode/
+*.hprof
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- logs ----
+*.log
+
+# ---- secrets: never commit these ----
+# machine-specific SDK path
+local.properties
+# Firebase configuration (each developer adds their own, see README)
+google-services.json
+GoogleService-Info.plist
+*service-account*.json
+*serviceAccount*.json
+credentials.json
+# signing keys
+*.jks
+*.keystore
+keystore.properties
+# private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+# environment / API key files
+.env*
+secrets.properties
+
+# ---- project documents and scratch files (kept out of the public repo) ----
+/*.pdf
+/tmp_pdf/
+/pdf_text.txt
+/helmet.png
