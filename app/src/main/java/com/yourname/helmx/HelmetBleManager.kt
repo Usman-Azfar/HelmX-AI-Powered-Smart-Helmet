@@ -272,7 +272,57 @@ class HelmetBleManager private constructor(private val context: Context) {
         }
     }
 
+    // ---------------------------------------------------------------------------------------
+    // Demo helmet (debug builds only): simulated readings for demos and screenshots when no
+    // helmet is available. Never reports a crash or drowsiness.
+    // ---------------------------------------------------------------------------------------
+
+    private var demoRunnable: Runnable? = null
+    private var demoTick = 0
+
+    val isDemoMode: Boolean
+        get() = demoRunnable != null
+
+    fun startDemo() {
+        if (isDemoMode || isScanning || bluetoothGatt != null) return
+        demoTick = 0
+        val runnable = object : Runnable {
+            override fun run() {
+                demoTick++
+                val t = demoTick.toDouble()
+                val speed = 34.0 + 8.0 * kotlin.math.sin(t / 6.0)
+                _helmetData.update {
+                    it.copy(
+                        connectionStatus = ConnectionStatus.CONNECTED,
+                        batteryLevel = (87 - demoTick / 120).coerceAtLeast(20),
+                        speed = speed.toFloat(),
+                        distance = (it.distance + speed / 3600.0).toFloat(),
+                        temperature = (31.4 + 0.3 * kotlin.math.sin(t / 20.0)).toFloat(),
+                        humidity = (58.0 + 2.0 * kotlin.math.sin(t / 25.0)).toFloat(),
+                        airQuality = "Good",
+                        isDrowsy = false,
+                        isCrashDetected = false
+                    )
+                }
+                handler.postDelayed(this, 1000)
+            }
+        }
+        demoRunnable = runnable
+        _helmetData.value = HelmetData(connectionStatus = ConnectionStatus.CONNECTED, distance = 3.4f)
+        handler.post(runnable)
+    }
+
+    fun stopDemo() {
+        demoRunnable?.let { handler.removeCallbacks(it) }
+        demoRunnable = null
+        _helmetData.value = HelmetData()
+    }
+
     fun disconnect() {
+        if (isDemoMode) {
+            stopDemo()
+            return
+        }
         userInitiatedDisconnect = true
         hasConnected = false
         stopScan()

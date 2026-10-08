@@ -165,6 +165,21 @@ class DashboardActivity : AppCompatActivity() {
             Toast.makeText(this, "No new notifications", Toast.LENGTH_SHORT).show()
         }
 
+        // Debug builds only: long-press Pair to start/stop a simulated helmet (demos, screenshots)
+        val debuggable = (applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0
+        if (debuggable) {
+            binding.btnPair.setOnLongClickListener {
+                if (helmetBleManager.isDemoMode) {
+                    helmetBleManager.stopDemo()
+                    Toast.makeText(this, "Demo helmet stopped", Toast.LENGTH_SHORT).show()
+                } else {
+                    helmetBleManager.startDemo()
+                    Toast.makeText(this, "Demo helmet started (simulated data, debug build)", Toast.LENGTH_SHORT).show()
+                }
+                true
+            }
+        }
+
         binding.btnPair.setOnClickListener {
             when (helmetBleManager.helmetData.value.connectionStatus) {
                 ConnectionStatus.CONNECTED -> {
@@ -357,6 +372,7 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun updateUI(data: HelmetData) {
+        binding.tvHelmetName.text = if (helmetBleManager.isDemoMode) "HelmX Pro v1 · Demo" else "HelmX Pro v1"
         val status = data.connectionStatus
         val connected = status == ConnectionStatus.CONNECTED
         binding.tvConnectionStatus.text = status.label
