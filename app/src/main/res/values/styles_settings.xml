@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The "HelmX" gradient wordmark from the logo -->
+    <style name="BrandWordmark">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/logo_wordmark</item>
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+
+    <!-- Small coloured caption above each settings group -->
+    <style name="SettingsSectionHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/primary_blue</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Rounded card holding a group of rows -->
+    <style name="SettingsSectionCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/secondary_dark</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/input_stroke</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Hairline between rows, indented past the icon -->
+    <style name="SettingsDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">72dp</item>
+        <item name="android:background">@color/input_stroke</item>
+    </style>
+
+    <!-- Explanatory text under a setting -->
+    <style name="SettingsHelpText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <!-- Full-width primary action on a settings screen -->
+    <style name="SettingsPrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="backgroundTint">@color/primary_blue</item>
+        <item name="cornerRadius">28dp</item>
+    </style>
+
+    <style name="SettingsSecondaryButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_blue</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="strokeColor">@color/input_stroke</item>
+    </style>
+</resources>

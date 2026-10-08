@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_settings_header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Spoken directions"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            style="@style/SettingsHelpText"
+                            android:layout_marginTop="2dp"
+                            android:text="Turn-by-turn voice prompts during navigation, e.g. &quot;In 300 meters, turn left&quot;." />
+                    </LinearLayout>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchVoiceGuidance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="Voice volume" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <LinearLayout
+                    android:id="@+id/groupVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvVolumeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="100%"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/SettingsHelpText"
+                        android:layout_marginTop="2dp"
+                        android:text="Relative to the phone's media volume." />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderVolume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="Voice volume"
+                        android:stepSize="10"
+                        android:value="100"
+                        android:valueFrom="10"
+                        android:valueTo="100"
+                        app:labelBehavior="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTestVoice"
+                style="@style/SettingsSecondaryButton"
+                android:layout_marginTop="24dp"
+                android:text="Play a sample" />
+
+            <TextView
+                style="@style/SettingsHelpText"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Changes are saved automatically. Music and calls play through your phone or the helmet's Bluetooth audio as usual." />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

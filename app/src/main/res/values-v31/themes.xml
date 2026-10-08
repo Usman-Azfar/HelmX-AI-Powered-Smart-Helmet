@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ launch screen: the HelmX helmet on the logo's background -->
+    <style name="Theme.HelmX" parent="Base.Theme.HelmX">
+        <item name="android:windowSplashScreenBackground">@color/brand_background</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/brand_background</item>
+    </style>
+</resources>

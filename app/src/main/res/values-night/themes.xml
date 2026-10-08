@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HelmX" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">@color/primary_blue</item>
+        <item name="colorSecondaryContainer">@color/input_stroke</item>
+        <item name="colorSurfaceContainerHighest">@color/input_stroke</item>
+        <item name="colorOutline">@color/text_secondary</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

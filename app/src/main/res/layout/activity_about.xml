@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_settings_header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- App identity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:contentDescription="@string/app_logo"
+                    android:src="@drawable/helmet" />
+
+                <ImageView
+                    style="@style/BrandWordmark"
+                    android:layout_width="150dp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:letterSpacing="0.06"
+                    android:text="@string/tagline"
+                    android:textColor="@color/brand_tagline"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvVersion"
+                    style="@style/SettingsHelpText"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Version 1.0" />
+            </LinearLayout>
+
+            <!-- Project -->
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="The project" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <TextView
+                    style="@style/SettingsHelpText"
+                    android:padding="16dp"
+                    android:text="HelmX is a smart motorcycle helmet that uses AI and IoT to make riding safer: it detects crashes and drowsiness, guides you with navigation and voice, and monitors your surroundings. This app is the rider's companion: it connects to the helmet, shows live data, records rides and raises alerts.\n\nFinal Year Project, BS Computer Science\nDepartment of Computer Science, FCIT, University of the Punjab, Lahore\nSession 2025–2026"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Features -->
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="Features" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <LinearLayout
+                    android:id="@+id/listFeatures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Helmet connection -->
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="Helmet connection" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <LinearLayout
+                    android:id="@+id/listConnection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/SettingsHelpText"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="The helmet's Raspberry Pi advertises itself over Bluetooth Low Energy as &quot;HelmX&quot; and sends readings as notifications. Pair from the Home screen." />
+
+            <!-- Team -->
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="Team" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <LinearLayout
+                    android:id="@+id/listTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Credits -->
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="Credits" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <TextView
+                    style="@style/SettingsHelpText"
+                    android:padding="16dp"
+                    android:text="Map data © OpenStreetMap contributors (ODbL)\nMap tiles: OpenFreeMap, OpenMapTiles\nMap engine: MapLibre GL JS\nPlace search: Photon by Komoot\nRouting: OSRM\nAccounts and data: Google Firebase" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/SettingsHelpText"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="© 2026 HelmX team, University of the Punjab" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

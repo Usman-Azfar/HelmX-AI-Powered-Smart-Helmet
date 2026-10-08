@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HelmX Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- MapLibre is bundled with the app (served from assets/offline) so the map works offline -->
+    <link rel="stylesheet" href="/maplibre-gl.css" />
+    <style>
+        html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; }
+        body { background: #e8eaed; }
+        body.dark { background: #1f2124; }
+        .maplibregl-ctrl-attrib { font-size: 10px; }
+        body.dark .maplibregl-ctrl-attrib { background: rgba(32, 33, 36, 0.8); color: #9aa0a6; }
+        body.dark .maplibregl-ctrl-attrib a { color: #8ab4f8; }
+        body.dark .maplibregl-ctrl-group { background: #303134; }
+        body.dark .maplibregl-ctrl-compass .maplibregl-ctrl-icon { filter: invert(1); }
+
+        /* "You are here" dot and accuracy halo */
+        .me-dot {
+            width: 20px; height: 20px; box-sizing: border-box; border-radius: 50%;
+            background: #1a73e8; border: 3px solid #fff; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+        }
+        .me-accuracy { border-radius: 50%; background: rgba(26, 115, 232, 0.14); pointer-events: none; }
+        /* Heading arrow while navigating */
+        .me-arrow { width: 52px; height: 52px; }
+        .me-arrow svg { filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35)); }
+        .dest-pin svg { filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.35)); }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+<script src="/maplibre-gl.js"></script>
+<script>
+    // ---- Base map: OpenFreeMap vector tiles (OpenStreetMap data, no API key) ----
+    // Online: live tiles everywhere. Offline: the Lahore package bundled with the app.
+    var STYLES = {
+        online: {
+            light: 'https://tiles.openfreemap.org/styles/liberty',
+            dark: 'https://tiles.openfreemap.org/styles/fiord'
+        },
+        offline: {
+            light: 'https://helmx.local/styles/liberty.json',
+            dark: 'https://helmx.local/styles/fiord.json'
+        }
+    };
+    var params = new URLSearchParams(location.search);
+    var darkTheme = params.get('dark') === '1';
+    var offline = params.get('offline') === '1';
+    function styleUrl() { return STYLES[offline ? 'offline' : 'online'][darkTheme ? 'dark' : 'light']; }
+    var NAV_ZOOM = 17, NAV_PITCH = 50;
+
+    var map = new maplibregl.Map({
+        container: 'map',
+        style: styleUrl(),
+        center: [69.3451, 30.3753],   // Pakistan overview until GPS arrives
+        zoom: 4.5,
+        attributionControl: false,
+        pitchWithRotate: true
+    });
+    map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-left');
+    map.addControl(new maplibregl.NavigationControl({ showZoom: false, visualizePitch: true }), 'top-right');
+
+    // ---- State ----
+    var currentStyle = styleUrl();
+    document.body.classList.toggle('dark', darkTheme);
+    var insetTop = 0, insetBottom = 0;          // CSS px covered by native overlays
+    var lastLngLat = null, lastBearing = 0, lastAccuracy = 0;
+    var navMode = false, following = true, firstFix = true;
+    var overview = false;                   // showing the whole route (until the rider moves the map)
+    var routeGeoJson = null, destMarker = null, routeProgress = 0;
+    var ROUTE_BLUE = '#4c8df6', ROUTE_CASING = '#185abc', TRAVELLED = '#9aa0a6', TRAVELLED_CASING = '#7a8086';
+
+    var ARROW_SVG = '<svg width="52" height="52" viewBox="0 0 52 52">' +
+        '<circle cx="26" cy="26" r="24" fill="#1a73e8" fill-opacity="0.15"/>' +
+        '<path d="M26 8 L40 41 L26 33 L12 41 Z" fill="#1a73e8" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/></svg>';
+    var PIN_SVG = '<svg width="34" height="46" viewBox="0 0 24 32">' +
+        '<path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0z" fill="#ea4335"/>' +
+        '<circle cx="12" cy="12" r="4.5" fill="#a50e0e"/></svg>';
+
+    // Rider marker: a dot when browsing, a heading arrow when navigating
+    var meEl = document.createElement('div');
+    var accEl = document.createElement('div');
+    accEl.className = 'me-accuracy';
+    var accMarker = new maplibregl.Marker({ element: accEl });
+    var meMarker = new maplibregl.Marker({ element: meEl, rotationAlignment: 'map', pitchAlignment: 'map' });
+    renderMe();
+
+    function notify(fn, arg) {
+        if (!window.Android || !window.Android[fn]) return;
+        // The Java bridge matches methods by argument count, so don't pass an empty argument
+        if (arg === undefined) window.Android[fn](); else window.Android[fn](arg);
+    }
+
+    function setFollowing(value) {
+        if (following === value) return;
+        following = value;
+        notify('onFollowChanged', value);
+    }
+
+    function renderMe() {
+        if (navMode) {
+            meEl.className = 'me-arrow';
+            meEl.innerHTML = ARROW_SVG;
+            meMarker.setRotation(lastBearing);
+        } else {
+            meEl.className = 'me-dot';
+            meEl.innerHTML = '';
+            meMarker.setRotation(0);
+        }
+        updateAccuracy();
+    }
+
+    function updateAccuracy() {
+        if (!lastLngLat || navMode) { accEl.style.display = 'none'; return; }
+        // MapLibre uses 512 px tiles: metres per pixel = 78271.517 * cos(lat) / 2^zoom
+        var mpp = 78271.517 * Math.cos(lastLngLat.lat * Math.PI / 180) / Math.pow(2, map.getZoom());
+        var size = Math.min(2000, 2 * lastAccuracy / mpp);
+        accEl.style.display = size > 24 ? 'block' : 'none';
+        accEl.style.width = accEl.style.height = size + 'px';
+    }
+    map.on('zoom', updateAccuracy);
+
+    /** Prefer English names, like Google Maps (falls back to Latin script, then local). */
+    function useEnglishLabels() {
+        map.getStyle().layers.forEach(function (layer) {
+            if (layer.type !== 'symbol' || !layer.layout || !layer.layout['text-field']) return;
+            if (JSON.stringify(layer.layout['text-field']).indexOf('name') === -1) return; // e.g. road refs
+            map.setLayoutProperty(layer.id, 'text-field',
+                ['coalesce', ['get', 'name:en'], ['get', 'name:latin'], ['get', 'name']]);
+        });
+    }
+
+    function firstSymbolLayerId() {
+        var layer = map.getStyle().layers.find(function (l) { return l.type === 'symbol'; });
+        return layer ? layer.id : undefined;
+    }
+
+    /** Route source + layers (re-added after every style change). Labels stay above the line. */
+    function addRouteLayers() {
+        if (!routeGeoJson || map.getSource('route')) return;
+        map.addSource('route', { type: 'geojson', data: routeGeoJson, lineMetrics: true });
+        var before = firstSymbolLayerId();
+        map.addLayer({
+            id: 'route-casing', type: 'line', source: 'route',
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: { 'line-width': ['interpolate', ['linear'], ['zoom'], 10, 6, 18, 16] }
+        }, before);
+        map.addLayer({
+            id: 'route-line', type: 'line', source: 'route',
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: { 'line-width': ['interpolate', ['linear'], ['zoom'], 10, 3.5, 18, 10] }
+        }, before);
+        applyRouteProgress();
+    }
+
+    /** Colours the route by progress: grey behind the rider, blue ahead (line-gradient). */
+    function routeGradient(done, ahead) {
+        if (routeProgress <= 0) return ['interpolate', ['linear'], ['line-progress'], 0, ahead, 1, ahead];
+        if (routeProgress >= 1) return ['interpolate', ['linear'], ['line-progress'], 0, done, 1, done];
+        return ['step', ['line-progress'], done, routeProgress, ahead];
+    }
+
+    function applyRouteProgress() {
+        if (!map.getLayer('route-line')) return;
+        map.setPaintProperty('route-casing', 'line-gradient', routeGradient(TRAVELLED_CASING, ROUTE_CASING));
+        map.setPaintProperty('route-line', 'line-gradient', routeGradient(TRAVELLED, ROUTE_BLUE));
+    }
+
+    function setRouteProgress(fraction) {
+        routeProgress = Math.max(0, Math.min(1, fraction));
+        applyRouteProgress();
+    }
+
+    map.on('style.load', function () {
+        useEnglishLabels();
+        addRouteLayers();
+    });
+
+    function cameraPadding() {
+        var height = map.getContainer().clientHeight;
+        var visible = Math.max(1, height - insetTop - insetBottom);
+        if (navMode) {
+            // Put the rider about 72% of the way down the visible area, so more road ahead shows
+            return { top: insetTop + visible * 0.44, bottom: insetBottom, left: 0, right: 0 };
+        }
+        return { top: insetTop, bottom: insetBottom, left: 0, right: 0 };
+    }
+
+    // ---- API called from Kotlin ----
+
+    function applyStyle() {
+        var wanted = styleUrl();
+        if (wanted !== currentStyle) {
+            currentStyle = wanted;
+            // diff:false forces a full reload so 'style.load' fires and re-applies labels and the route
+            map.setStyle(wanted, { diff: false });
+        }
+    }
+
+    function setTheme(dark) {
+        darkTheme = dark;
+        document.body.classList.toggle('dark', dark);
+        applyStyle();
+    }
+
+    /** Switches between live tiles and the bundled offline (Lahore) map. */
+    function setOffline(value) {
+        offline = value;
+        applyStyle();
+    }
+
+    /** Space (CSS px) covered by the search bar / banner at the top and the card at the bottom. */
+    function setInsets(top, bottom) {
+        insetTop = top;
+        insetBottom = bottom;
+        var bl = document.querySelector('.maplibregl-ctrl-bottom-left');
+        var br = document.querySelector('.maplibregl-ctrl-bottom-right');
+        var tr = document.querySelector('.maplibregl-ctrl-top-right');
+        if (bl) bl.style.bottom = bottom + 'px';
+        if (br) br.style.bottom = bottom + 'px';
+        if (tr) tr.style.top = top + 'px';
+        if (overview) fitRoute();               // e.g. the route card just appeared
+        else if (following && lastLngLat) follow(false);
+    }
+
+    function updateLocation(lat, lng, accuracy, bearing) {
+        lastLngLat = new maplibregl.LngLat(lng, lat);
+        lastAccuracy = accuracy;
+        if (bearing >= 0) lastBearing = bearing;
+
+        meMarker.setLngLat(lastLngLat);
+        accMarker.setLngLat(lastLngLat);
+        if (firstFix) {
+            firstFix = false;
+            accMarker.addTo(map);
+            meMarker.addTo(map);
+            if (!routeGeoJson) map.jumpTo({ center: lastLngLat, zoom: 16, padding: cameraPadding() });
+        }
+        if (navMode) meMarker.setRotation(lastBearing);
+        updateAccuracy();
+        if (following) follow(true);
+    }
+
+    /** Keeps the rider in view. While navigating the map turns with the rider and tilts. */
+    function follow(animate) {
+        if (!lastLngLat) return;
+        var options = { center: lastLngLat, padding: cameraPadding(), duration: animate ? 900 : 0 };
+        if (navMode) {
+            options.zoom = NAV_ZOOM;
+            options.bearing = lastBearing;
+            options.pitch = NAV_PITCH;
+        }
+        map.easeTo(options);
+    }
+
+    function recenter() {
+        overview = false;
+        setFollowing(true);
+        if (!lastLngLat) return;
+        if (navMode) {
+            follow(true);
+        } else {
+            map.easeTo({
+                center: lastLngLat, zoom: Math.max(map.getZoom(), 16), bearing: 0, pitch: 0,
+                padding: cameraPadding(), duration: 700
+            });
+        }
+    }
+
+    /** points: [[lat, lng], ...]. fit=true shows the whole route (preview). */
+    function showRoute(points, destLat, destLng, fit) {
+        routeProgress = 0;
+        routeGeoJson = {
+            type: 'Feature', properties: {},
+            geometry: { type: 'LineString', coordinates: points.map(function (p) { return [p[1], p[0]]; }) }
+        };
+        if (map.getSource('route')) { map.getSource('route').setData(routeGeoJson); applyRouteProgress(); }
+        else if (map.isStyleLoaded()) addRouteLayers();
+
+        if (!destMarker) {
+            var pin = document.createElement('div');
+            pin.className = 'dest-pin';
+            pin.innerHTML = PIN_SVG;
+            destMarker = new maplibregl.Marker({ element: pin, anchor: 'bottom' });
+        }
+        destMarker.setLngLat([destLng, destLat]).addTo(map);
+        if (fit) fitRoute();
+    }
+
+    /** Pin a place without a route (e.g. offline) and move the map to it. */
+    function showPlace(lat, lng) {
+        if (!destMarker) {
+            var pin = document.createElement('div');
+            pin.className = 'dest-pin';
+            pin.innerHTML = PIN_SVG;
+            destMarker = new maplibregl.Marker({ element: pin, anchor: 'bottom' });
+        }
+        destMarker.setLngLat([lng, lat]).addTo(map);
+        overview = false;
+        setFollowing(false);
+        map.easeTo({ center: [lng, lat], zoom: Math.max(map.getZoom(), 15), padding: cameraPadding(), duration: 700 });
+    }
+
+    function fitRoute() {
+        if (!routeGeoJson) return;
+        setFollowing(false);
+        overview = true;
+        var coords = routeGeoJson.geometry.coordinates;
+        var bounds = coords.reduce(function (b, c) { return b.extend(c); },
+            new maplibregl.LngLatBounds(coords[0], coords[0]));
+        map.fitBounds(bounds, {
+            padding: { top: insetTop + 48, bottom: insetBottom + 48, left: 48, right: 48 },
+            bearing: 0, pitch: 0, maxZoom: 17, duration: 800
+        });
+    }
+
+    function clearRoute() {
+        routeGeoJson = null;
+        overview = false;
+        if (map.getLayer('route-line')) map.removeLayer('route-line');
+        if (map.getLayer('route-casing')) map.removeLayer('route-casing');
+        if (map.getSource('route')) map.removeSource('route');
+        if (destMarker) destMarker.remove();
+    }
+
+    function setNavMode(on) {
+        navMode = on;
+        overview = false;
+        renderMe();
+        if (!on) map.jumpTo({ bearing: 0, pitch: 0 }); // back to a flat, north-up map
+        if (on) {
+            setFollowing(true);
+            follow(true);
+        } else if (routeGeoJson) {
+            fitRoute();
+        } else {
+            recenter();
+        }
+    }
+
+    // Like Google Maps, only show the compass once the map is rotated
+    function updateCompass() {
+        var tr = document.querySelector('.maplibregl-ctrl-top-right');
+        if (tr) tr.style.display = Math.abs(map.getBearing()) < 1 ? 'none' : 'block';
+    }
+    map.on('rotate', updateCompass);
+    updateCompass();
+
+    // The rider moved the map: stop following until they tap re-center
+    map.on('dragstart', function () { overview = false; setFollowing(false); });
+
+    notify('onMapReady');
+</script>
+</body>
+</html>

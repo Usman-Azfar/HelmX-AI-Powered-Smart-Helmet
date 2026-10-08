@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_settings_header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:layout_marginTop="4dp"
+                android:text="Permissions" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/permLocation"
+                        layout="@layout/item_permission_row" />
+
+                    <View
+                        android:id="@+id/dividerNearby"
+                        style="@style/SettingsDivider"
+                        android:layout_marginStart="16dp" />
+
+                    <include
+                        android:id="@+id/permNearby"
+                        layout="@layout/item_permission_row" />
+
+                    <View
+                        style="@style/SettingsDivider"
+                        android:layout_marginStart="16dp" />
+
+                    <include
+                        android:id="@+id/permMicrophone"
+                        layout="@layout/item_permission_row" />
+
+                    <View
+                        android:id="@+id/dividerNotifications"
+                        style="@style/SettingsDivider"
+                        android:layout_marginStart="16dp" />
+
+                    <include
+                        android:id="@+id/permNotifications"
+                        layout="@layout/item_permission_row" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/SettingsHelpText"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="Android only lets you turn a permission off in system settings, so Manage opens HelmX's App info page." />
+
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="Your data" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsSectionCard">
+
+                <TextView
+                    style="@style/SettingsHelpText"
+                    android:padding="16dp"
+                    android:text="• Account: your name, email and phone number are stored in your HelmX account (Google Firebase).\n\n• Rides: when you start navigation, HelmX saves the ride's date, destination, distance, duration and average speed to your account. The GPS track itself is not uploaded.\n\n• Emergency contacts: saved in your account so they are available after a crash.\n\n• Location: used on the phone for the map, directions and ride distance. Searches and routes are sent to OpenStreetMap-based services (Photon, OSRM) to get results.\n\n• Helmet data: speed, battery, temperature, drowsiness and crash readings are shown live and are not stored.\n\n• You can delete your account and all of this data from Settings → Account." />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
