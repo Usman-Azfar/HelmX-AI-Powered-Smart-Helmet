@@ -1,0 +1,4 @@
+# Third-party files: exclude them from GitHub's language statistics
+app/src/main/assets/offline/** linguist-vendored
+gradlew linguist-vendored
+gradlew.bat linguist-vendored
