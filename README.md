@@ -107,7 +107,7 @@ This repository contains the **Android app**, the rider's companion to the helme
   </tr>
 </table>
 
-<sub>Screenshots were taken on a Pixel 8 emulator (Android 14) with a simulated GPS position in Lahore and no helmet connected, so the helmet readings show as offline. Screens from before the Settings redesign are kept in <a href="docs/screenshots/before-redesign">docs/screenshots/before-redesign</a>.</sub>
+<sub>Screenshots were taken on a Pixel 8 emulator (Android 14) with a simulated GPS position in Lahore. Helmet readings (battery, speed, temperature, humidity, air quality) come from the debug-only demo helmet described under <a href="#testing">Testing</a>; rides were recorded by the app from a simulated drive. Screens from before the Settings redesign are kept in <a href="docs/screenshots/before-redesign">docs/screenshots/before-redesign</a>.</sub>
 
 ---
 
@@ -321,6 +321,8 @@ Searches and route requests are sent to Photon and OSRM to get results. Users ca
 | `ValidatorsTest` | Phone number validation |
 
 The UI flows were tested manually on a Pixel 8 emulator (Android 14) with simulated GPS.
+
+**Demo helmet (debug builds only).** To try the app without the hardware, long-press **Pair** on the Home screen. The app then receives simulated helmet readings (battery, speed, distance, temperature, humidity, air quality) and shows *HelmX Pro v1 · Demo*. It never reports a crash or drowsiness, and it is not available in release builds. Long-press again or tap **Unpair** to stop.
 
 ---
 
