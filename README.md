@@ -21,8 +21,21 @@ Live helmet data · Crash & drowsiness alerts · Turn-by-turn navigation with an
 
 ---
 
+## Download & try it
+
+**[⬇ Download HelmX v1.0.0 (APK)](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/download/android-v1.0.0/HelmX-v1.0.0.apk)** (Android 7.0 or newer) · [Release notes](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0)
+
+1. Open the link on your Android phone to download `HelmX-v1.0.0.apk` (it's also under **Assets** on the release page).
+2. Open the file. If Android asks, allow your browser or file manager to **install unknown apps**. Google Play Protect may show a warning because the app isn't from the Play Store; choose **Install anyway**.
+3. Sign up with your email and log in.
+
+Without the helmet you can still use navigation (including the offline Lahore map), ride recording, analytics and all settings. Helmet readings, crash and drowsiness alerts need the HelmX helmet, which connects from the **Pair** button on the Home screen.
+
+---
+
 ## Table of contents
 
+- [Download & try it](#download--try-it)
 - [About the project](#about-the-project)
 - [Screenshots](#screenshots)
 - [Features](#features)
@@ -229,6 +242,8 @@ cd HelmX-AI-Powered-Smart-Helmet
 ./gradlew assembleDebug        # build the debug APK
 ./gradlew installDebug         # install on a connected device
 ```
+
+For a signed release build, add the signing values to the git-ignored `local.properties` (`RELEASE_STORE_FILE`, `RELEASE_STORE_PASSWORD`, `RELEASE_KEY_ALIAS`, `RELEASE_KEY_PASSWORD`) and run `./gradlew assembleRelease`. Without them the release build is left unsigned.
 
 Or open the project in Android Studio and press **Run**.
 
