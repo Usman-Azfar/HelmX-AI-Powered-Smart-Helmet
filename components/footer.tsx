@@ -4,8 +4,8 @@
  *          Implements interactive link hover effects with underline animations.
  * Author: Hamza Ahmad
  */
-import Image from "next/image"
 import Link from "next/link"
+import { Logo } from "@/components/logo"
 
 const productLinks = [
   { label: "Features", href: "/#features" },
@@ -34,20 +34,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="mb-4 flex items-center gap-2 transition-transform hover:scale-105">
-              <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary to-accent shadow-lg">
-                <Image
-                  src="/futuristic-motorcycle-helmet-icon-minimal.jpg"
-                  alt="HelmX Logo"
-                  width={36}
-                  height={36}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-xl font-bold text-transparent">
-                HelmX
-              </span>
-            </div>
+            <Logo className="mb-4 w-fit transition-transform hover:scale-105" />
             <p className="mb-4 max-w-md text-sm leading-relaxed text-muted-foreground">
               AI-powered smart helmet designed to make riding safer, smarter, and more connected. A collaboration of BS
               CS students from the University of the Punjab.

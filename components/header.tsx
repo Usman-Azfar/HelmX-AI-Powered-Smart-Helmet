@@ -5,9 +5,9 @@
  *          plus a slide-out menu on small screens.
  * Author: Hamza Ahmad
  */
-import Image from "next/image"
 import Link from "next/link"
 import { Menu } from "lucide-react"
+import { Logo } from "@/components/logo"
 import { Badge } from "@/components/ui/badge"
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 
@@ -24,20 +24,8 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-lg">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/#hero" className="flex items-center gap-2 transition-transform hover:scale-105">
-          <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary to-accent transition-all hover:shadow-lg hover:shadow-primary/50">
-            <Image
-              src="/futuristic-motorcycle-helmet-icon-minimal.jpg"
-              alt="HelmX Logo"
-              width={36}
-              height={36}
-              priority
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-xl font-bold text-transparent">
-            HelmX
-          </span>
+        <Link href="/#hero" className="transition-transform hover:scale-105">
+          <Logo priority />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">

@@ -19,10 +19,6 @@ export const metadata: Metadata = {
   description:
     "HelmX is an AI-powered smart helmet designed to make riding safer, smarter, and more connected through crash detection, drowsiness alerts, and smart navigation.",
   generator: "v0.app",
-  icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.svg",
-  },
 }
 
 export default function RootLayout({
