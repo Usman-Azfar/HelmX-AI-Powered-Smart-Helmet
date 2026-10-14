@@ -1,0 +1,36 @@
+MPU6050 register dump -- Raspberry Pi 4 Model B Rev 1.5, I2C 0x68, bus 1
+
+SMPLRT_DIV      (0x19) = 0x0  (0b00000000)
+CONFIG          (0x1A) = 0x0  (0b00000000)
+GYRO_CONFIG     (0x1B) = 0x0  (0b00000000)
+ACCEL_CONFIG    (0x1C) = 0x0  (0b00000000)
+FIFO_EN         (0x23) = 0x0  (0b00000000)
+INT_ENABLE      (0x38) = 0x0  (0b00000000)
+INT_STATUS      (0x3A) = 0x5  (0b00000101)
+PWR_MGMT_1      (0x6B) = 0x1  (0b00000001)
+PWR_MGMT_2      (0x6C) = 0x0  (0b00000000)
+WHO_AM_I        (0x75) = 0x70  (0b01110000)
+USER_CTRL       (0x6A) = 0x0  (0b00000000)
+
+Decoded:
+  accel_full_scale: +/-2g
+  accel_afs_sel_raw: 0
+  gyro_full_scale: +/-250 deg/s
+  gyro_fs_sel_raw: 0
+  dlpf_mode_bandwidth: 260Hz accel / 256Hz gyro (DLPF off)
+  dlpf_cfg_raw: 0
+  smplrt_div_raw: 0
+  gyro_output_rate_hz_before_divider: 8000
+  configured_sample_rate_hz: 8000.0
+  device_clock_source: PLL with X gyro reference
+  clksel_raw: 1
+  sleep_mode: False
+  fifo_enabled_register_nonzero: False
+  fifo_en_raw: 0
+  data_ready_interrupt_enabled: False
+  int_enable_raw: 0
+  int_status_data_ready: True
+  who_am_i: 0x70
+  who_am_i_expected_0x68: False
+
+I2C baudrate: 100000 Hz (device-tree clock-frequency)

@@ -1,0 +1,101 @@
+{
+  "description": "External, never-trained-on test: electric scooter riding + controlled overturn/collision sessions (Sanchez-Iborra, Bernal-Escobedo & Santa 2025, Zenodo jsanta-upct/scooter-riding v1.1, CC BY 4.0). Evaluated with the ALREADY DEPLOYED Model A (classifier + reconstruction + exact OR-fusion rule) and Model B -- no retraining, no threshold recalibration.",
+  "source_citation": "Sanchez-Iborra, R., Bernal-Escobedo, L., & Santa, J. (2025). Dataset on personal mobility vehicle's regular riding and fall events. Data in Brief, 61, 111681. https://doi.org/10.1016/j.dib.2025.111681. Data: Zenodo, https://doi.org/10.5281/zenodo.14887437 (CC BY 4.0, verified via the Zenodo API).",
+  "second_candidate_dataset_finding": "The advisor's second-ranked dataset (Boubezoul et al. 2019, DOI 10.1016/j.dib.2019.103828, motorcycle fall/critical-events) was checked BEFORE any download and found to be byte-signature-identical (1000 Hz sampling, exact column names/units, exact scenario names) to this project's own data/fall/ and data/near-fall/ folders, which are already part of the FROZEN TRAINING snapshot (datasets_used/). It is NOT independent data and cannot be used as an external test set here -- using it would silently re-test the model on its own training data. Not used; reported as a finding rather than silently skipped.",
+  "vehicle_domain_note": "Electric scooter with a phone-based on-board unit, not a helmet-mounted motorcycle IMU -- closer to HelmX's two-wheeler domain than car-based sources (CARLA, STRIDE) already used elsewhere in this project, but not an exact sensor-placement match.",
+  "n_sessions": 14,
+  "n_normal_sessions": 5,
+  "n_crash_sessions": 9,
+  "n_windows": 9066,
+  "n_normal_windows": 8110,
+  "n_crash_windows": 956,
+  "normal_riding_hours": 0.4932222222222222,
+  "window_level_metrics": {
+    "model_a_classifier": {
+      "roc_auc": 0.7739013511909983,
+      "pr_auc": 0.2783913480280113,
+      "f1_score": 0.08445297504798464,
+      "precision": 0.5116279069767442,
+      "recall_sensitivity": 0.04602510460251046,
+      "specificity": 0.9948212083847102,
+      "recall_at_95pct_specificity": 0.12552301255230125,
+      "specificity_achieved_for_recall_at_spec": 0.9500616522811344,
+      "event_level_session_recall": 0.6666666666666666
+    },
+    "model_a_reconstruction": {
+      "roc_auc": 0.8258105082314823,
+      "pr_auc": 0.33262046500606524,
+      "f1_score": 0.14933837429111532,
+      "precision": 0.7745098039215687,
+      "recall_sensitivity": 0.08263598326359832,
+      "specificity": 0.9971639950678175,
+      "recall_at_95pct_specificity": 0.18200836820083682,
+      "specificity_achieved_for_recall_at_spec": 0.9524044389642417,
+      "event_level_session_recall": 0.8888888888888888
+    },
+    "model_b_classifier": {
+      "roc_auc": 0.7390396302926806,
+      "pr_auc": 0.23032732107126477,
+      "f1_score": 0.026503567787971458,
+      "precision": 0.52,
+      "recall_sensitivity": 0.013598326359832637,
+      "specificity": 0.9985203452527743,
+      "recall_at_95pct_specificity": 0.09623430962343096,
+      "specificity_achieved_for_recall_at_spec": 0.950308261405672,
+      "event_level_session_recall": 0.2222222222222222
+    },
+    "hybrid_or_fusion_deployed_rule": {
+      "roc_auc": 0.5409716812241717,
+      "pr_auc": 0.14719738662115914,
+      "f1_score": 0.15537488708220415,
+      "precision": 0.5695364238410596,
+      "recall_sensitivity": 0.0899581589958159,
+      "specificity": 0.9919852034525277,
+      "recall_at_95pct_specificity": 0.0899581589958159,
+      "specificity_achieved_for_recall_at_spec": 0.9919852034525277,
+      "event_level_session_recall": 0.8888888888888888
+    }
+  },
+  "event_level_deployed_alert_simulation": {
+    "model_a_classifier": {
+      "session_recall": 0.6666666666666666,
+      "n_anomaly_sessions": 9,
+      "n_normal_sessions": 5,
+      "total_false_alert_events": 4,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 0.4932222222222222,
+      "false_alerts_per_hour": 8.109934669970714
+    },
+    "model_a_reconstruction": {
+      "session_recall": 0.8888888888888888,
+      "n_anomaly_sessions": 9,
+      "n_normal_sessions": 5,
+      "total_false_alert_events": 3,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 0.4932222222222222,
+      "false_alerts_per_hour": 6.082451002478036
+    },
+    "model_b_classifier": {
+      "session_recall": 0.2222222222222222,
+      "n_anomaly_sessions": 9,
+      "n_normal_sessions": 5,
+      "total_false_alert_events": 2,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 0.4932222222222222,
+      "false_alerts_per_hour": 4.054967334985357
+    },
+    "hybrid_or_fusion_deployed_rule": {
+      "session_recall": 0.8888888888888888,
+      "n_anomaly_sessions": 9,
+      "n_normal_sessions": 5,
+      "total_false_alert_events": 7,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 0.4932222222222222,
+      "false_alerts_per_hour": 14.19238567244875
+    }
+  }
+}

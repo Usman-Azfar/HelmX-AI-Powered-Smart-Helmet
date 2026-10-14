@@ -1,0 +1,428 @@
+{
+  "description": "Experiment 2 (updated ExperimentsToPerform.txt): reconstruction-feature richness (none/mean/mean+peak/rich) on top of Experiment 1's winning pretrained architecture (A2_pretrained_warmup_finetune), 5 seeds each, identical metric set to Experiment 1.",
+  "base_architecture": "A2_pretrained_warmup_finetune",
+  "feature_modes": [
+    "none",
+    "scalar",
+    "mean_peak",
+    "rich"
+  ],
+  "feature_counts": {
+    "none": 0,
+    "scalar": 1,
+    "mean_peak": 2,
+    "rich": 12
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "summary_mean_std": {
+    "none": {
+      "roc_auc": {
+        "mean": 0.9450055611181412,
+        "std": 0.006684600323690598
+      },
+      "pr_auc": {
+        "mean": 0.4432777210851452,
+        "std": 0.012775960526392302
+      },
+      "f1_score": {
+        "mean": 0.38010579386397786,
+        "std": 0.029398540705962862
+      },
+      "precision": {
+        "mean": 0.4989535491996809,
+        "std": 0.20064933190847836
+      },
+      "recall_sensitivity": {
+        "mean": 0.40559440559440557,
+        "std": 0.18353146520083075
+      },
+      "specificity": {
+        "mean": 0.9803551190026447,
+        "std": 0.02199643568660324
+      },
+      "recall_at_95pct_specificity": {
+        "mean": 0.6713286713286714,
+        "std": 0.01398601398601399
+      },
+      "specificity_achieved_for_recall_at_spec": {
+        "mean": 0.9509255761239139,
+        "std": 0.0005261952503658767
+      },
+      "event_level_session_recall": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    },
+    "scalar": {
+      "roc_auc": {
+        "mean": 0.9466388918976755,
+        "std": 0.006994889607252694
+      },
+      "pr_auc": {
+        "mean": 0.4521645906733262,
+        "std": 0.03290518377508426
+      },
+      "f1_score": {
+        "mean": 0.3810587137096969,
+        "std": 0.023482829403956223
+      },
+      "precision": {
+        "mean": 0.5911469327822807,
+        "std": 0.26842353764857324
+      },
+      "recall_sensitivity": {
+        "mean": 0.4,
+        "std": 0.21821767680942197
+      },
+      "specificity": {
+        "mean": 0.9810351341140914,
+        "std": 0.025947227855487087
+      },
+      "recall_at_95pct_specificity": {
+        "mean": 0.6867132867132868,
+        "std": 0.02980038566805946
+      },
+      "specificity_achieved_for_recall_at_spec": {
+        "mean": 0.9514544767661505,
+        "std": 0.0010207220314398507
+      },
+      "event_level_session_recall": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    },
+    "mean_peak": {
+      "roc_auc": {
+        "mean": 0.9487795921494449,
+        "std": 0.006063306740547676
+      },
+      "pr_auc": {
+        "mean": 0.44649553278856413,
+        "std": 0.029463454055270476
+      },
+      "f1_score": {
+        "mean": 0.37431100608607,
+        "std": 0.02784602045789526
+      },
+      "precision": {
+        "mean": 0.43830437837016784,
+        "std": 0.25446447567475217
+      },
+      "recall_sensitivity": {
+        "mean": 0.5608391608391609,
+        "std": 0.25342873461157245
+      },
+      "specificity": {
+        "mean": 0.961956932376275,
+        "std": 0.02925602077084393
+      },
+      "recall_at_95pct_specificity": {
+        "mean": 0.6923076923076923,
+        "std": 0.029002015878780048
+      },
+      "specificity_achieved_for_recall_at_spec": {
+        "mean": 0.9510389119758216,
+        "std": 0.0009734868701719028
+      },
+      "event_level_session_recall": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    },
+    "rich": {
+      "roc_auc": {
+        "mean": 0.9458233492989822,
+        "std": 0.012827063557989557
+      },
+      "pr_auc": {
+        "mean": 0.4274191989701194,
+        "std": 0.06075753796030734
+      },
+      "f1_score": {
+        "mean": 0.3519890780006202,
+        "std": 0.06694566953484357
+      },
+      "precision": {
+        "mean": 0.28750638944722073,
+        "std": 0.14535906276433658
+      },
+      "recall_sensitivity": {
+        "mean": 0.6797202797202797,
+        "std": 0.17951200143200757
+      },
+      "specificity": {
+        "mean": 0.9332829618435966,
+        "std": 0.03983976862356304
+      },
+      "recall_at_95pct_specificity": {
+        "mean": 0.6503496503496503,
+        "std": 0.07334327609581479
+      },
+      "specificity_achieved_for_recall_at_spec": {
+        "mean": 0.9524367208160183,
+        "std": 0.0015224360921503375
+      },
+      "event_level_session_recall": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    }
+  },
+  "winning_feature_mode_by_pr_auc": "scalar",
+  "per_seed_runs": {
+    "none": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9465042890619013,
+        "pr_auc": 0.4525918861019042,
+        "f1_score": 0.4051724137931034,
+        "precision": 0.5280898876404494,
+        "recall_sensitivity": 0.32867132867132864,
+        "specificity": 0.9920664903664526,
+        "recall_at_95pct_specificity": 0.6503496503496503,
+        "specificity_achieved_for_recall_at_spec": 0.9505100113335851,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.9387893934550527,
+        "pr_auc": 0.4498536747090077,
+        "f1_score": 0.3951612903225806,
+        "precision": 0.4666666666666667,
+        "recall_sensitivity": 0.34265734265734266,
+        "specificity": 0.9894219871552701,
+        "recall_at_95pct_specificity": 0.6713286713286714,
+        "specificity_achieved_for_recall_at_spec": 0.9503211182470721,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.9451655258228737,
+        "pr_auc": 0.45665194984373325,
+        "f1_score": 0.40418118466898956,
+        "precision": 0.4027777777777778,
+        "recall_sensitivity": 0.40559440559440557,
+        "specificity": 0.9837551945598791,
+        "recall_at_95pct_specificity": 0.6783216783216783,
+        "specificity_achieved_for_recall_at_spec": 0.9510766905931243,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9380074024955022,
+        "pr_auc": 0.4349327562893073,
+        "f1_score": 0.327683615819209,
+        "precision": 0.8529411764705882,
+        "recall_sensitivity": 0.20279720279720279,
+        "specificity": 0.9990555345674348,
+        "recall_at_95pct_specificity": 0.6923076923076923,
+        "specificity_achieved_for_recall_at_spec": 0.9518322629391764,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9565611947553768,
+        "pr_auc": 0.4223583384817736,
+        "f1_score": 0.3683304647160069,
+        "precision": 0.24429223744292236,
+        "recall_sensitivity": 0.7482517482517482,
+        "specificity": 0.9374763883641859,
+        "recall_at_95pct_specificity": 0.6643356643356644,
+        "specificity_achieved_for_recall_at_spec": 0.9508877975066112,
+        "event_level_session_recall": 1.0
+      }
+    ],
+    "scalar": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9521479653704814,
+        "pr_auc": 0.4837190923927436,
+        "f1_score": 0.4247104247104247,
+        "precision": 0.47413793103448276,
+        "recall_sensitivity": 0.38461538461538464,
+        "specificity": 0.988477521722705,
+        "recall_at_95pct_specificity": 0.6713286713286714,
+        "specificity_achieved_for_recall_at_spec": 0.9518322629391764,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.936921597480721,
+        "pr_auc": 0.43406677067298693,
+        "f1_score": 0.3828125,
+        "precision": 0.4336283185840708,
+        "recall_sensitivity": 0.34265734265734266,
+        "specificity": 0.9879108424631659,
+        "recall_at_95pct_specificity": 0.6713286713286714,
+        "specificity_achieved_for_recall_at_spec": 0.9503211182470721,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.9491349225009974,
+        "pr_auc": 0.4822064354819068,
+        "f1_score": 0.3707865168539326,
+        "precision": 0.9428571428571428,
+        "recall_sensitivity": 0.23076923076923078,
+        "specificity": 0.9996222138269739,
+        "recall_at_95pct_specificity": 0.7342657342657343,
+        "specificity_achieved_for_recall_at_spec": 0.9514544767661504,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9400059706066507,
+        "pr_auc": 0.4638964010503867,
+        "f1_score": 0.35555555555555557,
+        "precision": 0.8648648648648649,
+        "recall_sensitivity": 0.22377622377622378,
+        "specificity": 0.9990555345674348,
+        "recall_at_95pct_specificity": 0.7062937062937062,
+        "specificity_achieved_for_recall_at_spec": 0.9531545145447676,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9549840035295268,
+        "pr_auc": 0.39693425376860686,
+        "f1_score": 0.37142857142857144,
+        "precision": 0.2402464065708419,
+        "recall_sensitivity": 0.8181818181818182,
+        "specificity": 0.9301095579901776,
+        "recall_at_95pct_specificity": 0.6503496503496503,
+        "specificity_achieved_for_recall_at_spec": 0.9505100113335851,
+        "event_level_session_recall": 1.0
+      }
+    ],
+    "mean_peak": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9566404505958719,
+        "pr_auc": 0.49313544978079016,
+        "f1_score": 0.4135188866799205,
+        "precision": 0.28888888888888886,
+        "recall_sensitivity": 0.7272727272727273,
+        "specificity": 0.9516433698526634,
+        "recall_at_95pct_specificity": 0.7342657342657343,
+        "specificity_achieved_for_recall_at_spec": 0.9506989044200982,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.9410244081570112,
+        "pr_auc": 0.43178792799570503,
+        "f1_score": 0.3784786641929499,
+        "precision": 0.25757575757575757,
+        "recall_sensitivity": 0.7132867132867133,
+        "specificity": 0.9444654325651681,
+        "recall_at_95pct_specificity": 0.6853146853146853,
+        "specificity_achieved_for_recall_at_spec": 0.9506989044200982,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.9478351267168798,
+        "pr_auc": 0.46812618634734715,
+        "f1_score": 0.38961038961038963,
+        "precision": 0.5113636363636364,
+        "recall_sensitivity": 0.3146853146853147,
+        "specificity": 0.9918775972799395,
+        "recall_at_95pct_specificity": 0.7132867132867133,
+        "specificity_achieved_for_recall_at_spec": 0.9503211182470721,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9436926881203421,
+        "pr_auc": 0.4245358392436489,
+        "f1_score": 0.3314285714285714,
+        "precision": 0.90625,
+        "recall_sensitivity": 0.20279720279720279,
+        "specificity": 0.9994333207404609,
+        "recall_at_95pct_specificity": 0.6503496503496503,
+        "specificity_achieved_for_recall_at_spec": 0.9529656214582546,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9547052871571194,
+        "pr_auc": 0.4148922605753293,
+        "f1_score": 0.3585185185185185,
+        "precision": 0.2274436090225564,
+        "recall_sensitivity": 0.8461538461538461,
+        "specificity": 0.9223649414431432,
+        "recall_at_95pct_specificity": 0.6783216783216783,
+        "specificity_achieved_for_recall_at_spec": 0.9505100113335851,
+        "event_level_session_recall": 1.0
+      }
+    ],
+    "rich": [
+      {
+        "seed": 42,
+        "roc_auc": 0.953887631069346,
+        "pr_auc": 0.4208994461464704,
+        "f1_score": 0.32716927453769556,
+        "precision": 0.20535714285714285,
+        "recall_sensitivity": 0.8041958041958042,
+        "specificity": 0.9159425765017001,
+        "recall_at_95pct_specificity": 0.7062937062937062,
+        "specificity_achieved_for_recall_at_spec": 0.9501322251605592,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.9202752291154256,
+        "pr_auc": 0.33059826369067263,
+        "f1_score": 0.24202420242024203,
+        "precision": 0.14360313315926893,
+        "recall_sensitivity": 0.7692307692307693,
+        "specificity": 0.8760861352474499,
+        "recall_at_95pct_specificity": 0.5174825174825175,
+        "specificity_achieved_for_recall_at_spec": 0.9539100868908198,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.950782123052618,
+        "pr_auc": 0.4801892727561368,
+        "f1_score": 0.4192139737991266,
+        "precision": 0.5581395348837209,
+        "recall_sensitivity": 0.3356643356643357,
+        "specificity": 0.9928220627125047,
+        "recall_at_95pct_specificity": 0.6783216783216783,
+        "specificity_achieved_for_recall_at_spec": 0.9542878730638459,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9511110347906722,
+        "pr_auc": 0.5025904620989393,
+        "f1_score": 0.423841059602649,
+        "precision": 0.3096774193548387,
+        "recall_sensitivity": 0.6713286713286714,
+        "specificity": 0.9595768794862108,
+        "recall_at_95pct_specificity": 0.7202797202797203,
+        "specificity_achieved_for_recall_at_spec": 0.9516433698526634,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9530607284668486,
+        "pr_auc": 0.4028185501583779,
+        "f1_score": 0.3476968796433878,
+        "precision": 0.22075471698113208,
+        "recall_sensitivity": 0.8181818181818182,
+        "specificity": 0.9219871552701171,
+        "recall_at_95pct_specificity": 0.6293706293706294,
+        "specificity_achieved_for_recall_at_spec": 0.9522100491122025,
+        "event_level_session_recall": 1.0
+      }
+    ]
+  }
+}

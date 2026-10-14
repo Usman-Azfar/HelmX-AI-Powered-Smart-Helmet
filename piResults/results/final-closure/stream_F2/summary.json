@@ -1,0 +1,679 @@
+{
+  "recordings": [
+    {
+      "file": "piResults/final_pi_results/final_aba_acquisition_test/A1_polling/raw_sensor.csv",
+      "sha256": "71709da0ebc32cb36a70db682b3d99247556c16507622a4633a5d30c2b58a498",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "reference": {
+        "scored": 3993,
+        "nominal_received_sample_positions": 3997,
+        "nominal_elapsed_time_positions": 3997,
+        "invalidations": 1,
+        "V_T_scored_over_scored_plus_resets": 0.9997496244366549,
+        "C_D_received_sample_denominator": 0.9989992494370779,
+        "inserted_samples": 0,
+        "p_valid_90_sample_position": 0.9985144631202951,
+        "confirmed_alert_events": 0,
+        "trigger_timestamps": [],
+        "guard_threshold_s": 0.03,
+        "run_lengths_samples": [
+          25303,
+          34697
+        ]
+      },
+      "variants": {
+        "25ms": {
+          "summary": {
+            "scored": 3975,
+            "nominal_received_sample_positions": 3997,
+            "nominal_elapsed_time_positions": 3997,
+            "invalidations": 6,
+            "V_T_scored_over_scored_plus_resets": 0.9984928409947249,
+            "C_D_received_sample_denominator": 0.994495871903928,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9910867787217706,
+            "confirmed_alert_events": 0,
+            "trigger_timestamps": [],
+            "guard_threshold_s": 0.025,
+            "run_lengths_samples": [
+              194,
+              991,
+              2594,
+              21524,
+              13196,
+              2269,
+              19232
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 2333,
+            "reference_only": 1660,
+            "transformed_only": 1642,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "30ms": {
+          "summary": {
+            "scored": 3993,
+            "nominal_received_sample_positions": 3997,
+            "nominal_elapsed_time_positions": 3997,
+            "invalidations": 1,
+            "V_T_scored_over_scored_plus_resets": 0.9997496244366549,
+            "C_D_received_sample_denominator": 0.9989992494370779,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9985144631202951,
+            "confirmed_alert_events": 0,
+            "trigger_timestamps": [],
+            "guard_threshold_s": 0.03,
+            "run_lengths_samples": [
+              25303,
+              34697
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 3993,
+            "reference_only": 0,
+            "transformed_only": 0,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "35ms": {
+          "summary": {
+            "scored": 3993,
+            "nominal_received_sample_positions": 3997,
+            "nominal_elapsed_time_positions": 3997,
+            "invalidations": 1,
+            "V_T_scored_over_scored_plus_resets": 0.9997496244366549,
+            "C_D_received_sample_denominator": 0.9989992494370779,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9985144631202951,
+            "confirmed_alert_events": 0,
+            "trigger_timestamps": [],
+            "guard_threshold_s": 0.035,
+            "run_lengths_samples": [
+              25303,
+              34697
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 3993,
+            "reference_only": 0,
+            "transformed_only": 0,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "40ms": {
+          "summary": {
+            "scored": 3993,
+            "nominal_received_sample_positions": 3997,
+            "nominal_elapsed_time_positions": 3997,
+            "invalidations": 1,
+            "V_T_scored_over_scored_plus_resets": 0.9997496244366549,
+            "C_D_received_sample_denominator": 0.9989992494370779,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9985144631202951,
+            "confirmed_alert_events": 0,
+            "trigger_timestamps": [],
+            "guard_threshold_s": 0.04,
+            "run_lengths_samples": [
+              25303,
+              34697
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 3993,
+            "reference_only": 0,
+            "transformed_only": 0,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "60ms": {
+          "summary": {
+            "scored": 3997,
+            "nominal_received_sample_positions": 3997,
+            "nominal_elapsed_time_positions": 3997,
+            "invalidations": 0,
+            "V_T_scored_over_scored_plus_resets": 1.0,
+            "C_D_received_sample_denominator": 1.0,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 1.0,
+            "confirmed_alert_events": 0,
+            "trigger_timestamps": [],
+            "guard_threshold_s": 0.06,
+            "run_lengths_samples": [
+              60000
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 1683,
+            "reference_only": 2310,
+            "transformed_only": 2314,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        }
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/clipping/motion_session_raw.csv",
+      "sha256": "da43d694712a753ab68cb4ff8be98c83188dc943e682ec35c189e26c8cc6beef",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 1,
+      "reference": {
+        "scored": 5571,
+        "nominal_received_sample_positions": 5603,
+        "nominal_elapsed_time_positions": 5604,
+        "invalidations": 9,
+        "V_T_scored_over_scored_plus_resets": 0.9983870967741936,
+        "C_D_received_sample_denominator": 0.9942887738711405,
+        "inserted_samples": 0,
+        "p_valid_90_sample_position": 0.9904654207832401,
+        "confirmed_alert_events": 2,
+        "trigger_timestamps": [
+          527.213259593,
+          594.002590444
+        ],
+        "guard_threshold_s": 0.03,
+        "run_lengths_samples": [
+          3280,
+          2374,
+          5921,
+          97,
+          3756,
+          2831,
+          3070,
+          3034,
+          5288,
+          54448
+        ]
+      },
+      "variants": {
+        "25ms": {
+          "summary": {
+            "scored": 5486,
+            "nominal_received_sample_positions": 5603,
+            "nominal_elapsed_time_positions": 5604,
+            "invalidations": 47,
+            "V_T_scored_over_scored_plus_resets": 0.9915055123802639,
+            "C_D_received_sample_denominator": 0.9791183294663574,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9665873110344007,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              527.253698628,
+              593.88259712
+            ],
+            "guard_threshold_s": 0.025,
+            "run_lengths_samples": [
+              42,
+              69,
+              6,
+              8,
+              754,
+              630,
+              5,
+              100,
+              5,
+              1644,
+              17,
+              4,
+              550,
+              1820,
+              2095,
+              34,
+              2620,
+              8,
+              1164,
+              10,
+              87,
+              6,
+              939,
+              2,
+              2501,
+              5,
+              303,
+              24,
+              2807,
+              2646,
+              257,
+              55,
+              112,
+              102,
+              2717,
+              215,
+              1866,
+              5,
+              1,
+              760,
+              2656,
+              3672,
+              932,
+              6544,
+              2683,
+              11,
+              13164,
+              27442
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 674,
+            "reference_only": 4897,
+            "transformed_only": 4812,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "30ms": {
+          "summary": {
+            "scored": 5571,
+            "nominal_received_sample_positions": 5603,
+            "nominal_elapsed_time_positions": 5604,
+            "invalidations": 9,
+            "V_T_scored_over_scored_plus_resets": 0.9983870967741936,
+            "C_D_received_sample_denominator": 0.9942887738711405,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9904654207832401,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              527.213259593,
+              594.002590444
+            ],
+            "guard_threshold_s": 0.03,
+            "run_lengths_samples": [
+              3280,
+              2374,
+              5921,
+              97,
+              3756,
+              2831,
+              3070,
+              3034,
+              5288,
+              54448
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 5571,
+            "reference_only": 0,
+            "transformed_only": 0,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "35ms": {
+          "summary": {
+            "scored": 5579,
+            "nominal_received_sample_positions": 5603,
+            "nominal_elapsed_time_positions": 5604,
+            "invalidations": 7,
+            "V_T_scored_over_scored_plus_resets": 0.9987468671679198,
+            "C_D_received_sample_denominator": 0.9957165804033553,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9925842161647422,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              527.213259593,
+              594.002590444
+            ],
+            "guard_threshold_s": 0.035,
+            "run_lengths_samples": [
+              3280,
+              2374,
+              6018,
+              3756,
+              2831,
+              3070,
+              3034,
+              59736
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 1942,
+            "reference_only": 3629,
+            "transformed_only": 3637,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "40ms": {
+          "summary": {
+            "scored": 5582,
+            "nominal_received_sample_positions": 5603,
+            "nominal_elapsed_time_positions": 5604,
+            "invalidations": 6,
+            "V_T_scored_over_scored_plus_resets": 0.9989262705798139,
+            "C_D_received_sample_denominator": 0.9962520078529359,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9936436138554934,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              527.213259593,
+              594.002590444
+            ],
+            "guard_threshold_s": 0.04,
+            "run_lengths_samples": [
+              5654,
+              6018,
+              3756,
+              2831,
+              3070,
+              3034,
+              59736
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 1787,
+            "reference_only": 3784,
+            "transformed_only": 3795,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "60ms": {
+          "summary": {
+            "scored": 5585,
+            "nominal_received_sample_positions": 5603,
+            "nominal_elapsed_time_positions": 5604,
+            "invalidations": 5,
+            "V_T_scored_over_scored_plus_resets": 0.9991055456171736,
+            "C_D_received_sample_denominator": 0.9967874353025165,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9947030115462445,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              527.213259593,
+              594.002590444
+            ],
+            "guard_threshold_s": 0.06,
+            "run_lengths_samples": [
+              5654,
+              6018,
+              3756,
+              2831,
+              6104,
+              59736
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 1588,
+            "reference_only": 3983,
+            "transformed_only": 3997,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        }
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/clipping/motion_session_raw_part2.csv",
+      "sha256": "ad69611ad17fefab595b08824d3039f51696d2fdefdecb9b19856efd2642307f",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "reference": {
+        "scored": 991,
+        "nominal_received_sample_positions": 1014,
+        "nominal_elapsed_time_positions": 1014,
+        "invalidations": 7,
+        "V_T_scored_over_scored_plus_resets": 0.9929859719438878,
+        "C_D_received_sample_denominator": 0.9773175542406312,
+        "inserted_samples": 0,
+        "p_valid_90_sample_position": 0.9589429286938184,
+        "confirmed_alert_events": 2,
+        "trigger_timestamps": [
+          773.39463977,
+          907.195115199
+        ],
+        "guard_threshold_s": 0.03,
+        "run_lengths_samples": [
+          5131,
+          127,
+          1831,
+          1593,
+          3145,
+          114,
+          395,
+          2927
+        ]
+      },
+      "variants": {
+        "25ms": {
+          "summary": {
+            "scored": 921,
+            "nominal_received_sample_positions": 1014,
+            "nominal_elapsed_time_positions": 1014,
+            "invalidations": 31,
+            "V_T_scored_over_scored_plus_resets": 0.967436974789916,
+            "C_D_received_sample_denominator": 0.908284023668639,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.8511269276393831,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              773.47521116,
+              907.195115199
+            ],
+            "guard_threshold_s": 0.025,
+            "run_lengths_samples": [
+              98,
+              186,
+              2389,
+              361,
+              218,
+              69,
+              152,
+              1573,
+              85,
+              9,
+              26,
+              92,
+              48,
+              106,
+              870,
+              622,
+              4,
+              75,
+              22,
+              84,
+              1364,
+              229,
+              76,
+              9,
+              61,
+              786,
+              2111,
+              102,
+              114,
+              395,
+              2620,
+              307
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 292,
+            "reference_only": 699,
+            "transformed_only": 629,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "30ms": {
+          "summary": {
+            "scored": 991,
+            "nominal_received_sample_positions": 1014,
+            "nominal_elapsed_time_positions": 1014,
+            "invalidations": 7,
+            "V_T_scored_over_scored_plus_resets": 0.9929859719438878,
+            "C_D_received_sample_denominator": 0.9773175542406312,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9589429286938184,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              773.39463977,
+              907.195115199
+            ],
+            "guard_threshold_s": 0.03,
+            "run_lengths_samples": [
+              5131,
+              127,
+              1831,
+              1593,
+              3145,
+              114,
+              395,
+              2927
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 991,
+            "reference_only": 0,
+            "transformed_only": 0,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "35ms": {
+          "summary": {
+            "scored": 1001,
+            "nominal_received_sample_positions": 1014,
+            "nominal_elapsed_time_positions": 1014,
+            "invalidations": 4,
+            "V_T_scored_over_scored_plus_resets": 0.9960199004975124,
+            "C_D_received_sample_denominator": 0.9871794871794872,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9765388163964677,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              773.39463977,
+              907.094906471
+            ],
+            "guard_threshold_s": 0.035,
+            "run_lengths_samples": [
+              5258,
+              1831,
+              1593,
+              3259,
+              3322
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 790,
+            "reference_only": 201,
+            "transformed_only": 211,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "40ms": {
+          "summary": {
+            "scored": 1007,
+            "nominal_received_sample_positions": 1014,
+            "nominal_elapsed_time_positions": 1014,
+            "invalidations": 2,
+            "V_T_scored_over_scored_plus_resets": 0.998017839444995,
+            "C_D_received_sample_denominator": 0.9930966469428008,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9882694081982338,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              773.534649037,
+              907.094906471
+            ],
+            "guard_threshold_s": 0.04,
+            "run_lengths_samples": [
+              7089,
+              4852,
+              3322
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 465,
+            "reference_only": 526,
+            "transformed_only": 542,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        },
+        "60ms": {
+          "summary": {
+            "scored": 1011,
+            "nominal_received_sample_positions": 1014,
+            "nominal_elapsed_time_positions": 1014,
+            "invalidations": 1,
+            "V_T_scored_over_scored_plus_resets": 0.9990118577075099,
+            "C_D_received_sample_denominator": 0.9970414201183432,
+            "inserted_samples": 0,
+            "p_valid_90_sample_position": 0.9941347040991169,
+            "confirmed_alert_events": 2,
+            "trigger_timestamps": [
+              773.534649037,
+              907.094906471
+            ],
+            "guard_threshold_s": 0.06,
+            "run_lengths_samples": [
+              11941,
+              3322
+            ]
+          },
+          "fidelity": {
+            "matched_end_sample_windows": 362,
+            "reference_only": 629,
+            "transformed_only": 649,
+            "classifier_mae": 0.0,
+            "reconstruction_mae": 0.0,
+            "or_flips": 0,
+            "or_agreement": 1.0,
+            "caveat": "Only common window end indices compared. Interpolation may change sample contents and scheduling; unmatched windows are not silently treated as agreeing. No crash labels exist for these physical captures."
+          }
+        }
+      }
+    }
+  ],
+  "policy_versions": "60 ms is frozen current deployment; 30 ms historical policy is explicit reference for F1/F2.",
+  "class_specific_fidelity": "Not estimable for unlabeled physical recordings; no invented crash-class metric."
+}

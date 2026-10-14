@@ -1,0 +1,27 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "i2c_address": "0x68",
+  "raw_hex": {
+    "SMPLRT_DIV": "0x0",
+    "CONFIG": "0x0",
+    "GYRO_CONFIG": "0x0",
+    "ACCEL_CONFIG": "0x0",
+    "FIFO_EN": "0x0",
+    "INT_ENABLE": "0x0",
+    "INT_STATUS": "0x5",
+    "PWR_MGMT_1": "0x1",
+    "PWR_MGMT_2": "0x0",
+    "WHO_AM_I": "0x70",
+    "USER_CTRL": "0x0"
+  },
+  "who_am_i": "0x70",
+  "who_am_i_expected_0x68": false
+}

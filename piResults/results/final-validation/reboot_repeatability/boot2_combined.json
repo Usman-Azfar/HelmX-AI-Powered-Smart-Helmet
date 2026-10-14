@@ -1,0 +1,161 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "i2c_errors_total": 0,
+  "per_phase": {
+    "boot2_stationary": {
+      "phase": "boot2_stationary",
+      "n_samples": 3497,
+      "duration_s": 69.91881852699998,
+      "n_windows_scored": 233,
+      "clipping_per_axis_raw_int16": {
+        "ax": {
+          "min_raw": -9380,
+          "max_raw": -9044,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "ay": {
+          "min_raw": -11260,
+          "max_raw": -10924,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "az": {
+          "min_raw": -7972,
+          "max_raw": -7548,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "gx": {
+          "min_raw": -244,
+          "max_raw": 162,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "gy": {
+          "min_raw": 207,
+          "max_raw": 362,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "gz": {
+          "min_raw": -530,
+          "max_raw": 734,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        }
+      },
+      "max_classifier_score": 0.0,
+      "max_reconstruction_error": 0.0,
+      "n_classifier_threshold_crossings": 0,
+      "n_recon_threshold_crossings": 0,
+      "n_or_positive_windows": 0,
+      "n_confirmed_triggers": 0,
+      "accel_magnitude_ms2_max": 9.880538990969455,
+      "gyro_magnitude_dps_max": 6.089139336099756,
+      "gyro_magnitude_dps_mean": 2.4541624463396596
+    },
+    "boot2_gentle_rotation": {
+      "phase": "boot2_gentle_rotation",
+      "n_samples": 2865,
+      "duration_s": 57.262067560000105,
+      "n_windows_scored": 191,
+      "clipping_per_axis_raw_int16": {
+        "ax": {
+          "min_raw": -12628,
+          "max_raw": 9128,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "ay": {
+          "min_raw": -32768,
+          "max_raw": 3316,
+          "count_near_neg32768": 1,
+          "count_near_32767": 0
+        },
+        "az": {
+          "min_raw": -13296,
+          "max_raw": 20216,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "gx": {
+          "min_raw": -21303,
+          "max_raw": 25331,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "gy": {
+          "min_raw": -31739,
+          "max_raw": 16081,
+          "count_near_neg32768": 0,
+          "count_near_32767": 0
+        },
+        "gz": {
+          "min_raw": -22085,
+          "max_raw": 32767,
+          "count_near_neg32768": 0,
+          "count_near_32767": 1
+        }
+      },
+      "max_classifier_score": 0.99609375,
+      "max_reconstruction_error": 0.9819153547286987,
+      "n_classifier_threshold_crossings": 32,
+      "n_recon_threshold_crossings": 0,
+      "n_or_positive_windows": 32,
+      "n_confirmed_triggers": 1,
+      "accel_magnitude_ms2_max": 21.207125547042175,
+      "gyro_magnitude_dps_max": 301.7875182877478,
+      "gyro_magnitude_dps_mean": 37.56467710756658
+    }
+  },
+  "register_dump": {
+    "device": {
+      "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+      "machine": "aarch64",
+      "python": "3.11.2",
+      "cpu_count": 4,
+      "ram_gb": 7.64,
+      "model": "Raspberry Pi 4 Model B Rev 1.5",
+      "tflite_runtime_version": "2.14.0"
+    },
+    "i2c_address": "0x68",
+    "raw_hex": {
+      "SMPLRT_DIV": "0x0",
+      "CONFIG": "0x0",
+      "GYRO_CONFIG": "0x0",
+      "ACCEL_CONFIG": "0x0",
+      "FIFO_EN": "0x0",
+      "INT_ENABLE": "0x0",
+      "INT_STATUS": "0x5",
+      "PWR_MGMT_1": "0x1",
+      "PWR_MGMT_2": "0x0",
+      "WHO_AM_I": "0x70",
+      "USER_CTRL": "0x0"
+    },
+    "who_am_i": "0x70",
+    "who_am_i_expected_0x68": false
+  },
+  "service_state": {
+    "services": {
+      "helmx-ble.service": "activating",
+      "mosquitto.service": "active",
+      "rhasspy.service": "active",
+      "helmx_assistant.service": "activating",
+      "wayvnc.service": "active",
+      "wayvnc-control.service": "active",
+      "rpi-connect.service": "inactive",
+      "rpi-connect-wayvnc.service": "inactive",
+      "bluetooth.service": "active"
+    },
+    "cpu_governor": "ondemand"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "context": "Checklist 4.6 -- non-destructive physical movement smoke test, real live MPU6050.",
+  "phases": [
+    {
+      "phase": "stationary_baseline",
+      "instruction": "Leave the sensor still and flat/resting on a surface.",
+      "duration_s": 15,
+      "n_reads": 561,
+      "n_errors": 0,
+      "accel_magnitude": {
+        "mean": 9.85429277164947,
+        "std": 0.024878057370474903,
+        "min": 9.782424671292413,
+        "max": 10.059109418233959
+      },
+      "gyro_magnitude": {
+        "mean": 2.432151921007672,
+        "std": 0.4619062348272853,
+        "min": 0.814078385356599,
+        "max": 4.463123184770737
+      }
+    },
+    {
+      "phase": "gentle_rotation",
+      "instruction": "Slowly rotate the sensor through different orientations by hand.",
+      "duration_s": 20,
+      "n_reads": 753,
+      "n_errors": 0,
+      "accel_magnitude": {
+        "mean": 9.890746274165027,
+        "std": 0.1798624458079398,
+        "min": 9.206198220723316,
+        "max": 11.074816050369485
+      },
+      "gyro_magnitude": {
+        "mean": 17.92407619150593,
+        "std": 25.307606008074583,
+        "min": 0.7564188350342174,
+        "max": 299.66736419731643
+      }
+    },
+    {
+      "phase": "tilt",
+      "instruction": "Slowly tilt the sensor side to side and front/back.",
+      "duration_s": 20,
+      "n_reads": 752,
+      "n_errors": 0,
+      "accel_magnitude": {
+        "mean": 9.973365188198873,
+        "std": 0.19564806608512705,
+        "min": 9.244242043590571,
+        "max": 11.034745065856937
+      },
+      "gyro_magnitude": {
+        "mean": 23.856792638539844,
+        "std": 13.235338302474567,
+        "min": 1.0045349069835865,
+        "max": 81.48056202695906
+      }
+    },
+    {
+      "phase": "shake",
+      "instruction": "Gently shake the sensor by hand (moderate motion, not an impact).",
+      "duration_s": 20,
+      "n_reads": 753,
+      "n_errors": 0,
+      "accel_magnitude": {
+        "mean": 9.971336168698194,
+        "std": 0.2909127846216218,
+        "min": 7.3203732749565695,
+        "max": 12.543545818009722
+      },
+      "gyro_magnitude": {
+        "mean": 22.34668227696163,
+        "std": 18.76302162490799,
+        "min": 1.3931245424977698,
+        "max": 177.8418940873663
+      }
+    },
+    {
+      "phase": "non_crash_bump",
+      "instruction": "Gently tap/knock the sensor a few times (a bump, not a drop or impact).",
+      "duration_s": 20,
+      "n_reads": 751,
+      "n_errors": 0,
+      "accel_magnitude": {
+        "mean": 9.964028484494339,
+        "std": 0.24313160967287398,
+        "min": 8.672845069504799,
+        "max": 11.501345319530127
+      },
+      "gyro_magnitude": {
+        "mean": 48.27078598402697,
+        "std": 32.653410109374505,
+        "min": 0.3932594464852292,
+        "max": 175.05156049476727
+      }
+    }
+  ],
+  "total_i2c_errors": 0
+}

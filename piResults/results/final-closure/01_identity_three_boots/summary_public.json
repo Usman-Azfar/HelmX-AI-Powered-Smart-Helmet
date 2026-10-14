@@ -1,0 +1,22 @@
+{
+  "test_id": "A1",
+  "title": "Power-cycle sensor identity records",
+  "status": "complete_with_operator_attestation",
+  "records_captured": 4,
+  "closure_records_required": 3,
+  "identity_reads_per_record": 100,
+  "identity_value_hex": "0x70",
+  "all_identity_reads_matched": true,
+  "i2c_bus": 1,
+  "i2c_address_hex": "0x68",
+  "configured_i2c_baud_hz": 100000,
+  "power_removal": "operator-attested; at least 10 seconds",
+  "privacy_note": "Exact operating-system boot UUIDs are omitted from the public package.",
+  "raw_identity_reads": [
+    "boot1/identity_reads.json",
+    "boot2/identity_reads.json",
+    "boot3/identity_reads.json",
+    "boot4/identity_reads.json"
+  ]
+}
+

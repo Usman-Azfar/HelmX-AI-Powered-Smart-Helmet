@@ -1,0 +1,98 @@
+HelmX Section E1/E2 -- Acquisition-Method Comparison (polling baseline vs FIFO)
+================================================================================
+
+E1 (deployed polling baseline, reused per PROGRESS.md -- no separate standalone
+capture since E3/E4 are the other comparison partners, not a dedicated E1 run):
+source = results/pi_research/w2_live2_pipeline.json
+  n_windows_generated:  1975
+  n_triggers:            0
+  (see that file directly for full latency/resource/timing detail)
+
+E2 (FIFO acquisition, this campaign, 2026-09-20):
+source = acquisition_compare/e2_fifo_acquisition.json (full 20-min run;
+         e2_smoke_test.json is an 18s calibration/sanity check only)
+
+Chip identity (from B1, confirmed again here): WHO_AM_I=0x70 -- a genuine MPU6500,
+not the classic MPU6050 the textbook "8kHz / (1+SMPLRT_DIV)" formula assumes.
+SMPLRT_DIV=159 (which should yield exactly 50Hz on a real MPU6050) does NOT
+gate this chip's FIFO push rate -- measured empirically at 486.9Hz (full run)
+/ 492.6Hz (smoke test), consistent across both calibration passes. The script
+decimates in software (decimation_n=10) to reach the model's expected ~50Hz
+(achieved_fed_hz=49.49 on the full run) -- disclosed workaround, not a hidden
+assumption; FIFO_COUNT stayed well under the 1024-byte overflow limit
+throughout (max seen ~512 bytes during calibration), so nothing was silently
+dropped by the hardware buffer itself.
+
+  requested/actual duration:  20 / 20.0004 min
+  n_raw_samples_drained:      593,922 (pre-decimation, native ~487Hz)
+  n_samples_fed_to_model:     59,392 (post-decimation, ~49.5Hz)
+  n_windows_scored:           3,956
+  n_i2c_errors:                0
+  n_fifo_overflow_suspected:   0
+  n_exceptions:                 0
+  deadline_miss_count/rate:    0 / 0.0  (stride budget = 300ms; p99 window
+                                latency 2.56ms, max 5.19ms -- FIFO path is, if
+                                anything, faster per-window than polling since
+                                inference is unchanged and only the read path
+                                differs)
+  n_triggers (confirmed):      5   <-- see finding below
+
+FINDING -- reconstruction-only marginal triggers, not seen in the E1 baseline
+--------------------------------------------------------------------------------
+All 5 confirmed triggers in the E2 run had crash_prob=0.0 (classifier silent)
+and recon_error in [10.99, 13.35] -- just above the deployed recon_error
+threshold of 10.8787 (1-23% over). The E1-reused baseline (1975 windows) had
+zero triggers, and the earlier guided benign-motion session (I, 11 phases,
+2026-09-19/20) found the reconstruction branch had ZERO threshold crossings
+across all of them.
+
+Both runs were nominally idle/stationary (unattended captures, nothing
+deliberately done to the sensor). Two honest possibilities, NEITHER confirmed
+here:
+  1. The FIFO/decimation acquisition path introduces different sample timing
+     or aliasing versus the deployed polling read, marginally raising
+     reconstruction error during otherwise-idle periods.
+  2. Coincidental environmental disturbance (e.g. desk vibration, thermal
+     drift -- temperature rose from ~43C to a max of 53C over the 20-min E2
+     run per resources.temperature_c) during the E2 run specifically, unrelated
+     to the acquisition method.
+This is reported as an open, disclosed finding for the paper's E1/E2
+acquisition-method discussion -- NOT claimed as a FIFO-caused effect, since
+that would require an isolating experiment (e.g. rerunning E1's standalone
+polling baseline for the same 20-min duration under identical conditions)
+that hasn't been done. All 5 crossings are marginal (recon_error within ~2.5
+of the 10.88 threshold, versus e.g. the K-section's known outlier reconstruction
+error of ~751 on an actual crash window) -- not remotely comparable in
+magnitude to a real crash signature.
+
+E3 (SCHED_FIFO + CPU-pinned, same acquisition method as E2) -- confirms and sharpens
+--------------------------------------------------------------------------------
+The E3 run (source: acquisition_compare/e3_sched_enhanced.json, sudo chrt -f 10
+taskset -c 3, cpu_affinity confirmed [3]) is otherwise identical in method to E2
+(same FIFO/decimation acquisition, same 20-min duration, same idle/stationary
+condition) -- and independently produced the SAME finding: 5 confirmed triggers
+over 3962 windows, again all reconstruction-only (crash_prob=0.0 every time).
+
+More striking: the 5 recon_error values are NOT independent random noise --
+3 of E2's 5 values recur in E3 to full float64 precision:
+  11.390218734741211  (E2 x1, E3 x2)
+  10.997451782226562  (E2 x1, E3 x1)
+  11.586601257324219  (E2 x1, E3 x1)
+(E2's other two values, 12.372133255004883 and 13.354048728942871, and E3's
+other value, 11.782984733581543, are each unique to their own run.)
+
+Bit-identical floats recurring across two independent 20-minute captures is a
+real pattern, not coincidence. Most likely explanation (plausible, NOT verified
+here): under genuinely idle/stationary conditions the underlying physical
+signal (gravity + static gyro bias, both ~constant) is itself nearly constant,
+and the INT8-quantized model maps near-identical inputs to a small, finite set
+of possible output buckets -- one of which happens to sit just above the
+deployed recon_error threshold (10.8787). This would mean the finding is a
+property of (idle input) x (INT8 quantization granularity) x (this specific
+threshold's proximity to a quantization bucket edge), not necessarily anything
+specific to the FIFO/decimation acquisition path -- except that E1's polling
+baseline (1975 windows, same nominal idle condition) saw NONE of this, which
+the acquisition-method difference has not been ruled out as a contributing
+factor either. Flagged as exactly this -- an open, disclosed, partially-narrowed
+finding -- not resolved to a single cause. Would need a same-duration polling
+rerun under identical conditions to isolate acquisition method from coincidence.

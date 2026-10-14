@@ -1,0 +1,355 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "n_sessions_replayed": 36,
+  "n_events_detected": 35,
+  "n_events_missed": 1,
+  "detection_rate": 0.9722222222222222,
+  "mean_trigger_latency_s": 10.242857142857144,
+  "median_trigger_latency_s": 0.6,
+  "p95_trigger_latency_s": 38.879999999999995,
+  "min_s": 0.6,
+  "max_s": 71.39999999999999,
+  "stride_seconds": 0.3,
+  "consecutive_windows_required": 3,
+  "gpio_alarm_smoke_test": {
+    "gpio_pin": 18,
+    "ran_without_error": true,
+    "used_real_gpio_device": true,
+    "wall_clock_s": 0.5013592400000562,
+    "note": "GPIO toggled successfully -- this timing is near-instant electrical switching, not a measurement the guide's schema asks for; whether an actual buzzer/vibration motor is physically wired to this pin to audibly confirm is a separate hardware question (see pin_connections.md)."
+  },
+  "per_session": [
+    {
+      "session_id": "near_fall_Acceleration On Curve",
+      "source": "near_fall",
+      "n_windows": 156,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 55,
+      "synthetic_latency_s": 16.5,
+      "detected": true
+    },
+    {
+      "session_id": "near_fall_Acceleration On Straight Line",
+      "source": "near_fall",
+      "n_windows": 458,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 68,
+      "synthetic_latency_s": 20.4,
+      "detected": true
+    },
+    {
+      "session_id": "near_fall_Fall Like manoeuvre 1",
+      "source": "near_fall",
+      "n_windows": 438,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 125,
+      "synthetic_latency_s": 37.5,
+      "detected": true
+    },
+    {
+      "session_id": "near_fall_Fall Like manoeuvre 2",
+      "source": "near_fall",
+      "n_windows": 493,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 238,
+      "synthetic_latency_s": 71.39999999999999,
+      "detected": true
+    },
+    {
+      "session_id": "near_fall_Fall Like manoeuvre 3",
+      "source": "near_fall",
+      "n_windows": 425,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 129,
+      "synthetic_latency_s": 38.699999999999996,
+      "detected": true
+    },
+    {
+      "session_id": "near_fall_Harsh breaking On Straight Line",
+      "source": "near_fall",
+      "n_windows": 368,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 32,
+      "synthetic_latency_s": 9.6,
+      "detected": true
+    },
+    {
+      "session_id": "near_fall_Much degraded track",
+      "source": "near_fall",
+      "n_windows": 437,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 56,
+      "synthetic_latency_s": 16.8,
+      "detected": true
+    },
+    {
+      "session_id": "fall_fall-in-a-curve",
+      "source": "fall",
+      "n_windows": 258,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 85,
+      "synthetic_latency_s": 25.5,
+      "detected": true
+    },
+    {
+      "session_id": "fall_fall-in-a-leaning",
+      "source": "fall",
+      "n_windows": 269,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 111,
+      "synthetic_latency_s": 33.3,
+      "detected": true
+    },
+    {
+      "session_id": "fall_fall-in-a-roundabout",
+      "source": "fall",
+      "n_windows": 218,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 117,
+      "synthetic_latency_s": 35.1,
+      "detected": true
+    },
+    {
+      "session_id": "fall_fall-in-a-slippery-road",
+      "source": "fall",
+      "n_windows": 243,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 131,
+      "synthetic_latency_s": 39.3,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_ISO13232-1_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_ISO13232-2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_ISO13232-3_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_ISO13232-4_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 1,
+      "trigger_window_idx": 3,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_ISO13232-5_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 1,
+      "trigger_window_idx": 3,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_ISO13232-6_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": null,
+      "trigger_window_idx": null,
+      "synthetic_latency_s": null,
+      "detected": false
+    },
+    {
+      "session_id": "darus_crash_ISO13232-7_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_115_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_131_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 1,
+      "trigger_window_idx": 3,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_132_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 2,
+      "trigger_window_idx": 4,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_226_3_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_241_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 2,
+      "trigger_window_idx": 4,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_242_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 1,
+      "trigger_window_idx": 3,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_243_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_312_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 2,
+      "trigger_window_idx": 4,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_313_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 2,
+      "trigger_window_idx": 4,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_314_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_512_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 2,
+      "trigger_window_idx": 4,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_513_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 2,
+      "trigger_window_idx": 4,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_514_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 1,
+      "trigger_window_idx": 3,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_623_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 1,
+      "trigger_window_idx": 3,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_624_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_648_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 3,
+      "trigger_window_idx": 5,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_711_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 0,
+      "trigger_window_idx": 2,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    },
+    {
+      "session_id": "darus_crash_Iso_712_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "first_abnormal_window_idx": 1,
+      "trigger_window_idx": 3,
+      "synthetic_latency_s": 0.6,
+      "detected": true
+    }
+  ]
+}

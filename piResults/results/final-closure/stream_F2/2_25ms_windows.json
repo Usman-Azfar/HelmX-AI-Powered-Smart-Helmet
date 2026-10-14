@@ -1,0 +1,8291 @@
+[
+  {
+    "sample_index": 59,
+    "timestamp": 658.033517957,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 74,
+    "timestamp": 658.334380324,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 89,
+    "timestamp": 658.633432779,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 157,
+    "timestamp": 659.993757777,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 172,
+    "timestamp": 660.29349013,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 187,
+    "timestamp": 660.593394095,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 202,
+    "timestamp": 660.893391231,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 217,
+    "timestamp": 661.193567244,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 232,
+    "timestamp": 661.493493759,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 247,
+    "timestamp": 661.793501866,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 262,
+    "timestamp": 662.093459509,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 277,
+    "timestamp": 662.393702147,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 343,
+    "timestamp": 663.713392534,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 358,
+    "timestamp": 664.014787325,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 373,
+    "timestamp": 664.314326625,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 388,
+    "timestamp": 664.613858098,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 403,
+    "timestamp": 664.916909314,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 418,
+    "timestamp": 665.214249297,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 433,
+    "timestamp": 665.514197902,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 448,
+    "timestamp": 665.81343297,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 463,
+    "timestamp": 666.113525736,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 478,
+    "timestamp": 666.413447366,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 493,
+    "timestamp": 666.713663391,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 508,
+    "timestamp": 667.013519273,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 523,
+    "timestamp": 667.31408691,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 538,
+    "timestamp": 667.613430585,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 553,
+    "timestamp": 667.913374781,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 568,
+    "timestamp": 668.213745937,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 583,
+    "timestamp": 668.514058787,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 598,
+    "timestamp": 668.813513371,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 613,
+    "timestamp": 669.113422081,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 628,
+    "timestamp": 669.413418298,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 643,
+    "timestamp": 669.713489809,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 658,
+    "timestamp": 670.01480553,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 673,
+    "timestamp": 670.313732029,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 688,
+    "timestamp": 670.613401877,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 703,
+    "timestamp": 670.913712174,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 718,
+    "timestamp": 671.215392055,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 733,
+    "timestamp": 671.514765093,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 748,
+    "timestamp": 671.813447964,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 763,
+    "timestamp": 672.113539642,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 778,
+    "timestamp": 672.413404459,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 793,
+    "timestamp": 672.713381912,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 808,
+    "timestamp": 673.013522001,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 823,
+    "timestamp": 673.313544608,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 838,
+    "timestamp": 673.613563566,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 853,
+    "timestamp": 673.913393165,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 868,
+    "timestamp": 674.213652463,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 883,
+    "timestamp": 674.513510988,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 898,
+    "timestamp": 674.814271528,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 913,
+    "timestamp": 675.113655209,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 928,
+    "timestamp": 675.413408031,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 943,
+    "timestamp": 675.713371735,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 958,
+    "timestamp": 676.014760985,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 973,
+    "timestamp": 676.313475341,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 988,
+    "timestamp": 676.613420216,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1003,
+    "timestamp": 676.913502522,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1018,
+    "timestamp": 677.213373469,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1033,
+    "timestamp": 677.513861289,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1048,
+    "timestamp": 677.813811541,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1063,
+    "timestamp": 678.113378929,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1078,
+    "timestamp": 678.413825532,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1093,
+    "timestamp": 678.713381482,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1108,
+    "timestamp": 679.013527655,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1123,
+    "timestamp": 679.313645671,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1138,
+    "timestamp": 679.613419414,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1153,
+    "timestamp": 679.913623375,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1168,
+    "timestamp": 680.21376576,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1183,
+    "timestamp": 680.51351569,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1198,
+    "timestamp": 680.813390205,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1213,
+    "timestamp": 681.113662973,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1228,
+    "timestamp": 681.41337821,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1243,
+    "timestamp": 681.713377091,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1258,
+    "timestamp": 682.013511624,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1273,
+    "timestamp": 682.314011101,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1288,
+    "timestamp": 682.613764967,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1303,
+    "timestamp": 682.913444369,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1318,
+    "timestamp": 683.21359545,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1333,
+    "timestamp": 683.51350975,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1348,
+    "timestamp": 683.813660362,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1363,
+    "timestamp": 684.113397925,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1378,
+    "timestamp": 684.41338765,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1393,
+    "timestamp": 684.713425865,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1408,
+    "timestamp": 685.014801303,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1423,
+    "timestamp": 685.313447098,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1438,
+    "timestamp": 685.613441511,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1453,
+    "timestamp": 685.913436738,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1468,
+    "timestamp": 686.213385963,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1483,
+    "timestamp": 686.513875601,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1498,
+    "timestamp": 686.813399662,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1513,
+    "timestamp": 687.113393589,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1528,
+    "timestamp": 687.413383098,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1543,
+    "timestamp": 687.713375318,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1558,
+    "timestamp": 688.013521395,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1573,
+    "timestamp": 688.313390139,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1588,
+    "timestamp": 688.613919279,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1603,
+    "timestamp": 688.913402613,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1618,
+    "timestamp": 689.213382942,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1633,
+    "timestamp": 689.514732207,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1648,
+    "timestamp": 689.813660876,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1663,
+    "timestamp": 690.113504163,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1678,
+    "timestamp": 690.413384571,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1693,
+    "timestamp": 690.713654203,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1708,
+    "timestamp": 691.013853277,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1723,
+    "timestamp": 691.313875002,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1738,
+    "timestamp": 691.613412892,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1753,
+    "timestamp": 691.913392387,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1768,
+    "timestamp": 692.213895025,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1783,
+    "timestamp": 692.513522686,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1798,
+    "timestamp": 692.813412958,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1813,
+    "timestamp": 693.113393769,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1828,
+    "timestamp": 693.413374388,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1843,
+    "timestamp": 693.713494631,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1858,
+    "timestamp": 694.013857695,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1873,
+    "timestamp": 694.313881295,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1888,
+    "timestamp": 694.613393767,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1903,
+    "timestamp": 694.913529328,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1918,
+    "timestamp": 695.213789059,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1933,
+    "timestamp": 695.513509605,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1948,
+    "timestamp": 695.813404794,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1963,
+    "timestamp": 696.113718826,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1978,
+    "timestamp": 696.413401798,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 1993,
+    "timestamp": 696.713393068,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2008,
+    "timestamp": 697.013512175,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2023,
+    "timestamp": 697.313403339,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2038,
+    "timestamp": 697.613400116,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2053,
+    "timestamp": 697.91338341,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2068,
+    "timestamp": 698.213720046,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2083,
+    "timestamp": 698.513520199,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2098,
+    "timestamp": 698.813631855,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2113,
+    "timestamp": 699.113406762,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2128,
+    "timestamp": 699.41365469,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2143,
+    "timestamp": 699.713653184,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2158,
+    "timestamp": 700.01354362,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2173,
+    "timestamp": 700.313392248,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2188,
+    "timestamp": 700.613381601,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2203,
+    "timestamp": 700.913663425,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2218,
+    "timestamp": 701.213375105,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2233,
+    "timestamp": 701.513512199,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2248,
+    "timestamp": 701.813399393,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2263,
+    "timestamp": 702.113681928,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2278,
+    "timestamp": 702.413381815,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2293,
+    "timestamp": 702.713373465,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2308,
+    "timestamp": 703.013521767,
+    "synthetic_end": false,
+    "probability": 0.26171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2323,
+    "timestamp": 703.313509909,
+    "synthetic_end": false,
+    "probability": 0.62890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2338,
+    "timestamp": 703.613399734,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2353,
+    "timestamp": 703.914094336,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2368,
+    "timestamp": 704.213755359,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2383,
+    "timestamp": 704.513395713,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2398,
+    "timestamp": 704.813388441,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2413,
+    "timestamp": 705.11357921,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2428,
+    "timestamp": 705.413835363,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2443,
+    "timestamp": 705.713856566,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2458,
+    "timestamp": 706.013849342,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2473,
+    "timestamp": 706.313492123,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2488,
+    "timestamp": 706.61474905,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2503,
+    "timestamp": 706.913815079,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2518,
+    "timestamp": 707.21474737,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2533,
+    "timestamp": 707.513625598,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2548,
+    "timestamp": 707.815152545,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2563,
+    "timestamp": 708.113510277,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2578,
+    "timestamp": 708.41364793,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2593,
+    "timestamp": 708.71489968,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2608,
+    "timestamp": 709.015609698,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2623,
+    "timestamp": 709.313524743,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2638,
+    "timestamp": 709.613643912,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2653,
+    "timestamp": 709.914162384,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2668,
+    "timestamp": 710.214815434,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2732,
+    "timestamp": 711.493898411,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2747,
+    "timestamp": 711.793467713,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2762,
+    "timestamp": 712.094360633,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2777,
+    "timestamp": 712.393503725,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2792,
+    "timestamp": 712.693392216,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2807,
+    "timestamp": 712.993449026,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2822,
+    "timestamp": 713.293425128,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2837,
+    "timestamp": 713.593503252,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2852,
+    "timestamp": 713.894151517,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2867,
+    "timestamp": 714.193801356,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2882,
+    "timestamp": 714.495758747,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2897,
+    "timestamp": 714.794314677,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2912,
+    "timestamp": 715.094083926,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2927,
+    "timestamp": 715.393487486,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2942,
+    "timestamp": 715.693831876,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2957,
+    "timestamp": 715.993894761,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2972,
+    "timestamp": 716.294442985,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 2987,
+    "timestamp": 716.593555503,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3002,
+    "timestamp": 716.893412145,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3017,
+    "timestamp": 717.193694887,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3032,
+    "timestamp": 717.494120551,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3093,
+    "timestamp": 718.715383147,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3108,
+    "timestamp": 719.014482467,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3123,
+    "timestamp": 719.313795114,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3138,
+    "timestamp": 719.613502449,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3153,
+    "timestamp": 719.915136816,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3168,
+    "timestamp": 720.213884764,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3183,
+    "timestamp": 720.513971037,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3198,
+    "timestamp": 720.814150792,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3213,
+    "timestamp": 721.113663461,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3228,
+    "timestamp": 721.413498338,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3243,
+    "timestamp": 721.713836508,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3311,
+    "timestamp": 723.073419445,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3380,
+    "timestamp": 724.453493168,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3395,
+    "timestamp": 724.75373843,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3410,
+    "timestamp": 725.053423368,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3425,
+    "timestamp": 725.353424569,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3440,
+    "timestamp": 725.653496207,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3455,
+    "timestamp": 725.95349951,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3470,
+    "timestamp": 726.255548104,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3532,
+    "timestamp": 727.493523281,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3547,
+    "timestamp": 727.793616344,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3562,
+    "timestamp": 728.09337355,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3577,
+    "timestamp": 728.393419879,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3592,
+    "timestamp": 728.693652695,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3607,
+    "timestamp": 728.9934138,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3622,
+    "timestamp": 729.293402352,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3637,
+    "timestamp": 729.59364466,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3652,
+    "timestamp": 729.893384609,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3667,
+    "timestamp": 730.193375117,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3682,
+    "timestamp": 730.493683259,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3697,
+    "timestamp": 730.793368978,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3712,
+    "timestamp": 731.093466684,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3727,
+    "timestamp": 731.393418064,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3742,
+    "timestamp": 731.693409021,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3757,
+    "timestamp": 731.993412219,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3772,
+    "timestamp": 732.293370378,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3787,
+    "timestamp": 732.593526683,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3802,
+    "timestamp": 732.893477356,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3817,
+    "timestamp": 733.193377565,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3832,
+    "timestamp": 733.493511705,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3847,
+    "timestamp": 733.793642133,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3862,
+    "timestamp": 734.093511707,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3877,
+    "timestamp": 734.393398069,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3892,
+    "timestamp": 734.69338262,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3907,
+    "timestamp": 734.993918124,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3922,
+    "timestamp": 735.294019896,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3937,
+    "timestamp": 735.593493623,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3952,
+    "timestamp": 735.893381243,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3967,
+    "timestamp": 736.193403087,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3982,
+    "timestamp": 736.493504547,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 3997,
+    "timestamp": 736.793372404,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4012,
+    "timestamp": 737.093464635,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4027,
+    "timestamp": 737.393627858,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4042,
+    "timestamp": 737.693390897,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4057,
+    "timestamp": 737.99341279,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4072,
+    "timestamp": 738.293557256,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4087,
+    "timestamp": 738.593473646,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4102,
+    "timestamp": 738.893379647,
+    "synthetic_end": false,
+    "probability": 0.03515625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4117,
+    "timestamp": 739.193609207,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4132,
+    "timestamp": 739.493843623,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4147,
+    "timestamp": 739.79337197,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4162,
+    "timestamp": 740.093466712,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4177,
+    "timestamp": 740.39372065,
+    "synthetic_end": false,
+    "probability": 0.33203125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4192,
+    "timestamp": 740.693385312,
+    "synthetic_end": false,
+    "probability": 0.03125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4207,
+    "timestamp": 740.993426607,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4222,
+    "timestamp": 741.293382827,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4237,
+    "timestamp": 741.593762089,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4252,
+    "timestamp": 741.89338612,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4267,
+    "timestamp": 742.193420637,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4282,
+    "timestamp": 742.493844942,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4297,
+    "timestamp": 742.793451381,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4312,
+    "timestamp": 743.093406193,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4327,
+    "timestamp": 743.393416443,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4342,
+    "timestamp": 743.693737501,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4357,
+    "timestamp": 743.993616702,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4372,
+    "timestamp": 744.294446911,
+    "synthetic_end": false,
+    "probability": 0.04296875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4387,
+    "timestamp": 744.593481456,
+    "synthetic_end": false,
+    "probability": 0.0703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4402,
+    "timestamp": 744.893438863,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4417,
+    "timestamp": 745.193401937,
+    "synthetic_end": false,
+    "probability": 0.08203125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4432,
+    "timestamp": 745.493873522,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4447,
+    "timestamp": 745.793416963,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4462,
+    "timestamp": 746.093467614,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4477,
+    "timestamp": 746.393399886,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4492,
+    "timestamp": 746.693427854,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4507,
+    "timestamp": 746.993427747,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4522,
+    "timestamp": 747.293669734,
+    "synthetic_end": false,
+    "probability": 0.0234375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4537,
+    "timestamp": 747.593456831,
+    "synthetic_end": false,
+    "probability": 0.04296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4552,
+    "timestamp": 747.893648433,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4567,
+    "timestamp": 748.19339503,
+    "synthetic_end": false,
+    "probability": 0.12890625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4582,
+    "timestamp": 748.493851271,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4597,
+    "timestamp": 748.793387759,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4612,
+    "timestamp": 749.093669716,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4627,
+    "timestamp": 749.393835443,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4642,
+    "timestamp": 749.693383416,
+    "synthetic_end": false,
+    "probability": 0.1484375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4657,
+    "timestamp": 749.99342319,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4672,
+    "timestamp": 750.293644222,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4687,
+    "timestamp": 750.593422183,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4702,
+    "timestamp": 750.893380757,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4717,
+    "timestamp": 751.193657593,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4732,
+    "timestamp": 751.493507155,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4747,
+    "timestamp": 751.793387177,
+    "synthetic_end": false,
+    "probability": 0.09375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4762,
+    "timestamp": 752.093401646,
+    "synthetic_end": false,
+    "probability": 0.12890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4777,
+    "timestamp": 752.393597702,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4792,
+    "timestamp": 752.693576768,
+    "synthetic_end": false,
+    "probability": 0.12890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4807,
+    "timestamp": 752.993427426,
+    "synthetic_end": false,
+    "probability": 0.45703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4822,
+    "timestamp": 753.293381527,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4837,
+    "timestamp": 753.593453711,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4852,
+    "timestamp": 753.893376394,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4867,
+    "timestamp": 754.193402393,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4882,
+    "timestamp": 754.493610291,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4897,
+    "timestamp": 754.793836909,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4912,
+    "timestamp": 755.093413874,
+    "synthetic_end": false,
+    "probability": 0.05859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4927,
+    "timestamp": 755.393416688,
+    "synthetic_end": false,
+    "probability": 0.0234375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4942,
+    "timestamp": 755.693393886,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4957,
+    "timestamp": 755.993448454,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4972,
+    "timestamp": 756.293673373,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 4987,
+    "timestamp": 756.593496244,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5002,
+    "timestamp": 756.893398893,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5017,
+    "timestamp": 757.193968417,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5032,
+    "timestamp": 757.493503702,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5105,
+    "timestamp": 758.953490011,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5120,
+    "timestamp": 759.253490103,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5225,
+    "timestamp": 761.35358932,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5240,
+    "timestamp": 761.653493441,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5255,
+    "timestamp": 761.953483748,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5365,
+    "timestamp": 764.154747838,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5380,
+    "timestamp": 764.454634187,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5395,
+    "timestamp": 764.755005085,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5410,
+    "timestamp": 765.060689682,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5471,
+    "timestamp": 766.274703979,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5486,
+    "timestamp": 766.574625088,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5501,
+    "timestamp": 766.874632824,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5516,
+    "timestamp": 767.174890783,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5531,
+    "timestamp": 767.474699628,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5546,
+    "timestamp": 767.774644229,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5561,
+    "timestamp": 768.074900258,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5576,
+    "timestamp": 768.374640506,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5591,
+    "timestamp": 768.674771622,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5606,
+    "timestamp": 768.974705903,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5621,
+    "timestamp": 769.274898944,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5636,
+    "timestamp": 769.574631704,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5651,
+    "timestamp": 769.874863426,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5666,
+    "timestamp": 770.175088797,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5681,
+    "timestamp": 770.475033443,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5696,
+    "timestamp": 770.774662789,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5711,
+    "timestamp": 771.074845563,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5726,
+    "timestamp": 771.375047578,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5741,
+    "timestamp": 771.674633216,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5756,
+    "timestamp": 771.974739282,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5771,
+    "timestamp": 772.274628829,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5786,
+    "timestamp": 772.574656691,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5801,
+    "timestamp": 772.874951978,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 5816,
+    "timestamp": 773.174657169,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 5831,
+    "timestamp": 773.47521116,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": true
+  },
+  {
+    "sample_index": 5846,
+    "timestamp": 773.7746372,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 5861,
+    "timestamp": 774.074937002,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5876,
+    "timestamp": 774.374679637,
+    "synthetic_end": false,
+    "probability": 0.66796875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5891,
+    "timestamp": 774.674623936,
+    "synthetic_end": false,
+    "probability": 0.62890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5906,
+    "timestamp": 774.975067718,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5921,
+    "timestamp": 775.274631349,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5936,
+    "timestamp": 775.574655556,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5951,
+    "timestamp": 775.874637669,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5966,
+    "timestamp": 776.17492393,
+    "synthetic_end": false,
+    "probability": 0.33203125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5981,
+    "timestamp": 776.474716284,
+    "synthetic_end": false,
+    "probability": 0.54296875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 5996,
+    "timestamp": 776.774839229,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6011,
+    "timestamp": 777.076532179,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6026,
+    "timestamp": 777.374634989,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6041,
+    "timestamp": 777.674626488,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6056,
+    "timestamp": 777.975008526,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6071,
+    "timestamp": 778.274621227,
+    "synthetic_end": false,
+    "probability": 0.96484375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6086,
+    "timestamp": 778.574624488,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6101,
+    "timestamp": 778.878140702,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6116,
+    "timestamp": 779.174801727,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6131,
+    "timestamp": 779.474672653,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6146,
+    "timestamp": 779.774627208,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6161,
+    "timestamp": 780.074629133,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6176,
+    "timestamp": 780.374654653,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6191,
+    "timestamp": 780.674633819,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6206,
+    "timestamp": 780.974705245,
+    "synthetic_end": false,
+    "probability": 0.96484375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6221,
+    "timestamp": 781.27463143,
+    "synthetic_end": false,
+    "probability": 0.66796875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6236,
+    "timestamp": 781.574624321,
+    "synthetic_end": false,
+    "probability": 0.94921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6251,
+    "timestamp": 781.874632599,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6266,
+    "timestamp": 782.174848137,
+    "synthetic_end": false,
+    "probability": 0.94921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6281,
+    "timestamp": 782.475021271,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6341,
+    "timestamp": 783.675077117,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6356,
+    "timestamp": 783.974702268,
+    "synthetic_end": false,
+    "probability": 0.05859375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6371,
+    "timestamp": 784.27463455,
+    "synthetic_end": false,
+    "probability": 0.0703125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6386,
+    "timestamp": 784.574913521,
+    "synthetic_end": false,
+    "probability": 0.33203125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6401,
+    "timestamp": 784.874730786,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6416,
+    "timestamp": 785.174660422,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6431,
+    "timestamp": 785.475029636,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6446,
+    "timestamp": 785.774667441,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6461,
+    "timestamp": 786.074684802,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6476,
+    "timestamp": 786.374660629,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6491,
+    "timestamp": 786.674989474,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6506,
+    "timestamp": 786.974734412,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6521,
+    "timestamp": 787.274682535,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6536,
+    "timestamp": 787.575053164,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6551,
+    "timestamp": 787.875091346,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6566,
+    "timestamp": 788.175147751,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6581,
+    "timestamp": 788.474740992,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6596,
+    "timestamp": 788.774636715,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6611,
+    "timestamp": 789.074939846,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6626,
+    "timestamp": 789.374690832,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6641,
+    "timestamp": 789.674622466,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6656,
+    "timestamp": 789.974725027,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6671,
+    "timestamp": 790.274630643,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6686,
+    "timestamp": 790.574758952,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6701,
+    "timestamp": 790.874986555,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6716,
+    "timestamp": 791.174643842,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6731,
+    "timestamp": 791.474743747,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6746,
+    "timestamp": 791.774643503,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6761,
+    "timestamp": 792.074920277,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6776,
+    "timestamp": 792.37524787,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6791,
+    "timestamp": 792.674639797,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6806,
+    "timestamp": 792.974751077,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 1.5710645914077759,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6821,
+    "timestamp": 793.274800375,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 1.9638307094573975,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6836,
+    "timestamp": 793.574640996,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 1.9638307094573975,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6851,
+    "timestamp": 793.874649078,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 1.9638307094573975,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6866,
+    "timestamp": 794.174642123,
+    "synthetic_end": false,
+    "probability": 0.5,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6881,
+    "timestamp": 794.475693824,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6896,
+    "timestamp": 794.774662337,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6967,
+    "timestamp": 796.195703819,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 6982,
+    "timestamp": 796.494905158,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7064,
+    "timestamp": 798.136905489,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7079,
+    "timestamp": 798.437063944,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7148,
+    "timestamp": 799.83207943,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7163,
+    "timestamp": 800.133458426,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7178,
+    "timestamp": 800.432692343,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7193,
+    "timestamp": 800.732027496,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7208,
+    "timestamp": 801.032043908,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7223,
+    "timestamp": 801.334329236,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7238,
+    "timestamp": 801.632688732,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7253,
+    "timestamp": 801.93224969,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7268,
+    "timestamp": 802.232029592,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7283,
+    "timestamp": 802.532056309,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7298,
+    "timestamp": 802.83223698,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7313,
+    "timestamp": 803.132401261,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7328,
+    "timestamp": 803.431938965,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7343,
+    "timestamp": 803.731946887,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7358,
+    "timestamp": 804.031958456,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7373,
+    "timestamp": 804.333113868,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7388,
+    "timestamp": 804.63205856,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7403,
+    "timestamp": 804.931933787,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7418,
+    "timestamp": 805.232788551,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7433,
+    "timestamp": 805.532173834,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7448,
+    "timestamp": 805.831930924,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7463,
+    "timestamp": 806.132252051,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7478,
+    "timestamp": 806.431919285,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7493,
+    "timestamp": 806.731964071,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7508,
+    "timestamp": 807.031974375,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7523,
+    "timestamp": 807.331932597,
+    "synthetic_end": false,
+    "probability": 0.80078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7538,
+    "timestamp": 807.632032783,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.39276614785194397,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 7553,
+    "timestamp": 807.931941783,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 7568,
+    "timestamp": 808.232211949,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 7583,
+    "timestamp": 808.53205271,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 7598,
+    "timestamp": 808.83206311,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 7613,
+    "timestamp": 809.132327751,
+    "synthetic_end": false,
+    "probability": 0.94921875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7628,
+    "timestamp": 809.431930816,
+    "synthetic_end": false,
+    "probability": 0.33203125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7643,
+    "timestamp": 809.732407598,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7658,
+    "timestamp": 810.03197227,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7673,
+    "timestamp": 810.331938009,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7688,
+    "timestamp": 810.632043823,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7703,
+    "timestamp": 810.931928895,
+    "synthetic_end": false,
+    "probability": 0.5859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7718,
+    "timestamp": 811.231963468,
+    "synthetic_end": false,
+    "probability": 0.73828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7733,
+    "timestamp": 811.53205995,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7748,
+    "timestamp": 811.832262108,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7763,
+    "timestamp": 812.132041898,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7778,
+    "timestamp": 812.431957185,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7793,
+    "timestamp": 812.731960542,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7808,
+    "timestamp": 813.032268787,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7823,
+    "timestamp": 813.332216211,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7838,
+    "timestamp": 813.632505173,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7853,
+    "timestamp": 813.932109248,
+    "synthetic_end": false,
+    "probability": 0.5859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7868,
+    "timestamp": 814.232307099,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7883,
+    "timestamp": 814.532054954,
+    "synthetic_end": false,
+    "probability": 0.12890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7898,
+    "timestamp": 814.831951245,
+    "synthetic_end": false,
+    "probability": 0.26171875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7913,
+    "timestamp": 815.132108295,
+    "synthetic_end": false,
+    "probability": 0.73828125,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7928,
+    "timestamp": 815.431948566,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7943,
+    "timestamp": 815.732023185,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7958,
+    "timestamp": 816.031969731,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 1.5710645914077759,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7973,
+    "timestamp": 816.331996085,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 1.3746814727783203,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 7988,
+    "timestamp": 816.632412829,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 1.1782984733581543,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8003,
+    "timestamp": 816.932024482,
+    "synthetic_end": false,
+    "probability": 0.703125,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8018,
+    "timestamp": 817.231993968,
+    "synthetic_end": false,
+    "probability": 0.45703125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8033,
+    "timestamp": 817.532383585,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8048,
+    "timestamp": 817.83193642,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8063,
+    "timestamp": 818.132055031,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8078,
+    "timestamp": 818.43230151,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8093,
+    "timestamp": 818.732019026,
+    "synthetic_end": false,
+    "probability": 0.04296875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8108,
+    "timestamp": 819.032258799,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8123,
+    "timestamp": 819.331944994,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8138,
+    "timestamp": 819.632035672,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8153,
+    "timestamp": 819.931996591,
+    "synthetic_end": false,
+    "probability": 0.98828125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8168,
+    "timestamp": 820.232337101,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.19638307392597198,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 8183,
+    "timestamp": 820.532086506,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 8198,
+    "timestamp": 820.832436661,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 8213,
+    "timestamp": 821.132334651,
+    "synthetic_end": false,
+    "probability": 0.984375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8228,
+    "timestamp": 821.431964716,
+    "synthetic_end": false,
+    "probability": 0.96484375,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8243,
+    "timestamp": 821.731963758,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8258,
+    "timestamp": 822.031966578,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8273,
+    "timestamp": 822.332231262,
+    "synthetic_end": false,
+    "probability": 0.96484375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8288,
+    "timestamp": 822.632237672,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8303,
+    "timestamp": 822.932120398,
+    "synthetic_end": false,
+    "probability": 0.5859375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8318,
+    "timestamp": 823.23203203,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8333,
+    "timestamp": 823.532134742,
+    "synthetic_end": false,
+    "probability": 0.54296875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8348,
+    "timestamp": 823.832233335,
+    "synthetic_end": false,
+    "probability": 0.09375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8363,
+    "timestamp": 824.132033614,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8378,
+    "timestamp": 824.4319343,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8393,
+    "timestamp": 824.732234946,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8408,
+    "timestamp": 825.032193463,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8423,
+    "timestamp": 825.33195566,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8438,
+    "timestamp": 825.632229156,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8512,
+    "timestamp": 827.112055526,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8527,
+    "timestamp": 827.411984692,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8542,
+    "timestamp": 827.712038705,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8557,
+    "timestamp": 828.01204557,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8572,
+    "timestamp": 828.312223968,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8587,
+    "timestamp": 828.612539109,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8602,
+    "timestamp": 828.912481492,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8617,
+    "timestamp": 829.212402653,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8632,
+    "timestamp": 829.51197138,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8647,
+    "timestamp": 829.811941003,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8662,
+    "timestamp": 830.112036256,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8677,
+    "timestamp": 830.412227252,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8741,
+    "timestamp": 831.692952259,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8756,
+    "timestamp": 831.992252015,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8826,
+    "timestamp": 833.392287597,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8887,
+    "timestamp": 834.611947364,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8902,
+    "timestamp": 834.911928842,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8917,
+    "timestamp": 835.212019967,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8932,
+    "timestamp": 835.511937604,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8947,
+    "timestamp": 835.812044008,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8962,
+    "timestamp": 836.11192258,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8977,
+    "timestamp": 836.411925229,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 8992,
+    "timestamp": 836.712059339,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9007,
+    "timestamp": 837.011944894,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9022,
+    "timestamp": 837.312087,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9037,
+    "timestamp": 837.612089798,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9052,
+    "timestamp": 837.911947762,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9067,
+    "timestamp": 838.211965744,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9082,
+    "timestamp": 838.511961479,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9097,
+    "timestamp": 838.812025148,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9112,
+    "timestamp": 839.112199724,
+    "synthetic_end": false,
+    "probability": 0.12890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9127,
+    "timestamp": 839.412179639,
+    "synthetic_end": false,
+    "probability": 0.9765625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9142,
+    "timestamp": 839.712048478,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.0,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 9157,
+    "timestamp": 840.011948818,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.0,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 9172,
+    "timestamp": 840.312370743,
+    "synthetic_end": false,
+    "probability": 0.96484375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9187,
+    "timestamp": 840.612074901,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9202,
+    "timestamp": 840.912436018,
+    "synthetic_end": false,
+    "probability": 0.94921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9217,
+    "timestamp": 841.212252194,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9232,
+    "timestamp": 841.511936845,
+    "synthetic_end": false,
+    "probability": 0.5859375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9247,
+    "timestamp": 841.812106355,
+    "synthetic_end": false,
+    "probability": 0.4140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9262,
+    "timestamp": 842.112225995,
+    "synthetic_end": false,
+    "probability": 0.62890625,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9277,
+    "timestamp": 842.411943752,
+    "synthetic_end": false,
+    "probability": 0.54296875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9292,
+    "timestamp": 842.712064099,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9307,
+    "timestamp": 843.012224575,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9322,
+    "timestamp": 843.31330358,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9337,
+    "timestamp": 843.611969273,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9352,
+    "timestamp": 843.911955365,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9367,
+    "timestamp": 844.212251121,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9382,
+    "timestamp": 844.511968782,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9397,
+    "timestamp": 844.812043914,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9412,
+    "timestamp": 845.112214268,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9427,
+    "timestamp": 845.411940333,
+    "synthetic_end": false,
+    "probability": 0.5859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9442,
+    "timestamp": 845.712067858,
+    "synthetic_end": false,
+    "probability": 0.33203125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9457,
+    "timestamp": 846.01230716,
+    "synthetic_end": false,
+    "probability": 0.45703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9472,
+    "timestamp": 846.311966666,
+    "synthetic_end": false,
+    "probability": 0.62890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9487,
+    "timestamp": 846.612048992,
+    "synthetic_end": false,
+    "probability": 0.703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9502,
+    "timestamp": 846.911963392,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9517,
+    "timestamp": 847.212299772,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9532,
+    "timestamp": 847.511931224,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9547,
+    "timestamp": 847.811993906,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9562,
+    "timestamp": 848.112229995,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9577,
+    "timestamp": 848.411935462,
+    "synthetic_end": false,
+    "probability": 0.94921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9592,
+    "timestamp": 848.7121375,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9607,
+    "timestamp": 849.0119598,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9673,
+    "timestamp": 850.331998137,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9688,
+    "timestamp": 850.631985149,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9703,
+    "timestamp": 850.932209493,
+    "synthetic_end": false,
+    "probability": 0.5,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9718,
+    "timestamp": 851.231981303,
+    "synthetic_end": false,
+    "probability": 0.08203125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9733,
+    "timestamp": 851.531932587,
+    "synthetic_end": false,
+    "probability": 0.0234375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9748,
+    "timestamp": 851.831971642,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9763,
+    "timestamp": 852.132219491,
+    "synthetic_end": false,
+    "probability": 0.05859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9778,
+    "timestamp": 852.431966515,
+    "synthetic_end": false,
+    "probability": 0.03515625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9793,
+    "timestamp": 852.732226073,
+    "synthetic_end": false,
+    "probability": 0.09375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9808,
+    "timestamp": 853.031926933,
+    "synthetic_end": false,
+    "probability": 0.0703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9823,
+    "timestamp": 853.331956303,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9838,
+    "timestamp": 853.63191937,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9853,
+    "timestamp": 853.932113232,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9868,
+    "timestamp": 854.232162613,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9883,
+    "timestamp": 854.532250987,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9898,
+    "timestamp": 854.832081505,
+    "synthetic_end": false,
+    "probability": 0.05859375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9913,
+    "timestamp": 855.132220448,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9928,
+    "timestamp": 855.431944416,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9943,
+    "timestamp": 855.732025217,
+    "synthetic_end": false,
+    "probability": 0.171875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9958,
+    "timestamp": 856.032227813,
+    "synthetic_end": false,
+    "probability": 0.54296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9973,
+    "timestamp": 856.3320515,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 9988,
+    "timestamp": 856.632171975,
+    "synthetic_end": false,
+    "probability": 0.66796875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10003,
+    "timestamp": 856.931935174,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10018,
+    "timestamp": 857.231983315,
+    "synthetic_end": false,
+    "probability": 0.45703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10033,
+    "timestamp": 857.531935581,
+    "synthetic_end": false,
+    "probability": 0.4140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10048,
+    "timestamp": 857.832362375,
+    "synthetic_end": false,
+    "probability": 0.45703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10063,
+    "timestamp": 858.13236782,
+    "synthetic_end": false,
+    "probability": 0.5,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10078,
+    "timestamp": 858.431953291,
+    "synthetic_end": false,
+    "probability": 0.26171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10093,
+    "timestamp": 858.73199002,
+    "synthetic_end": false,
+    "probability": 0.4140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10108,
+    "timestamp": 859.031934843,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10123,
+    "timestamp": 859.331997272,
+    "synthetic_end": false,
+    "probability": 0.05859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10138,
+    "timestamp": 859.63236684,
+    "synthetic_end": false,
+    "probability": 0.109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10153,
+    "timestamp": 859.931953821,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10168,
+    "timestamp": 860.232027392,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10183,
+    "timestamp": 860.532212993,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10198,
+    "timestamp": 860.831960814,
+    "synthetic_end": false,
+    "probability": 0.54296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10213,
+    "timestamp": 861.131940226,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10228,
+    "timestamp": 861.432168678,
+    "synthetic_end": false,
+    "probability": 0.08203125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10243,
+    "timestamp": 861.732270153,
+    "synthetic_end": false,
+    "probability": 0.04296875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10258,
+    "timestamp": 862.032020297,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10273,
+    "timestamp": 862.331948861,
+    "synthetic_end": false,
+    "probability": 0.0703125,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10288,
+    "timestamp": 862.632164028,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 0.9819153547286987,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10303,
+    "timestamp": 862.931980587,
+    "synthetic_end": false,
+    "probability": 0.05859375,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10318,
+    "timestamp": 863.231979367,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10333,
+    "timestamp": 863.53222701,
+    "synthetic_end": false,
+    "probability": 0.109375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10348,
+    "timestamp": 863.832114096,
+    "synthetic_end": false,
+    "probability": 0.09375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10363,
+    "timestamp": 864.131967237,
+    "synthetic_end": false,
+    "probability": 0.04296875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10378,
+    "timestamp": 864.432040307,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10393,
+    "timestamp": 864.73230625,
+    "synthetic_end": false,
+    "probability": 0.04296875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10408,
+    "timestamp": 865.032051956,
+    "synthetic_end": false,
+    "probability": 0.09375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10423,
+    "timestamp": 865.3324533,
+    "synthetic_end": false,
+    "probability": 0.1484375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10438,
+    "timestamp": 865.632212848,
+    "synthetic_end": false,
+    "probability": 0.171875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10453,
+    "timestamp": 865.931944267,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10468,
+    "timestamp": 866.231957721,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10483,
+    "timestamp": 866.53219415,
+    "synthetic_end": false,
+    "probability": 0.04296875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10498,
+    "timestamp": 866.832345037,
+    "synthetic_end": false,
+    "probability": 0.09375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10513,
+    "timestamp": 867.131929615,
+    "synthetic_end": false,
+    "probability": 0.09375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10528,
+    "timestamp": 867.431965452,
+    "synthetic_end": false,
+    "probability": 0.66796875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10543,
+    "timestamp": 867.731985498,
+    "synthetic_end": false,
+    "probability": 0.08203125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10558,
+    "timestamp": 868.031933322,
+    "synthetic_end": false,
+    "probability": 0.296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10573,
+    "timestamp": 868.332032807,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10588,
+    "timestamp": 868.631932808,
+    "synthetic_end": false,
+    "probability": 0.05859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10603,
+    "timestamp": 868.932039326,
+    "synthetic_end": false,
+    "probability": 0.26171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10618,
+    "timestamp": 869.232258713,
+    "synthetic_end": false,
+    "probability": 0.45703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10633,
+    "timestamp": 869.5319266,
+    "synthetic_end": false,
+    "probability": 0.703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10648,
+    "timestamp": 869.832025053,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10663,
+    "timestamp": 870.132044915,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10678,
+    "timestamp": 870.432239094,
+    "synthetic_end": false,
+    "probability": 0.94921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10693,
+    "timestamp": 870.732229021,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.0,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 10708,
+    "timestamp": 871.031926803,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10723,
+    "timestamp": 871.332261519,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10738,
+    "timestamp": 871.631920162,
+    "synthetic_end": false,
+    "probability": 0.33203125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10753,
+    "timestamp": 871.931946636,
+    "synthetic_end": false,
+    "probability": 0.171875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10768,
+    "timestamp": 872.232273126,
+    "synthetic_end": false,
+    "probability": 0.62890625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10783,
+    "timestamp": 872.531957618,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10798,
+    "timestamp": 872.832045897,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10813,
+    "timestamp": 873.13225101,
+    "synthetic_end": false,
+    "probability": 0.73828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10828,
+    "timestamp": 873.431954317,
+    "synthetic_end": false,
+    "probability": 0.296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10843,
+    "timestamp": 873.732035571,
+    "synthetic_end": false,
+    "probability": 0.109375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10858,
+    "timestamp": 874.032220194,
+    "synthetic_end": false,
+    "probability": 0.33203125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10873,
+    "timestamp": 874.331954576,
+    "synthetic_end": false,
+    "probability": 0.703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10888,
+    "timestamp": 874.6319436,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10903,
+    "timestamp": 874.931929125,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10918,
+    "timestamp": 875.231983019,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10933,
+    "timestamp": 875.531935356,
+    "synthetic_end": false,
+    "probability": 0.80078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10948,
+    "timestamp": 875.832426145,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10963,
+    "timestamp": 876.132377607,
+    "synthetic_end": false,
+    "probability": 0.5859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10978,
+    "timestamp": 876.43207178,
+    "synthetic_end": false,
+    "probability": 0.703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 10993,
+    "timestamp": 876.732362564,
+    "synthetic_end": false,
+    "probability": 0.5,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11008,
+    "timestamp": 877.031990707,
+    "synthetic_end": false,
+    "probability": 0.1484375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11023,
+    "timestamp": 877.331961194,
+    "synthetic_end": false,
+    "probability": 0.109375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11038,
+    "timestamp": 877.631984862,
+    "synthetic_end": false,
+    "probability": 0.171875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11053,
+    "timestamp": 877.931927791,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11068,
+    "timestamp": 878.231964848,
+    "synthetic_end": false,
+    "probability": 0.0703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11083,
+    "timestamp": 878.531935589,
+    "synthetic_end": false,
+    "probability": 0.12890625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11098,
+    "timestamp": 878.832056787,
+    "synthetic_end": false,
+    "probability": 0.03515625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11113,
+    "timestamp": 879.131931598,
+    "synthetic_end": false,
+    "probability": 0.03515625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11128,
+    "timestamp": 879.431951876,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11143,
+    "timestamp": 879.732356731,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11158,
+    "timestamp": 880.031931168,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11173,
+    "timestamp": 880.332020911,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11188,
+    "timestamp": 880.631919042,
+    "synthetic_end": false,
+    "probability": 0.0234375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11203,
+    "timestamp": 880.931947671,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11218,
+    "timestamp": 881.231956338,
+    "synthetic_end": false,
+    "probability": 0.015625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11233,
+    "timestamp": 881.532215296,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11248,
+    "timestamp": 881.832465917,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11263,
+    "timestamp": 882.131927139,
+    "synthetic_end": false,
+    "probability": 0.03125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11278,
+    "timestamp": 882.432036878,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11293,
+    "timestamp": 882.732755081,
+    "synthetic_end": false,
+    "probability": 0.33203125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11308,
+    "timestamp": 883.031934132,
+    "synthetic_end": false,
+    "probability": 0.54296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11323,
+    "timestamp": 883.33194895,
+    "synthetic_end": false,
+    "probability": 0.26171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11338,
+    "timestamp": 883.631934617,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11353,
+    "timestamp": 883.932131282,
+    "synthetic_end": false,
+    "probability": 0.26171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11368,
+    "timestamp": 884.231956246,
+    "synthetic_end": false,
+    "probability": 0.4140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11383,
+    "timestamp": 884.532138317,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11398,
+    "timestamp": 884.832484141,
+    "synthetic_end": false,
+    "probability": 0.80078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11413,
+    "timestamp": 885.131928549,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11428,
+    "timestamp": 885.431958587,
+    "synthetic_end": false,
+    "probability": 0.73828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11443,
+    "timestamp": 885.732030242,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11458,
+    "timestamp": 886.031956694,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11473,
+    "timestamp": 886.331968901,
+    "synthetic_end": false,
+    "probability": 0.73828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11488,
+    "timestamp": 886.631942014,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11503,
+    "timestamp": 886.931978405,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11518,
+    "timestamp": 887.232382717,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11533,
+    "timestamp": 887.531943944,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11548,
+    "timestamp": 887.832083643,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11563,
+    "timestamp": 888.131942401,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11578,
+    "timestamp": 888.432304011,
+    "synthetic_end": false,
+    "probability": 0.80078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11593,
+    "timestamp": 888.731964747,
+    "synthetic_end": false,
+    "probability": 0.80078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11608,
+    "timestamp": 889.032859081,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11623,
+    "timestamp": 889.332254649,
+    "synthetic_end": false,
+    "probability": 0.66796875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11638,
+    "timestamp": 889.63193551,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11653,
+    "timestamp": 889.931942478,
+    "synthetic_end": false,
+    "probability": 0.54296875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11668,
+    "timestamp": 890.232234017,
+    "synthetic_end": false,
+    "probability": 0.01171875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11683,
+    "timestamp": 890.531983025,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11698,
+    "timestamp": 890.832100024,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11713,
+    "timestamp": 891.132225819,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11784,
+    "timestamp": 892.554066237,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11799,
+    "timestamp": 892.85346755,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11814,
+    "timestamp": 893.152343943,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11886,
+    "timestamp": 894.591948855,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11901,
+    "timestamp": 894.892050227,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11916,
+    "timestamp": 895.191960952,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 11931,
+    "timestamp": 895.49197079,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12000,
+    "timestamp": 896.895779979,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12015,
+    "timestamp": 897.194955687,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12030,
+    "timestamp": 897.496124468,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12045,
+    "timestamp": 897.794935157,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12060,
+    "timestamp": 898.095142405,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12075,
+    "timestamp": 898.395127407,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12090,
+    "timestamp": 898.695274171,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12105,
+    "timestamp": 898.995134179,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12120,
+    "timestamp": 899.294915391,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12135,
+    "timestamp": 899.594907506,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12150,
+    "timestamp": 899.895175265,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12165,
+    "timestamp": 900.194908383,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12180,
+    "timestamp": 900.494910556,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12195,
+    "timestamp": 900.79490939,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12210,
+    "timestamp": 901.094923112,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12225,
+    "timestamp": 901.394976512,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12240,
+    "timestamp": 901.694896806,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12255,
+    "timestamp": 901.994910008,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12270,
+    "timestamp": 902.295337148,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12285,
+    "timestamp": 902.59512833,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12300,
+    "timestamp": 902.894937642,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12315,
+    "timestamp": 903.195177338,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12330,
+    "timestamp": 903.495593499,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12395,
+    "timestamp": 904.794853786,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12410,
+    "timestamp": 905.094843369,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12425,
+    "timestamp": 905.395223422,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12440,
+    "timestamp": 905.694853526,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12455,
+    "timestamp": 905.994848607,
+    "synthetic_end": false,
+    "probability": 0.96484375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12470,
+    "timestamp": 906.29514335,
+    "synthetic_end": false,
+    "probability": 0.98828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12485,
+    "timestamp": 906.59486771,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.0,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12500,
+    "timestamp": 906.894922214,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.0,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12515,
+    "timestamp": 907.195115199,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.0,
+    "positive": true,
+    "triggered": true
+  },
+  {
+    "sample_index": 12530,
+    "timestamp": 907.494858285,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.0,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12545,
+    "timestamp": 907.794842973,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.0,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12560,
+    "timestamp": 908.094955827,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12575,
+    "timestamp": 908.394928768,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12590,
+    "timestamp": 908.694844807,
+    "synthetic_end": false,
+    "probability": 0.9765625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12605,
+    "timestamp": 908.994863364,
+    "synthetic_end": false,
+    "probability": 0.984375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12620,
+    "timestamp": 909.295062251,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12635,
+    "timestamp": 909.595176879,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12650,
+    "timestamp": 909.894938123,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12665,
+    "timestamp": 910.194853586,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12680,
+    "timestamp": 910.495156717,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12695,
+    "timestamp": 910.794844849,
+    "synthetic_end": false,
+    "probability": 0.98828125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12710,
+    "timestamp": 911.095060345,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12725,
+    "timestamp": 911.39496793,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12740,
+    "timestamp": 911.695428126,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.3746814727783203,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12755,
+    "timestamp": 911.99484613,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12770,
+    "timestamp": 912.294883552,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12785,
+    "timestamp": 912.595128805,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.39276614785194397,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 12800,
+    "timestamp": 912.895243615,
+    "synthetic_end": false,
+    "probability": 0.984375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12815,
+    "timestamp": 913.194851672,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12830,
+    "timestamp": 913.494869358,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12845,
+    "timestamp": 913.794847095,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12860,
+    "timestamp": 914.094883238,
+    "synthetic_end": false,
+    "probability": 0.4140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12875,
+    "timestamp": 914.394941115,
+    "synthetic_end": false,
+    "probability": 0.66796875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12890,
+    "timestamp": 914.695044053,
+    "synthetic_end": false,
+    "probability": 0.66796875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12905,
+    "timestamp": 914.994960604,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12920,
+    "timestamp": 915.294885562,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12935,
+    "timestamp": 915.594840538,
+    "synthetic_end": false,
+    "probability": 0.94921875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12950,
+    "timestamp": 915.894944254,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12965,
+    "timestamp": 916.195149005,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12980,
+    "timestamp": 916.494874359,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 12995,
+    "timestamp": 916.79504274,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13010,
+    "timestamp": 917.095162807,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13025,
+    "timestamp": 917.394933111,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13040,
+    "timestamp": 917.694905846,
+    "synthetic_end": false,
+    "probability": 0.0078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13055,
+    "timestamp": 917.994852581,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13070,
+    "timestamp": 918.294886648,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13085,
+    "timestamp": 918.594843086,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13100,
+    "timestamp": 918.894959338,
+    "synthetic_end": false,
+    "probability": 0.703125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13115,
+    "timestamp": 919.194836555,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13130,
+    "timestamp": 919.494868332,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13145,
+    "timestamp": 919.79505673,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13160,
+    "timestamp": 920.095871047,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13175,
+    "timestamp": 920.395368466,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13190,
+    "timestamp": 920.694868059,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13205,
+    "timestamp": 920.994853516,
+    "synthetic_end": false,
+    "probability": 0.98828125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13220,
+    "timestamp": 921.294854565,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13235,
+    "timestamp": 921.594844096,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13250,
+    "timestamp": 921.894972292,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13265,
+    "timestamp": 922.194840158,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.9819153547286987,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13280,
+    "timestamp": 922.494877288,
+    "synthetic_end": false,
+    "probability": 0.9765625,
+    "reconstruction": 1.5710645914077759,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13295,
+    "timestamp": 922.795145186,
+    "synthetic_end": false,
+    "probability": 0.984375,
+    "reconstruction": 0.9819153547286987,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13310,
+    "timestamp": 923.094850074,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13325,
+    "timestamp": 923.394922321,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13340,
+    "timestamp": 923.695119572,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13355,
+    "timestamp": 923.99496244,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13370,
+    "timestamp": 924.294866306,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13385,
+    "timestamp": 924.594843691,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13400,
+    "timestamp": 924.89490826,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13415,
+    "timestamp": 925.195154827,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13430,
+    "timestamp": 925.494901406,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.39276614785194397,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13445,
+    "timestamp": 925.795082345,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13460,
+    "timestamp": 926.09484766,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13475,
+    "timestamp": 926.394937316,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13490,
+    "timestamp": 926.695154014,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13505,
+    "timestamp": 926.99526214,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13520,
+    "timestamp": 927.294844717,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.39276614785194397,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13535,
+    "timestamp": 927.594869512,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13550,
+    "timestamp": 927.895207673,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13565,
+    "timestamp": 928.194851547,
+    "synthetic_end": false,
+    "probability": 0.5859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13580,
+    "timestamp": 928.495043921,
+    "synthetic_end": false,
+    "probability": 0.5,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13595,
+    "timestamp": 928.796192887,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13610,
+    "timestamp": 929.095868577,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13625,
+    "timestamp": 929.395206247,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13640,
+    "timestamp": 929.694845049,
+    "synthetic_end": false,
+    "probability": 0.94140625,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13655,
+    "timestamp": 929.994964346,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.9819153547286987,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13670,
+    "timestamp": 930.294881255,
+    "synthetic_end": false,
+    "probability": 0.984375,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13685,
+    "timestamp": 930.595195106,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13700,
+    "timestamp": 930.895247424,
+    "synthetic_end": false,
+    "probability": 0.98828125,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13715,
+    "timestamp": 931.194997152,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13730,
+    "timestamp": 931.494868386,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13745,
+    "timestamp": 931.794894761,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13760,
+    "timestamp": 932.094905692,
+    "synthetic_end": false,
+    "probability": 0.90625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13775,
+    "timestamp": 932.394942857,
+    "synthetic_end": false,
+    "probability": 0.890625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13790,
+    "timestamp": 932.695261212,
+    "synthetic_end": false,
+    "probability": 0.98828125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13805,
+    "timestamp": 932.994845187,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13820,
+    "timestamp": 933.294838472,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13835,
+    "timestamp": 933.595128717,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13850,
+    "timestamp": 933.894911562,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13865,
+    "timestamp": 934.194840424,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 13880,
+    "timestamp": 934.49488481,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13895,
+    "timestamp": 934.794845839,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13910,
+    "timestamp": 935.094843165,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13925,
+    "timestamp": 935.394927354,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13940,
+    "timestamp": 935.694844332,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13955,
+    "timestamp": 935.994840048,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13970,
+    "timestamp": 936.2949613,
+    "synthetic_end": false,
+    "probability": 0.03125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 13985,
+    "timestamp": 936.595000982,
+    "synthetic_end": false,
+    "probability": 0.01953125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14000,
+    "timestamp": 936.894968572,
+    "synthetic_end": false,
+    "probability": 0.05078125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14015,
+    "timestamp": 937.195012698,
+    "synthetic_end": false,
+    "probability": 0.37109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14030,
+    "timestamp": 937.49516057,
+    "synthetic_end": false,
+    "probability": 0.703125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14045,
+    "timestamp": 937.796148593,
+    "synthetic_end": false,
+    "probability": 0.8515625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14060,
+    "timestamp": 938.094852906,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14075,
+    "timestamp": 938.395249821,
+    "synthetic_end": false,
+    "probability": 0.95703125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14090,
+    "timestamp": 938.694841624,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14105,
+    "timestamp": 938.994889237,
+    "synthetic_end": false,
+    "probability": 0.98828125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14120,
+    "timestamp": 939.294852239,
+    "synthetic_end": false,
+    "probability": 0.98828125,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14135,
+    "timestamp": 939.594840707,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14150,
+    "timestamp": 939.894975376,
+    "synthetic_end": false,
+    "probability": 0.984375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14165,
+    "timestamp": 940.194845031,
+    "synthetic_end": false,
+    "probability": 0.80078125,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14180,
+    "timestamp": 940.495179816,
+    "synthetic_end": false,
+    "probability": 0.296875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14195,
+    "timestamp": 940.794840328,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14210,
+    "timestamp": 941.09485678,
+    "synthetic_end": false,
+    "probability": 0.26171875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14225,
+    "timestamp": 941.395266128,
+    "synthetic_end": false,
+    "probability": 0.828125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14240,
+    "timestamp": 941.694844108,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14255,
+    "timestamp": 941.994842711,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14270,
+    "timestamp": 942.295358695,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14285,
+    "timestamp": 942.59503675,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14300,
+    "timestamp": 942.894997894,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14315,
+    "timestamp": 943.194832965,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14330,
+    "timestamp": 943.495137241,
+    "synthetic_end": false,
+    "probability": 0.9921875,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14345,
+    "timestamp": 943.794888762,
+    "synthetic_end": false,
+    "probability": 0.80078125,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14360,
+    "timestamp": 944.094879556,
+    "synthetic_end": false,
+    "probability": 0.0234375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14375,
+    "timestamp": 944.395277044,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14390,
+    "timestamp": 944.694844737,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14405,
+    "timestamp": 944.994881701,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14420,
+    "timestamp": 945.294844351,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14435,
+    "timestamp": 945.59483593,
+    "synthetic_end": false,
+    "probability": 0.0703125,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14450,
+    "timestamp": 945.894940915,
+    "synthetic_end": false,
+    "probability": 0.109375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14465,
+    "timestamp": 946.194997475,
+    "synthetic_end": false,
+    "probability": 0.2265625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14480,
+    "timestamp": 946.494943488,
+    "synthetic_end": false,
+    "probability": 0.66796875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14495,
+    "timestamp": 946.795211845,
+    "synthetic_end": false,
+    "probability": 0.87109375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14510,
+    "timestamp": 947.094853747,
+    "synthetic_end": false,
+    "probability": 0.96484375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14525,
+    "timestamp": 947.394960342,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14540,
+    "timestamp": 947.695018557,
+    "synthetic_end": false,
+    "probability": 0.984375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14555,
+    "timestamp": 947.994845479,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14570,
+    "timestamp": 948.294848176,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14585,
+    "timestamp": 948.595133873,
+    "synthetic_end": false,
+    "probability": 0.984375,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14600,
+    "timestamp": 948.894962113,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.5891492366790771,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14615,
+    "timestamp": 949.19483952,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.9819153547286987,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14630,
+    "timestamp": 949.495131189,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14645,
+    "timestamp": 949.794854472,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 1.1782984733581543,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14660,
+    "timestamp": 950.094856214,
+    "synthetic_end": false,
+    "probability": 0.99609375,
+    "reconstruction": 0.7855322957038879,
+    "positive": true,
+    "triggered": false
+  },
+  {
+    "sample_index": 14675,
+    "timestamp": 950.394948191,
+    "synthetic_end": false,
+    "probability": 0.9296875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14690,
+    "timestamp": 950.694950418,
+    "synthetic_end": false,
+    "probability": 0.09375,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14705,
+    "timestamp": 950.994918443,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14720,
+    "timestamp": 951.294847375,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14735,
+    "timestamp": 951.595238434,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14750,
+    "timestamp": 951.894954874,
+    "synthetic_end": false,
+    "probability": 0.00390625,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14765,
+    "timestamp": 952.194847218,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14780,
+    "timestamp": 952.494844385,
+    "synthetic_end": false,
+    "probability": 0.19921875,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14795,
+    "timestamp": 952.794837232,
+    "synthetic_end": false,
+    "probability": 0.12890625,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14810,
+    "timestamp": 953.09501117,
+    "synthetic_end": false,
+    "probability": 0.4140625,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14825,
+    "timestamp": 953.394983308,
+    "synthetic_end": false,
+    "probability": 0.7734375,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14840,
+    "timestamp": 953.694835995,
+    "synthetic_end": false,
+    "probability": 0.94921875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14855,
+    "timestamp": 953.99484618,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.7855322957038879,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14870,
+    "timestamp": 954.294839809,
+    "synthetic_end": false,
+    "probability": 0.98046875,
+    "reconstruction": 0.5891492366790771,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14885,
+    "timestamp": 954.595131198,
+    "synthetic_end": false,
+    "probability": 0.96875,
+    "reconstruction": 0.39276614785194397,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14900,
+    "timestamp": 954.894956242,
+    "synthetic_end": false,
+    "probability": 0.91796875,
+    "reconstruction": 0.19638307392597198,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14915,
+    "timestamp": 955.195029078,
+    "synthetic_end": false,
+    "probability": 0.05859375,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14930,
+    "timestamp": 955.495013925,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 14945,
+    "timestamp": 955.794958805,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15015,
+    "timestamp": 957.195705083,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15030,
+    "timestamp": 957.495091558,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15045,
+    "timestamp": 957.794909079,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15060,
+    "timestamp": 958.095096669,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15075,
+    "timestamp": 958.395142903,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15090,
+    "timestamp": 958.697306487,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15105,
+    "timestamp": 958.995137098,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15120,
+    "timestamp": 959.296083458,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15135,
+    "timestamp": 959.594911022,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15150,
+    "timestamp": 959.895026456,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15165,
+    "timestamp": 960.194974003,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15180,
+    "timestamp": 960.495593995,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15195,
+    "timestamp": 960.795111053,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15210,
+    "timestamp": 961.095769096,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15225,
+    "timestamp": 961.394904729,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15240,
+    "timestamp": 961.694910786,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  },
+  {
+    "sample_index": 15255,
+    "timestamp": 961.994934898,
+    "synthetic_end": false,
+    "probability": 0.0,
+    "reconstruction": 0.0,
+    "positive": false,
+    "triggered": false
+  }
+]

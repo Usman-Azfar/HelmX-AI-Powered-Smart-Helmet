@@ -1,0 +1,70 @@
+{
+  "phase": "3_repeated_tilts",
+  "n_samples": 3756,
+  "duration_s": 75.083515998,
+  "n_windows_scored": 250,
+  "clipping_per_axis_raw_int16": {
+    "ax": {
+      "min_raw": -19872,
+      "max_raw": 5720,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "ay": {
+      "min_raw": -23048,
+      "max_raw": -144,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "az": {
+      "min_raw": -8096,
+      "max_raw": 15040,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gx": {
+      "min_raw": -13378,
+      "max_raw": 22350,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gy": {
+      "min_raw": -21455,
+      "max_raw": 23095,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gz": {
+      "min_raw": -24051,
+      "max_raw": 24211,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    }
+  },
+  "max_classifier_score": 0.99609375,
+  "max_reconstruction_error": 0.5891492366790771,
+  "n_classifier_threshold_crossings": 7,
+  "n_recon_threshold_crossings": 0,
+  "n_or_positive_windows": 7,
+  "n_confirmed_triggers": 1,
+  "accel_magnitude_ms2_max": 16.65097854047264,
+  "gyro_magnitude_dps_max": 257.09196899122156
+}

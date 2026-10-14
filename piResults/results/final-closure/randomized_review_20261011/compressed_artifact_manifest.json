@@ -1,0 +1,517 @@
+{
+  "compression": "gzip, lossless; decompress to original filename before validating original capture hashes or using perf",
+  "artifacts": [
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair1_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair1_A/scheduler.data.gz",
+      "original_bytes": 208288006,
+      "compressed_bytes": 11873902,
+      "original_sha256": "551e2633cffbf82d00c863141544e4ceaccc589e6119ca4ef8bdf64e85bca584",
+      "compressed_sha256": "2c7ec3566e2ffac967dea4477cf4757ac1042eec074cd8cbe930a69c5aad6c8d"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair1_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair1_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40122532,
+      "compressed_bytes": 3202375,
+      "original_sha256": "bf70458ec7b4f16a70f7ef19d901b68cb5dd0c101884ff7a103db1f8a0f7a504",
+      "compressed_sha256": "8ced91017bc798e3ec61b51e7e5f918b04eb2b38643cc347b50505a84df463df"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair1_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair1_B/scheduler.data.gz",
+      "original_bytes": 208181182,
+      "compressed_bytes": 11900610,
+      "original_sha256": "e9be64b0210f2aeac40cfed99596a47e2fa2f9315f8496f2463d87767012cdc2",
+      "compressed_sha256": "8675ae47b91a2e1ff378edaa9bd59071b7fdd7d0711c36b13ae8d0d3fec9bde3"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair1_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair1_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40093696,
+      "compressed_bytes": 3025781,
+      "original_sha256": "430445efc7f5fd5997c44d12b0514f6c4e01d30a6ea8b655a012e02c9d18953e",
+      "compressed_sha256": "721684687c40dc09474631b9b0759445b7c0588e5c797d2a4d79ec603b5b522b"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair2_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair2_A/scheduler.data.gz",
+      "original_bytes": 208286846,
+      "compressed_bytes": 11880808,
+      "original_sha256": "2e4e41bc054c89fc53ada433807e9ddffb89895ff140f9ad59830c4b51411425",
+      "compressed_sha256": "bfb43d3ae82d05b0abd7eb3cacc558ae8171f6454d38a28fdc15debc00de7146"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair2_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair2_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40125469,
+      "compressed_bytes": 3184487,
+      "original_sha256": "0ca6b5e6e460f3289d8435751ee4dffd36e83fcc2ab1157ee26d48dced81b6fa",
+      "compressed_sha256": "6685f7e8e035775ca1662e8d07dd28cc0976c3a033780d72117062317e3c0fd9"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair2_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair2_B/scheduler.data.gz",
+      "original_bytes": 208182926,
+      "compressed_bytes": 11879540,
+      "original_sha256": "94488e5d43b10e29a6c673329dad73d4b1079f4876e328b8b9c6a0172b53a71a",
+      "compressed_sha256": "dee42b4833480a8ef6ccda549529843c53eed5416b114cc1b53881f1839c9dac"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair2_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair2_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40095298,
+      "compressed_bytes": 3025624,
+      "original_sha256": "2b52ee09602b40b36c7f6f6b177036c4e182c9ea195bdfef2edfbcf66c1ef9e4",
+      "compressed_sha256": "77a703afd488000be8a2a7f7ffb758604abe60f9cc948c7d45449bfe409dab28"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair3_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair3_A/scheduler.data.gz",
+      "original_bytes": 208298990,
+      "compressed_bytes": 11909922,
+      "original_sha256": "ef745c06fb05b3ba1989ea820c1a08b8aa7a66165d026cbbb095cd9e284b7ba2",
+      "compressed_sha256": "ca1225f7a0d761a34d66b249afb4ac6d9238e5351811c2e1e5a36ac14029faf6"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair3_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair3_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40129474,
+      "compressed_bytes": 3216926,
+      "original_sha256": "e09355e180e18e972276b9ff4f617c80dc46a332ed475be2da8cc0c817786473",
+      "compressed_sha256": "dddc6998c0023d3c45a3d4a75fafeec729c773bcd24bd0c6cbb4e3b158b4bffa"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair3_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair3_B/scheduler.data.gz",
+      "original_bytes": 208184718,
+      "compressed_bytes": 11878721,
+      "original_sha256": "c187b0d307de4a3800f0eeeedacde60ff813714550bde6d4cc65d0bfa7115797",
+      "compressed_sha256": "a82259dc40a621fbc2c2fa2f5f04dae5ce036153d6bba6f6e6eee69b9198fad9"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair3_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair3_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40095031,
+      "compressed_bytes": 3021044,
+      "original_sha256": "a8056b02f87dc96a045db3427ece28129ecdeced9ed9e8b35d9db67b4044a68c",
+      "compressed_sha256": "e7cee2d13ea9725fe7344d42be6a989eca2f7367613f37d5abfc2a4b4affd74f"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair4_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair4_A/scheduler.data.gz",
+      "original_bytes": 208293742,
+      "compressed_bytes": 11864935,
+      "original_sha256": "16cd08f84573d1c76a4b681e9aea296c2278a0ad19aed74ef56b6454d5ef0c04",
+      "compressed_sha256": "cc5f9c2145d2450153f171f5e4cc373e8cbb04fa671d97e1f068753b5598458b"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair4_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair4_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40123867,
+      "compressed_bytes": 3198634,
+      "original_sha256": "2abf6de8e32efebba53baa3528fc9cc85b192df7112d0b6d405e2a83b7354ed9",
+      "compressed_sha256": "e533d806699d3fbb9190cb71c5aa115f33589b9cd253a91e88d3c41babf137ff"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair4_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair4_B/scheduler.data.gz",
+      "original_bytes": 208237294,
+      "compressed_bytes": 11859277,
+      "original_sha256": "ca26112968a06eb2508616aaac5ec9c3a8477e458a1cd9398463f4fb1d5fd066",
+      "compressed_sha256": "4e29cd298b6417a5c1ca0779bdf0019b188a90e9063d7a3880a72dc083972d22"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair4_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair4_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40103397,
+      "compressed_bytes": 3024983,
+      "original_sha256": "54f5d7e1ce4b5ceab742f640332971a3d61e46fbdf666a6f20cfd60f4062421d",
+      "compressed_sha256": "e4cbdfbf6087abb615560beab5475053a54312019e7b6945dc2f6b021cb89bfd"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair5_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair5_A/scheduler.data.gz",
+      "original_bytes": 208300502,
+      "compressed_bytes": 11875009,
+      "original_sha256": "e1dc64c38ce03dfe23f3e64eaad4f319a9518a2343999cc5313cdbb70df7a076",
+      "compressed_sha256": "dcb1df971ea405a4938bda655244c186293b1846c2981a93e70c3b165b55bc7b"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair5_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair5_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40129029,
+      "compressed_bytes": 3188627,
+      "original_sha256": "2375625147968cc71d58a5d5e9347ea4a49d54849bdb1e3a8b2c816136f4724c",
+      "compressed_sha256": "02a72441d803d88cdb50731f2e7b143083c5ea2f48903d303d39792ea0ed5a14"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair5_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair5_B/scheduler.data.gz",
+      "original_bytes": 208217678,
+      "compressed_bytes": 11854972,
+      "original_sha256": "261ecd7049fd8502e608b33104c473e70bac64677cb89976306be61a8c5dd6b3",
+      "compressed_sha256": "7feac6566bdb2c4960366d3dd2c77e630ba053d92bdd96762afc223a1d9ad362"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair5_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair5_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40102240,
+      "compressed_bytes": 3009002,
+      "original_sha256": "6b061fc256fa299b28ecf0c29a5b9a2b94f1ce5c2bad19e830e451fa53f531a1",
+      "compressed_sha256": "473baf7367edb6cecb37e85b7d4f9f01d9bcf2461401fe9149fe44032040b13b"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair6_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair6_A/scheduler.data.gz",
+      "original_bytes": 208311030,
+      "compressed_bytes": 11872762,
+      "original_sha256": "0bbd82b766f54a35296ee6860874b3389e055b17c9746272fbf27a2d0286cf14",
+      "compressed_sha256": "a427d2fc3b8bc0aa602198d4c1521f8237b5acba17e19353dfcdb8f558499837"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair6_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair6_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40132589,
+      "compressed_bytes": 3175662,
+      "original_sha256": "92e19f145a11d69d18e255ac01b1b088d7be955cc6a9e78b1222e9142befc598",
+      "compressed_sha256": "7edec6a948e9c3bf9535e9bc7ef130472de07a23f18ea0f6536398a5d446947f"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair6_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair6_B/scheduler.data.gz",
+      "original_bytes": 208171686,
+      "compressed_bytes": 11873017,
+      "original_sha256": "55f37a965024ae9a79a268a910269c969b5655a2bae5b0afb659ffa8b938dfbf",
+      "compressed_sha256": "56e3fd475694d5ca8cea43450fa1b8cadee164f13273f64847d057603f893988"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair6_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_D4_20261011T065644991406Z/pair6_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40091204,
+      "compressed_bytes": 3013221,
+      "original_sha256": "41f51126bddbce4df07976b0e30db2aafe5cb257a3c6ea6dc2f98057a1173679",
+      "compressed_sha256": "5261cd7c3a57bd8174c40c855344e8773518556b719227f8025f7b7b40b2f495"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T090315494023Z/pair1_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T090315494023Z/pair1_A/scheduler.data.gz",
+      "original_bytes": 99877526,
+      "compressed_bytes": 5754883,
+      "original_sha256": "55cb88ca4cae2ba4252809d3fa604177117dc21cfd35cdb7dd2df97f2c7def83",
+      "compressed_sha256": "ecd0a8a5b95a42ea9988708555fcaec1f912cb84433c5462946674202c5d6bc4"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T090315494023Z/pair1_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T090315494023Z/pair1_B/scheduler.data.gz",
+      "original_bytes": 208315030,
+      "compressed_bytes": 11889268,
+      "original_sha256": "b0d211fa162976736df7f0baf4000ecea634de5c7ef799ce325b6e9337ca39cb",
+      "compressed_sha256": "5c4a6d16c3fe5cd0afc3c4d81b535303ca816a3640b847115f7cde8bf3dfc1cf"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T090315494023Z/pair1_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T090315494023Z/pair1_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40126448,
+      "compressed_bytes": 3199818,
+      "original_sha256": "16974af57a3104236cd95154e282a30ffe946cfeec8ae6c0d890f4c84da2e055",
+      "compressed_sha256": "72bc3719b3f096c5ecdc8967ed3303595a71f8c3587f9da3973d85deed5f5095"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair1_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair1_A/scheduler.data.gz",
+      "original_bytes": 208469558,
+      "compressed_bytes": 11900908,
+      "original_sha256": "a624b54d6d8f995d5d1fcce939616dc346465d9b1f621e30419f74603ba56135",
+      "compressed_sha256": "fc5d9423a0f6aee3e4a7b4e6d7c53ca93e70556bddc60aa26c1cf559647208c2"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair1_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair1_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40122532,
+      "compressed_bytes": 3286409,
+      "original_sha256": "ef917403d407c6e7152e342894776746d20a79f51afda04a34a97c4551487ee8",
+      "compressed_sha256": "4c43ef101f838de161adb1eff980d2e6d4b713b9df8d0e1a1508fde5bb393771"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair1_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair1_B/scheduler.data.gz",
+      "original_bytes": 208310478,
+      "compressed_bytes": 11878459,
+      "original_sha256": "01afb2b8212458052ecca462dacf375f701f4d76aa7d078e0937ba7497d150cf",
+      "compressed_sha256": "007833a05159e1d62bcf851656417aa8a9644a2192ded6cfacd0177b605d2ed4"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair1_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair1_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40127249,
+      "compressed_bytes": 3195909,
+      "original_sha256": "06b413b9421c2ef0330d76dd7eef9b9b39b60e9111ee248781a2f283de505125",
+      "compressed_sha256": "0bde7e3cb087b39b2c89df35c9bd5ec3e5e68ddf31665547d7cc7b4c6aa3b652"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair2_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T094221462687Z/pair2_B/scheduler.data.gz",
+      "original_bytes": 166563542,
+      "compressed_bytes": 9486027,
+      "original_sha256": "3b12134b0d8cc44474a9ebc62c89426f91fe13239bc204f9aefbd4801228a95f",
+      "compressed_sha256": "c5e4e49e667b80c58401888ff43460200a712f58f94e85f2bffa7aa0d4798c9d"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair1_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair1_A/scheduler.data.gz",
+      "original_bytes": 208492790,
+      "compressed_bytes": 11950890,
+      "original_sha256": "c4e54b91c786be705b2f28f8d867b9acd588559afb15ec93ce96781e5c4ac48b",
+      "compressed_sha256": "be90098206282ea5337adbcbe23f937dfa869e0f02979a0d4e020edd9eed480f"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair1_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair1_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40130720,
+      "compressed_bytes": 3274126,
+      "original_sha256": "3df491ee7da8fafea9d9c3e6dee887be64804121fc34756253e22442d6fd4146",
+      "compressed_sha256": "5eb18aaf7c2618a80637a1ba9545e3d8a368712b2cd1723b51d0664bedf2331d"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair1_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair1_B/scheduler.data.gz",
+      "original_bytes": 208304510,
+      "compressed_bytes": 11883686,
+      "original_sha256": "d2eae7f1c9bd5e4e5141a5e4b6c89b502efce1d5c3db90655e23d1305c85df00",
+      "compressed_sha256": "6b5b90f91741c4d0874ec454a645a01ff1d1125acd99641a0ba1364d89575e47"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair1_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair1_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40126804,
+      "compressed_bytes": 3180202,
+      "original_sha256": "65861567fce76d6e86cd32169d8fdff31213891d1eb7f605da6f69866a204e02",
+      "compressed_sha256": "73e48947fdf3483d63600f6088c1c06803e2a3591e0945869b9e93fbccb10d2c"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair2_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair2_A/scheduler.data.gz",
+      "original_bytes": 208503502,
+      "compressed_bytes": 11921909,
+      "original_sha256": "9f05fc95099b2742abe30c7157fee61d12fb2b387924e688d8305866340a25a3",
+      "compressed_sha256": "80ad370341bb01e3ff8d3a969a5dd9fd06c5f768929fb12ed7bea8e9ae858808"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair2_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair2_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40130097,
+      "compressed_bytes": 3236386,
+      "original_sha256": "41f67e4a4a7e3c3033c97e40811d322d39063e028a040a4b249d7eda317c8633",
+      "compressed_sha256": "796dc9b1a9e701fb34b6627727e51faf685e1df9291494ba8c3ba31cb7f0ead9"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair2_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair2_B/scheduler.data.gz",
+      "original_bytes": 208294542,
+      "compressed_bytes": 11874844,
+      "original_sha256": "631decc7c7e3541f98037f4512f0695c46f8d84fba8aa21437e995a31e5ed14f",
+      "compressed_sha256": "ba44c691c1aa9d0823a235f5c4957cd4dcb951527f1ee21bb1aecf2670419473"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair2_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair2_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40123066,
+      "compressed_bytes": 3171050,
+      "original_sha256": "13f27f7b5bc5043717c094893547d53a4c44401e97fa410cac6a1156c506bd44",
+      "compressed_sha256": "8da51f4c3f9fcce2d5a4a266426574dc5698e4ecc1e74ca0b1f79e77fb41bba3"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair3_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair3_A/scheduler.data.gz",
+      "original_bytes": 208484806,
+      "compressed_bytes": 11919526,
+      "original_sha256": "8d45f67fa4cdca849de4676f3841dcd6849cb2037a5e7307069ef21a52c0f193",
+      "compressed_sha256": "5c89205c85878485d5ff02b16e50e110a9ca87238bbb53d18b6f48280b97e431"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair3_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair3_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40127427,
+      "compressed_bytes": 3277645,
+      "original_sha256": "31b0f56a23a6594b7cd12e2c475296cec1fde0a59500490b552afb56c40f4928",
+      "compressed_sha256": "7a7cb74fe2fd0b04cd2e6d70f01ea57a3efc8e142831433a5ac2e5df0ae44cc1"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair3_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair3_B/scheduler.data.gz",
+      "original_bytes": 208415094,
+      "compressed_bytes": 11896712,
+      "original_sha256": "b7a0edbf09b1036755f187c85c4474deb13e5501af85d9a477b8afe52b5b69f8",
+      "compressed_sha256": "7091d9ffa8c200ca32a838b94bf65eaf430474a1293396097eee2ec500d4244a"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair3_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair3_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40130008,
+      "compressed_bytes": 3169672,
+      "original_sha256": "db7c211167c8be75816264a3a6248dc58422b011e08661eaf10b9e92fd8e00df",
+      "compressed_sha256": "fe38d5275676b8f02d3f40d5f7208e9a7f59d1615e63298c73470e97b67f73bf"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair4_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair4_A/scheduler.data.gz",
+      "original_bytes": 208456166,
+      "compressed_bytes": 11900428,
+      "original_sha256": "344d7e65fb7e6467d3f74d8509e0da791787abb91e2cb111c3e98cb09d629bae",
+      "compressed_sha256": "1f9f7a5383f92b763d0a5064f31ece8d1dd3c63ffc8070c2e59adee5351f1cfd"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair4_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair4_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40126003,
+      "compressed_bytes": 3220858,
+      "original_sha256": "44f08f71499bea98ed7dfbf3d60b415a464e46a47aedd79e7b5080a4c5a1d7ef",
+      "compressed_sha256": "b6fc91eb6418d9073cd37a2e80eb790ff15d9073ac36c34f68d2fef835d34b30"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair4_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair4_B/scheduler.data.gz",
+      "original_bytes": 208301318,
+      "compressed_bytes": 11915993,
+      "original_sha256": "fe169bc444879b0f1e60b874bd3566201e4d9380e29d633c2bffd4ff0b59e1b7",
+      "compressed_sha256": "b89fabe100660c2a89c4a71d97608314de64049408bac10261845857e2dee946"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair4_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair4_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40125024,
+      "compressed_bytes": 3203056,
+      "original_sha256": "712f092a3435b454afb8c6ad07140d8a52aa9b358bb0b018f909ebadb20c3f33",
+      "compressed_sha256": "6e20e404663cbff2d844353e8a150a272d114364a3f328206460bdb8928c380d"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair5_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair5_A/scheduler.data.gz",
+      "original_bytes": 208481446,
+      "compressed_bytes": 11910542,
+      "original_sha256": "855d776fed9a8e18067d098beb460ea525adf4445dd80c6c8597d9c317677096",
+      "compressed_sha256": "b384ae94cc06cdacbfebd9cf5c352dd1d971171c179a7edd62048031397abb65"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair5_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair5_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40126181,
+      "compressed_bytes": 3264651,
+      "original_sha256": "9701a6bd5175b7f4b8e004f03287bb58c10cb1a9d09d23f403afac73f7fa66dc",
+      "compressed_sha256": "0086cd6a0c0b295f947bc65037919e0d4f2b5441fabf9838ea8d59f8faa33eae"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair5_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair5_B/scheduler.data.gz",
+      "original_bytes": 208310246,
+      "compressed_bytes": 11867072,
+      "original_sha256": "826e63caa893ea2088e05b18136828aa114bef97d00a50b128ea8546010970a6",
+      "compressed_sha256": "8528da62391d1ddf4446e0978f6727e83b6fc601cc09347e28cf985b7b7bf969"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair5_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair5_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40125469,
+      "compressed_bytes": 3172830,
+      "original_sha256": "910ba36e59f1afd699b7d4ba425701e502772ad727245ccba73620725ae34cd8",
+      "compressed_sha256": "e3a8349200771c5b0feac14bf6d05b519cce1666d00b10a940e1acca1a9e95f0"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair6_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair6_A/scheduler.data.gz",
+      "original_bytes": 208612630,
+      "compressed_bytes": 11932872,
+      "original_sha256": "6bbf5e9fa914f940f29a28c284ff72f046eb3bfd6bfa5df7f217a39b18375031",
+      "compressed_sha256": "5e18718ce9924f179639d10043fb7856b756b1cf5171d2c28494050e4a0eaf75"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair6_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair6_A/scheduler_timehist.txt.gz",
+      "original_bytes": 40130364,
+      "compressed_bytes": 3270558,
+      "original_sha256": "f1e6ea6441222184631d214811e603d4aa2c1e0bc66dabbdc0da8fe1bc225448",
+      "compressed_sha256": "654d38ffc3c425dd523a05f31dc9152fbf938d537354169476d3a67cc8253114"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair6_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair6_B/scheduler.data.gz",
+      "original_bytes": 208291398,
+      "compressed_bytes": 11912028,
+      "original_sha256": "79c6be0d20cdbc99c1ea2b129543156163620d98a7faad7d6dd9a322a14d4d50",
+      "compressed_sha256": "ebbeeaf1e60e6a291b71f8aee2027a059bc3336899e211ecd81ed06286823b27"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair6_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_K1_20261011T103536168830Z/pair6_B/scheduler_timehist.txt.gz",
+      "original_bytes": 40123066,
+      "compressed_bytes": 3199027,
+      "original_sha256": "7ef9cff0b22b529c775d6ad7222530882c96945fb1ce462b8aab8489d2bb0c58",
+      "compressed_sha256": "f1dfd9387f7561944a25b19750f5828ba1d15f2ee47668ec87f23a7c1d1394f9"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_smoke_D4_20261011T064030315864Z/pair1_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_smoke_D4_20261011T064030315864Z/pair1_A/scheduler.data.gz",
+      "original_bytes": 21735902,
+      "compressed_bytes": 1413396,
+      "original_sha256": "5ba0f169f0d21d4a70fc4d1f9c9aec0e2345f9dc80deca191adef754673a9fd1",
+      "compressed_sha256": "69af02dacd9b7bc134d4a11bcc04c7b27191deabebd94a54fd7670ce1e408cfd"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_smoke_D4_20261011T064030315864Z/pair1_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_smoke_D4_20261011T064030315864Z/pair1_A/scheduler_timehist.txt.gz",
+      "original_bytes": 4084385,
+      "compressed_bytes": 457004,
+      "original_sha256": "eb04c37f24524f57e37f5977867795c65b1fd7622ff5ab57d9946f1de3b7b029",
+      "compressed_sha256": "dc61d0d6fccb5afaca95807c48544b32458efd30f336085fe118c398e3f0f6c2"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_smoke_D4_20261011T064030315864Z/pair1_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_smoke_D4_20261011T064030315864Z/pair1_B/scheduler.data.gz",
+      "original_bytes": 21615302,
+      "compressed_bytes": 1434773,
+      "original_sha256": "b6749cb7c746c35e6582fb56cc945e5065910ac5be24bda1cac85e7a26ad84c0",
+      "compressed_sha256": "c5a03f2813792d706cf03ab663b43890e4c5c9ba06002dbcedac96a98f828842"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_smoke_D4_20261011T064030315864Z/pair1_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_smoke_D4_20261011T064030315864Z/pair1_B/scheduler_timehist.txt.gz",
+      "original_bytes": 4010693,
+      "compressed_bytes": 447319,
+      "original_sha256": "93b3781cf220217d05ca9f2b8b2981af95535f682ff8126f01f2c05f0a204160",
+      "compressed_sha256": "dd8cda6db11c9353482d6e60dfcc7b3f4076fee718ceadfdd564edf87ad68ea3"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_smoke_K1_20261011T064349140324Z/pair1_A/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_smoke_K1_20261011T064349140324Z/pair1_A/scheduler.data.gz",
+      "original_bytes": 21809342,
+      "compressed_bytes": 1544368,
+      "original_sha256": "903759d07fea88d7e38c997a20d5d4b46a2ae3fad85e80f46081c429273cca18",
+      "compressed_sha256": "efc5c0f315a03614a7c083a06a86059a6aea680a01255dc0ffe6a257a7cefe21"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_smoke_K1_20261011T064349140324Z/pair1_A/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_smoke_K1_20261011T064349140324Z/pair1_A/scheduler_timehist.txt.gz",
+      "original_bytes": 4127817,
+      "compressed_bytes": 501629,
+      "original_sha256": "7f6f227500090761fee9e04f64513b57815b7bd703abea56a95dc37c5ee3d13e",
+      "compressed_sha256": "0993d3ca9a541150b1a879834bf1e4e05e0f99aacf6176515f901351589ae5c5"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_smoke_K1_20261011T064349140324Z/pair1_B/scheduler.data",
+      "compressed": "piResults/final_pi_review_closure/randomized_smoke_K1_20261011T064349140324Z/pair1_B/scheduler.data.gz",
+      "original_bytes": 21799638,
+      "compressed_bytes": 1543091,
+      "original_sha256": "85f645c82a4830bf6ecbe7f3fa72e607f6a52cb8cdea1570408a0797f81e9722",
+      "compressed_sha256": "01fef9490ddf2c95b8866ddf67e19f3a263ab84db94e229aca585e864e918c09"
+    },
+    {
+      "original": "piResults/final_pi_review_closure/randomized_smoke_K1_20261011T064349140324Z/pair1_B/scheduler_timehist.txt",
+      "compressed": "piResults/final_pi_review_closure/randomized_smoke_K1_20261011T064349140324Z/pair1_B/scheduler_timehist.txt.gz",
+      "original_bytes": 4146863,
+      "compressed_bytes": 504849,
+      "original_sha256": "39766e7622bf39f7603a174d51847a2cc0125339938f7c358129497ac4f7edc7",
+      "compressed_sha256": "285e684f483ba168e742b82b995e633875de7c5a8edeb4c489e3f37f2a5dfdee"
+    }
+  ]
+}

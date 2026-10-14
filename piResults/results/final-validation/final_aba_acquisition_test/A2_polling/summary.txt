@@ -1,0 +1,13 @@
+HelmX ABA Acquisition Test -- Condition A2_polling (polling)
+======================================================================
+Duration: 1200.0s (20.00 min), 59999 samples, 3986 windows scored, achieved 50.00Hz
+
+V_T=0.9992479318124843, C_D=0.9974974974974975, timing_gaps=3, i2c_failures=0, exceptions=0
+dt p50/p99/max (ms): 19.99584249824693/21.059054020115582/36.65349099901505
+processing latency p50/p99/max (ms): 1.5921385020192247/2.7488597004776247/7.870473000366474
+
+Classifier prob: max=0.0, n_above_threshold=0
+Reconstruction error: median=0.0, p99=0.0, max=0.0, n_above_threshold=0
+Bands around threshold (10.8787): {"r_lt_8": 3986, "8_le_r_lt_9": 0, "9_le_r_lt_10": 0, "10_le_r_lt_theta_r": 0, "theta_r_le_r_lt_11.5": 0, "11.5_le_r_lt_12.5": 0, "r_ge_12.5": 0}
+
+Trigger analysis: classifier_only=0, recon_only=0, both=0, neither=3986, total_or_positive=0, longest_run=0, confirmed_triggers=0

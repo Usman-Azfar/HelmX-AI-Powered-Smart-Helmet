@@ -1,0 +1,42 @@
+HelmX Section E4 -- Deployment-Realistic No-IDE/No-Desktop Stress Reduction
+============================================================================
+2026-09-20, ~13:53-14:15, 20-min run (deployed polling acquisition, same
+method as E1/F1 -- NOT the FIFO/decimation path used in E2/E3).
+
+Reduced-service list stopped (established F1/E1 convention): helmx-ble,
+mosquitto, rhasspy, helmx_assistant, wayvnc, wayvnc-control. All 6 stopped and
+restarted cleanly (see e4_service_transitions.log). rpi-connect and
+rpi-connect-wayvnc failed to stop/start with "Unit not found" -- these
+services are not installed on this Pi at all (consistent with every earlier
+campaign's "unchanged, rpi-connect already absent" note), not a new failure.
+
+DISCLOSED LIMITATION (per orchestrate_e4.sh's own comment, unchanged): VS Code
+and the interactive coding agent stayed open/present, since the agent is what
+launched and must later analyze this run -- same confound F1 already
+disclosed for its own "reduced" condition. Not claimed as "headless."
+
+Results (source: runtime_optional/e4_deployment_reduced_interactive.json):
+  n_input_samples:            59,997
+  n_windows_generated:         3,881
+  n_triggers:                      0
+  n_sensor_read_failures:          0
+  n_reconnects:                    0
+  n_exceptions:                    0
+  deadline_miss_count/rate:    0 / 0.0  (p99 window latency 1.98ms, max 8.50ms)
+  stream_guard: 36 timing gaps, 38 suspected-dropped, 36 duplicate/too-fast,
+                36 windows invalidated (out of 3881+36=3917 attempted) --
+                consistent in magnitude with prior reduced-condition runs.
+  memory_leak_check: slope +0.053 MB/min, verdict "stable plateau"
+  max_temperature_c: 50.6, thermal_throttling_occurred: false
+
+Cross-reference with E2/E3's finding: E4 uses the deployed POLLING method
+(same as E1), not the FIFO/decimation path, and under equally-idle conditions
+saw ZERO triggers -- matching E1's 0/1975 and NOT reproducing E2/E3's 5
+reconstruction-only near-threshold triggers. This is a useful additional data
+point (not proof) for the open question raised in
+acquisition_compare/acquisition_comparison.txt: three independent runs on the
+polling method (E1, and now E4) show 0 such crossings, while both FIFO-based
+runs (E2, E3) show 5 each with partially-overlapping bit-identical values --
+consistent with, though still not conclusive proof of, the acquisition method
+(rather than pure INT8-quantization-on-idle-input alone) being a contributing
+factor. Still flagged as open/disclosed, not resolved.

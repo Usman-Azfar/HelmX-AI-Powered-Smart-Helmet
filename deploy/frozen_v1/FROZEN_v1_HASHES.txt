@@ -1,0 +1,9 @@
+=== Frozen evaluated-v1 snapshot, taken 2026-08-30T21:53:50+05:00 before Weakness 1 / Weakness 2 corrections ===
+Per HelmX_Paper1_Deployment_Weaknesses_Correction_Revalidation_Plan.md Section 2.
+
+843dc665a8cdf2fd68ff896a0173c2a7a98fc51be2c19848dce8619ecf90c5be  deploy/crash_monitor.py
+c9fa8a2b85aa991b5b1a08fde6ec7fb5f7d8a0e5f09a9aa3e4d9a0b5615c7abb  deploy/config.yaml
+525cddc914e010ef433033dc2f5141c30eda14d5e5464da5d544b65d9780e771  deploy/pi_research_suite/exp_a4_replay_streaming_pipeline.py
+2e59379601b02706e97832a93e72bb954a5b62e4ba77ccd82acbcbaa0a515bd6  models/helmx_crash_model_int8.tflite
+008ee756a5cf6cf5b7ac7dd13fe84a531365666af7add608760581cd11305b0a  models/helmx_crash_model_fp16.tflite
+f61e2fa4122d9b1944c36d67eddaf4c20dde53961c2822804a032875ac2b50de  models/thresholds.json

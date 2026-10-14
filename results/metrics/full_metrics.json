@@ -1,0 +1,281 @@
+{
+  "train": {
+    "n_windows": 18720,
+    "n_normal": 17825,
+    "n_crash_like": 895,
+    "n_sessions": 46,
+    "normal_exposure_hours": 1.333927777777778,
+    "classification_metrics": {
+      "balanced_operating_point": {
+        "confusion_matrix": {
+          "TP": 118,
+          "TN": 17814,
+          "FP": 11,
+          "FN": 777
+        },
+        "accuracy": 0.957905982905983,
+        "precision": 0.9147286821705426,
+        "recall_sensitivity": 0.1318435754189944,
+        "specificity": 0.9993828892005611,
+        "f1_score": 0.23046875,
+        "f2_score": 0.159072526287409,
+        "balanced_accuracy": 0.5656132323097778,
+        "matthews_corrcoef": 0.33845542913226645,
+        "roc_auc": 0.980168271603971,
+        "pr_auc": 0.7404386319812674,
+        "threshold": 0.9892255067825317,
+        "n_windows": 18720,
+        "window_level_trigger_rate_per_hour": 8.246323514099963
+      },
+      "high_recall_operating_point": {
+        "confusion_matrix": {
+          "TP": 745,
+          "TN": 17146,
+          "FP": 679,
+          "FN": 150
+        },
+        "accuracy": 0.955715811965812,
+        "precision": 0.5231741573033708,
+        "recall_sensitivity": 0.8324022346368715,
+        "specificity": 0.9619074333800841,
+        "f1_score": 0.6425183268650281,
+        "f2_score": 0.7444044764188649,
+        "balanced_accuracy": 0.8971548340084778,
+        "matthews_corrcoef": 0.6392758562624169,
+        "roc_auc": 0.980168271603971,
+        "pr_auc": 0.7404386319812674,
+        "threshold": 0.76202392578125,
+        "n_windows": 18720,
+        "window_level_trigger_rate_per_hour": 509.02306055217036
+      }
+    },
+    "reconstruction_error_metrics": {
+      "overall": {
+        "mse": 0.742579996585846,
+        "rmse": 0.8617308144576507,
+        "mae": 0.21731579303741455
+      },
+      "normal_windows": {
+        "mse": 0.22596625983715057,
+        "rmse": 0.47535908515263553,
+        "mae": 0.19886243343353271
+      },
+      "crash_like_windows": {
+        "mse": 11.032395362854004,
+        "rmse": 3.3215049846197737,
+        "mae": 0.5850105881690979
+      }
+    },
+    "reconstruction_anomaly_score_distribution": {
+      "normal_windows": {
+        "mean": 0.22640584409236908,
+        "std": 1.3122994899749756,
+        "min": 0.0004991411115042865,
+        "p25": 0.017131470143795013,
+        "median": 0.05209796130657196,
+        "p75": 0.13881312310695648,
+        "p95": 0.572637999057769,
+        "p99": 4.035654678344667,
+        "max": 100.26077270507812
+      },
+      "crash_like_windows": {
+        "mean": 11.032407760620117,
+        "std": 49.48932647705078,
+        "min": 0.0013418900780379772,
+        "p25": 0.044230177998542786,
+        "median": 0.08920847624540329,
+        "p75": 0.17270097881555557,
+        "p95": 73.23103713989212,
+        "p99": 294.1957690429686,
+        "max": 449.6990966796875
+      }
+    },
+    "reconstruction_anomaly_score_distribution_peak": {
+      "normal_windows": {
+        "mean": 1.593274712562561,
+        "std": 10.281002044677734,
+        "min": 0.0016422303160652518,
+        "p25": 0.07837098091840744,
+        "median": 0.3030124008655548,
+        "p75": 0.7402690052986145,
+        "p95": 3.0106970310211167,
+        "p99": 33.011714324951114,
+        "max": 414.0771179199219
+      },
+      "crash_like_windows": {
+        "mean": 119.1518783569336,
+        "std": 587.70849609375,
+        "min": 0.0107371024787426,
+        "p25": 0.23291664570569992,
+        "median": 0.5809460282325745,
+        "p75": 1.2134524583816528,
+        "p95": 603.9564270019521,
+        "p99": 2243.4115234374513,
+        "max": 7491.91845703125
+      }
+    }
+  },
+  "test": {
+    "n_windows": 5437,
+    "n_normal": 5294,
+    "n_crash_like": 143,
+    "n_sessions": 10,
+    "normal_exposure_hours": 0.4177444444444445,
+    "classification_metrics": {
+      "balanced_operating_point": {
+        "confusion_matrix": {
+          "TP": 29,
+          "TN": 5292,
+          "FP": 2,
+          "FN": 114
+        },
+        "accuracy": 0.9786647048004414,
+        "precision": 0.9354838709677419,
+        "recall_sensitivity": 0.20279720279720279,
+        "specificity": 0.9996222138269739,
+        "f1_score": 0.3333333333333333,
+        "f2_score": 0.24046434494195687,
+        "balanced_accuracy": 0.6012097083120883,
+        "matthews_corrcoef": 0.4302226673098108,
+        "roc_auc": 0.9459237400302758,
+        "pr_auc": 0.5393709255767394,
+        "threshold": 0.9892255067825317,
+        "n_windows": 5437,
+        "window_level_trigger_rate_per_hour": 4.787616033194137
+      },
+      "high_recall_operating_point": {
+        "confusion_matrix": {
+          "TP": 111,
+          "TN": 4741,
+          "FP": 553,
+          "FN": 32
+        },
+        "accuracy": 0.8924038992091227,
+        "precision": 0.16716867469879518,
+        "recall_sensitivity": 0.7762237762237763,
+        "specificity": 0.8955421231582924,
+        "f1_score": 0.275092936802974,
+        "f2_score": 0.44902912621359226,
+        "balanced_accuracy": 0.8358829496910343,
+        "matthews_corrcoef": 0.3283206390937215,
+        "roc_auc": 0.9459237400302758,
+        "pr_auc": 0.5393709255767394,
+        "threshold": 0.76202392578125,
+        "n_windows": 5437,
+        "window_level_trigger_rate_per_hour": 1323.775833178179
+      }
+    },
+    "reconstruction_error_metrics": {
+      "overall": {
+        "mse": 0.7722549438476562,
+        "rmse": 0.8787803729303791,
+        "mae": 0.1863740086555481
+      },
+      "normal_windows": {
+        "mse": 0.21207159757614136,
+        "rmse": 0.46051232076475584,
+        "mae": 0.17110127210617065
+      },
+      "crash_like_windows": {
+        "mse": 21.51082420349121,
+        "rmse": 4.637976304757411,
+        "mae": 0.7517881989479065
+      }
+    },
+    "reconstruction_anomaly_score_distribution": {
+      "normal_windows": {
+        "mean": 0.21214202046394348,
+        "std": 4.068885326385498,
+        "min": 0.00035604217555373907,
+        "p25": 0.002816976048052311,
+        "median": 0.04049216955900192,
+        "p75": 0.16149456799030304,
+        "p95": 0.5433703690767276,
+        "p99": 1.2044479429721813,
+        "max": 283.91937255859375
+      },
+      "crash_like_windows": {
+        "mean": 21.510831832885742,
+        "std": 112.20429229736328,
+        "min": 0.023215072229504585,
+        "p25": 0.06464409828186035,
+        "median": 0.11558176577091217,
+        "p75": 0.3589012622833252,
+        "p95": 44.50618896484382,
+        "p99": 704.816076660157,
+        "max": 751.843505859375
+      }
+    },
+    "reconstruction_anomaly_score_distribution_peak": {
+      "normal_windows": {
+        "mean": 1.5549049377441406,
+        "std": 32.04083251953125,
+        "min": 0.0016729416092857718,
+        "p25": 0.011154633481055498,
+        "median": 0.2533114552497864,
+        "p75": 0.7738368958234787,
+        "p95": 2.9739498853683393,
+        "p99": 11.449215478896926,
+        "max": 2167.69775390625
+      },
+      "crash_like_windows": {
+        "mean": 259.4313049316406,
+        "std": 1175.722900390625,
+        "min": 0.1400650292634964,
+        "p25": 0.36155733466148376,
+        "median": 0.6529884934425354,
+        "p75": 3.2190154790878296,
+        "p95": 1077.2863464355473,
+        "p99": 7115.209365234377,
+        "max": 7544.16015625
+      }
+    },
+    "detection_latency_seconds": {
+      "balanced": {
+        "n_sessions_detected": 3,
+        "mean_s": 0.39999999999999997,
+        "median_s": 0.6,
+        "min_s": 0.0,
+        "max_s": 0.6
+      },
+      "high_recall": {
+        "n_sessions_detected": 3,
+        "mean_s": 0.0,
+        "median_s": 0.0,
+        "min_s": 0.0,
+        "max_s": 0.0
+      }
+    }
+  },
+  "inference_benchmark_this_machine": {
+    "keras_fp32": {
+      "mean_ms": 60.09731350004586,
+      "p95_ms": 63.754700000936275,
+      "throughput_windows_per_sec": 16.639678910093657,
+      "n_runs": 200
+    },
+    "tflite_fp16": {
+      "mean_ms": 0.16200400002162496,
+      "p95_ms": 0.30537500001628354,
+      "n_runs": 100,
+      "throughput_windows_per_sec": 6172.687093321868
+    },
+    "tflite_int8": {
+      "mean_ms": 0.22503199998936907,
+      "p95_ms": 0.36270499936108536,
+      "n_runs": 100,
+      "throughput_windows_per_sec": 4443.812435774654
+    }
+  },
+  "model_footprint": {
+    "keras": {
+      "size_kb": 774.3
+    },
+    "fp16": {
+      "size_kb": 130.8
+    },
+    "int8": {
+      "size_kb": 81.6
+    }
+  }
+}

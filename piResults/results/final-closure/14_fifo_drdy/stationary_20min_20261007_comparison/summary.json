@@ -1,0 +1,367 @@
+{
+  "id": "J3",
+  "verification": "14_fifo_drdy/stationary_20min_20261007_verification",
+  "checks": {
+    "frozen_artifacts_unchanged": true,
+    "full_duration": true,
+    "no_exception": true,
+    "no_i2c_errors": true,
+    "raw_rows_match": true,
+    "window_rows_match": true,
+    "nonempty": true,
+    "indices_contiguous": true,
+    "times_nondecreasing": true,
+    "registers_restored": true,
+    "replay_endpoints_exact": true,
+    "replay_scores_exact": true,
+    "replay_policy_exact": true,
+    "gap_count_matches": true,
+    "no_overflow": true,
+    "no_edge_timeout": true,
+    "edge_rows_match": true,
+    "fifo_packet_accounting": true,
+    "fifo_raw_decode_exact": true,
+    "fifo_host_times_exact": true,
+    "fifo_configuration_correct": true
+  },
+  "comparisons": [
+    {
+      "condition": "Current J3",
+      "source": "14_fifo_drdy/stationary_20min_20261007",
+      "n_samples": 60712,
+      "n_windows": 4040,
+      "duration_s": 1200.0189315459993,
+      "sample_rate_hz": 50.59253517091099,
+      "gaps": 1,
+      "gaps_per_min": 0.04999921119802773,
+      "C_D": 0.9990108803165183,
+      "V_T": 0.9997525365008662,
+      "survival_90": 0.9985319103310625,
+      "dt_p99_ms": 23.997024800155494,
+      "dt_max_ms": 89.1436629999589,
+      "processing_p99_ms": 12.03355814998759,
+      "i2c_failures": 0,
+      "events": 0,
+      "cpu_mean_pct": 7.6516372795968675,
+      "rss_max_bytes": 61419520,
+      "cpu_temp_max_c": 53.556,
+      "score_distributions": {
+        "classifier": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "99.9": 0.0,
+          "100": 0.0
+        },
+        "reconstruction": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "99.9": 0.0,
+          "100": 0.0
+        }
+      },
+      "physical_axes": {
+        "ax": {
+          "mean": -5.838907015533184,
+          "std": 0.0089292138992266,
+          "min": -6.042964990234375,
+          "max": -5.651513018798828,
+          "rms": 5.838913843079337
+        },
+        "ay": {
+          "mean": -0.7776428471967248,
+          "std": 0.010382668494174225,
+          "min": -1.7902642913818358,
+          "max": -0.14963760375976562,
+          "rms": 0.7777121560071494
+        },
+        "az": {
+          "mean": -7.792635472584663,
+          "std": 0.013615334957525321,
+          "min": -7.9661074737548825,
+          "max": -7.4591352722167965,
+          "rms": 7.792647366969121
+        },
+        "gx": {
+          "mean": -0.21006888737113477,
+          "std": 0.05740371189476498,
+          "min": -7.137404580152672,
+          "max": 2.7251908396946565,
+          "rms": 0.21777080516139827
+        },
+        "gy": {
+          "mean": 2.0982698693066197,
+          "std": 0.17941007456787206,
+          "min": -0.6717557251908397,
+          "max": 7.152671755725191,
+          "rms": 2.10592602417475
+        },
+        "gz": {
+          "mean": 1.062140210972289,
+          "std": 0.03870841385225415,
+          "min": -1.0,
+          "max": 2.229007633587786,
+          "rms": 1.062845317563763
+        }
+      },
+      "summary_sha256": "d70e1ce4cbfd27170ad1a60b1df6f7655fd94b0d48bd9a90e591728529eef9bc"
+    },
+    {
+      "condition": "Historical FIFO",
+      "source": "05_corrected_aba/B_fifo",
+      "n_samples": 60595,
+      "n_windows": 4029,
+      "duration_s": 1200.0067377279993,
+      "sample_rate_hz": 50.49554981226682,
+      "gaps": 2,
+      "gaps_per_min": 0.09999943852581927,
+      "C_D": 0.9982656095143707,
+      "V_T": 0.9995038451997023,
+      "survival_90": 0.9970581429940832,
+      "dt_p99_ms": 28.019794280771748,
+      "dt_max_ms": 157.97823700268054,
+      "processing_p99_ms": 13.747696681239164,
+      "i2c_failures": 0,
+      "events": 0,
+      "cpu_mean_pct": 12.590664423885398,
+      "rss_max_bytes": 79757312,
+      "cpu_temp_max_c": 52.095,
+      "score_distributions": {
+        "classifier": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "99.9": 0.0,
+          "100": 0.0
+        },
+        "reconstruction": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "99.9": 0.0,
+          "100": 0.0
+        }
+      },
+      "physical_axes": {
+        "ax": {
+          "mean": 1.405104305220987,
+          "std": 0.012210480462996037,
+          "min": 1.3269862701416015,
+          "max": 1.5071499450683592,
+          "rms": 1.4051573592959936
+        },
+        "ay": {
+          "mean": -0.9153591639928175,
+          "std": 0.010950328848207867,
+          "min": -1.0402806213378906,
+          "max": -0.8289923248291016,
+          "rms": 0.9154246603667139
+        },
+        "az": {
+          "mean": -9.61126543348423,
+          "std": 0.015209994783483897,
+          "min": -9.853935482788085,
+          "max": -9.33978067626953,
+          "rms": 9.611277468517393
+        },
+        "gx": {
+          "mean": -0.15723490147638966,
+          "std": 0.08811084902780121,
+          "min": -0.8396946564885496,
+          "max": 0.47328244274809156,
+          "rms": 0.18023966255707966
+        },
+        "gy": {
+          "mean": 2.1594067482201,
+          "std": 0.1605610302630365,
+          "min": 1.1068702290076335,
+          "max": 3.5038167938931295,
+          "rms": 2.1653677167394996
+        },
+        "gz": {
+          "mean": 1.1131780328535912,
+          "std": 0.31906234528471855,
+          "min": -1.3511450381679388,
+          "max": 4.206106870229007,
+          "rms": 1.158000912351271
+        }
+      },
+      "summary_sha256": "b2a52cc8ae15aef16ef6f4d62b41efbe27702a0ce486fecbbaddf3a117512a7b"
+    },
+    {
+      "condition": "Historical DATA_RDY",
+      "source": "13_optional_drdy/stationary_20min_20261006",
+      "n_samples": 60688,
+      "n_windows": 4042,
+      "duration_s": 1200.0156610620002,
+      "sample_rate_hz": 50.572673315189746,
+      "gaps": 0,
+      "gaps_per_min": 0.0,
+      "C_D": 1.0,
+      "V_T": 1.0,
+      "survival_90": 1.0,
+      "dt_p99_ms": 22.274308879968885,
+      "dt_max_ms": 48.763186999849495,
+      "processing_p99_ms": 8.485830749889391,
+      "i2c_failures": 0,
+      "events": 0,
+      "cpu_mean_pct": 4.698487394957984,
+      "rss_max_bytes": 53055488,
+      "cpu_temp_max_c": 51.121,
+      "score_distributions": {
+        "classifier": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "99.9": 0.0,
+          "100": 0.0
+        },
+        "reconstruction": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "99.9": 0.0,
+          "100": 0.0
+        }
+      },
+      "physical_axes": {
+        "ax": {
+          "mean": -5.8506308132149,
+          "std": 0.014471617795802912,
+          "min": -6.043563540649414,
+          "max": -5.685630392456054,
+          "rms": 5.85064871106284
+        },
+        "ay": {
+          "mean": -0.6066206376985167,
+          "std": 0.009145240744776637,
+          "min": -0.7619546783447265,
+          "max": -0.45669396667480466,
+          "rms": 0.606689569310397
+        },
+        "az": {
+          "mean": -7.782199830870674,
+          "std": 0.015183174904496794,
+          "min": -8.009203103637695,
+          "max": -7.6285250396728514,
+          "rms": 7.78221464214421
+        },
+        "gx": {
+          "mean": -0.21906829676201436,
+          "std": 0.0635056526549161,
+          "min": -1.6259541984732824,
+          "max": 0.9618320610687022,
+          "rms": 0.22808745376573622
+        },
+        "gy": {
+          "mean": 2.0828682255178785,
+          "std": 0.34922626350761465,
+          "min": -3.83206106870229,
+          "max": 5.740458015267175,
+          "rms": 2.1119420039374863
+        },
+        "gz": {
+          "mean": 1.0924988880682174,
+          "std": 0.049455542456978425,
+          "min": 0.47328244274809156,
+          "max": 1.5572519083969465,
+          "rms": 1.093617698791495
+        }
+      },
+      "summary_sha256": "b5e766a75dcd78497c7d35a76f04570c5ca858b96f2ae35174e503d8f43e6e95"
+    },
+    {
+      "condition": "Historical filtered polling",
+      "source": "05_corrected_aba/A1_polling",
+      "n_samples": 59837,
+      "n_windows": 3986,
+      "duration_s": 1200.0134424690004,
+      "sample_rate_hz": 49.863608091661646,
+      "gaps": 0,
+      "gaps_per_min": 0.0,
+      "C_D": 1.0,
+      "V_T": 1.0,
+      "survival_90": 1.0,
+      "dt_p99_ms": 29.019639049329275,
+      "dt_max_ms": 57.648023997899145,
+      "processing_p99_ms": 13.268392601457894,
+      "i2c_failures": 0,
+      "events": 0,
+      "cpu_mean_pct": 8.048569023568954,
+      "rss_max_bytes": 52793344,
+      "cpu_temp_max_c": 51.121,
+      "score_distributions": {
+        "classifier": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "99.9": 0.0,
+          "100": 0.0
+        },
+        "reconstruction": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "99.9": 0.0,
+          "100": 0.0
+        }
+      },
+      "physical_axes": {
+        "ax": {
+          "mean": 1.4072898652476107,
+          "std": 0.01210529980840495,
+          "min": 1.2497732666015624,
+          "max": 1.5316905120849609,
+          "rms": 1.4073419282861184
+        },
+        "ay": {
+          "mean": -0.9151836246067869,
+          "std": 0.018833176767998127,
+          "min": -1.0726023437499999,
+          "max": -0.766743081665039,
+          "rms": 0.9153773840857065
+        },
+        "az": {
+          "mean": -9.611623755198101,
+          "std": 0.014390816904125478,
+          "min": -9.76116016845703,
+          "max": -9.387066159057616,
+          "rms": 9.611634528377555
+        },
+        "gx": {
+          "mean": -0.1556792900611547,
+          "std": 0.11792816043791368,
+          "min": -1.9541984732824427,
+          "max": 1.9465648854961832,
+          "rms": 0.19530256623561157
+        },
+        "gy": {
+          "mean": 2.159229902813585,
+          "std": 0.18201668399195936,
+          "min": 0.0,
+          "max": 3.900763358778626,
+          "rms": 2.1668880558200954
+        },
+        "gz": {
+          "mean": 1.1142096333716776,
+          "std": 0.34716477757210606,
+          "min": -1.5648854961832062,
+          "max": 4.374045801526718,
+          "rms": 1.1670417686976493
+        }
+      },
+      "summary_sha256": "d972bc04f1a6160f1aea7433f11ee34f7dacfc80c40256d55cbce5034304234b"
+    }
+  ],
+  "operator_attestation": "Untouched throughout confirmed after capture",
+  "limits": "Historical comparisons are descriptive, not simultaneous/matched-motion equivalence or causal estimates. Raw binary decoding and model replay are verified independently. FIFO batch timestamps are host availability; IIO timestamps may be driver reconstructed. Do not compare their dt as physical jitter. Kernel I2C error counts are unavailable for IIO. Desktop/agent and development activity remained active during current extension captures."
+}

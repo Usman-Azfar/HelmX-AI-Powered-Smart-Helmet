@@ -1,0 +1,89 @@
+{
+  "method": "reference=offline zero-phase Butterworth decision, transformed=causal EMA(0.3Hz) decision, both via the deployed INT8 model + thresholds, per-window, index-aligned per session.",
+  "normal_windows": {
+    "group": "normal (label=0)",
+    "n": 5294,
+    "ref_neg_to_trans_neg": 5288,
+    "ref_neg_to_trans_pos": 3,
+    "ref_pos_to_trans_neg": 2,
+    "ref_pos_to_trans_pos": 1,
+    "agreement_rate": 0.9990555345674348
+  },
+  "crash_like_windows": {
+    "group": "crash_like (label=1)",
+    "n": 143,
+    "ref_neg_to_trans_neg": 102,
+    "ref_neg_to_trans_pos": 10,
+    "ref_pos_to_trans_neg": 6,
+    "ref_pos_to_trans_pos": 25,
+    "agreement_rate": 0.8881118881118881
+  },
+  "overall": {
+    "group": "all",
+    "n": 5437,
+    "ref_neg_to_trans_neg": 5390,
+    "ref_neg_to_trans_pos": 13,
+    "ref_pos_to_trans_neg": 8,
+    "ref_pos_to_trans_pos": 26,
+    "agreement_rate": 0.9961375758690454
+  },
+  "sessions_with_flips_and_event_trigger_check": [
+    {
+      "session_id": "road_2. Aggressive",
+      "n_flipped_windows": 1,
+      "flipped_window_indices": [
+        944
+      ],
+      "offline_event_trigger_window": null,
+      "causal_event_trigger_window": null,
+      "event_trigger_changed_by_flip": false
+    },
+    {
+      "session_id": "near_fall_Acceleration On Curve",
+      "n_flipped_windows": 5,
+      "flipped_window_indices": [
+        2,
+        53,
+        56,
+        66,
+        74
+      ],
+      "offline_event_trigger_window": 55,
+      "causal_event_trigger_window": 2,
+      "event_trigger_changed_by_flip": false
+    },
+    {
+      "session_id": "fall_fall-in-a-leaning",
+      "n_flipped_windows": 13,
+      "flipped_window_indices": [
+        1,
+        2,
+        109,
+        110,
+        111,
+        112,
+        148,
+        149,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "offline_event_trigger_window": 111,
+      "causal_event_trigger_window": 2,
+      "event_trigger_changed_by_flip": false
+    },
+    {
+      "session_id": "darus_crash_Iso_115_Out",
+      "n_flipped_windows": 2,
+      "flipped_window_indices": [
+        0,
+        1
+      ],
+      "offline_event_trigger_window": 2,
+      "causal_event_trigger_window": 4,
+      "event_trigger_changed_by_flip": false
+    }
+  ]
+}

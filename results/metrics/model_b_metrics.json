@@ -1,0 +1,44 @@
+{
+  "description": "Model B: pure supervised CNN classifier, no reconstruction/decoder branch, no auxiliary unsupervised objective -- isolates whether joint multi-task training (Model A / the hybrid model) helps the classifier itself.",
+  "threshold_balanced": 0.9898595809936523,
+  "val": {
+    "confusion_matrix": {
+      "TP": 122,
+      "TN": 4437,
+      "FP": 57,
+      "FN": 97
+    },
+    "accuracy": 0.9673244218120093,
+    "precision": 0.6815642458100558,
+    "recall_sensitivity": 0.5570776255707762,
+    "specificity": 0.9873164218958611,
+    "f1_score": 0.6130653266331658,
+    "f2_score": 0.5781990521327014,
+    "balanced_accuracy": 0.7721970237333187,
+    "matthews_corrcoef": 0.599493786190491,
+    "roc_auc": 0.9767716671442187,
+    "pr_auc": 0.7103326563040323,
+    "threshold": 0.9898595809936523,
+    "n_windows": 4713
+  },
+  "test": {
+    "confusion_matrix": {
+      "TP": 28,
+      "TN": 5292,
+      "FP": 2,
+      "FN": 115
+    },
+    "accuracy": 0.9784807798418246,
+    "precision": 0.9333333333333333,
+    "recall_sensitivity": 0.1958041958041958,
+    "specificity": 0.9996222138269739,
+    "f1_score": 0.3236994219653179,
+    "f2_score": 0.23255813953488372,
+    "balanced_accuracy": 0.5977132048155849,
+    "matthews_corrcoef": 0.42218658388961183,
+    "roc_auc": 0.9489367828997599,
+    "pr_auc": 0.47488620996585984,
+    "threshold": 0.9898595809936523,
+    "n_windows": 5437
+  }
+}

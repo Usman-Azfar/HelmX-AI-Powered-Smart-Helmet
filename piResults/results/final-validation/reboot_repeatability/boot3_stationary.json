@@ -1,0 +1,61 @@
+{
+  "phase": "stationary",
+  "n_samples": 3000,
+  "duration_s": 59.97952785900003,
+  "i2c_errors": 0,
+  "dt_stats_ms": {
+    "p50": 19.988293999972484,
+    "p95": 20.849115600043433,
+    "p99": 21.947480640025105,
+    "max": 26.729997000018102
+  },
+  "n_windows_scored": 197,
+  "clipping_per_axis_raw_int16": {
+    "ax": {
+      "min_raw": -8612,
+      "max_raw": -8248,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "ay": {
+      "min_raw": -13728,
+      "max_raw": -13436,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "az": {
+      "min_raw": -4044,
+      "max_raw": -3644,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "gx": {
+      "min_raw": -186,
+      "max_raw": 156,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "gy": {
+      "min_raw": 199,
+      "max_raw": 334,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "gz": {
+      "min_raw": -447,
+      "max_raw": 848,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    }
+  },
+  "accel_magnitude_ms2_mean": 9.842801611342265,
+  "accel_magnitude_ms2_max": 9.929396258667875,
+  "gyro_magnitude_dps_mean": 2.480146165067747,
+  "gyro_magnitude_dps_max": 6.736977480092586,
+  "max_classifier_score": 0.0,
+  "max_reconstruction_error": 0.0,
+  "n_classifier_threshold_crossings": 0,
+  "n_recon_threshold_crossings": 0,
+  "n_or_positive_windows": 0,
+  "n_confirmed_triggers": 0
+}

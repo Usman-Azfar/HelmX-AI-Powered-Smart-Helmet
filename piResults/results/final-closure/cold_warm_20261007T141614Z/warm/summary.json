@@ -1,0 +1,10 @@
+{
+  "samples": 30000,
+  "elapsed_s": 600.0001275870004,
+  "seconds_requested": 600,
+  "first_sample_uptime_s": 3600.057247351,
+  "last_sample_uptime_s": 4200.037352715,
+  "exception": null,
+  "cleanup_error": null,
+  "scope": "Matched filtered coherent-burst polling at nominal 50 Hz. No inference during acquisition. Offline score comparison required."
+}

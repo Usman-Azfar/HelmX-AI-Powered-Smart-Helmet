@@ -1,0 +1,11 @@
+session,source,windows,positive_labels,label_type,reference_trigger,reference_indices,causal_float_trigger,causal_float_indices,offline_int8_trigger,offline_int8_indices,deployed_trigger,deployed_indices
+carla_onder,carla,2614,0,normal recording,False,[],False,[],False,[],False,[]
+road_2. Aggressive,road,2355,0,normal recording,False,[],False,[],False,[],False,[]
+road_2.Bump,road,13,0,normal recording,False,[],False,[],False,[],False,[]
+near_fall_Acceleration On Curve,near_fall,156,50,weak severity,True,[56],True,[56],True,[55],True,[2]
+fall_fall-in-a-leaning,fall,269,81,weak severity,True,[111],False,[],True,[111],True,[2]
+darus_crash_Iso_115_Out,darus,6,4,simulation timestep,True,[2],True,[4],True,[2],True,[4]
+darus_crash_Iso_312_2_Out,darus,6,4,simulation timestep,True,[4],True,[4],True,[4],True,[4]
+darus_crash_Iso_513_2_Out,darus,6,4,simulation timestep,True,[4],True,[4],True,[4],True,[4]
+darus_non_crash_Pothole_5_Out,darus,6,0,simulation timestep,False,[],False,[],False,[],False,[]
+darus_non_crash_Randomstate_60_Out,darus,6,0,simulation timestep,False,[],False,[],False,[],False,[]

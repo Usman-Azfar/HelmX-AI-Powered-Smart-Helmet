@@ -1,0 +1,12 @@
+{
+  "armed": false,
+  "armed_boot_id": "<redacted-boot-id>",
+  "prepared_date_pkt": "2026-10-07",
+  "cold_seconds": 600,
+  "warm_minimum_uptime_s": 3600,
+  "warm_seconds": 600,
+  "physical_condition": "Operator must fully remove Pi and IMU power >=10 seconds, preserve orientation, and leave untouched for at least 72 minutes after power-on. Attestation afterward.",
+  "coverage_limit": "Earliest available userspace sample is later than boot. Missing startup interval stays explicit; literal first-ten-minute coverage cannot be claimed.",
+  "started_boot_id": "<redacted-boot-id>",
+  "started_uptime_s": 97.69
+}

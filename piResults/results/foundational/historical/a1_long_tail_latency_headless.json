@@ -1,0 +1,39 @@
+{
+  "device": {
+    "platform": "Linux-6.12.75+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "n": 50000,
+  "mean_ms": 0.5968067719928513,
+  "median_ms": 0.5029094991186867,
+  "p95_ms": 0.963933299863127,
+  "p99_ms": 1.3233764729011477,
+  "p99_9_ms": 2.406216237886843,
+  "max_ms": 6.358679002005374,
+  "std_ms": 0.21009411327115352,
+  "stride_budget_ms": 300.0,
+  "event_counts_exceeding_threshold": {
+    ">2ms": 78,
+    ">5ms": 11,
+    ">10ms": 0,
+    ">25ms": 0,
+    ">50ms": 0,
+    ">100ms": 0,
+    ">300ms": 0
+  },
+  "event_rates_exceeding_threshold": {
+    ">2ms": 0.00156,
+    ">5ms": 0.00022,
+    ">10ms": 0.0,
+    ">25ms": 0.0,
+    ">50ms": 0.0,
+    ">100ms": 0.0,
+    ">300ms": 0.0
+  },
+  "empirical_deadline_miss_rate_gt_300ms": 0.0
+}

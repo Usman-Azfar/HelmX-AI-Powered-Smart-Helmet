@@ -1,0 +1,16 @@
+[Unit]
+Description=HelmX crash detection monitor
+After=multi-user.target
+
+[Service]
+Type=simple
+# Install with deploy/install_service.sh. The installer substitutes the
+# service account and absolute checkout path below.
+User=__HELMX_USER__
+WorkingDirectory="__HELMX_ROOT__"
+ExecStart="__HELMX_PYTHON__" "__HELMX_ROOT__/deploy/crash_monitor.py"
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

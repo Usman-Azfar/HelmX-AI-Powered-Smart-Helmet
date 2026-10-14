@@ -1,0 +1,366 @@
+{
+  "description": "Classifier-primary, reconstruction-fallback ('hierarchical') decision policy, compared against classifier-alone, reconstruction-alone, the deployed naive OR rule, and a freshly-tuned OR rule -- all four thresholds of the hierarchical policy (and the tuned-OR pair) calibrated on VALIDATION ONLY, then applied unchanged to the held-out test split and the Round 7 external scooter dataset (never used for any tuning, evaluated here exactly once as a pure check).",
+  "thresholds": {
+    "naive_or_deployed": {
+      "t_clf": 0.9892255067825317,
+      "t_recon": 10.878735866546593
+    },
+    "tuned_or": {
+      "t_clf": 0.9881946760780957,
+      "t_recon": 212.5227813720703,
+      "val_f1": 0.587378640776699
+    },
+    "hierarchical": {
+      "t_low": 0.8775906346061015,
+      "t_high": 1.0,
+      "t_recon_ambiguous": 1.0012549053538942,
+      "t_recon_escalate": 212.5227813720703,
+      "val_f1": 0.6859903381642513
+    }
+  },
+  "test_split": {
+    "n_windows": 5437,
+    "normal_hours": 0.4177444444444445,
+    "window_level_metrics": {
+      "classifier_alone": {
+        "roc_auc": 0.9459237400302758,
+        "pr_auc": 0.5393709255767394,
+        "f1_score": 0.3333333333333333,
+        "precision": 0.9354838709677419,
+        "recall_sensitivity": 0.20279720279720279,
+        "specificity": 0.9996222138269739,
+        "recall_at_95pct_specificity": 0.6853146853146853,
+        "specificity_achieved_for_recall_at_spec": 0.9514544767661504,
+        "event_level_session_recall": 1.0
+      },
+      "reconstruction_alone": {
+        "roc_auc": 0.7183075707820703,
+        "pr_auc": 0.12521392992740776,
+        "f1_score": 0.1518987341772152,
+        "precision": 0.8,
+        "recall_sensitivity": 0.08391608391608392,
+        "specificity": 0.9994333207404609,
+        "recall_at_95pct_specificity": 0.15384615384615385,
+        "specificity_achieved_for_recall_at_spec": 0.9588213071401587,
+        "event_level_session_recall": 0.6
+      },
+      "naive_or_deployed": {
+        "roc_auc": 0.6011152617688318,
+        "pr_auc": 0.20475241031728983,
+        "f1_score": 0.3314285714285714,
+        "precision": 0.90625,
+        "recall_sensitivity": 0.20279720279720279,
+        "specificity": 0.9994333207404609,
+        "recall_at_95pct_specificity": 0.20279720279720279,
+        "specificity_achieved_for_recall_at_spec": 0.9994333207404609,
+        "event_level_session_recall": 1.0
+      },
+      "tuned_or": {
+        "roc_auc": 0.6047062118085919,
+        "pr_auc": 0.2174618420020296,
+        "f1_score": 0.34285714285714286,
+        "precision": 0.9375,
+        "recall_sensitivity": 0.2097902097902098,
+        "specificity": 0.9996222138269739,
+        "recall_at_95pct_specificity": 0.2097902097902098,
+        "specificity_achieved_for_recall_at_spec": 0.9996222138269739,
+        "event_level_session_recall": 1.0
+      },
+      "hierarchical": {
+        "roc_auc": 0.5618037044179847,
+        "pr_auc": 0.09851509535158606,
+        "f1_score": 0.20809248554913296,
+        "precision": 0.6,
+        "recall_sensitivity": 0.1258741258741259,
+        "specificity": 0.9977332829618436,
+        "recall_at_95pct_specificity": 0.1258741258741259,
+        "specificity_achieved_for_recall_at_spec": 0.9977332829618436,
+        "event_level_session_recall": 0.8
+      }
+    },
+    "event_level_deployed_alert_simulation": {
+      "classifier_alone": {
+        "session_recall": 1.0,
+        "n_anomaly_sessions": 5,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 0,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4177444444444445,
+        "false_alerts_per_hour": 0.0
+      },
+      "reconstruction_alone": {
+        "session_recall": 0.6,
+        "n_anomaly_sessions": 5,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 0,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4177444444444445,
+        "false_alerts_per_hour": 0.0
+      },
+      "naive_or_deployed": {
+        "session_recall": 1.0,
+        "n_anomaly_sessions": 5,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 0,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4177444444444445,
+        "false_alerts_per_hour": 0.0
+      },
+      "tuned_or": {
+        "session_recall": 1.0,
+        "n_anomaly_sessions": 5,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 0,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4177444444444445,
+        "false_alerts_per_hour": 0.0
+      },
+      "hierarchical": {
+        "session_recall": 0.8,
+        "n_anomaly_sessions": 5,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 1,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4177444444444445,
+        "false_alerts_per_hour": 2.3938080165970685
+      }
+    }
+  },
+  "external_scooter_dataset": {
+    "n_sessions": 14,
+    "n_normal_sessions": 5,
+    "n_windows": 9066,
+    "normal_hours": 0.4932222222222222,
+    "window_level_metrics": {
+      "classifier_alone": {
+        "roc_auc": 0.7739013511909983,
+        "pr_auc": 0.2783913480280113,
+        "f1_score": 0.08445297504798464,
+        "precision": 0.5116279069767442,
+        "recall_sensitivity": 0.04602510460251046,
+        "specificity": 0.9948212083847102,
+        "recall_at_95pct_specificity": 0.12552301255230125,
+        "specificity_achieved_for_recall_at_spec": 0.9500616522811344,
+        "event_level_session_recall": 0.6666666666666666
+      },
+      "reconstruction_alone": {
+        "roc_auc": 0.8258105082314823,
+        "pr_auc": 0.33262046500606524,
+        "f1_score": 0.14933837429111532,
+        "precision": 0.7745098039215687,
+        "recall_sensitivity": 0.08263598326359832,
+        "specificity": 0.9971639950678175,
+        "recall_at_95pct_specificity": 0.18200836820083682,
+        "specificity_achieved_for_recall_at_spec": 0.9524044389642417,
+        "event_level_session_recall": 0.8888888888888888
+      },
+      "naive_or_deployed": {
+        "roc_auc": 0.5409716812241717,
+        "pr_auc": 0.14719738662115914,
+        "f1_score": 0.15537488708220415,
+        "precision": 0.5695364238410596,
+        "recall_sensitivity": 0.0899581589958159,
+        "specificity": 0.9919852034525277,
+        "recall_at_95pct_specificity": 0.0899581589958159,
+        "specificity_achieved_for_recall_at_spec": 0.9919852034525277,
+        "event_level_session_recall": 0.8888888888888888
+      },
+      "tuned_or": {
+        "roc_auc": 0.521037615630272,
+        "pr_auc": 0.12367386043175609,
+        "f1_score": 0.08753568030447194,
+        "precision": 0.4842105263157895,
+        "recall_sensitivity": 0.04811715481171548,
+        "specificity": 0.9939580764488286,
+        "recall_at_95pct_specificity": 0.04811715481171548,
+        "specificity_achieved_for_recall_at_spec": 0.9939580764488286,
+        "event_level_session_recall": 0.6666666666666666
+      },
+      "hierarchical": {
+        "roc_auc": 0.5262913444324636,
+        "pr_auc": 0.12277868291512489,
+        "f1_score": 0.11180124223602485,
+        "precision": 0.3684210526315789,
+        "recall_sensitivity": 0.06589958158995816,
+        "specificity": 0.9866831072749692,
+        "recall_at_95pct_specificity": 0.06589958158995816,
+        "specificity_achieved_for_recall_at_spec": 0.9866831072749692,
+        "event_level_session_recall": 0.6666666666666666
+      }
+    },
+    "event_level_deployed_alert_simulation": {
+      "classifier_alone": {
+        "session_recall": 0.6666666666666666,
+        "n_anomaly_sessions": 9,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 4,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4932222222222222,
+        "false_alerts_per_hour": 8.109934669970714
+      },
+      "reconstruction_alone": {
+        "session_recall": 0.8888888888888888,
+        "n_anomaly_sessions": 9,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 3,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4932222222222222,
+        "false_alerts_per_hour": 6.082451002478036
+      },
+      "naive_or_deployed": {
+        "session_recall": 0.8888888888888888,
+        "n_anomaly_sessions": 9,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 7,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4932222222222222,
+        "false_alerts_per_hour": 14.19238567244875
+      },
+      "tuned_or": {
+        "session_recall": 0.6666666666666666,
+        "n_anomaly_sessions": 9,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 4,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4932222222222222,
+        "false_alerts_per_hour": 8.109934669970714
+      },
+      "hierarchical": {
+        "session_recall": 0.6666666666666666,
+        "n_anomaly_sessions": 9,
+        "n_normal_sessions": 5,
+        "total_false_alert_events": 6,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 0.4932222222222222,
+        "false_alerts_per_hour": 12.164902004956073
+      }
+    },
+    "note": "Same frozen thresholds as calibrated on validation above -- zero recalibration on this data."
+  },
+  "external_simra_dataset": {
+    "n_sessions": 45,
+    "n_normal_sessions": 25,
+    "n_windows": 156617,
+    "normal_hours": 7.0127444444444444,
+    "window_level_metrics": {
+      "classifier_alone": {
+        "roc_auc": 0.46461879678602125,
+        "pr_auc": 0.13055499058451522,
+        "f1_score": 0.0,
+        "precision": 0.0,
+        "recall_sensitivity": 0.0,
+        "specificity": 0.9985090679820495,
+        "recall_at_95pct_specificity": 0.015503164847261719,
+        "specificity_achieved_for_recall_at_spec": 0.9500500686125432,
+        "event_level_session_recall": 0.0
+      },
+      "reconstruction_alone": {
+        "roc_auc": 0.6733716599401526,
+        "pr_auc": 0.19359337995830608,
+        "f1_score": 0.0,
+        "precision": 0.0,
+        "recall_sensitivity": 0.0,
+        "specificity": 1.0,
+        "recall_at_95pct_specificity": 0.03563893220805431,
+        "specificity_achieved_for_recall_at_spec": 0.9500797389014576,
+        "event_level_session_recall": 0.0
+      },
+      "naive_or_deployed": {
+        "roc_auc": 0.49925453399102476,
+        "pr_auc": 0.13920583333865416,
+        "f1_score": 0.0,
+        "precision": 0.0,
+        "recall_sensitivity": 0.0,
+        "specificity": 0.9985090679820495,
+        "recall_at_95pct_specificity": 0.0,
+        "specificity_achieved_for_recall_at_spec": 1.0,
+        "event_level_session_recall": 0.0
+      },
+      "tuned_or": {
+        "roc_auc": 0.4992063197715388,
+        "pr_auc": 0.13920583333865416,
+        "f1_score": 0.0,
+        "precision": 0.0,
+        "recall_sensitivity": 0.0,
+        "specificity": 0.9984126395430776,
+        "recall_at_95pct_specificity": 0.0,
+        "specificity_achieved_for_recall_at_spec": 1.0,
+        "event_level_session_recall": 0.0
+      },
+      "hierarchical": {
+        "roc_auc": 0.4999443682082854,
+        "pr_auc": 0.13920583333865416,
+        "f1_score": 0.0,
+        "precision": 0.0,
+        "recall_sensitivity": 0.0,
+        "specificity": 0.9998887364165708,
+        "recall_at_95pct_specificity": 0.0,
+        "specificity_achieved_for_recall_at_spec": 1.0,
+        "event_level_session_recall": 0.0
+      }
+    },
+    "event_level_deployed_alert_simulation": {
+      "classifier_alone": {
+        "session_recall": 0.0,
+        "n_anomaly_sessions": 20,
+        "n_normal_sessions": 25,
+        "total_false_alert_events": 16,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 7.0127444444444444,
+        "false_alerts_per_hour": 2.281560397181639
+      },
+      "reconstruction_alone": {
+        "session_recall": 0.0,
+        "n_anomaly_sessions": 20,
+        "n_normal_sessions": 25,
+        "total_false_alert_events": 0,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 7.0127444444444444,
+        "false_alerts_per_hour": 0.0
+      },
+      "naive_or_deployed": {
+        "session_recall": 0.0,
+        "n_anomaly_sessions": 20,
+        "n_normal_sessions": 25,
+        "total_false_alert_events": 16,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 7.0127444444444444,
+        "false_alerts_per_hour": 2.281560397181639
+      },
+      "tuned_or": {
+        "session_recall": 0.0,
+        "n_anomaly_sessions": 20,
+        "n_normal_sessions": 25,
+        "total_false_alert_events": 16,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 7.0127444444444444,
+        "false_alerts_per_hour": 2.281560397181639
+      },
+      "hierarchical": {
+        "session_recall": 0.0,
+        "n_anomaly_sessions": 20,
+        "n_normal_sessions": 25,
+        "total_false_alert_events": 1,
+        "cooldown_seconds": 60.0,
+        "cooldown_windows": 200,
+        "normal_exposure_hours": 7.0127444444444444,
+        "false_alerts_per_hour": 0.14259752482385243
+      }
+    },
+    "note": "Same frozen thresholds as calibrated on validation above -- zero recalibration on this data."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-02T15:20:29.595146+00:00",
+  "protocol": "piResults/last_test.txt C3",
+  "seconds_per_phase": 60,
+  "phases": [
+    "01_stationary",
+    "02_donning",
+    "03_removing",
+    "04_gentle_rotation",
+    "05_repeated_tilt",
+    "06_moderate_rotation",
+    "07_moderate_shake",
+    "08_stronger_safe_shake",
+    "09_soft_placement",
+    "10_controlled_bump",
+    "11_hand_carried_walking"
+  ],
+  "configuration": "Filtered polling; +/-16 g, +/-2000 deg/s; fixed deployed model and thresholds; current 60-ms timing guard. Registers restored after each phase.",
+  "method": "Each phase is separately initialized: fresh gravity filter, scorer and confirmation/cooldown state. Cross-phase transition windows are not measured. Nominal phase duration includes initial filter/window startup. User readiness recorded in conversation; actual motion not independently verified or amplitude-matched.",
+  "alert_behavior": "Record policy events only; no GPIO, countdown or SMS.",
+  "logging": "Each phase has raw sensor data, scores, metadata, register readbacks and summary; appended to last_results.txt before next phase. C3 remains pending until all eleven phases completed."
+}

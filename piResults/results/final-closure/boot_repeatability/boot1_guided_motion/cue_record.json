@@ -1,0 +1,7 @@
+{
+  "recorded_uptime_s": 1074.91910844,
+  "cue": "START issued after raw rows 194 and 195 confirmed recording",
+  "confirmed_recording_sample_uptime_s": 1040.175247739,
+  "cue_time_limitation": "Record written after cue; recorded_uptime_s is not the exact cue delivery time.",
+  "operator_completion": "Completed as instructed"
+}

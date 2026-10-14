@@ -1,0 +1,72 @@
+model_path: "models/helmx_crash_model_int8.tflite"
+normalizer_path: "models/normalizer.npz"
+thresholds_path: "models/thresholds.json"
+
+sensor:
+  i2c_address: 0x68
+  sample_rate_hz: 50
+  window_samples: 60
+  stride_samples: 15
+
+  # Acquisition-layer timing-gap detection (SampleStreamGuard in
+  # crash_monitor.py). This was originally set to 30ms, but the live Pi runs
+  # showed repeated scheduler jitter near 30-60ms despite otherwise healthy
+  # sensor reads. The guard therefore uses a wider window that still catches
+  # true stalls without discarding valid windows during transient jitter.
+  # Measured live telemetry from the Pi (max ~58.6ms, p99 ~33.8ms) supports a
+  # threshold around 60ms while keeping real stalls visible.
+  timing_guard:
+    max_dt_s: 0.060      # dt > this -> suspected drop/stall, in-flight window discarded
+    min_dt_s: 0.010      # dt < this -> suspected duplicate/too-fast read, counted only
+    long_gap_reset_s: 1.0  # dt >= this -> also reset the gravity filter's stale EMA state
+
+gravity_filter:
+  cutoff_hz: 0.3
+
+# classifier_prob / recon_error are loaded directly from `thresholds_path`
+# above (models/thresholds.json: classifier_prob_balanced / recon_error, the
+# F1-optimal operating point) at startup -- NOT duplicated here. A previous
+# version of this file hardcoded copies of those two numbers, which drifted
+# out of sync with the actual trained model after a retrain (changesToMake2.txt
+# item 1: "the current deployment config is not synchronized with the current
+# model artifacts"). Re-run scripts/train.py to regenerate thresholds.json;
+# this file will pick up the new values automatically, with nothing to edit.
+#
+# consecutive_windows/cooldown_seconds below are deployment *policy*, not
+# model calibration -- they aren't retrained, so they stay here. With this
+# confirmation logic, the balanced operating point reached 100% session-level
+# recall on the held-out test set with zero false alert events -- see
+# results/test_metrics.json -> deployed_alert_simulation (real-duration-based,
+# real-cooldown-based numbers as of changesToMake2.txt item 2).
+# Every trigger goes through the cancellation window below before an SMS is ever
+# sent, so this threshold controls how often the rider gets a check-in buzz, not
+# how often an emergency contact gets messaged.
+# classifier_prob_high_recall in thresholds.json is a more sensitive fallback
+# (same recall, more triggers) if you want extra margin given the test set is
+# still small.
+thresholds:
+  consecutive_windows: 3
+  cooldown_seconds: 60
+
+# When the model flags a crash, the alarm fires and the rider has this long to
+# cancel (via the voice-assistant module) before an SMS actually goes out.
+# See deploy/crash_monitor.py: CancellationListener for the file-based signal
+# the voice-assistant process should write to cancel a pending alert.
+alarm:
+  countdown_seconds: 30
+  gpio_pin: 18                                  # BCM pin driving the buzzer/vibration motor
+  cancel_signal_file: "/tmp/helmx_cancel_alert"  # touched/written by the voice-assistant module
+
+gps:
+  timeout_seconds: 15
+
+gsm:
+  port: "/dev/ttyUSB0"
+  baudrate: 9600
+  recipient_number: "+92XXXXXXXXXX"   # <-- set this before deploying
+
+logging:
+  log_file: "logs/crash_monitor.log"
+  level: "INFO"
+  max_bytes: 5000000
+  backup_count: 3

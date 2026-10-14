@@ -1,0 +1,28 @@
+{
+  "device_info": {
+    "platform": "Linux aarch64",
+    "cpu_count": 4
+  },
+  "model_path": "models/helmx_crash_model_int8.tflite",
+  "model_load_time_ms": 3.4921080005005933,
+  "power_now_microwatts": null,
+  "power_note": "None means no sysfs power-supply fuel-gauge was found on this device (expected on a plain Pi 4 with no UPS/power-monitoring HAT) -- this is reported honestly as unavailable, not estimated.",
+  "solo": {
+    "latency": {
+      "n_runs": 300,
+      "mean_ms": 0.6040792499091671,
+      "p50_ms": 0.574274499740568,
+      "p95_ms": 0.8738676493521782,
+      "p99_ms": 1.0376517711301856,
+      "max_ms": 1.1276779987383634,
+      "throughput_windows_per_sec": 1655.411935024032
+    },
+    "resources": {
+      "cpu_percent_mean": 349.625,
+      "cpu_percent_max": 1102.8,
+      "rss_mb_mean": 42.06640625,
+      "rss_mb_max": 42.06640625,
+      "n_samples": 4
+    }
+  }
+}

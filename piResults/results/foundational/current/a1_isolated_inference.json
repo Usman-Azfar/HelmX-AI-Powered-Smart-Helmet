@@ -1,0 +1,85 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "model": {
+    "path": "models/helmx_crash_model_int8.tflite",
+    "format": "tflite",
+    "size_bytes": 83568,
+    "load_time_ms": 8.729174999984934
+  },
+  "config": {
+    "warmup": 100,
+    "measured": 1000,
+    "repeats": 5
+  },
+  "repeats": [
+    {
+      "n": 1000,
+      "mean_ms": 1.0243382550009983,
+      "median_ms": 0.8780509999724018,
+      "p95_ms": 1.6251206499759971,
+      "p99_ms": 3.771940830047242,
+      "max_ms": 7.035664999989422,
+      "std_ms": 0.5130911941077432,
+      "throughput_windows_per_sec": 976.2400214165832
+    },
+    {
+      "n": 1000,
+      "mean_ms": 1.1454532650010378,
+      "median_ms": 0.9768474999418686,
+      "p95_ms": 1.9244396999795297,
+      "p99_ms": 3.4458318900715303,
+      "max_ms": 6.085431999963475,
+      "std_ms": 0.5332452452142863,
+      "throughput_windows_per_sec": 873.0168489232025
+    },
+    {
+      "n": 1000,
+      "mean_ms": 1.0058488519991897,
+      "median_ms": 0.9090215000355784,
+      "p95_ms": 1.5823702500711077,
+      "p99_ms": 1.848974459956025,
+      "max_ms": 3.482378999933644,
+      "std_ms": 0.2982449935826884,
+      "throughput_windows_per_sec": 994.1851581501885
+    },
+    {
+      "n": 1000,
+      "mean_ms": 1.1704060850012183,
+      "median_ms": 0.9149170000455342,
+      "p95_ms": 2.532997550025579,
+      "p99_ms": 5.352911390034478,
+      "max_ms": 9.816934000014044,
+      "std_ms": 0.8250863623793466,
+      "throughput_windows_per_sec": 854.4043070307166
+    },
+    {
+      "n": 1000,
+      "mean_ms": 0.9679702170001292,
+      "median_ms": 0.869743999999173,
+      "p95_ms": 1.511930999964761,
+      "p99_ms": 1.9624617199792738,
+      "max_ms": 4.238280000095074,
+      "std_ms": 0.3313560738126582,
+      "throughput_windows_per_sec": 1033.089636888969
+    }
+  ],
+  "across_repeats": {
+    "median_ms_mean": 0.9097161999989112,
+    "median_ms_std": 0.037774605297033206,
+    "p95_ms_mean": 1.8353718300033948,
+    "p95_ms_std": 0.3761499858795115,
+    "p99_ms_mean": 3.27642405801771,
+    "p99_ms_std": 1.2922960114261561,
+    "max_ms_worst": 9.816934000014044
+  },
+  "stride_seconds": 0.3,
+  "note": "The deployed stride is stride_seconds above -- compare median/p95/p99 latency against it directly: even a p99 a few ms wide leaves enormous headroom against a ~300ms budget between windows."
+}

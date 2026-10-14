@@ -1,0 +1,23 @@
+{
+  "n_samples": 3733,
+  "n_windows": 242,
+  "confirmed_alert_events": 1,
+  "or_positive_windows": 14,
+  "rail_counts": {
+    "ax": 0,
+    "ay": 0,
+    "az": 0,
+    "gx": 0,
+    "gy": 0,
+    "gz": 0
+  },
+  "i2c_failures": 0,
+  "gap_count": 1,
+  "classifier_crossings": 14,
+  "reconstruction_crossings": 0,
+  "raw_rows_verified": true,
+  "configuration_restored": true,
+  "cue_after_first_sample_s": 15.125791820999893,
+  "recorded_time_after_cue_s": 59.85952089300008,
+  "phase_scope": "75 seconds including helmet-on baseline, removal, gentle placement and subsequent rest. Motion components not separately labeled. Chat display/reaction delay unmeasured."
+}

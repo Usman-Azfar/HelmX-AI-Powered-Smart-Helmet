@@ -1,0 +1,59 @@
+{
+  "session": "fall_fall-in-a-leaning",
+  "source_samples": [
+    0,
+    120
+  ],
+  "injected_samples": 90,
+  "onset": 1440.465124863,
+  "confirmation": 1442.247119171,
+  "first_anomaly": 1441.647062202,
+  "confirmation_triplet_times": [
+    1441.647062202,
+    1441.947332567,
+    1442.247119171
+  ],
+  "gpio_on_call_start": 1442.24751193,
+  "gpio_on_call_return": 1442.24789193,
+  "gpio_off_call_start": 1443.248588839,
+  "gpio_off_call_return": 1443.249079863,
+  "cancel_outcome": {
+    "cancelled": true,
+    "sms_attempted": false,
+    "sms_sent": false,
+    "gps_available": false
+  },
+  "decisions": [
+    {
+      "sample_index": 59,
+      "absolute_source_sample": 59,
+      "t_monotonic": 1441.647062202,
+      "crash_prob": 0.99609375,
+      "recon_error": 0.9819153547286987,
+      "positive": true,
+      "triggered": false
+    },
+    {
+      "sample_index": 74,
+      "absolute_source_sample": 74,
+      "t_monotonic": 1441.947332567,
+      "crash_prob": 0.99609375,
+      "recon_error": 0.39276614785194397,
+      "positive": true,
+      "triggered": false
+    },
+    {
+      "sample_index": 89,
+      "absolute_source_sample": 89,
+      "t_monotonic": 1442.247119171,
+      "crash_prob": 0.9921875,
+      "recon_error": 0.0,
+      "positive": true,
+      "triggered": true
+    }
+  ],
+  "cancellation_handler_start": 1442.247139968,
+  "cancellation_accepted": 1443.248578876,
+  "cancellation_handler_end": 1443.249349209,
+  "outcome": "triggered and controlled-cancelled"
+}

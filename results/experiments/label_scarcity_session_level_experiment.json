@@ -1,0 +1,345 @@
+{
+  "description": "Session-level label-scarcity ablation, 5 seeds: Model A (joint hybrid) vs Model B (pure supervised) as the fraction of train-split crash-like SESSIONS (not windows) shrinks from 100% to 10%. Whole sessions are kept/dropped together; normal-session windows are never touched; val/test splits are full and unchanged.",
+  "fractions": [
+    1.0,
+    0.5,
+    0.25,
+    0.1
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_train_crash_sessions_total": 25,
+  "summary_mean_std": {
+    "100pct": {
+      "n_crash_sessions_kept": 25,
+      "n_crash_sessions_total": 25,
+      "model_a_classifier_roc_auc": {
+        "mean": 0.9513321585856531,
+        "std": 0.010638708562651556
+      },
+      "model_a_classifier_f1": {
+        "mean": 0.3169219263055922,
+        "std": 0.0578908519100719
+      },
+      "model_a_reconstruction_roc_auc": {
+        "mean": 0.7311810969536697,
+        "std": 0.010143661967929804
+      },
+      "model_b_roc_auc": {
+        "mean": 0.9580191059412819,
+        "std": 0.013735449142739109
+      },
+      "model_b_f1": {
+        "mean": 0.3394672190897235,
+        "std": 0.06436000744733947
+      }
+    },
+    "50pct": {
+      "n_crash_sessions_kept": 12,
+      "n_crash_sessions_total": 25,
+      "model_a_classifier_roc_auc": {
+        "mean": 0.9288813566486404,
+        "std": 0.02432406179132856
+      },
+      "model_a_classifier_f1": {
+        "mean": 0.3410872524773208,
+        "std": 0.09346361200264909
+      },
+      "model_a_reconstruction_roc_auc": {
+        "mean": 0.7133223784149361,
+        "std": 0.019308523413745227
+      },
+      "model_b_roc_auc": {
+        "mean": 0.9323890880558807,
+        "std": 0.026223749865365714
+      },
+      "model_b_f1": {
+        "mean": 0.4943087010991274,
+        "std": 0.056778397810803884
+      }
+    },
+    "25pct": {
+      "n_crash_sessions_kept": 6,
+      "n_crash_sessions_total": 25,
+      "model_a_classifier_roc_auc": {
+        "mean": 0.8345567352934182,
+        "std": 0.10395151600658532
+      },
+      "model_a_classifier_f1": {
+        "mean": 0.2781539640995673,
+        "std": 0.10148781714705617
+      },
+      "model_a_reconstruction_roc_auc": {
+        "mean": 0.7405774052166194,
+        "std": 0.01219686817168525
+      },
+      "model_b_roc_auc": {
+        "mean": 0.8199686411057774,
+        "std": 0.12807725190051797
+      },
+      "model_b_f1": {
+        "mean": 0.29356085349966843,
+        "std": 0.12268323232482338
+      }
+    },
+    "10pct": {
+      "n_crash_sessions_kept": 2,
+      "n_crash_sessions_total": 25,
+      "model_a_classifier_roc_auc": {
+        "mean": 0.7892539647734208,
+        "std": 0.084834452021625
+      },
+      "model_a_classifier_f1": {
+        "mean": 0.16647778084519996,
+        "std": 0.08027920891967938
+      },
+      "model_a_reconstruction_roc_auc": {
+        "mean": 0.7258622374980517,
+        "std": 0.009271875946005169
+      },
+      "model_b_roc_auc": {
+        "mean": 0.7992789039445631,
+        "std": 0.10108580708197724
+      },
+      "model_b_f1": {
+        "mean": 0.1724040397099387,
+        "std": 0.07805433494649666
+      }
+    }
+  },
+  "per_seed_runs": {
+    "100pct": [
+      {
+        "seed": 42,
+        "n_crash_sessions_kept": 25,
+        "n_train_windows": 18720,
+        "n_train_crash_windows": 895,
+        "model_a_classifier_roc_auc": 0.9459237400302758,
+        "model_a_classifier_f1": 0.3333333333333333,
+        "model_a_reconstruction_roc_auc": 0.7183075707820703,
+        "model_b_roc_auc": 0.9489367828997599,
+        "model_b_f1": 0.3236994219653179
+      },
+      {
+        "seed": 43,
+        "n_crash_sessions_kept": 25,
+        "n_train_windows": 18720,
+        "n_train_crash_windows": 895,
+        "model_a_classifier_roc_auc": 0.9675037844663836,
+        "model_a_classifier_f1": 0.3314285714285714,
+        "model_a_reconstruction_roc_auc": 0.7215491346583148,
+        "model_b_roc_auc": 0.9419384921840531,
+        "model_b_f1": 0.375
+      },
+      {
+        "seed": 44,
+        "n_crash_sessions_kept": 25,
+        "n_train_windows": 18720,
+        "n_train_crash_windows": 895,
+        "model_a_classifier_roc_auc": 0.941168389600577,
+        "model_a_classifier_f1": 0.3023255813953488,
+        "model_a_reconstruction_roc_auc": 0.7441898864263806,
+        "model_b_roc_auc": 0.9555348316209669,
+        "model_b_f1": 0.4
+      },
+      {
+        "seed": 45,
+        "n_crash_sessions_kept": 25,
+        "n_train_windows": 18720,
+        "n_train_crash_windows": 895,
+        "model_a_classifier_roc_auc": 0.9602967867040402,
+        "model_a_classifier_f1": 0.39800995024875624,
+        "model_a_reconstruction_roc_auc": 0.7404926014672898,
+        "model_b_roc_auc": 0.9821839475220661,
+        "model_b_f1": 0.37777777777777777
+      },
+      {
+        "seed": 46,
+        "n_crash_sessions_kept": 25,
+        "n_train_windows": 18720,
+        "n_train_crash_windows": 895,
+        "model_a_classifier_roc_auc": 0.941768092126989,
+        "model_a_classifier_f1": 0.21951219512195122,
+        "model_a_reconstruction_roc_auc": 0.7313662914342929,
+        "model_b_roc_auc": 0.9615014754795639,
+        "model_b_f1": 0.22085889570552147
+      }
+    ],
+    "50pct": [
+      {
+        "seed": 42,
+        "n_crash_sessions_kept": 12,
+        "n_train_windows": 17109,
+        "n_train_crash_windows": 383,
+        "model_a_classifier_roc_auc": 0.9303843115705601,
+        "model_a_classifier_f1": 0.494949494949495,
+        "model_a_reconstruction_roc_auc": 0.7380039680757475,
+        "model_b_roc_auc": 0.9442818232013549,
+        "model_b_f1": 0.5042735042735043
+      },
+      {
+        "seed": 43,
+        "n_crash_sessions_kept": 12,
+        "n_train_windows": 17409,
+        "n_train_crash_windows": 471,
+        "model_a_classifier_roc_auc": 0.9551808222000893,
+        "model_a_classifier_f1": 0.39805825242718446,
+        "model_a_reconstruction_roc_auc": 0.7342128970387376,
+        "model_b_roc_auc": 0.941690157217169,
+        "model_b_f1": 0.3925233644859813
+      },
+      {
+        "seed": 44,
+        "n_crash_sessions_kept": 12,
+        "n_train_windows": 17234,
+        "n_train_crash_windows": 420,
+        "model_a_classifier_roc_auc": 0.8863273107700761,
+        "model_a_classifier_f1": 0.2653061224489796,
+        "model_a_reconstruction_roc_auc": 0.7014657046768871,
+        "model_b_roc_auc": 0.895753472066279,
+        "model_b_f1": 0.4890829694323144
+      },
+      {
+        "seed": 45,
+        "n_crash_sessions_kept": 12,
+        "n_train_windows": 17519,
+        "n_train_crash_windows": 505,
+        "model_a_classifier_roc_auc": 0.9493858993292315,
+        "model_a_classifier_f1": 0.24277456647398843,
+        "model_a_reconstruction_roc_auc": 0.7038658357132102,
+        "model_b_roc_auc": 0.969682659614658,
+        "model_b_f1": 0.5213483146067416
+      },
+      {
+        "seed": 46,
+        "n_crash_sessions_kept": 12,
+        "n_train_windows": 16885,
+        "n_train_crash_windows": 315,
+        "model_a_classifier_roc_auc": 0.9231284393732447,
+        "model_a_classifier_f1": 0.30434782608695654,
+        "model_a_reconstruction_roc_auc": 0.6890634865700979,
+        "model_b_roc_auc": 0.9105373281799424,
+        "model_b_f1": 0.5643153526970954
+      }
+    ],
+    "25pct": [
+      {
+        "seed": 42,
+        "n_crash_sessions_kept": 6,
+        "n_train_windows": 15965,
+        "n_train_crash_windows": 26,
+        "model_a_classifier_roc_auc": 0.7234697678596431,
+        "model_a_classifier_f1": 0.1276595744680851,
+        "model_a_reconstruction_roc_auc": 0.7372880236499427,
+        "model_b_roc_auc": 0.6361489851289625,
+        "model_b_f1": 0.13333333333333333
+      },
+      {
+        "seed": 43,
+        "n_crash_sessions_kept": 6,
+        "n_train_windows": 16649,
+        "n_train_crash_windows": 230,
+        "model_a_classifier_roc_auc": 0.951246430184851,
+        "model_a_classifier_f1": 0.36018957345971564,
+        "model_a_reconstruction_roc_auc": 0.7447367517257959,
+        "model_b_roc_auc": 0.9349256712309224,
+        "model_b_f1": 0.40414507772020725
+      },
+      {
+        "seed": 44,
+        "n_crash_sessions_kept": 6,
+        "n_train_windows": 16417,
+        "n_train_crash_windows": 159,
+        "model_a_classifier_roc_auc": 0.8168793805363506,
+        "model_a_classifier_f1": 0.3691588785046729,
+        "model_a_reconstruction_roc_auc": 0.7185096731753324,
+        "model_b_roc_auc": 0.8731549900798105,
+        "model_b_f1": 0.39826839826839827
+      },
+      {
+        "seed": 45,
+        "n_crash_sessions_kept": 6,
+        "n_train_windows": 17051,
+        "n_train_crash_windows": 349,
+        "model_a_classifier_roc_auc": 0.9582533069499447,
+        "model_a_classifier_f1": 0.3492957746478873,
+        "model_a_reconstruction_roc_auc": 0.7525976101722228,
+        "model_b_roc_auc": 0.9544212870620123,
+        "model_b_f1": 0.37755102040816324
+      },
+      {
+        "seed": 46,
+        "n_crash_sessions_kept": 6,
+        "n_train_windows": 15965,
+        "n_train_crash_windows": 27,
+        "model_a_classifier_roc_auc": 0.7229347909363021,
+        "model_a_classifier_f1": 0.18446601941747573,
+        "model_a_reconstruction_roc_auc": 0.749754967359803,
+        "model_b_roc_auc": 0.7011922720271795,
+        "model_b_f1": 0.15450643776824036
+      }
+    ],
+    "10pct": [
+      {
+        "seed": 42,
+        "n_crash_sessions_kept": 2,
+        "n_train_windows": 15941,
+        "n_train_crash_windows": 8,
+        "model_a_classifier_roc_auc": 0.7324164313208514,
+        "model_a_classifier_f1": 0.12682926829268293,
+        "model_a_reconstruction_roc_auc": 0.7339830551013022,
+        "model_b_roc_auc": 0.7665717357821628,
+        "model_b_f1": 0.12394366197183099
+      },
+      {
+        "seed": 43,
+        "n_crash_sessions_kept": 2,
+        "n_train_windows": 16625,
+        "n_train_crash_windows": 212,
+        "model_a_classifier_roc_auc": 0.8409507002253508,
+        "model_a_classifier_f1": 0.2,
+        "model_a_reconstruction_roc_auc": 0.7365166001357917,
+        "model_b_roc_auc": 0.881457699836997,
+        "model_b_f1": 0.251063829787234
+      },
+      {
+        "seed": 44,
+        "n_crash_sessions_kept": 2,
+        "n_train_windows": 15941,
+        "n_train_crash_windows": 9,
+        "model_a_classifier_roc_auc": 0.6983720850362332,
+        "model_a_classifier_f1": 0.08074534161490683,
+        "model_a_reconstruction_roc_auc": 0.7119829547105709,
+        "model_b_roc_auc": 0.7005053880762229,
+        "model_b_f1": 0.08421052631578947
+      },
+      {
+        "seed": 45,
+        "n_crash_sessions_kept": 2,
+        "n_train_windows": 16428,
+        "n_train_crash_windows": 153,
+        "model_a_classifier_roc_auc": 0.9300329440110325,
+        "model_a_classifier_f1": 0.30716723549488056,
+        "model_a_reconstruction_roc_auc": 0.7186311987974247,
+        "model_b_roc_auc": 0.9510066812673538,
+        "model_b_f1": 0.2803532008830022
+      },
+      {
+        "seed": 46,
+        "n_crash_sessions_kept": 2,
+        "n_train_windows": 15941,
+        "n_train_crash_windows": 9,
+        "model_a_classifier_roc_auc": 0.744497663273636,
+        "model_a_classifier_f1": 0.11764705882352941,
+        "model_a_reconstruction_roc_auc": 0.7281973787451687,
+        "model_b_roc_auc": 0.6968530147600793,
+        "model_b_f1": 0.12244897959183673
+      }
+    ]
+  }
+}

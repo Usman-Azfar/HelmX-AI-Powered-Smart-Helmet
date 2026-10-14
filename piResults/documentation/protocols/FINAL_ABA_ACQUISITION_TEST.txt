@@ -1,0 +1,478 @@
+HELMX — FINAL RASPBERRY PI ACQUISITION A–B–A TEST
+=================================================
+
+Purpose
+-------
+This is the final targeted Raspberry Pi experiment recommended before stopping Pi-side testing for the current HelmX IEEE Sensors Journal paper.
+
+The reason for this test is that the previously tested FIFO/decimated acquisition path produced reconstruction-only confirmed triggers that were not seen in the deployed polling path.
+
+This experiment is designed to determine whether changing only the acquisition method systematically changes the reconstruction-error distribution.
+
+After this experiment, no further Raspberry Pi testing is recommended unless a real journal reviewer specifically requests something new.
+
+
+IMPORTANT HARDWARE NOTE
+-----------------------
+The physical sensor module is confirmed by the author as an MPU6050 based on the sensor/module marking.
+
+Do not alter the physical sensor mounting between runs.
+
+
+EXPERIMENT DESIGN
+-----------------
+Run three consecutive matched conditions in this exact order:
+
+A1 — DEPLOYED POLLING BASELINE
+B  — FIFO / DECIMATED ACQUISITION
+A2 — DEPLOYED POLLING REPEAT
+
+Recommended duration:
+- 20 minutes per condition
+
+Total experiment time:
+- approximately 60 minutes, excluding setup/transitions.
+
+The three conditions should be performed in the same session.
+
+
+CRITICAL CONTROL REQUIREMENTS
+-----------------------------
+Keep all of the following unchanged across A1, B, and A2:
+
+- same Raspberry Pi,
+- same MPU6050,
+- same helmet,
+- same physical sensor mounting,
+- same helmet position,
+- same room/location,
+- same table/surface,
+- same orientation,
+- same trained model,
+- same INT8 TFLite model,
+- same classifier threshold,
+- same reconstruction threshold,
+- same 3-window confirmation policy,
+- same EMA preprocessing,
+- same CPU governor,
+- same CPU frequency,
+- same TFLite thread count,
+- same background services,
+- same desktop/IDE state,
+- same scheduler policy,
+- same CPU affinity,
+- same logging configuration,
+- same Python environment,
+- same duration.
+
+Do NOT intentionally move the helmet between the three runs.
+
+Do NOT retune thresholds.
+
+Do NOT restart the Pi between A1, B, and A2 unless technically unavoidable.
+
+If a restart is unavoidable, record it explicitly.
+
+
+CONDITION A1 — DEPLOYED POLLING BASELINE
+----------------------------------------
+Run the current deployed acquisition path exactly as used in the normal HelmX crash-monitor configuration.
+
+Acquisition mode:
+- current deployed polling / sleep-paced userspace I2C path.
+
+Duration:
+- 20 minutes.
+
+Save all raw results.
+
+
+CONDITION B — FIFO / DECIMATED ACQUISITION
+------------------------------------------
+Run the previously implemented FIFO/decimated acquisition path.
+
+Important:
+- change only the acquisition mechanism,
+- keep the model and decision logic identical,
+- do not alter thresholds,
+- do not alter preprocessing intentionally,
+- do not alter physical conditions.
+
+Duration:
+- 20 minutes.
+
+Save all raw results.
+
+
+CONDITION A2 — DEPLOYED POLLING REPEAT
+--------------------------------------
+Immediately return to the exact same deployed polling configuration used in A1.
+
+Duration:
+- 20 minutes.
+
+This third run is essential.
+
+Its purpose is to determine whether any difference seen in B follows the acquisition mode rather than time drift, environmental change, or gradual sensor/temperature change.
+
+
+REQUIRED RAW DATA FOR EVERY SCORED WINDOW
+-----------------------------------------
+For every scored window in A1, B, and A2, save at minimum:
+
+1. timestamp
+2. window index
+3. classifier probability
+4. reconstruction error
+5. classifier threshold crossing: true/false
+6. reconstruction threshold crossing: true/false
+7. OR anomaly decision: true/false
+8. current consecutive-positive count
+9. confirmed trigger: true/false
+10. processing latency
+11. acquisition mode
+
+Do not save only trigger windows.
+
+The complete score distributions are needed.
+
+
+REQUIRED SENSOR DATA
+--------------------
+For each run save:
+
+- raw ax
+- raw ay
+- raw az
+- raw gx
+- raw gy
+- raw gz
+
+and preferably converted physical units as well.
+
+Also preserve:
+
+- per-sample host timestamp,
+- inter-sample dt,
+- temperature if available.
+
+
+REQUIRED TIMING / STREAM METRICS
+--------------------------------
+For A1, B, and A2 separately report:
+
+- run duration,
+- total sensor samples,
+- achieved sample rate,
+- nominal decision positions,
+- scored windows,
+- invalidated candidate windows,
+- never-formed/suppressed decision positions,
+- V_T,
+- C_D,
+- timing-gap count,
+- gaps/min,
+- dt < 10 ms count,
+- too-fast events/min,
+- estimated dropped-equivalent samples,
+- dropped-equivalent samples/min,
+- dt mean,
+- dt p50,
+- dt p95,
+- dt p99,
+- dt p99.9 if practical,
+- dt maximum,
+- I2C failures,
+- reconnects,
+- exceptions.
+
+
+REQUIRED PROCESSING-LATENCY METRICS
+-----------------------------------
+For each run report:
+
+- mean processing latency,
+- p50,
+- p95,
+- p99,
+- p99.9 if practical,
+- maximum,
+- count >20 ms,
+- count >50 ms,
+- count >100 ms,
+- count >300 ms.
+
+
+REQUIRED MODEL-SCORE ANALYSIS
+-----------------------------
+For CLASSIFIER probability, report per run:
+
+- minimum
+- mean
+- median
+- p95
+- p99
+- maximum
+- number above classifier threshold
+
+For RECONSTRUCTION error, report per run:
+
+- minimum
+- mean
+- median
+- p90
+- p95
+- p99
+- p99.9
+- maximum
+- number above reconstruction threshold
+
+Also report reconstruction-error counts within useful bands around the frozen threshold:
+
+theta_r = 10.878735866546593
+
+Suggested bands:
+
+- r < 8
+- 8 <= r < 9
+- 9 <= r < 10
+- 10 <= r < theta_r
+- theta_r <= r < 11.5
+- 11.5 <= r < 12.5
+- r >= 12.5
+
+If easier, preserve all reconstruction values and generate these counts afterward.
+
+
+REQUIRED TRIGGER ANALYSIS
+-------------------------
+For every condition report:
+
+- classifier-only positive windows
+- reconstruction-only positive windows
+- both-positive windows
+- neither-positive windows
+- total OR-positive windows
+- longest consecutive OR-positive sequence
+- number of 2-window sequences
+- number of 3-window confirmed triggers
+- total confirmed triggers
+
+For every confirmed trigger save:
+
+- timestamp
+- trigger number
+- classifier score for the three confirmation windows
+- reconstruction error for the three confirmation windows
+- which branch caused each positive window
+- surrounding reconstruction values for at least 5 windows before and 5 windows after the trigger if available.
+
+
+PHYSICAL / SENSOR SUMMARY FOR EACH RUN
+--------------------------------------
+Report per-axis:
+
+- min
+- max
+- mean
+- standard deviation
+- RMS
+- absolute maximum
+
+for:
+
+- ax
+- ay
+- az
+- gx
+- gy
+- gz
+
+Also report:
+
+- acceleration magnitude mean/std/max
+- gyroscope magnitude mean/std/max
+
+This is required to check whether B saw a different physical input distribution even though the helmet was not intentionally moved.
+
+
+TEMPERATURE / SYSTEM STATE
+--------------------------
+For each run record:
+
+- start CPU temperature
+- mean CPU temperature
+- max CPU temperature
+- throttle state
+- process CPU mean/p95/max if available
+- process RSS mean/max
+- total CPU if available
+
+Record the MPU6050 temperature too if the implementation exposes it.
+
+
+EXPERIMENT METADATA
+-------------------
+For every condition save:
+
+- date
+- start time
+- end time
+- exact command
+- code/git hash
+- INT8 model SHA-256
+- threshold/config SHA-256
+- Python version
+- TFLite Runtime version
+- OS version
+- kernel version
+- CPU governor
+- CPU frequency
+- TFLite thread count
+- scheduler policy
+- CPU affinity
+- active HelmX services
+- stopped services
+- desktop state
+- VS Code/IDE state
+- acquisition mode
+
+
+PREFERRED OUTPUT DIRECTORY
+--------------------------
+final_pi_validation/
+  final_aba_acquisition_test/
+    README.txt
+
+    A1_polling/
+      raw_sensor.csv
+      window_scores.csv
+      timing.csv
+      system_metrics.csv
+      summary.txt
+
+    B_fifo/
+      raw_sensor.csv
+      window_scores.csv
+      timing.csv
+      system_metrics.csv
+      summary.txt
+
+    A2_polling/
+      raw_sensor.csv
+      window_scores.csv
+      timing.csv
+      system_metrics.csv
+      summary.txt
+
+    aba_comparison.csv
+    aba_comparison_summary.txt
+
+
+FINAL COMPARISON TABLE
+----------------------
+Create one row per condition:
+
+Metric | A1 Polling | B FIFO | A2 Polling
+
+Include at minimum:
+
+- samples
+- scored windows
+- V_T
+- C_D
+- gaps/min
+- dropped-equivalent/min
+- dt p99
+- dt max
+- processing p99
+- processing max
+- classifier max
+- reconstruction median
+- reconstruction p95
+- reconstruction p99
+- reconstruction max
+- classifier threshold crossings
+- reconstruction threshold crossings
+- OR-positive windows
+- confirmed 3-window triggers
+- I2C failures
+- CPU mean
+- RSS mean
+- temperature max
+
+
+PRIMARY RESEARCH QUESTION
+-------------------------
+The purpose is to answer:
+
+"With physical conditions, model, thresholds, preprocessing, system load and runtime configuration held as constant as practicable, does switching from the deployed polling acquisition path to the FIFO/decimated path systematically alter the reconstruction-error distribution or confirmed-trigger behavior?"
+
+
+INTERPRETATION RULES
+--------------------
+Scenario 1:
+A1 = no reconstruction triggers
+B  = reconstruction triggers
+A2 = no reconstruction triggers
+
+Interpretation:
+Strong evidence that the acquisition-path change is associated with the altered reconstruction behavior under this matched test.
+
+Do NOT automatically claim the precise mechanism.
+
+
+Scenario 2:
+A1, B and A2 all behave similarly.
+
+Interpretation:
+The earlier FIFO-trigger observation was likely run-specific/environment-specific rather than a stable acquisition-mode effect.
+
+
+Scenario 3:
+A1 differs from A2 substantially.
+
+Interpretation:
+The experimental conditions were not sufficiently stationary to isolate acquisition mode. Report the test as inconclusive.
+
+
+Scenario 4:
+B improves timing continuity but also shifts model scores.
+
+Interpretation:
+Report both effects separately.
+
+Do not present FIFO as an unqualified improvement.
+
+
+IMPORTANT CLAIM LIMITS
+----------------------
+Do NOT claim:
+
+- FIFO is inherently unsafe,
+- polling is inherently superior,
+- FIFO causes reconstruction errors by a specific internal mechanism unless proven,
+- the result generalizes to all MPU6050 systems,
+- the stationary test establishes real-road false-positive behavior,
+- the stationary test establishes crash-detection reliability.
+
+
+STOPPING RULE
+-------------
+After this A1 -> B -> A2 experiment:
+
+STOP Raspberry Pi testing for the current IEEE Sensors Journal paper.
+
+No additional Pi experiment should be added unless:
+
+1. this experiment fails because of a technical/protocol problem and must be repeated, or
+2. an actual journal reviewer explicitly requests additional evidence.
+
+The remaining work should then move to:
+
+- final data analysis,
+- manuscript revision,
+- supplement revision,
+- figures/tables,
+- reproducibility archive,
+- submission preparation.

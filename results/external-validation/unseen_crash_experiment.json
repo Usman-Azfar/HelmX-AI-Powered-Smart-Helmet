@@ -1,0 +1,119 @@
+{
+  "description": "Model trained on CARLA + road + fall + near-fall only (DaRUS fully excluded from training/validation), evaluated against all 39 DaRUS sessions as an unseen, externally-sourced (ISO 13232 collision-physics) test set.",
+  "n_train_val_sessions_non_darus": 27,
+  "n_unseen_darus_sessions": 39,
+  "n_unseen_windows": 234,
+  "normal_exposure_hours_caveat": "DaRUS non_crash sessions are short, edge-padded simulation snippets, not continuous riding -- per-hour figures here are rougher than the main test set.",
+  "normal_exposure_hours": 0.011666666666666667,
+  "thresholds_from_non_darus_validation": {
+    "recon_error": 10.830519676208496,
+    "recon_error_peak": 130.7594223022461,
+    "classifier_prob_balanced": 0.9993048310279846,
+    "classifier_prob_moderate_recall": 0.9993168711662292,
+    "classifier_prob_high_recall": 0.8982468247413635,
+    "classifier_prob": 0.9993048310279846
+  },
+  "classifier_only": {
+    "confusion_matrix": {
+      "TP": 33,
+      "TN": 74,
+      "FP": 52,
+      "FN": 75
+    },
+    "accuracy": 0.45726495726495725,
+    "precision": 0.38823529411764707,
+    "recall_sensitivity": 0.3055555555555556,
+    "specificity": 0.5873015873015873,
+    "f1_score": 0.34196891191709844,
+    "f2_score": 0.3191489361702128,
+    "balanced_accuracy": 0.44642857142857145,
+    "matthews_corrcoef": -0.11106002748530354,
+    "roc_auc": 0.3520355673133451,
+    "pr_auc": 0.4482391007050076,
+    "threshold": 0.9993048310279846,
+    "n_windows": 234,
+    "window_level_trigger_rate_per_hour": 4457.142857142857
+  },
+  "classifier_only_high_recall": {
+    "confusion_matrix": {
+      "TP": 38,
+      "TN": 57,
+      "FP": 69,
+      "FN": 70
+    },
+    "accuracy": 0.405982905982906,
+    "precision": 0.35514018691588783,
+    "recall_sensitivity": 0.35185185185185186,
+    "specificity": 0.4523809523809524,
+    "f1_score": 0.35348837209302325,
+    "f2_score": 0.3525046382189239,
+    "balanced_accuracy": 0.4021164021164021,
+    "matthews_corrcoef": -0.1959040078011662,
+    "roc_auc": 0.3520355673133451,
+    "pr_auc": 0.4482391007050076,
+    "threshold": 0.8982468247413635,
+    "n_windows": 234,
+    "window_level_trigger_rate_per_hour": 5914.285714285714
+  },
+  "reconstruction_only_mean": {
+    "confusion_matrix": {
+      "TP": 94,
+      "TN": 89,
+      "FP": 37,
+      "FN": 14
+    },
+    "accuracy": 0.782051282051282,
+    "precision": 0.7175572519083969,
+    "recall_sensitivity": 0.8703703703703703,
+    "specificity": 0.7063492063492064,
+    "f1_score": 0.7866108786610879,
+    "f2_score": 0.8348134991119005,
+    "balanced_accuracy": 0.7883597883597884,
+    "matthews_corrcoef": 0.5791720348155136,
+    "roc_auc": 0.8683862433862434,
+    "pr_auc": 0.8886118835673649,
+    "threshold": 10.830519676208496,
+    "n_windows": 234,
+    "window_level_trigger_rate_per_hour": 3171.428571428571
+  },
+  "reconstruction_only_peak": {
+    "confusion_matrix": {
+      "TP": 93,
+      "TN": 97,
+      "FP": 29,
+      "FN": 15
+    },
+    "accuracy": 0.811965811965812,
+    "precision": 0.7622950819672131,
+    "recall_sensitivity": 0.8611111111111112,
+    "specificity": 0.7698412698412699,
+    "f1_score": 0.808695652173913,
+    "f2_score": 0.8393501805054152,
+    "balanced_accuracy": 0.8154761904761905,
+    "matthews_corrcoef": 0.6296581182952343,
+    "roc_auc": 0.8733833039388594,
+    "pr_auc": 0.9007560647543993,
+    "threshold": 130.7594223022461,
+    "n_windows": 234,
+    "window_level_trigger_rate_per_hour": 2485.714285714286
+  },
+  "deployed_alert_simulation": {
+    "classifier_only_balanced": {
+      "session_recall": 0.28,
+      "n_anomaly_sessions": 25,
+      "n_normal_sessions": 14,
+      "total_false_alert_events": 9,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 0.011666666666666667,
+      "false_alerts_per_hour": 771.4285714285714
+    }
+  },
+  "detection_latency_seconds_balanced": {
+    "n_sessions_detected": 7,
+    "mean_s": 0.2571428571428571,
+    "median_s": 0.3,
+    "min_s": 0.0,
+    "max_s": 0.8999999999999999
+  }
+}

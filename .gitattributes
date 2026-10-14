@@ -1,0 +1,16 @@
+* text=auto
+
+# Executable/configuration files deployed to Linux must keep LF endings.
+*.sh text eol=lf
+*.service text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Generated scientific and model artifacts are binary.
+*.keras binary
+*.tflite binary
+*.npz binary
+*.npy binary
+*.png binary
+*.pdf binary

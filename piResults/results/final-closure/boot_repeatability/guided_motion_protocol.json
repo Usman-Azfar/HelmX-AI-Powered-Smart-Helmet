@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-10-04T17:45:14.582249+00:00",
+  "sequence": [
+    "Rest on original surface for 10 seconds after START cue",
+    "Three gentle left/right rotation cycles",
+    "Three gentle forward/back tilt cycles",
+    "Return to original resting position and remain still"
+  ],
+  "capture_seconds": 120,
+  "configuration": "Same unfiltered polling configuration as boot1_stationary",
+  "mounting": "IMU fixed in assembled helmet; user reports same surface and no movement during early baseline up to attestation",
+  "repeat_on_boots": [
+    1,
+    2,
+    3
+  ],
+  "limitation": "Manual movements are not amplitude-matched. Cue delivery and operator response have unmeasured latency. Completion requires operator confirmation."
+}

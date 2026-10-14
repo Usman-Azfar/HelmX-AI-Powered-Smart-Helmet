@@ -1,0 +1,136 @@
+{
+  "reconstruction_only": {
+    "accuracy": 0.9753540555453375,
+    "precision": 0.8,
+    "recall": 0.08391608391608392,
+    "f1": 0.1518987341772152,
+    "confusion_matrix": [
+      [
+        5291,
+        3
+      ],
+      [
+        131,
+        12
+      ]
+    ],
+    "n_windows": 5437,
+    "window_level_trigger_rate_per_hour": 7.1814240497912065,
+    "threshold": 10.878735866546593,
+    "roc_auc": 0.7183075707820703,
+    "pr_auc": 0.12521392992740776
+  },
+  "classifier_only_balanced": {
+    "accuracy": 0.9786647048004414,
+    "precision": 0.9354838709677419,
+    "recall": 0.20279720279720279,
+    "f1": 0.3333333333333333,
+    "confusion_matrix": [
+      [
+        5292,
+        2
+      ],
+      [
+        114,
+        29
+      ]
+    ],
+    "n_windows": 5437,
+    "window_level_trigger_rate_per_hour": 4.787616033194137,
+    "threshold": 0.9892255067825317,
+    "roc_auc": 0.9459237400302758,
+    "pr_auc": 0.5393709255767394
+  },
+  "classifier_only_moderate_recall": {
+    "accuracy": 0.9799521795107596,
+    "precision": 0.925,
+    "recall": 0.25874125874125875,
+    "f1": 0.40437158469945356,
+    "confusion_matrix": [
+      [
+        5291,
+        3
+      ],
+      [
+        106,
+        37
+      ]
+    ],
+    "n_windows": 5437,
+    "window_level_trigger_rate_per_hour": 7.1814240497912065,
+    "threshold": 0.9772439002990723,
+    "roc_auc": 0.9459237400302758,
+    "pr_auc": 0.5393709255767394
+  },
+  "classifier_only_high_recall": {
+    "accuracy": 0.8924038992091227,
+    "precision": 0.16716867469879518,
+    "recall": 0.7762237762237763,
+    "f1": 0.275092936802974,
+    "confusion_matrix": [
+      [
+        4741,
+        553
+      ],
+      [
+        32,
+        111
+      ]
+    ],
+    "n_windows": 5437,
+    "window_level_trigger_rate_per_hour": 1323.775833178179,
+    "threshold": 0.76202392578125,
+    "roc_auc": 0.9459237400302758,
+    "pr_auc": 0.5393709255767394
+  },
+  "hybrid": {
+    "accuracy": 0.9784807798418246,
+    "precision": 0.90625,
+    "recall": 0.20279720279720279,
+    "f1": 0.3314285714285714,
+    "confusion_matrix": [
+      [
+        5291,
+        3
+      ],
+      [
+        114,
+        29
+      ]
+    ],
+    "n_windows": 5437,
+    "window_level_trigger_rate_per_hour": 7.1814240497912065
+  },
+  "deployed_alert_simulation": {
+    "classifier_only_balanced": {
+      "session_recall": 1.0,
+      "n_anomaly_sessions": 5,
+      "n_normal_sessions": 5,
+      "total_false_alert_events": 0,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 0.4177444444444445,
+      "false_alerts_per_hour": 0.0
+    },
+    "classifier_only_moderate_recall": {
+      "session_recall": 1.0,
+      "n_anomaly_sessions": 5,
+      "n_normal_sessions": 5,
+      "total_false_alert_events": 0,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 0.4177444444444445,
+      "false_alerts_per_hour": 0.0
+    },
+    "classifier_only_high_recall": {
+      "session_recall": 1.0,
+      "n_anomaly_sessions": 5,
+      "n_normal_sessions": 5,
+      "total_false_alert_events": 11,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 0.4177444444444445,
+      "false_alerts_per_hour": 26.331888182567756
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "date_pkt": "2026-10-11",
+  "run": "cold_warm_20261007T141614Z",
+  "user_statement_verbatim": "Both conditions confirmed",
+  "question_confirmed": "For the earlier I2 recording on 7 October\u2014not the D4/K1 runs\u2014did the helmet remain untouched in the same position and orientation throughout the early and one-hour-warm recordings? If you remember, also state whether both Pi and sensor power had been disconnected for at least 10 seconds before boot.",
+  "confirmed": {
+    "untouched_same_position_orientation": true,
+    "both_pi_and_sensor_unpowered_at_least_10_seconds_before_boot": true
+  },
+  "reuse_instruction_verbatim": "wecan use the earlier results not need to repeat",
+  "scope": "Operator attestation for this historical pair. Exact power-off duration beyond the stated minimum and power-on thermal equilibrium are not independently measured."
+}

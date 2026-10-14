@@ -1,0 +1,30 @@
+{
+  "phase": "05_repeated_tilt",
+  "checks": {
+    "sample_rows_match": true,
+    "window_rows_match": true,
+    "full_duration": true,
+    "no_exception": true,
+    "sample_indices_contiguous": true,
+    "timestamps_increasing": true,
+    "configuration_restored": true,
+    "high_range_filtered_readback": true,
+    "replay_endpoint_indices_exact": true,
+    "replay_scores_exact": true,
+    "replay_policy_exact": true,
+    "event_count_matches": true
+  },
+  "source_hashes": {
+    "raw_sensor.csv": "4f2d7fc481465d258a058e8b2dae2f93723a6a5ceeafbc03cb1c60c4c273c3c3",
+    "window_scores.csv": "dbf395073d2c80c67d0afcf7c7b42e7dcc36c5ff94ae9ef5997dc046763845b0",
+    "summary.json": "dff01a1c804efc700bdad6547935f019c72a02f744eca7b0219bb96502137c4f",
+    "metadata.json": "3f75f061c4685e4fdc117d231b84b12294d09ff4cdbc70e34b117508c8d08b7e"
+  },
+  "max_abs_replay_score_error": [
+    0.0,
+    0.0
+  ],
+  "scope": "Offline integrity/replay verification of the saved capture, not a new physical trial. Policy replay uses recorded decision timestamps. Operator motion and reaction latency are not independently verified.",
+  "cue_after_first_sample_s": 11.556830912999999,
+  "recorded_time_after_cue_s": 78.42942774300002
+}

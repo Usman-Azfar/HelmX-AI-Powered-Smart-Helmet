@@ -1,0 +1,43 @@
+
+B1 — FIFO source/register audit
+Status: COMPLETE; HARDWARE GATE PENDING
+UTC: 2026-09-29T14:38:24.015140+00:00
+Evidence: piResults/final_pi_review_closure/02_fifo_parser_audit
+{
+  "sources": [
+    "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6500-Register-Map2.pdf",
+    "https://invensense.tdk.com/wp-content/uploads/2020/06/PS-MPU-6500A-01-v1.3.pdf",
+    "https://raw.githubusercontent.com/torvalds/linux/master/drivers/iio/imu/inv_mpu6050/inv_mpu_core.c",
+    "https://learn.microsoft.com/en-us/dotnet/api/iot.device.imu.mpu6500.readfifo"
+  ],
+  "identity": "100/100 readbacks 0x70 on current boot; compatible register map, physical silicon provenance not proven.",
+  "old_harness_defects": [
+    "1024-byte capacity/overflow test inappropriate for the 512-byte MPU6500 FIFO.",
+    "Divider=159 was used with DLPF_CFG=0, where divider does not control FIFO output rate.",
+    "Full-buffer throughput was interpreted as native sensor rate without recognizing overflow.",
+    "Interpolated host timestamps cannot establish actual sensor timing."
+  ],
+  "corrected_definition": {
+    "FIFO_EN": "0x78",
+    "order": "ax,ay,az,gx,gy,gz, each signed big-endian int16",
+    "bytes_per_packet": 12,
+    "accel_conversion": "raw / 16384 * 9.80665 m/s^2",
+    "gyro_conversion": "raw / 131 deg/s",
+    "CONFIG": 4,
+    "ACCEL_CONFIG2": 4,
+    "GYRO_CONFIG": 0,
+    "ACCEL_CONFIG": 0,
+    "SMPLRT_DIV": 19,
+    "nominal_ODR_hz": 50,
+    "host_drain_interval_s": 0.005,
+    "max_read_bytes": 24,
+    "overflow": "INT_STATUS bit 4 or count >=504; abort and preserve failure, reset FIFO during cleanup",
+    "decimation": "none",
+    "timestamps": "host read-completion timestamps retained separately from FIFO order; no fabricated per-sample dt"
+  },
+  "limitations": [
+    "Correcting rate requires changing the sensor filter/rate configuration. This is NOT an acquisition-only comparison with the old unfiltered deployment.",
+    "B2 must pass before any FIFO model run; B3 compares identically configured filtered polling/FIFO.",
+    "Mounting and no-motion condition await user confirmation; first run is explicitly unattended."
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "early": {
+    "boot": 4,
+    "phase": "stationary",
+    "boot_id": "<redacted-boot-id>",
+    "first_sample_uptime_s": 97.266535921,
+    "identity_counts": {
+      "0x70": 100
+    },
+    "registers": {
+      "SMPLRT_DIV": 0,
+      "CONFIG": 0,
+      "GYRO_CONFIG": 0,
+      "ACCEL_CONFIG": 0,
+      "ACCEL_CONFIG2": 0,
+      "FIFO_EN": 0,
+      "INT_PIN_CFG": 0,
+      "INT_ENABLE": 0,
+      "INT_STATUS": 1,
+      "USER_CTRL": 0,
+      "PWR_MGMT_1": 0,
+      "PWR_MGMT_2": 0,
+      "FIFO_COUNT_H": 0,
+      "FIFO_COUNT_L": 0,
+      "WHO_AM_I": 112
+    },
+    "source_hashes": {
+      "raw_sensor.csv": "0ca85b2eb66ab1013ea6110f6d90b7f941e448afa397e97479155e45dc92e407",
+      "README.txt": "683c4aa7db0f9c4b77bd98914ac53b51b6ac7249ccc398603c5230bef540e705",
+      "window_scores.csv": "83e171fa4274a30e366d321cf77a077c6776031bd4f123a99cdf8926933a0a1e",
+      "metadata.json": "f7305fc3059108f283512b2776fcf03dac5c5cfde624b695033e1a949d28f0c0",
+      "fifo_batches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "registers_during.json": "31d645e3f093b9bb5d7da2a3532bf16639c8d12735ae911358b35a42bfd9f82e",
+      "registers_restored.json": "8653ee928584842bfd6ee4789da50d2162c1f46baf60b6a000446f41e7344142",
+      "registers_before.json": "8653ee928584842bfd6ee4789da50d2162c1f46baf60b6a000446f41e7344142",
+      "errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "configuration.json": "6c7fce2e496de288e22029a3f364b2f07cbd96fe7709dda5623e358f803cc88b",
+      "summary.json": "95360a74adc182693d754810a800251a36569fa127dd4ee2728ec88747e26328",
+      "resources.json": "13a71d1f9d415a91b19a44bef5331e5fa64d3e1cbbae4889946481b6c42a0221",
+      "throttled_start.json": "518a5b7e760f3e653fef809b35392a9839d13a23cf4bdbf3b298cf85fc8117f2",
+      "gc_events.json": "9b60bc8b96500f88a46ee2c5ab26b88686cf2dd82c7d7711fc92b11119e74e66"
+    },
+    "elapsed_s": 600.00060187,
+    "n_samples": 29991,
+    "n_windows": 1996,
+    "sample_rate_hz": 49.984949859263715,
+    "timing": {
+      "n": 29990,
+      "mean_ms": 20.005811319373127,
+      "median_ms": 19.995401000016955,
+      "std_ms": 1.8699371573147232,
+      "rms_error_from_20ms": 1.869946187391264,
+      "p90_ms": 21.813407899963977,
+      "p95_ms": 22.780247799968834,
+      "p99_ms": 25.96963374000154,
+      "p99.9_ms": 31.16463200499196,
+      "max_ms": 43.62840200001017,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        35,
+        421,
+        29059,
+        427,
+        45,
+        3,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 4713,
+        "5": 931,
+        "8": 251
+      }
+    },
+    "physical_axes": {
+      "ax": {
+        "mean": -2.2545541065066104,
+        "std": 0.04517171007805832,
+        "min": -2.6384102294921874,
+        "max": -1.8914193115234375,
+        "rms": 2.2550065859232418
+      },
+      "ay": {
+        "mean": 0.7944583947295192,
+        "std": 0.047556445400641724,
+        "min": 0.040701428222656245,
+        "max": 1.3120225097656248,
+        "rms": 0.7958804913147127
+      },
+      "az": {
+        "mean": -9.46357226200412,
+        "std": 0.05335713275388987,
+        "min": -9.72285294189453,
+        "max": -9.200916979980468,
+        "rms": 9.46372267882938
+      },
+      "gx": {
+        "mean": -0.21221048248316735,
+        "std": 0.8371966396926391,
+        "min": -4.3816793893129775,
+        "max": 3.8931297709923665,
+        "rms": 0.8636732613600964
+      },
+      "gy": {
+        "mean": 2.115694250259811,
+        "std": 0.6904882224900258,
+        "min": -6.633587786259542,
+        "max": 11.251908396946565,
+        "rms": 2.2255192980470553
+      },
+      "gz": {
+        "mean": 1.0900758777251496,
+        "std": 2.779330054394027,
+        "min": -14.977099236641221,
+        "max": 15.793893129770993,
+        "rms": 2.985454901762236
+      }
+    },
+    "score_distributions": {
+      "classifier": {
+        "0": 0.0,
+        "50": 0.0,
+        "95": 0.0,
+        "99": 0.0,
+        "99.9": 0.0,
+        "100": 0.0
+      },
+      "reconstruction": {
+        "0": 0.0,
+        "50": 0.0,
+        "95": 0.0,
+        "99": 0.0,
+        "99.9": 0.0,
+        "100": 0.0
+      }
+    },
+    "rail_counts": {
+      "ax": 0,
+      "ay": 0,
+      "az": 0,
+      "gx": 0,
+      "gy": 0,
+      "gz": 0
+    },
+    "confirmed_alert_events": 0,
+    "i2c_failures": 0,
+    "gap_count": 0,
+    "C_D": 1.0
+  },
+  "warm": {
+    "boot": 4,
+    "phase": "warm_stationary",
+    "boot_id": "<redacted-boot-id>",
+    "first_sample_uptime_s": 3803.725261616,
+    "identity_counts": {
+      "0x70": 100
+    },
+    "registers": {
+      "SMPLRT_DIV": 0,
+      "CONFIG": 0,
+      "GYRO_CONFIG": 0,
+      "ACCEL_CONFIG": 0,
+      "ACCEL_CONFIG2": 0,
+      "FIFO_EN": 0,
+      "INT_PIN_CFG": 0,
+      "INT_ENABLE": 0,
+      "INT_STATUS": 1,
+      "USER_CTRL": 0,
+      "PWR_MGMT_1": 0,
+      "PWR_MGMT_2": 0,
+      "FIFO_COUNT_H": 0,
+      "FIFO_COUNT_L": 0,
+      "WHO_AM_I": 112
+    },
+    "source_hashes": {
+      "raw_sensor.csv": "87105f81cbbd5ae278819b10fb643985ccd5676e66413dc6690eae09ff4e7a98",
+      "README.txt": "88d922e679695a425d1d59ffbe5609bb7fccf37f8c51d0aa7c6d2a8f16b70303",
+      "window_scores.csv": "f04eb60d690e634ef01f9dd7c8770996d1b37d5d90ea42e9b794871279421513",
+      "metadata.json": "21c6ff9c608c39ad1eea5b831810cfc4240b526b5409280d1ddf785e2d25c2f5",
+      "fifo_batches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "registers_during.json": "31d645e3f093b9bb5d7da2a3532bf16639c8d12735ae911358b35a42bfd9f82e",
+      "registers_restored.json": "8653ee928584842bfd6ee4789da50d2162c1f46baf60b6a000446f41e7344142",
+      "registers_before.json": "8653ee928584842bfd6ee4789da50d2162c1f46baf60b6a000446f41e7344142",
+      "errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "configuration.json": "6c7fce2e496de288e22029a3f364b2f07cbd96fe7709dda5623e358f803cc88b",
+      "summary.json": "cab7f6ce26d63bc59d53f73b80773b72cc6d9e4b364c3ff67ac67d282779619b",
+      "resources.json": "a30370bfcca654e4fe603b9904f7517a8002f3bc4bb02a98206f89c1424e434e",
+      "throttled_start.json": "518a5b7e760f3e653fef809b35392a9839d13a23cf4bdbf3b298cf85fc8117f2",
+      "gc_events.json": "ab579249ae1ea1dd08e7e92901ed725b2d022db4e11695a51391f86101d27a6f"
+    },
+    "elapsed_s": 600.0022906589998,
+    "n_samples": 29999,
+    "n_windows": 1996,
+    "sample_rate_hz": 49.99814245217504,
+    "timing": {
+      "n": 29998,
+      "mean_ms": 20.00041241616107,
+      "median_ms": 19.994384500023443,
+      "std_ms": 1.1339532932212208,
+      "rms_error_from_20ms": 1.1339533682186151,
+      "p90_ms": 21.33163250000507,
+      "p95_ms": 21.817853099878448,
+      "p99_ms": 23.38443771969196,
+      "p99.9_ms": 27.164517920758822,
+      "max_ms": 41.15462000027037,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        8,
+        73,
+        29828,
+        82,
+        6,
+        1,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 1867,
+        "5": 170,
+        "8": 35
+      }
+    },
+    "physical_axes": {
+      "ax": {
+        "mean": -2.2488247999856017,
+        "std": 0.044548338507922086,
+        "min": -2.4516625,
+        "max": -1.9943699829101562,
+        "rms": 2.249265999274896
+      },
+      "ay": {
+        "mean": 0.7887511772666185,
+        "std": 0.04882949809022477,
+        "min": 0.612915625,
+        "max": 1.0869675537109373,
+        "rms": 0.7902611843708509
+      },
+      "az": {
+        "mean": -9.463154329163267,
+        "std": 0.05270959358176557,
+        "min": -9.65342109375,
+        "max": -9.200916979980468,
+        "rms": 9.46330112375259
+      },
+      "gx": {
+        "mean": -0.21451860100171274,
+        "std": 0.8727450564743034,
+        "min": -4.0534351145038165,
+        "max": 3.900763358778626,
+        "rms": 0.8987225176749868
+      },
+      "gy": {
+        "mean": 2.1161242270416647,
+        "std": 0.6576501180640094,
+        "min": -0.40458015267175573,
+        "max": 5.854961832061068,
+        "rms": 2.215961511863933
+      },
+      "gz": {
+        "mean": 1.088394803999828,
+        "std": 3.0170337238215086,
+        "min": -13.557251908396946,
+        "max": 16.068702290076335,
+        "rms": 3.207350267752199
+      }
+    },
+    "score_distributions": {
+      "classifier": {
+        "0": 0.0,
+        "50": 0.0,
+        "95": 0.0,
+        "99": 0.0,
+        "99.9": 0.0,
+        "100": 0.0
+      },
+      "reconstruction": {
+        "0": 0.0,
+        "50": 0.0,
+        "95": 0.0,
+        "99": 0.0,
+        "99.9": 0.0,
+        "100": 0.0
+      }
+    },
+    "rail_counts": {
+      "ax": 0,
+      "ay": 0,
+      "az": 0,
+      "gx": 0,
+      "gy": 0,
+      "gz": 0
+    },
+    "confirmed_alert_events": 0,
+    "i2c_failures": 0,
+    "gap_count": 0,
+    "C_D": 1.0
+  },
+  "axis_comparison": [
+    {
+      "axis": "ax",
+      "units": "m/s^2",
+      "early_mean": -2.2545541065066104,
+      "warm_mean": -2.2488247999856017,
+      "mean_difference": 0.00572930652100867,
+      "early_std": 0.04517171007805832,
+      "warm_std": 0.044548338507922086,
+      "std_ratio": 0.9861999563651891
+    },
+    {
+      "axis": "ay",
+      "units": "m/s^2",
+      "early_mean": 0.7944583947295192,
+      "warm_mean": 0.7887511772666185,
+      "mean_difference": -0.005707217462900704,
+      "early_std": 0.047556445400641724,
+      "warm_std": 0.04882949809022477,
+      "std_ratio": 1.0267692986483357
+    },
+    {
+      "axis": "az",
+      "units": "m/s^2",
+      "early_mean": -9.46357226200412,
+      "warm_mean": -9.463154329163267,
+      "mean_difference": 0.0004179328408540073,
+      "early_std": 0.05335713275388987,
+      "warm_std": 0.05270959358176557,
+      "std_ratio": 0.9878640560558027
+    },
+    {
+      "axis": "gx",
+      "units": "deg/s",
+      "early_mean": -0.21221048248316735,
+      "warm_mean": -0.21451860100171274,
+      "mean_difference": -0.002308118518545399,
+      "early_std": 0.8371966396926391,
+      "warm_std": 0.8727450564743034,
+      "std_ratio": 1.0424612511520772
+    },
+    {
+      "axis": "gy",
+      "units": "deg/s",
+      "early_mean": 2.115694250259811,
+      "warm_mean": 2.1161242270416647,
+      "mean_difference": 0.00042997678185363597,
+      "early_std": 0.6904882224900258,
+      "warm_std": 0.6576501180640094,
+      "std_ratio": 0.9524421947305687
+    },
+    {
+      "axis": "gz",
+      "units": "deg/s",
+      "early_mean": 1.0900758777251496,
+      "warm_mean": 1.088394803999828,
+      "mean_difference": -0.001681073725321669,
+      "early_std": 2.779330054394027,
+      "warm_std": 3.0170337238215086,
+      "std_ratio": 1.085525527654292
+    }
+  ],
+  "operator_confirmation": {
+    "recorded_utc": "2026-10-05T18:29:29.744200+00:00",
+    "user_statement": "yes",
+    "same_orientation_since_initial_baseline": true,
+    "untouched_throughout_warm_recording": true
+  },
+  "boot2_resolution": "Boot2 has a 300-second startup baseline; no boot2 warm recording exists in the active evidence tree. Ten-minute warm recordings exist for boots 1 and 4.",
+  "limitations": [
+    "Early recording begins 97.27 seconds after boot and lasts ten minutes; the full first ten minutes after boot are not covered.",
+    "No calibrated temperature sweep; observed differences cannot be attributed exclusively to temperature.",
+    "Boot1 warm comparison has a previously documented orientation confound. No new physical measurement."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "register_dump": {
+    "device": {
+      "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+      "machine": "aarch64",
+      "python": "3.11.2",
+      "cpu_count": 4,
+      "ram_gb": 7.64,
+      "model": "Raspberry Pi 4 Model B Rev 1.5",
+      "tflite_runtime_version": "2.14.0"
+    },
+    "i2c_address": "0x68",
+    "raw_hex": {
+      "SMPLRT_DIV": "0x0",
+      "CONFIG": "0x0",
+      "GYRO_CONFIG": "0x0",
+      "ACCEL_CONFIG": "0x0",
+      "FIFO_EN": "0x0",
+      "INT_ENABLE": "0x0",
+      "INT_STATUS": "0x5",
+      "PWR_MGMT_1": "0x1",
+      "PWR_MGMT_2": "0x0",
+      "WHO_AM_I": "0x70",
+      "USER_CTRL": "0x0"
+    },
+    "who_am_i": "0x70",
+    "who_am_i_expected_0x68": false
+  },
+  "service_state": {
+    "services": {
+      "helmx-ble.service": "active",
+      "mosquitto.service": "active",
+      "rhasspy.service": "active",
+      "helmx_assistant.service": "activating",
+      "wayvnc.service": "active",
+      "wayvnc-control.service": "active",
+      "rpi-connect.service": "inactive",
+      "rpi-connect-wayvnc.service": "inactive",
+      "bluetooth.service": "active"
+    },
+    "cpu_governor": "ondemand",
+    "system_boot_time": "2026-09-20 12:58:01"
+  },
+  "stationary": {
+    "phase": "stationary",
+    "n_samples": 3000,
+    "duration_s": 59.97952785900003,
+    "i2c_errors": 0,
+    "dt_stats_ms": {
+      "p50": 19.988293999972484,
+      "p95": 20.849115600043433,
+      "p99": 21.947480640025105,
+      "max": 26.729997000018102
+    },
+    "n_windows_scored": 197,
+    "clipping_per_axis_raw_int16": {
+      "ax": {
+        "min_raw": -8612,
+        "max_raw": -8248,
+        "count_near_neg32768": 0,
+        "count_near_32767": 0
+      },
+      "ay": {
+        "min_raw": -13728,
+        "max_raw": -13436,
+        "count_near_neg32768": 0,
+        "count_near_32767": 0
+      },
+      "az": {
+        "min_raw": -4044,
+        "max_raw": -3644,
+        "count_near_neg32768": 0,
+        "count_near_32767": 0
+      },
+      "gx": {
+        "min_raw": -186,
+        "max_raw": 156,
+        "count_near_neg32768": 0,
+        "count_near_32767": 0
+      },
+      "gy": {
+        "min_raw": 199,
+        "max_raw": 334,
+        "count_near_neg32768": 0,
+        "count_near_32767": 0
+      },
+      "gz": {
+        "min_raw": -447,
+        "max_raw": 848,
+        "count_near_neg32768": 0,
+        "count_near_32767": 0
+      }
+    },
+    "accel_magnitude_ms2_mean": 9.842801611342265,
+    "accel_magnitude_ms2_max": 9.929396258667875,
+    "gyro_magnitude_dps_mean": 2.480146165067747,
+    "gyro_magnitude_dps_max": 6.736977480092586,
+    "max_classifier_score": 0.0,
+    "max_reconstruction_error": 0.0,
+    "n_classifier_threshold_crossings": 0,
+    "n_recon_threshold_crossings": 0,
+    "n_or_positive_windows": 0,
+    "n_confirmed_triggers": 0
+  }
+}

@@ -1,0 +1,388 @@
+
+E1 — Complete observed-dt distributions
+Status: COMPLETE (HISTORICAL INPUTS)
+UTC: 2026-09-29T19:28:54.820818+00:00
+Evidence: piResults/final_pi_review_closure/stream_E1
+{
+  "recordings": [
+    {
+      "file": "piResults/final_pi_results/final_aba_acquisition_test/A1_polling/raw_sensor.csv",
+      "sha256": "71709da0ebc32cb36a70db682b3d99247556c16507622a4633a5d30c2b58a498",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "n": 59999,
+      "mean_ms": 20.00031732335538,
+      "median_ms": 19.994618000055198,
+      "std_ms": 0.3754196376912626,
+      "rms_error_from_20ms": 0.3754197717999822,
+      "p90_ms": 20.11993019914371,
+      "p95_ms": 20.309206298406934,
+      "p99_ms": 21.090115117840465,
+      "p99.9_ms": 23.054290589716604,
+      "max_ms": 52.07183700258611,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        1,
+        5,
+        59987,
+        5,
+        0,
+        1,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 421,
+        "5": 12,
+        "8": 4
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/clipping/motion_session_raw.csv",
+      "sha256": "da43d694712a753ab68cb4ff8be98c83188dc943e682ec35c189e26c8cc6beef",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 1,
+      "n": 84098,
+      "mean_ms": 20.00374341650218,
+      "median_ms": 19.9925084999677,
+      "std_ms": 0.8436486758603826,
+      "rms_error_from_20ms": 0.843656980915873,
+      "p90_ms": 20.337823200048888,
+      "p95_ms": 20.58840234997774,
+      "p99_ms": 21.983182999997553,
+      "p99.9_ms": 24.23335812591945,
+      "max_ms": 125.8753600000091,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        9,
+        38,
+        84004,
+        38,
+        3,
+        1,
+        3,
+        2
+      ],
+      "deviation_counts": {
+        "2": 1681,
+        "5": 94,
+        "8": 31
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/clipping/motion_session_raw_part2.csv",
+      "sha256": "ad69611ad17fefab595b08824d3039f51696d2fdefdecb9b19856efd2642307f",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "n": 15262,
+      "mean_ms": 20.00272314709736,
+      "median_ms": 19.991365000009864,
+      "std_ms": 0.9006105363305654,
+      "rms_error_from_20ms": 0.9006146532672797,
+      "p90_ms": 20.379633899995042,
+      "p95_ms": 20.759547450001033,
+      "p99_ms": 22.297716570018327,
+      "p99.9_ms": 25.82088084303779,
+      "max_ms": 60.61179699997865,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        6,
+        23,
+        15202,
+        24,
+        5,
+        1,
+        1,
+        0
+      ],
+      "deviation_counts": {
+        "2": 358,
+        "5": 60,
+        "8": 18
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/scheduler_repeats/run1_loaded_dt.csv",
+      "sha256": "0ac21ae414a82ffaa449a0ef83d13820de0d6f719618c77ccc76be38b39586d5",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "n": 59973,
+      "mean_ms": 20.00877557670953,
+      "median_ms": 19.994073999441753,
+      "std_ms": 2.0033105226563594,
+      "rms_error_from_20ms": 2.003329743435234,
+      "p90_ms": 21.46831040045072,
+      "p95_ms": 22.011233000375796,
+      "p99_ms": 27.07408691978344,
+      "p99.9_ms": 33.58623697275477,
+      "max_ms": 67.74176999988413,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        141,
+        1211,
+        57246,
+        1199,
+        152,
+        22,
+        2,
+        0
+      ],
+      "deviation_counts": {
+        "2": 6038,
+        "5": 2727,
+        "8": 775
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/scheduler_repeats/run1_reduced_dt.csv",
+      "sha256": "f96f023c4afaac1b0b869fc833aa1a3b7b144301255519637c288840be37e35f",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "n": 59996,
+      "mean_ms": 20.001316677978533,
+      "median_ms": 19.99494700021387,
+      "std_ms": 1.7312861164263271,
+      "rms_error_from_20ms": 1.7312866171063224,
+      "p90_ms": 20.83103949962606,
+      "p95_ms": 21.75873424994279,
+      "p99_ms": 26.906189399824147,
+      "p99.9_ms": 30.650346854800155,
+      "max_ms": 40.79111800001556,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        78,
+        1161,
+        57511,
+        1171,
+        72,
+        3,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 4140,
+        "5": 2485,
+        "8": 531
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/scheduler_repeats/run2_loaded_dt.csv",
+      "sha256": "3945e6afd4f17915f8781c535cba461a9e0ea91d31bf9eecb60804bcc8bb2975",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "n": 59985,
+      "mean_ms": 20.004886062232217,
+      "median_ms": 19.993981999505195,
+      "std_ms": 1.9013855698284494,
+      "rms_error_from_20ms": 1.9013918477673122,
+      "p90_ms": 21.311170200169727,
+      "p95_ms": 21.883436200187134,
+      "p99_ms": 26.994028240333133,
+      "p99.9_ms": 32.87248863280591,
+      "max_ms": 49.875673000315146,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        136,
+        1153,
+        57386,
+        1176,
+        124,
+        10,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 5394,
+        "5": 2599,
+        "8": 712
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/scheduler_repeats/run2_reduced_dt.csv",
+      "sha256": "04df9e43a9e957d8a221d66312b992415125178bbf7a0da65d69b19e05fe240f",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "n": 59996,
+      "mean_ms": 20.001113230548707,
+      "median_ms": 19.99490500020329,
+      "std_ms": 1.721255629749736,
+      "rms_error_from_20ms": 1.7212559897433661,
+      "p90_ms": 20.85443300074985,
+      "p95_ms": 21.762562999356305,
+      "p99_ms": 26.923891699698288,
+      "p99.9_ms": 30.245558139358952,
+      "max_ms": 45.16956800034677,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        69,
+        1145,
+        57558,
+        1153,
+        68,
+        3,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 4066,
+        "5": 2438,
+        "8": 578
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/scheduler_repeats/run3_loaded_dt.csv",
+      "sha256": "6c4da770e5ff3aa33d0884e3162c8683427ad27379ac38af3b14619cdd85b0e4",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "n": 59991,
+      "mean_ms": 20.002843650047517,
+      "median_ms": 19.99411299948406,
+      "std_ms": 1.871527555083051,
+      "rms_error_from_20ms": 1.8715297154415518,
+      "p90_ms": 21.344864000639063,
+      "p95_ms": 21.86739549961203,
+      "p99_ms": 26.98981540142995,
+      "p99.9_ms": 31.514934419610668,
+      "max_ms": 44.60498899970844,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        115,
+        1195,
+        57338,
+        1230,
+        103,
+        10,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 5267,
+        "5": 2653,
+        "8": 710
+      }
+    },
+    {
+      "file": "piResults/final_pi_results/scheduler_repeats/run3_reduced_dt.csv",
+      "sha256": "f30b0585ddc30201b8ee91014b957b843f24aa01c9712feb9f850c114107ac1e",
+      "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+      "invalid_rows_removed": 0,
+      "n": 59979,
+      "mean_ms": 20.006762020957346,
+      "median_ms": 19.994205000330112,
+      "std_ms": 1.9140636372209539,
+      "rms_error_from_20ms": 1.9140755816474269,
+      "p90_ms": 21.42774640124117,
+      "p95_ms": 21.86841769998864,
+      "p99_ms": 27.016212680500757,
+      "p99.9_ms": 32.60998944223685,
+      "max_ms": 71.19749699995737,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        113,
+        1201,
+        57323,
+        1211,
+        119,
+        11,
+        1,
+        0
+      ],
+      "deviation_counts": {
+        "2": 5212,
+        "5": 2656,
+        "8": 714
+      }
+    }
+  ],
+  "note": "No FIFO synthetic timestamps used. Explicit interval-bin convention prevents boundary ambiguity."
+}

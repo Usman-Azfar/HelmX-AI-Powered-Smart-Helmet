@@ -1,0 +1,92 @@
+[
+  {
+    "t_monotonic": 1357.564521785,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 1357.564987179,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 1487.855229944,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 1487.855472208,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 1617.177310274,
+    "phase": "start",
+    "generation": 1
+  },
+  {
+    "t_monotonic": 1617.183639622,
+    "phase": "stop",
+    "generation": 1
+  },
+  {
+    "t_monotonic": 1746.446709222,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 1746.447392115,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 1875.984895539,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 1875.98515297,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 2005.323870994,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 2005.324183837,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 2134.82382817,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 2134.824149088,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 2264.283758106,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 2264.284144879,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 2393.623783031,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 2393.624129229,
+    "phase": "stop",
+    "generation": 0
+  }
+]

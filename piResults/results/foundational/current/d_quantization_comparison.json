@@ -1,0 +1,43 @@
+{
+  "device": {
+    "platform": "Linux-6.12.75+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "n_test_windows": 5437,
+  "keras": {
+    "size_bytes": 792902,
+    "total_predict_time_s_batched": 6.965469280999969
+  },
+  "fp16": {
+    "size_bytes": 133920,
+    "n": 5437,
+    "mean_ms": 0.5743825600573159,
+    "median_ms": 0.49836600010166876,
+    "p95_ms": 0.9240105999197111,
+    "p99_ms": 1.1592555600509515,
+    "max_ms": 1.7878550006571459,
+    "std_ms": 0.17193340219142061,
+    "mean_abs_diff_vs_keras": 0.0001680028481554121,
+    "classification_agreement_vs_keras_at_0.5": 0.9994482251241493,
+    "classification_agreement_vs_keras_at_deployed_threshold": 1.0
+  },
+  "int8": {
+    "size_bytes": 83568,
+    "n": 5437,
+    "mean_ms": 0.6625989416910014,
+    "median_ms": 0.5286069990688702,
+    "p95_ms": 1.0873160001210633,
+    "p99_ms": 1.5806537597381993,
+    "max_ms": 109.57989499911491,
+    "std_ms": 1.5023847812934576,
+    "mean_abs_diff_vs_keras": 0.06579396401837627,
+    "classification_agreement_vs_keras_at_0.5": 0.9324995401876035,
+    "classification_agreement_vs_keras_at_deployed_threshold": 0.9988964502482987
+  },
+  "deployed_threshold_used": 0.9892255067825317
+}

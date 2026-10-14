@@ -1,0 +1,30 @@
+
+ — Boot4 early/warm comparison
+Status: VERIFIED; SAME ORIENTATION AND WARM STATIONARITY USER-CONFIRMED
+UTC: 2026-10-05T18:29:29.853611+00:00
+Evidence: piResults/final_pi_review_closure/boot_repeatability/boot4_warm_comparison
+{
+  "operator_confirmation": {
+    "recorded_utc": "2026-10-05T18:29:29.744200+00:00",
+    "user_statement": "yes",
+    "same_orientation_since_initial_baseline": true,
+    "untouched_throughout_warm_recording": true
+  },
+  "mean_acceleration_direction_difference_deg": 0.04576690074871218,
+  "warm_minus_early_axis_means": {
+    "ax": 0.00572930652100867,
+    "ay": -0.005707217462900704,
+    "az": 0.0004179328408540073,
+    "gx": -0.002308118518545399,
+    "gy": 0.00042997678185363597,
+    "gz": -0.001681073725321669
+  },
+  "axis_units": "acceleration m/s^2; gyro deg/s",
+  "early_first_sample_uptime_s": 97.266535921,
+  "warm_first_sample_uptime_s": 3803.725261616,
+  "limitations": [
+    "Early capture starts 97.27 seconds after boot; does not cover the complete first ten minutes from power-on.",
+    "Physical conditions are operator-attested; axis differences do not independently establish temperature drift.",
+    "Boot4 guided motion remains pending."
+  ]
+}

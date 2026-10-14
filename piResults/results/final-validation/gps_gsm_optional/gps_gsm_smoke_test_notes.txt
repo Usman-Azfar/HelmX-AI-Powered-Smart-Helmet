@@ -1,0 +1,32 @@
+HelmX Final Pi Requirements, Section Q -- GPS/GSM integration smoke test
+==========================================================================
+STATUS: NOT PERFORMED this round -- no GSM/GPS module physically connected.
+
+Checked at the start of this campaign: `ls /dev/ttyUSB* /dev/ttyAMA* /dev/serial0`
+found no `/dev/ttyUSB0` (the port deploy/config.yaml: gsm.port names as the deployed
+GSM/GPS module's connection). `/dev/serial0` exists but is the Pi's own UART header
+(symlinked to ttyS0), not confirmed to be wired to a SIM808/SIM760 module this
+session -- substituting it without confirming the physical wiring would risk
+mischaracterizing whatever is or isn't on that line, so this was not attempted.
+
+Scope agreement with the user for this section (made before this campaign started):
+run the smoke test up to modem dispatch, but stop short of actually sending an SMS
+(real message to deploy/config.yaml's configured recipient_number, real cost/real
+notification to a real contact). That agreement is moot until a module is actually
+connected -- there is currently nothing to dispatch to.
+
+This is documented as a genuine gap, not silently omitted -- matching this project's
+established convention (e.g. Round 9's Experiment 2 power-instrumentation gap: "no
+loggable power meter available, documented rather than estimated/skipped silently").
+
+To complete this section: connect the SIM808/SIM760 module the deployed system
+expects (USB, appearing as /dev/ttyUSB0 per config.yaml), then re-run. A script
+(deploy/pi_research_suite/pi_val_q_gps_gsm_smoke_test.py, using the exact
+GsmModule/get_gps_coordinates classes from deploy/crash_monitor.py) is ready and
+will exercise: trigger -> local alert (real GPIO pulse) -> cancellation-timer
+behavior -> GPS fix attempt (real, via the module's NMEA output) -> SMS message
+construction -> AT+CMGS dispatch attempt logged and INTERCEPTED before the final
+write to the modem (send_sms() is not called; the exact message and AT commands
+that would have been sent are logged instead) -- across 5-10 trials, timestamping
+every stage per the doc's ask. Per the agreed scope, actual SMS transmission
+requires a separate, explicit go-ahead even once hardware is connected.

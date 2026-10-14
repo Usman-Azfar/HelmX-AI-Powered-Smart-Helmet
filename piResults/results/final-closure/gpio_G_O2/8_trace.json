@@ -1,0 +1,86 @@
+{
+  "session": "darus_non_crash_Pothole_5_Out",
+  "source_samples": [
+    0,
+    150
+  ],
+  "injected_samples": 150,
+  "onset": 1453.437863564,
+  "confirmation": null,
+  "first_anomaly": null,
+  "confirmation_triplet_times": [],
+  "gpio_on_call_start": null,
+  "gpio_on_call_return": null,
+  "gpio_off_call_start": null,
+  "gpio_off_call_return": null,
+  "cancel_outcome": null,
+  "decisions": [
+    {
+      "sample_index": 59,
+      "absolute_source_sample": 59,
+      "t_monotonic": 1454.622672082,
+      "crash_prob": 0.01953125,
+      "recon_error": 2.7493629455566406,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 74,
+      "absolute_source_sample": 74,
+      "t_monotonic": 1454.923311999,
+      "crash_prob": 0.5,
+      "recon_error": 3.731278419494629,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 89,
+      "absolute_source_sample": 89,
+      "t_monotonic": 1455.22641726,
+      "crash_prob": 0.5,
+      "recon_error": 4.124044418334961,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 104,
+      "absolute_source_sample": 104,
+      "t_monotonic": 1455.531745942,
+      "crash_prob": 0.03515625,
+      "recon_error": 2.9457461833953857,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 119,
+      "absolute_source_sample": 119,
+      "t_monotonic": 1455.834461507,
+      "crash_prob": 0.00390625,
+      "recon_error": 2.3565969467163086,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 134,
+      "absolute_source_sample": 134,
+      "t_monotonic": 1456.129021079,
+      "crash_prob": 0.0078125,
+      "recon_error": 1.5710645914077759,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 149,
+      "absolute_source_sample": 149,
+      "t_monotonic": 1456.421086625,
+      "crash_prob": 0.296875,
+      "recon_error": 1.1782984733581543,
+      "positive": false,
+      "triggered": false
+    }
+  ],
+  "cancellation_handler_start": null,
+  "cancellation_accepted": null,
+  "cancellation_handler_end": null,
+  "outcome": "no trigger within injected segment"
+}

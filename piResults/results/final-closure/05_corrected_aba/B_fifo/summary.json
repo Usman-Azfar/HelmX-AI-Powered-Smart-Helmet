@@ -1,0 +1,167 @@
+{
+  "mode": "fifo",
+  "fifo_overflows": 0,
+  "seconds_requested": 1200.0,
+  "elapsed_s": 1200.0067377279993,
+  "n_samples": 60595,
+  "sample_rate_hz": 50.49554981226682,
+  "n_windows": 4029,
+  "i2c_failures": 0,
+  "exception": null,
+  "timing": {
+    "n": 60594,
+    "mean_ms": 19.803545500726123,
+    "median_ms": 19.160972500685602,
+    "std_ms": 3.5450695564212893,
+    "rms_error_from_20ms": 3.5505087706059797,
+    "p90_ms": 24.51076319994172,
+    "p95_ms": 25.652981798521065,
+    "p99_ms": 28.019794280771748,
+    "p99.9_ms": 32.18678025988281,
+    "max_ms": 157.97823700268054,
+    "histogram_edges_ms": [
+      0,
+      10,
+      15,
+      25,
+      30,
+      40,
+      60,
+      100,
+      "inf"
+    ],
+    "counts_left_closed_right_open": [
+      143,
+      2807,
+      53081,
+      4390,
+      166,
+      5,
+      0,
+      2
+    ],
+    "deviation_counts": {
+      "2": 39184,
+      "5": 7513,
+      "8": 1276
+    }
+  },
+  "nominal_positions_received_samples": 4036,
+  "C_D": 0.9982656095143707,
+  "V_T_scored_over_scored_plus_resets": 0.9995038451997023,
+  "p_valid_90_sample_position": 0.9970581429940832,
+  "gap_count": 2,
+  "processing_ms": {
+    "0": 1.5706739977758843,
+    "50": 2.5563150011294056,
+    "95": 8.883962600521043,
+    "99": 13.747696681239164,
+    "99.9": 19.602081983524844,
+    "100": 27.10602999650291
+  },
+  "processing_over_300ms": 0,
+  "sensor_read_ms": {
+    "50": 3.3276059984927997,
+    "95": 6.410039900947591,
+    "99": 8.881185962309244,
+    "100": 157.85344100004295
+  },
+  "confirmed_alert_events": 0,
+  "or_positive_windows": 0,
+  "rail_counts": {
+    "ax": 0,
+    "ay": 0,
+    "az": 0,
+    "gx": 0,
+    "gy": 0,
+    "gz": 0
+  },
+  "throttled_end": {
+    "command": [
+      "vcgencmd",
+      "get_throttled"
+    ],
+    "returncode": 0,
+    "stdout": "throttled=0x0\n",
+    "stderr": ""
+  },
+  "fifo_timing_note": "FIFO packets retain common host read-completion timestamps per batch. Zero dt within batches is intentional; these are host availability metrics, not direct physical-sample jitter measurements. No invented timestamps or decimation.",
+  "conditions": "Unattended, desktop/agent state in metadata. No physical mounting confirmation. No alarm countdown or communication blocks; policy events recorded only.",
+  "memory_scope": "Raw samples stream to disk and are loaded only after capture. RSS still includes score/resource/GC research buffers; do not interpret their growth as a production-monitor leak.",
+  "timing_scope": "Processing latency excludes scheduled pacing sleep and raw file write; sensor reads reported separately. Stream dt includes harness logging/resource overhead. CPU temperature from sysfs; sensor temperature preserved RAW because device identity differs from MPU6050.",
+  "score_distributions": {
+    "classifier": {
+      "0": 0.0,
+      "50": 0.0,
+      "95": 0.0,
+      "99": 0.0,
+      "99.9": 0.0,
+      "100": 0.0
+    },
+    "reconstruction": {
+      "0": 0.0,
+      "50": 0.0,
+      "95": 0.0,
+      "99": 0.0,
+      "99.9": 0.0,
+      "100": 0.0
+    }
+  },
+  "overlapping_three_positive_positions": 0,
+  "classifier_crossings": 0,
+  "reconstruction_crossings": 0,
+  "physical_axes": {
+    "ax": {
+      "mean": 1.405104305220987,
+      "std": 0.012210480462996037,
+      "min": 1.3269862701416015,
+      "max": 1.5071499450683592,
+      "rms": 1.4051573592959936
+    },
+    "ay": {
+      "mean": -0.9153591639928175,
+      "std": 0.010950328848207867,
+      "min": -1.0402806213378906,
+      "max": -0.8289923248291016,
+      "rms": 0.9154246603667139
+    },
+    "az": {
+      "mean": -9.61126543348423,
+      "std": 0.015209994783483897,
+      "min": -9.853935482788085,
+      "max": -9.33978067626953,
+      "rms": 9.611277468517393
+    },
+    "gx": {
+      "mean": -0.15723490147638966,
+      "std": 0.08811084902780121,
+      "min": -0.8396946564885496,
+      "max": 0.47328244274809156,
+      "rms": 0.18023966255707966
+    },
+    "gy": {
+      "mean": 2.1594067482201,
+      "std": 0.1605610302630365,
+      "min": 1.1068702290076335,
+      "max": 3.5038167938931295,
+      "rms": 2.1653677167394996
+    },
+    "gz": {
+      "mean": 1.1131780328535912,
+      "std": 0.31906234528471855,
+      "min": -1.3511450381679388,
+      "max": 4.206106870229007,
+      "rms": 1.158000912351271
+    }
+  },
+  "magnitudes": {
+    "accel": {
+      "mean": 9.756479751994785,
+      "max": 9.99945915388169
+    },
+    "gyro": {
+      "mean": 2.456230351722285,
+      "max": 4.603053435114504
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "source": {
+    "file": "piResults/final_pi_results/clipping/motion_session_raw.csv",
+    "sha256": "da43d694712a753ab68cb4ff8be98c83188dc943e682ec35c189e26c8cc6beef",
+    "origin": "HISTORICAL recording; fresh analysis, not a fresh hardware trial",
+    "invalid_rows_removed": 1
+  },
+  "scores": {
+    "continuous": [
+      {
+        "sample": 59,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 74,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 89,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 104,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 119,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 134,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 149,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 164,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 179,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 194,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 209,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 224,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 239,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 254,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 269,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 284,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 299,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      }
+    ],
+    "unexpected_2s_gap": [
+      {
+        "sample": 59,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 74,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 89,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 104,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 119,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 134,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 149,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 209,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 224,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 239,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 254,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 269,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 284,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 299,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      }
+    ],
+    "known_cancel_pause": [
+      {
+        "sample": 59,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 74,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 89,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 104,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 119,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 134,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 149,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 209,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 224,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 239,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 254,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 269,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 284,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      },
+      {
+        "sample": 299,
+        "probability": 0.0,
+        "reconstruction": 0.0
+      }
+    ]
+  },
+  "behavior": "Unexpected >=1 s gap resets EMA; known countdown cancellation pause clears window and resets guard baseline but preserves EMA, matching main(). These tests characterize transient scores; they do not prove absence of artifacts for every possible post-pause orientation."
+}

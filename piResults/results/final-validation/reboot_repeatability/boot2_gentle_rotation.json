@@ -1,0 +1,53 @@
+{
+  "phase": "boot2_gentle_rotation",
+  "n_samples": 2865,
+  "duration_s": 57.262067560000105,
+  "n_windows_scored": 191,
+  "clipping_per_axis_raw_int16": {
+    "ax": {
+      "min_raw": -12628,
+      "max_raw": 9128,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "ay": {
+      "min_raw": -32768,
+      "max_raw": 3316,
+      "count_near_neg32768": 1,
+      "count_near_32767": 0
+    },
+    "az": {
+      "min_raw": -13296,
+      "max_raw": 20216,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "gx": {
+      "min_raw": -21303,
+      "max_raw": 25331,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "gy": {
+      "min_raw": -31739,
+      "max_raw": 16081,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0
+    },
+    "gz": {
+      "min_raw": -22085,
+      "max_raw": 32767,
+      "count_near_neg32768": 0,
+      "count_near_32767": 1
+    }
+  },
+  "max_classifier_score": 0.99609375,
+  "max_reconstruction_error": 0.9819153547286987,
+  "n_classifier_threshold_crossings": 32,
+  "n_recon_threshold_crossings": 0,
+  "n_or_positive_windows": 32,
+  "n_confirmed_triggers": 1,
+  "accel_magnitude_ms2_max": 21.207125547042175,
+  "gyro_magnitude_dps_max": 301.7875182877478,
+  "gyro_magnitude_dps_mean": 37.56467710756658
+}

@@ -1,0 +1,470 @@
+
+HELMX IEEE SENSORS JOURNAL — FINAL RASPBERRY PI VALIDATION PLAN
+=================================================================
+
+Purpose
+-------
+This protocol is designed to address the strongest remaining reviewer concerns before submission:
+(1) direct evidence about scheduler/background-load effects,
+(2) power consumption under continuous operation,
+(3) clearer empirical treatment of deadline misses,
+(4) stronger system-level context,
+while preserving the paper's current scope as a deployment-validation study.
+
+The aim is NOT to create a large new benchmark campaign. The aim is to add one tightly controlled
+experiment set that materially strengthens the paper without changing the frozen crash detector.
+
+DO NOT CHANGE THE FOLLOWING BETWEEN CONDITIONS
+----------------------------------------------
+- Raspberry Pi 4 hardware
+- MPU6050 hardware and mounting/orientation
+- detector model and model file
+- classifier threshold
+- reconstruction threshold
+- 3-consecutive-window confirmation logic
+- 50 Hz target sampling
+- 60-sample window
+- 15-sample stride
+- causal preprocessing configuration
+- TensorFlow Lite thread count (use the deployed single-thread setting)
+- logging level
+- CPU-frequency configuration
+- sensor acquisition code
+- stream-integrity logic
+- room/environment as much as practical
+
+Record the exact git/archive version used.
+
+============================================================
+A. EXPERIMENT 1 — LOADED VS REDUCED-BACKGROUND SCHEDULER PROFILE
+============================================================
+
+Goal
+----
+Test whether the previously observed reduction in timing gaps and latency tails under reduced
+background load is accompanied by measurable reductions in scheduler activity/waiting.
+
+Run duration
+------------
+20 minutes per condition minimum.
+Preferred: 30 minutes per condition if convenient.
+Do both runs in the same session/day.
+
+Condition A — LOADED
+--------------------
+Run the normal HelmX/background environment that corresponds as closely as possible to the
+previous loaded experiment.
+
+Before starting, record:
+- date/time
+- uname -a
+- cat /etc/os-release
+- python3 --version
+- CPU governor
+- CPU min/max frequency
+- vcgencmd measure_temp
+- vcgencmd get_throttled
+- free -h
+- active HelmX/background services
+- detector PID
+- exact detector command/service name
+
+Condition B — REDUCED BACKGROUND
+--------------------------------
+Use the same reduced-background service set used previously.
+Do NOT call it "headless" unless the desktop/session stack is actually removed.
+
+Record exactly which services/processes were stopped.
+
+PRIMARY APPLICATION LOG
+-----------------------
+For BOTH conditions, save the detector/live-monitor log containing at least:
+- sample timestamp
+- sample interval dt
+- scored-window timestamp
+- sensor-to-decision latency
+- gap count
+- estimated dropped-equivalent sample count
+- too-fast count
+- invalidated-window/candidate count
+- scored-window count
+- I2C errors/failures
+- reconnects
+- exceptions
+- trigger count
+- CPU %
+- RSS memory
+- temperature
+- throttling state if available
+
+Output filenames:
+loaded_detector.csv or loaded_detector.json
+reduced_detector.csv or reduced_detector.json
+
+PERF — PROCESS LEVEL
+--------------------
+Replace <PID> with the live detector process PID.
+
+sudo perf stat -p <PID> \
+  -e task-clock,context-switches,cpu-migrations,page-faults,cycles,instructions \
+  -o perf_loaded_process.txt \
+  sleep 1200
+
+For reduced background:
+
+sudo perf stat -p <PID> \
+  -e task-clock,context-switches,cpu-migrations,page-faults,cycles,instructions \
+  -o perf_reduced_process.txt \
+  sleep 1200
+
+If an event is unsupported, keep the remaining supported events and note the error.
+
+PERF — SYSTEM LEVEL
+-------------------
+Run a matched system-wide profile:
+
+sudo perf stat -a \
+  -e task-clock,context-switches,cpu-migrations,page-faults \
+  -o perf_loaded_system.txt \
+  sleep 1200
+
+and:
+
+sudo perf stat -a \
+  -e task-clock,context-switches,cpu-migrations,page-faults \
+  -o perf_reduced_system.txt \
+  sleep 1200
+
+SCHEDULER TRACE — STRONGLY RECOMMENDED
+--------------------------------------
+Run a shorter 5–10 minute scheduler trace in each condition.
+
+Loaded:
+sudo perf sched record -a -- sleep 600
+sudo perf sched latency > sched_loaded_latency.txt
+sudo perf sched timehist > sched_loaded_timehist.txt
+
+Reduced:
+sudo perf sched record -a -- sleep 600
+sudo perf sched latency > sched_reduced_latency.txt
+sudo perf sched timehist > sched_reduced_timehist.txt
+
+IMPORTANT:
+perf sched record writes perf.data. Rename it after each condition:
+mv perf.data perf_loaded_sched.data
+mv perf.data.old perf_loaded_sched_old.data   [only if generated]
+
+Then repeat and rename for reduced condition.
+
+FALLBACK IF perf sched DOES NOT WORK
+------------------------------------
+Use pidstat and vmstat:
+
+pidstat -u -w -p <PID> 1 1200 > pidstat_loaded.txt
+vmstat 1 1200 > vmstat_loaded.txt
+
+and the corresponding reduced files.
+
+If possible also collect:
+pidstat -w -p ALL 1 1200 > pidstat_all_loaded.txt
+
+Then repeat for reduced background.
+
+OPTIONAL /proc SNAPSHOTS
+------------------------
+Before and after each run:
+
+cat /proc/<PID>/status > proc_status_<condition>_<before_or_after>.txt
+cat /proc/<PID>/sched  > proc_sched_<condition>_<before_or_after>.txt
+
+WHAT I NEED RETURNED FROM EXPERIMENT 1
+--------------------------------------
+Raw files, not screenshots:
+- loaded detector log
+- reduced-background detector log
+- perf process stats for both
+- perf system stats for both
+- perf sched latency/timehist for both OR pidstat/vmstat fallback
+- before/after process snapshots if collected
+- exact list of stopped services/processes
+- short notes if anything unusual happened
+
+PRIMARY ANALYSIS TO REPORT
+--------------------------
+For each condition:
+- context switches/s
+- involuntary context switches/s if available
+- CPU migrations/s
+- process CPU utilization
+- scheduler wait/runqueue latency p50/p95/p99 if available
+- samples acquired
+- scored windows
+- gaps/min
+- estimated dropped-equivalent samples/min
+- invalid-candidate fraction
+- sample interval p50/p95/p99/max
+- sensor-to-decision latency p50/p95/p99/max
+- number and rate of >10 ms, >25 ms, >50 ms, >100 ms, >300 ms decision latencies
+- I2C failure count
+- throttling status
+
+NOVEL/STRONG ANALYSIS
+---------------------
+If timestamps can be aligned between scheduler output and detector logs, test whether large sample
+intervals or decision-latency excursions coincide with elevated scheduler wait/context-switch activity.
+
+Do NOT claim scheduler causality unless the trace supports it.
+Safe language if supported:
+"Direct scheduler profiling showed higher context-switch/runqueue activity under the loaded
+configuration, temporally associated with larger sampling and decision-latency excursions."
+
+If association is weak:
+"Scheduler activity differed between conditions, but the available traces did not establish a
+one-to-one causal explanation for individual timing gaps."
+
+============================================================
+B. EXPERIMENT 2 — POWER / ENERGY MEASUREMENT
+============================================================
+
+Goal
+----
+Address the reviewer concern that power was not instrumented.
+
+BEST METHOD
+-----------
+Use an external inline USB-C power meter capable of logging or stable display of:
+- voltage (V)
+- current (A)
+- power (W)
+Prefer a meter with data logging/export.
+
+Do NOT estimate power from battery capacity.
+Do NOT infer power from CPU utilization alone.
+
+Conditions
+----------
+Measure at least:
+1. Pi idle / detector stopped
+2. Live detector + MPU6050 at 50 Hz, reduced-background condition
+3. Live detector + MPU6050 at 50 Hz, loaded/background-services condition
+
+Preferred duration:
+10 minutes each after a 2–3 minute stabilization period.
+
+If feasible, add:
+4. Live detector during controlled trigger/injected-crash test
+
+For each condition record:
+- mean voltage
+- mean current
+- mean power
+- minimum/maximum power if meter supports it
+- sample count / logging interval
+- Pi temperature
+- throttling state
+- detector CPU %
+- active services
+
+Return:
+power_idle.csv/txt
+power_reduced.csv/txt
+power_loaded.csv/txt
+power_trigger.csv/txt (optional)
+plus the exact power meter make/model.
+
+If the meter only shows a stable screen and cannot log:
+- record readings every 10 s manually for 10 min
+- put them in a CSV with timestamp,V,A,W
+This is weaker but still useful.
+
+DO NOT REPORT BATTERY RUNTIME unless measured with the actual integrated battery system in a
+controlled discharge experiment.
+
+PUBLISHABLE POWER METRICS
+-------------------------
+- idle mean W
+- live-reduced mean W
+- live-loaded mean W
+- incremental detector/system power over idle
+- if trigger measured: peak or mean trigger-phase power
+
+Novelty angle:
+Treat energy as another deployment transformation/constraint alongside causal preprocessing,
+quantization, timing integrity, and OS load. Keep this secondary, not the main novelty claim.
+
+============================================================
+C. EXPERIMENT 3 — DEADLINE-MISS STATISTICAL BOUND
+============================================================
+
+No new Pi run is required for this section if the existing counts are verified.
+
+For 20,175 observed live decision windows with zero >300 ms deadline misses:
+- report the observation as zero misses in the tested campaign
+- do NOT call it a deterministic real-time guarantee
+
+A simple 95% zero-event "rule of three" upper bound is approximately:
+3 / 20175 = 0.0001487 per window = 0.0149%
+
+For the 90-minute soak alone, 14,461 windows and zero misses:
+3 / 14461 = 0.0002075 per window = 0.0207%
+
+Suggested wording:
+"No >300-ms deadline miss was observed in 20,175 evaluated live decision windows. Under a simple
+zero-event binomial approximation, the corresponding 95% upper bound on the per-window miss
+probability is approximately 1.49e-4 for the evaluated operating conditions. This is an empirical
+bound for the tested configuration, not a hard real-time guarantee."
+
+Before publication, recompute using an exact one-sided Clopper-Pearson interval if desired.
+
+============================================================
+D. EXPERIMENT 4 — PHYSICAL / MOUNTING CONTEXT
+============================================================
+
+No destructive crash test is required.
+
+If convenient, repeat a short 5–10 minute physical movement smoke test with the helmet in its
+actual integrated mounting configuration and save:
+- stationary
+- gentle tilt/rotation
+- shake
+- bump/impact surrogate already considered safe for the equipment
+- 0 I2C errors expected
+- accel/gyro summary statistics
+- gap/invalid-window counts
+
+DO NOT create dangerous motorcycle crash tests merely to satisfy a reviewer.
+DO NOT claim natural crash effectiveness from this test.
+
+What the paper should state:
+"The live experiments validate the evaluated sensor mounting and software configuration. They do
+not establish robustness to the full vibration, shock, mounting-stiffness, or structural-transfer
+spectra encountered across motorcycles and crash mechanisms. Hardware or mounting changes require
+revalidation."
+
+============================================================
+E. CHECK FIGURES / TYPOGRAPHY / THRESHOLD PRESENTATION
+============================================================
+
+Reviewer-specific corrections:
+- Verify Fig. 1 architecture is actually embedded in the final PDF.
+- Verify Fig. 3 quantization figure is embedded and legible.
+- Correct "unpassed" -> "unpaced" if present.
+- Correct malformed "p99.7.232 ms" -> "p99.9 = 7.232 ms" or the actual intended statistic.
+- Use concise display precision for thresholds in prose/table, e.g. theta_c = 0.9892 and theta_r = 10.879,
+  while preserving full frozen values in reproducibility material/configuration.
+- Explain threshold provenance exactly as supported by the frozen development protocol.
+- Do not invent threshold-selection methodology.
+- Explain supervised probability and reconstruction error clearly for readers unfamiliar with the
+  dual-signal architecture.
+- Add test-set composition only if already verified from the frozen corpus:
+  5,294 normal and 143 crash-like windows in the held-out test set.
+
+============================================================
+F. NOVELTY — WHAT WE CAN LEGITIMATELY STRENGTHEN
+============================================================
+
+Do NOT claim a new crash-classification architecture.
+Do NOT claim "first" unless a fresh literature review proves it.
+
+The strongest defensible novelty is a deployment-validation methodology built around the idea of
+DECISION FIDELITY under deployment transformations.
+
+Suggested conceptual framing:
+
+1. Deployment-Transformation Fidelity
+   Evaluate whether operational decisions are preserved as the detector passes through:
+   offline zero-phase preprocessing -> live causal preprocessing -> model quantization -> continuous
+   sensor acquisition -> resource-constrained execution.
+
+2. Temporal Validity as a First-Class Sensing Metric
+   Distinguish:
+   sensor read success
+   from
+   temporally valid inference windows.
+   The 90-minute soak already shows why this matters: zero I2C failures can coexist with timing gaps
+   and invalidated windows.
+
+3. Decision-Centric Quantization Validation
+   Compare quantized models at the ACTUAL deployed threshold and event policy, rather than relying
+   only on score MAE or a generic 0.5 classifier threshold.
+
+4. Tail-Aware Edge Validation
+   Treat p95/p99/max and deadline exceedances as primary deployment metrics rather than reporting
+   only mean/median inference latency.
+
+5. Stream-Integrity-Aware Sensor-to-Decision Evaluation
+   Combine timestamp continuity, window invalidation, decision latency, and sustained operation in
+   one evaluation framework.
+
+6. If scheduler tracing is collected:
+   add direct system-level evidence linking OS scheduling behavior to temporal sensing integrity.
+
+Potential paper contribution sentence:
+"Rather than treating deployment as a final implementation step, this study evaluates deployment
+as a sequence of measurable transformations and tests decision fidelity, temporal validity, and
+tail timing at each stage."
+
+Potential stronger but still safe novelty statement:
+"The work contributes a decision-centric validation framework for translating an offline IMU
+detector into a continuous edge sensing pipeline, in which score preservation, temporal stream
+validity, and tail latency are evaluated separately rather than collapsed into a single inference
+benchmark."
+
+============================================================
+G. FILES TO SEND BACK TO CHATGPT
+============================================================
+
+Send one ZIP containing:
+
+00_readme.txt
+01_system_info.txt
+02_services_loaded.txt
+03_services_reduced.txt
+
+loaded_detector.csv/json
+reduced_detector.csv/json
+
+perf_loaded_process.txt
+perf_reduced_process.txt
+perf_loaded_system.txt
+perf_reduced_system.txt
+
+sched_loaded_latency.txt
+sched_reduced_latency.txt
+sched_loaded_timehist.txt
+sched_reduced_timehist.txt
+OR pidstat/vmstat fallback files
+
+power_idle.csv/txt
+power_reduced.csv/txt
+power_loaded.csv/txt
+power_trigger.csv/txt (optional)
+
+physical_movement.csv/json (optional)
+notes.txt
+
+Also include:
+- exact detector script/config used
+- service file used
+- exact duration of every run
+- any command errors
+- power meter make/model
+- whether the helmet was fully assembled during the run
+- whether cameras/voice/BLE/MQTT/etc. were active in the loaded condition
+- ambient temperature if known
+
+============================================================
+H. PRIORITY IF TIME IS LIMITED
+============================================================
+
+Highest value:
+1. Loaded vs reduced scheduler profiling
+2. Power measurement
+3. Exact service/process inventory for both conditions
+4. Existing zero-deadline-miss confidence bound
+5. Optional mounting/physical smoke-test repeat
+
+Do not delay submission for cross-platform testing (Jetson/ESP32) unless a suitable platform is
+already available. Platform specificity can be stated as a limitation.
+
+END OF PROTOCOL

@@ -1,0 +1,108 @@
+{
+  "description": "Model C: pure autoencoder, no classifier head, no aux input, trained only on normal windows. 'plain' = original architecture; 'denoising' = same architecture with GaussianNoise-corrupted input during training only (changesToMake2.txt item 5).",
+  "n_train_normal_windows": 17825,
+  "n_val_windows": 4713,
+  "n_test_windows": 5437,
+  "denoising_noise_std": 0.25,
+  "variants": {
+    "plain": {
+      "model_file": "helmx_autoencoder_only.keras",
+      "thresholds": {
+        "recon_error_mean": 6.043829007148691,
+        "recon_error_peak": 68.65924583435054
+      },
+      "test": {
+        "mean_error": {
+          "confusion_matrix": {
+            "TP": 12,
+            "TN": 5288,
+            "FP": 6,
+            "FN": 131
+          },
+          "accuracy": 0.9748022806694868,
+          "precision": 0.6666666666666666,
+          "recall_sensitivity": 0.08391608391608392,
+          "specificity": 0.9988666414809217,
+          "f1_score": 0.14906832298136646,
+          "f2_score": 0.1016949152542373,
+          "balanced_accuracy": 0.5413913626985029,
+          "matthews_corrcoef": 0.23062367025501174,
+          "roc_auc": 0.7322077242742147,
+          "pr_auc": 0.1280924227278012,
+          "threshold": 6.043829007148691,
+          "n_windows": 5437
+        },
+        "peak_error": {
+          "confusion_matrix": {
+            "TP": 12,
+            "TN": 5290,
+            "FP": 4,
+            "FN": 131
+          },
+          "accuracy": 0.9751701305867206,
+          "precision": 0.75,
+          "recall_sensitivity": 0.08391608391608392,
+          "specificity": 0.9992444276539478,
+          "f1_score": 0.1509433962264151,
+          "f2_score": 0.10204081632653061,
+          "balanced_accuracy": 0.5415802557850159,
+          "matthews_corrcoef": 0.24568432259275821,
+          "roc_auc": 0.7481302226296559,
+          "pr_auc": 0.14621457330786525,
+          "threshold": 68.65924583435054,
+          "n_windows": 5437
+        }
+      }
+    },
+    "denoising": {
+      "model_file": "helmx_autoencoder_only_denoising.keras",
+      "thresholds": {
+        "recon_error_mean": 6.855112519264217,
+        "recon_error_peak": 65.97024032592746
+      },
+      "test": {
+        "mean_error": {
+          "confusion_matrix": {
+            "TP": 12,
+            "TN": 5290,
+            "FP": 4,
+            "FN": 131
+          },
+          "accuracy": 0.9751701305867206,
+          "precision": 0.75,
+          "recall_sensitivity": 0.08391608391608392,
+          "specificity": 0.9992444276539478,
+          "f1_score": 0.1509433962264151,
+          "f2_score": 0.10204081632653061,
+          "balanced_accuracy": 0.5415802557850159,
+          "matthews_corrcoef": 0.24568432259275821,
+          "roc_auc": 0.737063465435207,
+          "pr_auc": 0.1287155460558373,
+          "threshold": 6.855112519264217,
+          "n_windows": 5437
+        },
+        "peak_error": {
+          "confusion_matrix": {
+            "TP": 12,
+            "TN": 5287,
+            "FP": 7,
+            "FN": 131
+          },
+          "accuracy": 0.97461835571087,
+          "precision": 0.631578947368421,
+          "recall_sensitivity": 0.08391608391608392,
+          "specificity": 0.9986777483944088,
+          "f1_score": 0.14814814814814814,
+          "f2_score": 0.10152284263959391,
+          "balanced_accuracy": 0.5412969161552463,
+          "matthews_corrcoef": 0.22398106431914352,
+          "roc_auc": 0.7534007360225721,
+          "pr_auc": 0.14275121961346682,
+          "threshold": 65.97024032592746,
+          "n_windows": 5437
+        }
+      }
+    }
+  },
+  "best_variant_by_test_roc_auc": "denoising"
+}

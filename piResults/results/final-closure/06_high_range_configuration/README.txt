@@ -1,0 +1,45 @@
+
+C1 — High-range register-map interpretation
+Status: COMPLETE (MAP-QUALIFIED READBACK)
+UTC: 2026-09-30T14:14:37.497017+00:00
+Evidence: piResults/final_pi_review_closure/06_high_range_configuration
+{
+  "physical_test": "piResults/final_pi_review_closure/06_high_range_register_check",
+  "registers": {
+    "SMPLRT_DIV": 19,
+    "CONFIG": 4,
+    "GYRO_CONFIG": 24,
+    "ACCEL_CONFIG": 24,
+    "ACCEL_CONFIG2": 4,
+    "FIFO_EN": 0,
+    "INT_PIN_CFG": 0,
+    "INT_ENABLE": 0,
+    "INT_STATUS": 1,
+    "USER_CTRL": 0,
+    "PWR_MGMT_1": 1,
+    "PWR_MGMT_2": 0,
+    "FIFO_COUNT_H": 0,
+    "FIFO_COUNT_L": 0,
+    "WHO_AM_I": 112
+  },
+  "AFS_SEL": 3,
+  "FS_SEL": 3,
+  "accel_full_scale_g": 16,
+  "gyro_full_scale_deg_s": 2000,
+  "accel_counts_per_g": 2048,
+  "gyro_counts_per_deg_s": 16.4,
+  "gyro_DLPF_CFG": 4,
+  "gyro_FCHOICE_B": 0,
+  "accel_A_DLPF_CFG": 4,
+  "accel_FCHOICE_B": 0,
+  "map_gyro_bandwidth_hz": 20,
+  "map_accel_bandwidth_hz": 20,
+  "map_internal_rate_hz": 1000,
+  "divider": 19,
+  "nominal_output_rate_hz": 50,
+  "host_target_hz": 50,
+  "source": "InvenSense RM-MPU-6500A-00 revision 2.1, sections 4.4\u20134.8, pages 12\u201315.",
+  "official_source_url": "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6500-Register-Map2.pdf",
+  "manufacturer_document_mirror_read": "https://www.ic-components.jp/files/5b/MPU-6500.pdf",
+  "limits": "Interpretation assumes the compatible MPU6500 register map. Silicon provenance is unproven. Nominal bandwidth and ODR are register-derived, not independent anti-alias or physical-clock measurements."
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "global_index": 5247,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 109,
+    "label": 1,
+    "reference_scores": [
+      0.9943462610244751,
+      0.6829169988632202
+    ],
+    "transformed_scores": [
+      0.8865221738815308,
+      0.38917261362075806
+    ],
+    "reference_margin": [
+      0.005120754241943359,
+      -10.195818867683373
+    ],
+    "transformed_margin": [
+      -0.10270333290100098,
+      -10.489563252925835
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5248,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 110,
+    "label": 1,
+    "reference_scores": [
+      0.9988386034965515,
+      0.7569473385810852
+    ],
+    "transformed_scores": [
+      0.9432331919670105,
+      0.5964009761810303
+    ],
+    "reference_margin": [
+      0.009613096714019775,
+      -10.121788527965508
+    ],
+    "transformed_margin": [
+      -0.04599231481552124,
+      -10.282334890365563
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5249,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 111,
+    "label": 1,
+    "reference_scores": [
+      0.9991288781166077,
+      1.4626288414001465
+    ],
+    "transformed_scores": [
+      0.982677698135376,
+      1.633711576461792
+    ],
+    "reference_margin": [
+      0.009903371334075928,
+      -9.416107025146447
+    ],
+    "transformed_margin": [
+      -0.006547808647155762,
+      -9.245024290084801
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5250,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 112,
+    "label": 1,
+    "reference_scores": [
+      0.9965083599090576,
+      1.544105052947998
+    ],
+    "transformed_scores": [
+      0.9851211309432983,
+      1.7765800952911377
+    ],
+    "reference_margin": [
+      0.007282853126525879,
+      -9.334630813598595
+    ],
+    "transformed_margin": [
+      -0.0041043758392333984,
+      -9.102155771255456
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5336,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 198,
+    "label": 1,
+    "reference_scores": [
+      0.9239712357521057,
+      0.058318689465522766
+    ],
+    "transformed_scores": [
+      0.9911189675331116,
+      0.17226004600524902
+    ],
+    "reference_margin": [
+      -0.06525427103042603,
+      -10.82041717708107
+    ],
+    "transformed_margin": [
+      0.001893460750579834,
+      -10.706475820541344
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5407,
+    "session": "darus_crash_Iso_115_Out",
+    "source": "darus",
+    "window_index": 0,
+    "label": 0,
+    "reference_scores": [
+      1.0,
+      78.96678924560547
+    ],
+    "transformed_scores": [
+      0.0019738306291401386,
+      0.0005773365846835077
+    ],
+    "reference_margin": [
+      0.010774493217468262,
+      68.08805337905888
+    ],
+    "transformed_margin": [
+      -0.9872516761533916,
+      -10.87815852996191
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5408,
+    "session": "darus_crash_Iso_115_Out",
+    "source": "darus",
+    "window_index": 1,
+    "label": 0,
+    "reference_scores": [
+      1.0,
+      283.91937255859375
+    ],
+    "transformed_scores": [
+      0.002786126686260104,
+      0.0005772977019660175
+    ],
+    "reference_margin": [
+      0.010774493217468262,
+      273.04063669204714
+    ],
+    "transformed_margin": [
+      -0.9864393800962716,
+      -10.878158568844627
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  }
+]

@@ -1,0 +1,37 @@
+HelmX Section H2 -- Optional 3-Hour Soak
+==========================================
+2026-09-20, ~14:16-17:37, 180-min run (deployed polling acquisition, same
+method as E1/E4/F1/H1), 5-minute checkpoints.
+
+Results (source: long_soak/long_soak_summary.json):
+  n_input_samples:            539,981
+  n_windows_generated:         33,734
+  n_triggers:                       0
+  n_sensor_read_failures:           0
+  n_reconnects:                     0
+  n_exceptions:                     0
+  deadline_miss_count/rate:     0 / 0.0  (p99 window latency 3.03ms, max 11.04ms)
+  stream_guard: 674 timing gaps, 677 suspected-dropped, 694 duplicate/too-fast,
+                674 windows invalidated (out of 33734+674=34408 attempted,
+                ~2% invalidated -- consistent in rate with the shorter runs)
+  max_temperature_c: 55.0, thermal_throttling_occurred: false
+
+Memory over 3 hours: first-quarter mean 48.86 MB -> last-quarter mean 54.32 MB
+(+5.46 MB net, slope +0.041 MB/min). The script's own automated verdict labels
+this "stable plateau" -- reporting the actual numbers rather than just the
+label: this is a real, small, monotonic-looking upward drift (~7.4 MB
+projected per 3hr at this slope), not perfectly flat. Not large enough to be
+alarming over a 3-hour run and no exceptions/failures resulted, but should be
+described in the paper as "no leak large enough to matter over 3 hours" rather
+than "provably zero drift" -- an 18-hour+ run would be needed to distinguish a
+genuine slow leak from noise at this magnitude, which is out of scope here.
+
+Cross-reference with E2/E3's finding: this is the third independent run on the
+deployed POLLING method (after E1 and E4) to show ZERO reconstruction-only
+near-threshold triggers, over the largest window count yet (33,734, vs
+E1's 1,975 and E4's 3,881) -- while both FIFO-based runs (E2, E3, 20 min each)
+showed 5 each. This strengthens, without proving, the hypothesis in
+acquisition_compare/acquisition_comparison.txt that the FIFO/decimation
+acquisition path (not just "idle input + INT8 quantization" alone) is a
+contributing factor to that finding -- three separate long polling runs,
+zero occurrences; two separate FIFO runs, five each, every time.

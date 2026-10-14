@@ -1,0 +1,48 @@
+{
+  "boot": 4,
+  "capture": "guided_motion",
+  "checks": {
+    "raw_rows_match": true,
+    "score_rows_match": true,
+    "full_requested_duration": true,
+    "protocol_duration_met": true,
+    "no_exception": true,
+    "indices_contiguous": true,
+    "timestamps_increasing": true,
+    "configuration_restored": true,
+    "identity_100_reads": true,
+    "identity_counts_match": true,
+    "identity_baseline_same_boot": true,
+    "replay_endpoints_exact": true,
+    "replay_scores_exact": true,
+    "replay_policy_exact": true,
+    "event_count_matches": true
+  },
+  "identity_counts": {
+    "0x70": 100
+  },
+  "power_off_seconds_user_reported": 10,
+  "first_sample_uptime_s": 4738.675160321,
+  "samples": 5998,
+  "windows": 396,
+  "elapsed_s": 120.004649556,
+  "sample_rate_hz": 49.981396739140855,
+  "i2c_failures": 0,
+  "gap_count": 0,
+  "confirmed_policy_events": 1,
+  "rail_counts": {
+    "ax": 0,
+    "ay": 0,
+    "az": 0,
+    "gx": 0,
+    "gy": 2,
+    "gz": 1
+  },
+  "source_hashes": {
+    "raw_sensor.csv": "91ab41bbf0792d0f0e683e7aabc9ad1469d851b28faa21e90c2cdd1cc3212e27",
+    "window_scores.csv": "f94e120d6e00ec26f5042863d23145e937f71ce4b7d9bdbf63c3df4173aff518",
+    "summary.json": "324b6217ceef16a5900435beda6ae36f4b8a14a2fe06db8269b29058fd329810",
+    "metadata.json": "46db3333b6c18d3621e9a2f96dc653a90f64d42008711bb2ce735d7dbc7128ee"
+  },
+  "scope": "Offline verification only; physical conditions require operator attestation. H1 requires baseline and guided motion on three boots independently of A1 identity completion. Late recordings cannot supply I2 first-ten-minute coverage."
+}

@@ -1,0 +1,1543 @@
+
+L8 — Diagnostic calibration conversion
+Status: COMPLETE
+UTC: 2026-09-29T19:27:33.186903+00:00
+Evidence: piResults/final_pi_review_closure/model_L8
+{
+  "method": "Three diagnostic exports of the frozen Keras model. Validation data only; same conversion process for all. Deployment model never replaced.",
+  "variants": {
+    "A_original_selection": {
+      "classifier": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5402,
+          "ref_neg_to_trans_pos": 4,
+          "ref_pos_to_trans_neg": 2,
+          "ref_pos_to_trans_pos": 29,
+          "n": 5437,
+          "agreement": 0.9988964502482987
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5292,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 0,
+          "ref_pos_to_trans_pos": 2,
+          "n": 5294,
+          "agreement": 1.0
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 110,
+          "ref_neg_to_trans_pos": 4,
+          "ref_pos_to_trans_neg": 2,
+          "ref_pos_to_trans_pos": 27,
+          "n": 143,
+          "agreement": 0.958041958041958
+        }
+      },
+      "reconstruction": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5422,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 0,
+          "ref_pos_to_trans_pos": 15,
+          "n": 5437,
+          "agreement": 1.0
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5291,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 0,
+          "ref_pos_to_trans_pos": 3,
+          "n": 5294,
+          "agreement": 1.0
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 131,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 0,
+          "ref_pos_to_trans_pos": 12,
+          "n": 143,
+          "agreement": 1.0
+        }
+      },
+      "or": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5401,
+          "ref_neg_to_trans_pos": 4,
+          "ref_pos_to_trans_neg": 2,
+          "ref_pos_to_trans_pos": 30,
+          "n": 5437,
+          "agreement": 0.9988964502482987
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5291,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 0,
+          "ref_pos_to_trans_pos": 3,
+          "n": 5294,
+          "agreement": 1.0
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 110,
+          "ref_neg_to_trans_pos": 4,
+          "ref_pos_to_trans_neg": 2,
+          "ref_pos_to_trans_pos": 27,
+          "n": 143,
+          "agreement": 0.958041958041958
+        }
+      },
+      "reference_metrics": {
+        "tn": 5291,
+        "fp": 3,
+        "fn": 114,
+        "tp": 29,
+        "precision": 0.90625,
+        "recall": 0.20279720279720279,
+        "f1": 0.3314285714285714
+      },
+      "transformed_metrics": {
+        "tn": 5291,
+        "fp": 3,
+        "fn": 112,
+        "tp": 31,
+        "precision": 0.9117647058823529,
+        "recall": 0.21678321678321677,
+        "f1": 0.3502824858757062
+      },
+      "score_mae": {
+        "classifier": 0.0657939640444035,
+        "reconstruction": 0.6117278271256316
+      },
+      "reference_events": {
+        "carla_onder": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2. Aggressive": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2.Bump": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "near_fall_Acceleration On Curve": {
+          "trigger_indices": [
+            56
+          ],
+          "trigger_times_s": [
+            17.98
+          ],
+          "overlapping_three_positive_positions": [
+            56,
+            61,
+            65
+          ],
+          "event_detected": true
+        },
+        "fall_fall-in-a-leaning": {
+          "trigger_indices": [
+            111
+          ],
+          "trigger_times_s": [
+            34.48
+          ],
+          "overlapping_three_positive_positions": [
+            111,
+            112
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_115_Out": {
+          "trigger_indices": [
+            2
+          ],
+          "trigger_times_s": [
+            1.7799999999999998
+          ],
+          "overlapping_three_positive_positions": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_312_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_513_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_non_crash_Pothole_5_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "darus_non_crash_Randomstate_60_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        }
+      },
+      "transformed_events": {
+        "carla_onder": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2. Aggressive": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2.Bump": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "near_fall_Acceleration On Curve": {
+          "trigger_indices": [
+            55
+          ],
+          "trigger_times_s": [
+            17.68
+          ],
+          "overlapping_three_positive_positions": [
+            55,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66
+          ],
+          "event_detected": true
+        },
+        "fall_fall-in-a-leaning": {
+          "trigger_indices": [
+            111
+          ],
+          "trigger_times_s": [
+            34.48
+          ],
+          "overlapping_three_positive_positions": [
+            111,
+            112
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_115_Out": {
+          "trigger_indices": [
+            2
+          ],
+          "trigger_times_s": [
+            1.7799999999999998
+          ],
+          "overlapping_three_positive_positions": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_312_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_513_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_non_crash_Pothole_5_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "darus_non_crash_Randomstate_60_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        }
+      },
+      "calibration_indices": [
+        1697,
+        2359,
+        2096,
+        421,
+        420,
+        1615,
+        2324,
+        3033,
+        1090,
+        2803,
+        2625,
+        4281,
+        2570,
+        3634,
+        3494,
+        1785,
+        3605,
+        3191,
+        3663,
+        1032,
+        3880,
+        3766,
+        349,
+        3385,
+        161,
+        752,
+        4699,
+        4414,
+        2571,
+        418,
+        1616,
+        1902,
+        868,
+        3560,
+        4626,
+        1956,
+        3090,
+        4147,
+        4038,
+        1312,
+        1491,
+        781,
+        2339,
+        3990,
+        589,
+        309,
+        3220,
+        3679,
+        2123,
+        271,
+        1122,
+        2003,
+        1418,
+        3266,
+        1287,
+        3105,
+        3705,
+        644,
+        2857,
+        2151,
+        3398,
+        3330,
+        2165,
+        3827,
+        1328,
+        497,
+        200,
+        1681,
+        647,
+        2946,
+        2875,
+        1437,
+        4655,
+        2183,
+        2335,
+        3149,
+        1913,
+        4073,
+        911,
+        2922,
+        1677,
+        1515,
+        4652,
+        3407,
+        2497,
+        1565,
+        998,
+        2037,
+        412,
+        2598,
+        425,
+        922,
+        2632,
+        2477,
+        2027,
+        1281,
+        447,
+        402,
+        3808,
+        3905,
+        2667,
+        1597,
+        4425,
+        3259,
+        2273,
+        1370,
+        3363,
+        33,
+        2014,
+        3533,
+        756,
+        3965,
+        1880,
+        3805,
+        3072,
+        4518,
+        1955,
+        3076,
+        2184,
+        2521,
+        2381,
+        3152,
+        3976,
+        705,
+        4219,
+        1661,
+        3098,
+        2041,
+        2956,
+        1259,
+        1041,
+        4319,
+        2032,
+        3123,
+        106,
+        3694,
+        1503,
+        3453,
+        4204,
+        3610,
+        738,
+        3546,
+        2601,
+        3146,
+        2268,
+        1104,
+        3092,
+        3736,
+        4533,
+        1826,
+        388,
+        530,
+        4428,
+        172,
+        3445,
+        555,
+        3715,
+        3270,
+        3876,
+        2351,
+        3615,
+        2328,
+        3647,
+        2179,
+        1137,
+        4225,
+        367,
+        1982,
+        4623,
+        2592,
+        2046,
+        4138,
+        3842,
+        4573,
+        2131,
+        3550,
+        290,
+        2622,
+        715,
+        828,
+        1900,
+        2008,
+        580,
+        3248,
+        2965,
+        1613,
+        2895,
+        3216,
+        1413,
+        3551,
+        1703,
+        3468,
+        1791,
+        4661,
+        888,
+        3830,
+        143,
+        2936,
+        4403,
+        595
+      ],
+      "positive_calibration_windows": 8,
+      "sha256": "18119d9065b085d66b7839c44ba2dc57fdfb2aa325b7a58712944a92b9d477af",
+      "outlier_5410": [
+        0.99609375,
+        49.29215621948242
+      ],
+      "byte_identical_to_deployed": false
+    },
+    "B_crash_enriched": {
+      "classifier": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5406,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 7,
+          "ref_pos_to_trans_pos": 24,
+          "n": 5437,
+          "agreement": 0.9987125252896818
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5292,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 0,
+          "ref_pos_to_trans_pos": 2,
+          "n": 5294,
+          "agreement": 1.0
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 114,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 7,
+          "ref_pos_to_trans_pos": 22,
+          "n": 143,
+          "agreement": 0.951048951048951
+        }
+      },
+      "reconstruction": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5422,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 1,
+          "ref_pos_to_trans_pos": 14,
+          "n": 5437,
+          "agreement": 0.9998160750413831
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5291,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 1,
+          "ref_pos_to_trans_pos": 2,
+          "n": 5294,
+          "agreement": 0.999811106913487
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 131,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 0,
+          "ref_pos_to_trans_pos": 12,
+          "n": 143,
+          "agreement": 1.0
+        }
+      },
+      "or": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5405,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 8,
+          "ref_pos_to_trans_pos": 24,
+          "n": 5437,
+          "agreement": 0.9985286003310649
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5291,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 1,
+          "ref_pos_to_trans_pos": 2,
+          "n": 5294,
+          "agreement": 0.999811106913487
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 114,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 7,
+          "ref_pos_to_trans_pos": 22,
+          "n": 143,
+          "agreement": 0.951048951048951
+        }
+      },
+      "reference_metrics": {
+        "tn": 5291,
+        "fp": 3,
+        "fn": 114,
+        "tp": 29,
+        "precision": 0.90625,
+        "recall": 0.20279720279720279,
+        "f1": 0.3314285714285714
+      },
+      "transformed_metrics": {
+        "tn": 5292,
+        "fp": 2,
+        "fn": 121,
+        "tp": 22,
+        "precision": 0.9166666666666666,
+        "recall": 0.15384615384615385,
+        "f1": 0.2634730538922156
+      },
+      "score_mae": {
+        "classifier": 0.1314308509205853,
+        "reconstruction": 0.4908494257417726
+      },
+      "reference_events": {
+        "carla_onder": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2. Aggressive": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2.Bump": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "near_fall_Acceleration On Curve": {
+          "trigger_indices": [
+            56
+          ],
+          "trigger_times_s": [
+            17.98
+          ],
+          "overlapping_three_positive_positions": [
+            56,
+            61,
+            65
+          ],
+          "event_detected": true
+        },
+        "fall_fall-in-a-leaning": {
+          "trigger_indices": [
+            111
+          ],
+          "trigger_times_s": [
+            34.48
+          ],
+          "overlapping_three_positive_positions": [
+            111,
+            112
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_115_Out": {
+          "trigger_indices": [
+            2
+          ],
+          "trigger_times_s": [
+            1.7799999999999998
+          ],
+          "overlapping_three_positive_positions": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_312_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_513_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_non_crash_Pothole_5_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "darus_non_crash_Randomstate_60_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        }
+      },
+      "transformed_events": {
+        "carla_onder": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2. Aggressive": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2.Bump": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "near_fall_Acceleration On Curve": {
+          "trigger_indices": [
+            65
+          ],
+          "trigger_times_s": [
+            20.68
+          ],
+          "overlapping_three_positive_positions": [
+            65
+          ],
+          "event_detected": true
+        },
+        "fall_fall-in-a-leaning": {
+          "trigger_indices": [
+            112
+          ],
+          "trigger_times_s": [
+            34.78
+          ],
+          "overlapping_three_positive_positions": [
+            112
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_115_Out": {
+          "trigger_indices": [
+            2
+          ],
+          "trigger_times_s": [
+            1.7799999999999998
+          ],
+          "overlapping_three_positive_positions": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_312_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_513_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_non_crash_Pothole_5_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "darus_non_crash_Randomstate_60_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        }
+      },
+      "calibration_indices": [
+        4156,
+        4565,
+        4321,
+        4183,
+        4157,
+        4557,
+        4178,
+        4580,
+        4564,
+        4359,
+        4294,
+        4280,
+        4278,
+        4187,
+        4232,
+        4687,
+        4300,
+        4155,
+        4225,
+        4274,
+        4572,
+        4589,
+        4686,
+        4353,
+        4199,
+        4196,
+        4555,
+        4285,
+        4354,
+        4499,
+        4203,
+        4554,
+        4575,
+        4694,
+        4697,
+        4228,
+        4593,
+        4543,
+        4236,
+        4578,
+        4574,
+        4176,
+        4165,
+        4566,
+        4267,
+        4548,
+        4594,
+        4235,
+        4553,
+        4177,
+        4356,
+        4297,
+        4562,
+        4282,
+        4559,
+        4698,
+        4549,
+        4201,
+        4582,
+        4318,
+        4302,
+        4220,
+        4592,
+        4355,
+        4277,
+        4169,
+        4504,
+        4561,
+        4551,
+        4681,
+        4264,
+        4154,
+        4193,
+        4591,
+        4299,
+        4182,
+        4170,
+        4269,
+        4317,
+        4217,
+        4533,
+        4227,
+        4212,
+        4171,
+        4222,
+        4584,
+        4587,
+        4579,
+        4685,
+        4357,
+        4271,
+        4286,
+        4276,
+        4679,
+        4186,
+        4215,
+        4692,
+        4500,
+        4179,
+        4213,
+        2111,
+        3276,
+        2780,
+        1823,
+        1915,
+        1625,
+        1284,
+        4387,
+        3778,
+        1621,
+        1450,
+        3579,
+        2045,
+        3039,
+        2461,
+        2824,
+        1043,
+        3515,
+        425,
+        2341,
+        2709,
+        3243,
+        617,
+        810,
+        2821,
+        3510,
+        2671,
+        3589,
+        615,
+        3251,
+        900,
+        1996,
+        1842,
+        3568,
+        3262,
+        3842,
+        902,
+        2371,
+        3238,
+        2651,
+        3100,
+        2234,
+        378,
+        729,
+        2745,
+        3426,
+        4103,
+        3420,
+        2359,
+        1698,
+        4253,
+        1028,
+        1176,
+        4428,
+        3457,
+        1681,
+        4066,
+        2597,
+        2902,
+        3791,
+        269,
+        2246,
+        4292,
+        2040,
+        4402,
+        322,
+        1496,
+        2379,
+        759,
+        1921,
+        3635,
+        1138,
+        2843,
+        3412,
+        1422,
+        4432,
+        589,
+        4392,
+        1458,
+        1102,
+        1316,
+        2662,
+        2665,
+        3245,
+        156,
+        787,
+        2135,
+        404,
+        4333,
+        2976,
+        4673,
+        2759,
+        2175,
+        3674,
+        4380,
+        3026,
+        2819,
+        3772,
+        2264,
+        592
+      ],
+      "positive_calibration_windows": 100,
+      "sha256": "34fbe55bfe57fe955b475b2d365b7ebd014fed5bdec6118d9d6d1052aaa01f32",
+      "outlier_5410": [
+        0.99609375,
+        203.92300415039062
+      ],
+      "byte_identical_to_deployed": false
+    },
+    "C_amplitude_stratified": {
+      "classifier": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5406,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 7,
+          "ref_pos_to_trans_pos": 24,
+          "n": 5437,
+          "agreement": 0.9987125252896818
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5292,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 0,
+          "ref_pos_to_trans_pos": 2,
+          "n": 5294,
+          "agreement": 1.0
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 114,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 7,
+          "ref_pos_to_trans_pos": 22,
+          "n": 143,
+          "agreement": 0.951048951048951
+        }
+      },
+      "reconstruction": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5422,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 5,
+          "ref_pos_to_trans_pos": 10,
+          "n": 5437,
+          "agreement": 0.9990803752069156
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5291,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 1,
+          "ref_pos_to_trans_pos": 2,
+          "n": 5294,
+          "agreement": 0.999811106913487
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 131,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 4,
+          "ref_pos_to_trans_pos": 8,
+          "n": 143,
+          "agreement": 0.972027972027972
+        }
+      },
+      "or": {
+        "overall": {
+          "ref_neg_to_trans_neg": 5405,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 8,
+          "ref_pos_to_trans_pos": 24,
+          "n": 5437,
+          "agreement": 0.9985286003310649
+        },
+        "normal": {
+          "ref_neg_to_trans_neg": 5291,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 1,
+          "ref_pos_to_trans_pos": 2,
+          "n": 5294,
+          "agreement": 0.999811106913487
+        },
+        "crash_like": {
+          "ref_neg_to_trans_neg": 114,
+          "ref_neg_to_trans_pos": 0,
+          "ref_pos_to_trans_neg": 7,
+          "ref_pos_to_trans_pos": 22,
+          "n": 143,
+          "agreement": 0.951048951048951
+        }
+      },
+      "reference_metrics": {
+        "tn": 5291,
+        "fp": 3,
+        "fn": 114,
+        "tp": 29,
+        "precision": 0.90625,
+        "recall": 0.20279720279720279,
+        "f1": 0.3314285714285714
+      },
+      "transformed_metrics": {
+        "tn": 5292,
+        "fp": 2,
+        "fn": 121,
+        "tp": 22,
+        "precision": 0.9166666666666666,
+        "recall": 0.15384615384615385,
+        "f1": 0.2634730538922156
+      },
+      "score_mae": {
+        "classifier": 0.07650964725036233,
+        "reconstruction": 0.6608346669746171
+      },
+      "reference_events": {
+        "carla_onder": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2. Aggressive": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2.Bump": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "near_fall_Acceleration On Curve": {
+          "trigger_indices": [
+            56
+          ],
+          "trigger_times_s": [
+            17.98
+          ],
+          "overlapping_three_positive_positions": [
+            56,
+            61,
+            65
+          ],
+          "event_detected": true
+        },
+        "fall_fall-in-a-leaning": {
+          "trigger_indices": [
+            111
+          ],
+          "trigger_times_s": [
+            34.48
+          ],
+          "overlapping_three_positive_positions": [
+            111,
+            112
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_115_Out": {
+          "trigger_indices": [
+            2
+          ],
+          "trigger_times_s": [
+            1.7799999999999998
+          ],
+          "overlapping_three_positive_positions": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_312_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_513_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_non_crash_Pothole_5_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "darus_non_crash_Randomstate_60_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        }
+      },
+      "transformed_events": {
+        "carla_onder": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2. Aggressive": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "road_2.Bump": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "near_fall_Acceleration On Curve": {
+          "trigger_indices": [
+            65
+          ],
+          "trigger_times_s": [
+            20.68
+          ],
+          "overlapping_three_positive_positions": [
+            65
+          ],
+          "event_detected": true
+        },
+        "fall_fall-in-a-leaning": {
+          "trigger_indices": [
+            111
+          ],
+          "trigger_times_s": [
+            34.48
+          ],
+          "overlapping_three_positive_positions": [
+            111,
+            112
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_115_Out": {
+          "trigger_indices": [
+            2
+          ],
+          "trigger_times_s": [
+            1.7799999999999998
+          ],
+          "overlapping_three_positive_positions": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_312_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_crash_Iso_513_2_Out": {
+          "trigger_indices": [
+            4
+          ],
+          "trigger_times_s": [
+            2.38
+          ],
+          "overlapping_three_positive_positions": [
+            4,
+            5
+          ],
+          "event_detected": true
+        },
+        "darus_non_crash_Pothole_5_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        },
+        "darus_non_crash_Randomstate_60_Out": {
+          "trigger_indices": [],
+          "trigger_times_s": [],
+          "overlapping_three_positive_positions": [],
+          "event_detected": false
+        }
+      },
+      "calibration_indices": [
+        2126,
+        922,
+        2017,
+        659,
+        1935,
+        4616,
+        4599,
+        4671,
+        89,
+        517,
+        4657,
+        377,
+        1824,
+        839,
+        664,
+        1057,
+        692,
+        496,
+        1128,
+        1226,
+        1362,
+        1711,
+        173,
+        524,
+        1879,
+        705,
+        4547,
+        1071,
+        4477,
+        20,
+        4437,
+        4039,
+        447,
+        4528,
+        457,
+        715,
+        4508,
+        1780,
+        1308,
+        3110,
+        3819,
+        311,
+        1444,
+        2097,
+        2741,
+        4018,
+        209,
+        4063,
+        2786,
+        3404,
+        3698,
+        354,
+        2295,
+        4386,
+        2207,
+        3212,
+        2318,
+        1782,
+        3841,
+        54,
+        2565,
+        283,
+        3278,
+        273,
+        2590,
+        4445,
+        2487,
+        3647,
+        2471,
+        4417,
+        2991,
+        2893,
+        3005,
+        318,
+        3056,
+        3032,
+        2317,
+        2881,
+        3547,
+        1938,
+        2269,
+        4051,
+        3797,
+        3262,
+        3008,
+        2976,
+        2473,
+        3286,
+        2160,
+        3579,
+        2944,
+        2816,
+        4394,
+        3815,
+        4082,
+        2623,
+        2314,
+        3152,
+        2373,
+        3436,
+        3326,
+        41,
+        3300,
+        1207,
+        3163,
+        988,
+        2870,
+        3555,
+        636,
+        359,
+        3799,
+        356,
+        3073,
+        1948,
+        1860,
+        2148,
+        1569,
+        2427,
+        4002,
+        3828,
+        1378,
+        1459,
+        853,
+        2304,
+        2311,
+        2782,
+        2602,
+        2490,
+        1395,
+        2332,
+        1528,
+        2429,
+        2233,
+        1097,
+        1994,
+        2705,
+        3563,
+        3244,
+        1046,
+        3513,
+        3341,
+        2777,
+        2876,
+        1585,
+        1119,
+        320,
+        802,
+        3240,
+        120,
+        3417,
+        771,
+        2405,
+        2843,
+        3658,
+        3729,
+        1341,
+        1312,
+        3559,
+        2244,
+        4369,
+        2408,
+        3144,
+        4346,
+        258,
+        1414,
+        347,
+        1984,
+        148,
+        1494,
+        4401,
+        139,
+        1468,
+        3025,
+        745,
+        540,
+        976,
+        1583,
+        4245,
+        330,
+        4288,
+        536,
+        4319,
+        4265,
+        4201,
+        1326,
+        4296,
+        4286,
+        4214,
+        4357,
+        4156,
+        1671,
+        1080,
+        970,
+        228,
+        1434,
+        335,
+        1725,
+        620,
+        1279,
+        4694
+      ],
+      "positive_calibration_windows": 10,
+      "sha256": "cfef96cb35f930aa471c9323a0071bd7f1aedf44b09ad70f56e71a3ed575bf9c",
+      "outlier_5410": [
+        0.99609375,
+        47.39009094238281
+      ],
+      "byte_identical_to_deployed": false
+    }
+  }
+}

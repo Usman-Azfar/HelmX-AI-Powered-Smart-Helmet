@@ -1,0 +1,168 @@
+{
+  "description": "Two-stage AE pretraining -> joint fine-tuning, tested against the already-computed from-scratch Model A/Model B baselines at 100% labels (same frozen split, same 5 seeds). Tests whether cold-start multi-task optimization interference, not the reconstruction objective itself, explains why joint training hasn't beaten supervised-only so far.",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "pretrain_epochs_max": 60,
+  "finetune_epochs_max": 60,
+  "warmup_epochs": 5,
+  "finetune_lr": 0.0001,
+  "summary_mean_std": {
+    "A1_pretrained_full_finetune": {
+      "roc_auc": {
+        "mean": 0.9430583772102473,
+        "std": 0.01957769142060655
+      },
+      "pr_auc": {
+        "mean": 0.44853761448581697,
+        "std": 0.07930588035327339
+      },
+      "f1_score": {
+        "mean": 0.37719121804869965,
+        "std": 0.06734699669608075
+      },
+      "precision": {
+        "mean": 0.5301086779903977,
+        "std": 0.1569454121888359
+      },
+      "recall_sensitivity": {
+        "mean": 0.32167832167832167,
+        "std": 0.08472800688593543
+      }
+    },
+    "A2_pretrained_warmup_finetune": {
+      "roc_auc": {
+        "mean": 0.9466388918976755,
+        "std": 0.006994889607252694
+      },
+      "pr_auc": {
+        "mean": 0.4521645906733262,
+        "std": 0.03290518377508426
+      },
+      "f1_score": {
+        "mean": 0.3810587137096969,
+        "std": 0.023482829403956223
+      },
+      "precision": {
+        "mean": 0.5911469327822807,
+        "std": 0.26842353764857324
+      },
+      "recall_sensitivity": {
+        "mean": 0.4,
+        "std": 0.21821767680942197
+      }
+    }
+  },
+  "baselines_from_label_scarcity_100pct": {
+    "B_random_no_reconstruction": {
+      "roc_auc": {
+        "mean": 0.9580191059412819,
+        "std": 0.013735449142739109
+      },
+      "f1_score": {
+        "mean": 0.3394672190897235,
+        "std": 0.06436000744733947
+      }
+    },
+    "A_current_random_joint_from_scratch": {
+      "roc_auc": {
+        "mean": 0.9513321585856531,
+        "std": 0.010638708562651556
+      },
+      "f1_score": {
+        "mean": 0.3169219263055922,
+        "std": 0.0578908519100719
+      }
+    }
+  },
+  "per_seed_runs": {
+    "A1_pretrained_full_finetune": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9377716163700297,
+        "pr_auc": 0.44257810514815643,
+        "f1_score": 0.37037037037037035,
+        "precision": 0.547945205479452,
+        "recall_sensitivity": 0.27972027972027974
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.9253363749963675,
+        "pr_auc": 0.381561380923855,
+        "f1_score": 0.3209169054441261,
+        "precision": 0.27184466019417475,
+        "recall_sensitivity": 0.3916083916083916
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.9324819494823273,
+        "pr_auc": 0.4201181182781664,
+        "f1_score": 0.33695652173913043,
+        "precision": 0.7560975609756098,
+        "recall_sensitivity": 0.21678321678321677
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9386546585262112,
+        "pr_auc": 0.39679045269381535,
+        "f1_score": 0.34977578475336324,
+        "precision": 0.4875,
+        "recall_sensitivity": 0.2727272727272727
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9810472866763006,
+        "pr_auc": 0.6016400153850915,
+        "f1_score": 0.5079365079365079,
+        "precision": 0.5871559633027523,
+        "recall_sensitivity": 0.44755244755244755
+      }
+    ],
+    "A2_pretrained_warmup_finetune": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9521479653704814,
+        "pr_auc": 0.4837190923927436,
+        "f1_score": 0.4247104247104247,
+        "precision": 0.47413793103448276,
+        "recall_sensitivity": 0.38461538461538464
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.936921597480721,
+        "pr_auc": 0.43406677067298693,
+        "f1_score": 0.3828125,
+        "precision": 0.4336283185840708,
+        "recall_sensitivity": 0.34265734265734266
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.9491349225009974,
+        "pr_auc": 0.4822064354819068,
+        "f1_score": 0.3707865168539326,
+        "precision": 0.9428571428571428,
+        "recall_sensitivity": 0.23076923076923078
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9400059706066507,
+        "pr_auc": 0.4638964010503867,
+        "f1_score": 0.35555555555555557,
+        "precision": 0.8648648648648649,
+        "recall_sensitivity": 0.22377622377622378
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9549840035295268,
+        "pr_auc": 0.39693425376860686,
+        "f1_score": 0.37142857142857144,
+        "precision": 0.2402464065708419,
+        "recall_sensitivity": 0.8181818181818182
+      }
+    ]
+  }
+}

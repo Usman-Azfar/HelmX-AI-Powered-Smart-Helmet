@@ -1,0 +1,32 @@
+
+L9 — Outlier preserved-tensor trace
+Status: COMPLETE
+UTC: 2026-09-29T19:28:03.777656+00:00
+Evidence: piResults/final_pi_review_closure/model_L9
+{
+  "index": 5410,
+  "session": "darus_crash_Iso_115_Out",
+  "label": 1,
+  "reference_scores": [
+    1.0,
+    751.8433837890625
+  ],
+  "int8_scores": [
+    0.99609375,
+    49.292152404785156
+  ],
+  "preserve_tensor_output": {
+    "crash_prob": [
+      [
+        0.99609375
+      ]
+    ],
+    "recon_error": [
+      [
+        49.292152404785156
+      ]
+    ]
+  },
+  "tensors_recorded": 105,
+  "mechanism": "Saturation counts are diagnostics, not proof of the first causal divergence. No matched operator-by-operator float execution is asserted."
+}

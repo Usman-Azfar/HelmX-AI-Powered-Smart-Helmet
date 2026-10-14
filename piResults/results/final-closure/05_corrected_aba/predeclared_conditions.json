@@ -1,0 +1,11 @@
+{
+  "order": [
+    "A1_polling",
+    "B_fifo",
+    "A2_polling"
+  ],
+  "duration_s_each": 1200,
+  "fixed_config": "Filtered 50-Hz low-range configuration for ALL arms; does not reproduce original unfiltered polling.",
+  "timing": "Host observed read-completion times, no artificial reconstruction of sensor timestamps. Batch duplicate timestamps retained.",
+  "policy": "Frozen model/thresholds/60ms guard/3 consecutive positives/60s cooldown. Record events; no GPIO/countdown block/SMS."
+}

@@ -1,0 +1,1 @@
+detector command used: .pi_research_venv/bin/python deploy/pi_research_suite/exp_w2_live3_soak.py --duration-min 20

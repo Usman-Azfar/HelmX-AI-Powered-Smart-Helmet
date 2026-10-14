@@ -1,0 +1,102 @@
+{
+  "description": "Third external test: SimRa bicycle near-miss dataset (Berlin, CC BY-NC 4.0), evaluated with the ALREADY DEPLOYED Model A (classifier + reconstruction + OR-fusion) and Model B -- no retraining, no threshold recalibration. Qualitatively different from DaRUS/the scooter dataset: near-miss (not crash) events, pedal bicycle (not motorized two-wheeler), and a much lower native sampling rate (~4 Hz) -- see ATTRIBUTION.md.",
+  "source_citation": "SimRa dataset, simra-project (TU Berlin / Digital Future), https://github.com/simra-project/dataset, Berlin_2024_03 folder. CC BY-NC 4.0.",
+  "caveats": [
+    "Positive events are self-reported near-misses, not actual falls/collisions.",
+    "Pedal bicycle, not a motorized two-wheeler -- a bigger domain gap than the scooter dataset.",
+    "Native accelerometer/gyroscope sampling rate measured at ~4 Hz, ~12x below this pipeline's 50 Hz target -- window content here is far more interpolated than any other source this project uses."
+  ],
+  "n_sessions": 45,
+  "n_normal_sessions": 25,
+  "n_incident_sessions": 20,
+  "n_windows": 156617,
+  "normal_riding_hours": 7.0127444444444444,
+  "window_level_metrics": {
+    "model_a_classifier": {
+      "roc_auc": 0.46461879678602125,
+      "pr_auc": 0.13055499058451522,
+      "f1_score": 0.0,
+      "precision": 0.0,
+      "recall_sensitivity": 0.0,
+      "specificity": 0.9985090679820495,
+      "recall_at_95pct_specificity": 0.015503164847261719,
+      "specificity_achieved_for_recall_at_spec": 0.9500500686125432,
+      "event_level_session_recall": 0.0
+    },
+    "model_a_reconstruction": {
+      "roc_auc": 0.6733716599401526,
+      "pr_auc": 0.19359337995830608,
+      "f1_score": 0.0,
+      "precision": 0.0,
+      "recall_sensitivity": 0.0,
+      "specificity": 1.0,
+      "recall_at_95pct_specificity": 0.03563893220805431,
+      "specificity_achieved_for_recall_at_spec": 0.9500797389014576,
+      "event_level_session_recall": 0.0
+    },
+    "model_b_classifier": {
+      "roc_auc": 0.44276276218019234,
+      "pr_auc": 0.12572825453919032,
+      "f1_score": 0.0,
+      "precision": 0.0,
+      "recall_sensitivity": 0.0,
+      "specificity": 0.9997107146830843,
+      "recall_at_95pct_specificity": 0.014998623979451427,
+      "specificity_achieved_for_recall_at_spec": 0.9500426510403145,
+      "event_level_session_recall": 0.0
+    },
+    "hybrid_or_fusion_deployed_rule": {
+      "roc_auc": 0.49925453399102476,
+      "pr_auc": 0.13920583333865416,
+      "f1_score": 0.0,
+      "precision": 0.0,
+      "recall_sensitivity": 0.0,
+      "specificity": 0.9985090679820495,
+      "recall_at_95pct_specificity": 0.0,
+      "specificity_achieved_for_recall_at_spec": 1.0,
+      "event_level_session_recall": 0.0
+    }
+  },
+  "event_level_deployed_alert_simulation": {
+    "model_a_classifier": {
+      "session_recall": 0.0,
+      "n_anomaly_sessions": 20,
+      "n_normal_sessions": 25,
+      "total_false_alert_events": 16,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 7.0127444444444444,
+      "false_alerts_per_hour": 2.281560397181639
+    },
+    "model_a_reconstruction": {
+      "session_recall": 0.0,
+      "n_anomaly_sessions": 20,
+      "n_normal_sessions": 25,
+      "total_false_alert_events": 0,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 7.0127444444444444,
+      "false_alerts_per_hour": 0.0
+    },
+    "model_b_classifier": {
+      "session_recall": 0.0,
+      "n_anomaly_sessions": 20,
+      "n_normal_sessions": 25,
+      "total_false_alert_events": 2,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 7.0127444444444444,
+      "false_alerts_per_hour": 0.28519504964770487
+    },
+    "hybrid_or_fusion_deployed_rule": {
+      "session_recall": 0.0,
+      "n_anomaly_sessions": 20,
+      "n_normal_sessions": 25,
+      "total_false_alert_events": 16,
+      "cooldown_seconds": 60.0,
+      "cooldown_windows": 200,
+      "normal_exposure_hours": 7.0127444444444444,
+      "false_alerts_per_hour": 2.281560397181639
+    }
+  }
+}

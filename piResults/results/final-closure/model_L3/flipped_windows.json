@@ -1,0 +1,152 @@
+[
+  {
+    "global_index": 5035,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 53,
+    "label": 1,
+    "reference_scores": [
+      0.987875759601593,
+      0.3247567415237427
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.19638307392597198
+    ],
+    "reference_margin": [
+      -0.0013497471809387207,
+      -10.55397912502285
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.682352792620621
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5038,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 56,
+    "label": 1,
+    "reference_scores": [
+      0.9898900985717773,
+      0.3408993184566498
+    ],
+    "transformed_scores": [
+      0.98828125,
+      0.19638307392597198
+    ],
+    "reference_margin": [
+      0.0006645917892456055,
+      -10.537836548089944
+    ],
+    "transformed_margin": [
+      -0.0009442567825317383,
+      -10.682352792620621
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5040,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 58,
+    "label": 1,
+    "reference_scores": [
+      0.9821935296058655,
+      0.23273760080337524
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.0
+    ],
+    "reference_margin": [
+      -0.00703197717666626,
+      -10.645998265743218
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5044,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 62,
+    "label": 1,
+    "reference_scores": [
+      0.9871196746826172,
+      0.2435544729232788
+    ],
+    "transformed_scores": [
+      0.99609375,
+      0.0
+    ],
+    "reference_margin": [
+      -0.0021058320999145508,
+      -10.635181393623315
+    ],
+    "transformed_margin": [
+      0.006868243217468262,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5048,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 66,
+    "label": 1,
+    "reference_scores": [
+      0.9888581037521362,
+      0.37373971939086914
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.19638307392597198
+    ],
+    "reference_margin": [
+      -0.0003674030303955078,
+      -10.504996147155724
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.682352792620621
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5139,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 1,
+    "label": 1,
+    "reference_scores": [
+      0.9931256175041199,
+      0.38417327404022217
+    ],
+    "transformed_scores": [
+      0.828125,
+      0.39276614785194397
+    ],
+    "reference_margin": [
+      0.0039001107215881348,
+      -10.494562592506371
+    ],
+    "transformed_margin": [
+      -0.16110050678253174,
+      -10.48596971869465
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": false
+  }
+]

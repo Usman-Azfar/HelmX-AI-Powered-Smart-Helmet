@@ -1,0 +1,218 @@
+{
+  "status": "COMPLETE (VERIFIED; OPERATOR-ATTESTED UNTOUCHED)",
+  "studies": {
+    "D4": {
+      "run": "randomized_D4_20261011T065644991406Z",
+      "recordings_verified": 12,
+      "samples": 359970,
+      "timing_gaps": 8,
+      "i2c_failures": 0,
+      "alerts": 0,
+      "analysis": {
+        "gaps_per_min": {
+          "pair_differences_B_minus_A": [
+            0.2999962198586321,
+            0.09999909136725625,
+            0.19999412663582058,
+            0.0,
+            0.0,
+            0.1999950666523592
+          ],
+          "mean": 0.1333307507523447,
+          "median": 0.1499966090015384,
+          "bootstrap_mean_95_percentile": [
+            0.04999886966717947,
+            0.21666313214676913
+          ]
+        },
+        "V_T": {
+          "pair_differences_B_minus_A": [
+            -0.0015082956259426794,
+            -0.0005017561465128217,
+            -0.001004520341536863,
+            0.0,
+            0.0,
+            -0.001004520341536863
+          ],
+          "mean": -0.0006698487425882046,
+          "median": -0.0007531382440248424,
+          "bootstrap_mean_95_percentile": [
+            -0.0010889879268169607,
+            -0.00025104608134161416
+          ]
+        },
+        "C_D": {
+          "pair_differences_B_minus_A": [
+            -0.00501002004008011,
+            -0.002004008016032066,
+            -0.003507014028056088,
+            0.0,
+            0.0,
+            -0.003507014028056088
+          ],
+          "mean": -0.002338009352037392,
+          "median": -0.002755511022044077,
+          "bootstrap_mean_95_percentile": [
+            -0.0037575150300600915,
+            -0.0009185036740146924
+          ]
+        },
+        "survival_90": {
+          "pair_differences_B_minus_A": [
+            -0.008928571428571397,
+            -0.0029760909546898695,
+            -0.005952181909379739,
+            0.0,
+            0.0,
+            -0.005952779078322479
+          ],
+          "mean": -0.003968270561827247,
+          "median": -0.004464136432034804,
+          "bootstrap_mean_95_percentile": [
+            -0.006448545407059858,
+            -0.0014880454773449348
+          ]
+        },
+        "processing_p99_ms": {
+          "pair_differences_B_minus_A": [
+            -0.1726391500551463,
+            -0.13834685948495462,
+            -0.12205231912958014,
+            -0.002888399649236817,
+            -0.14640195066022033,
+            -0.0947103992075431
+          ],
+          "mean": -0.11283984636444688,
+          "median": -0.13019958930726738,
+          "bootstrap_mean_95_percentile": [
+            -0.14978471971609952,
+            -0.06468740138340474
+          ]
+        },
+        "scheduler_delay_p99_ms": {
+          "pair_differences_B_minus_A": [
+            -0.013999999999999999,
+            -0.016999999999999998,
+            -0.021999999999999995,
+            -0.018,
+            -0.016,
+            -0.016
+          ],
+          "mean": -0.017166666666666667,
+          "median": -0.0165,
+          "bootstrap_mean_95_percentile": [
+            -0.01933333333333333,
+            -0.015333333333333332
+          ]
+        }
+      }
+    },
+    "K1": {
+      "run": "randomized_K1_20261011T103536168830Z",
+      "recordings_verified": 12,
+      "samples": 359999,
+      "timing_gaps": 0,
+      "i2c_failures": 0,
+      "alerts": 0,
+      "analysis": {
+        "gaps_per_min": {
+          "pair_differences_B_minus_A": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "bootstrap_mean_95_percentile": [
+            0.0,
+            0.0
+          ]
+        },
+        "V_T": {
+          "pair_differences_B_minus_A": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "bootstrap_mean_95_percentile": [
+            0.0,
+            0.0
+          ]
+        },
+        "C_D": {
+          "pair_differences_B_minus_A": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "bootstrap_mean_95_percentile": [
+            0.0,
+            0.0
+          ]
+        },
+        "survival_90": {
+          "pair_differences_B_minus_A": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "bootstrap_mean_95_percentile": [
+            0.0,
+            0.0
+          ]
+        },
+        "processing_p99_ms": {
+          "pair_differences_B_minus_A": [
+            -0.10075185049572433,
+            -0.02307147908140772,
+            -0.06702107784803868,
+            -0.10584412055322856,
+            -0.2344986396201416,
+            -0.033036200766218826
+          ],
+          "mean": -0.09403722806079329,
+          "median": -0.0838864641718815,
+          "bootstrap_mean_95_percentile": [
+            -0.15637593984138162,
+            -0.04666471467316935
+          ]
+        },
+        "scheduler_delay_p99_ms": {
+          "pair_differences_B_minus_A": [
+            -0.006999999999999999,
+            -0.0029999999999999957,
+            -0.0050000000000000044,
+            0.001999999999999995,
+            -0.0040000000000000036,
+            -0.0020000000000000018
+          ],
+          "mean": -0.0031666666666666683,
+          "median": -0.0034999999999999996,
+          "bootstrap_mean_95_percentile": [
+            -0.00516666666666667,
+            -0.0008333333333333364
+          ]
+        }
+      }
+    }
+  },
+  "limitations": "Six pairs per study; bootstrap intervals descriptive. Completion does not imply scheduler benefit. Earlier failed attempts retained separately. Existing release archives have not been refreshed."
+}

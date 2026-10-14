@@ -1,0 +1,7 @@
+{
+  "user_statement": "Yes\u2014GPIO23 / pin 16, helmet stationary",
+  "scope": "Before recording; not independent physical verification",
+  "pin_bcm": 23,
+  "physical_pin": 16,
+  "test": "J1 1200-second stationary DATA_RDY acquisition"
+}

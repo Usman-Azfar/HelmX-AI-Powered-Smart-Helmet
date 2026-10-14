@@ -1,0 +1,60 @@
+.venv/
+.pi_research_venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+logs/
+.claude/
+.scratch/
+*.log
+*.pid
+.coverage
+htmlcov/
+
+# Local raw datasets are intentionally excluded from the public repository.
+# Their redistribution status is documented in DATA_LICENSES.md. Keep the
+# public acquisition/layout instructions below under version control.
+/data/**
+!/data/README.md
+
+# Dataset mirrors retained locally during consolidation. The training and
+# evaluation code reads the canonical source directories under /data/ only.
+/data_local_archive/
+
+# Model binaries and fitted normalization state are derived from datasets
+# whose redistribution status is not yet fully established. Training history,
+# thresholds, and the public model card remain versioned.
+/models/*.keras
+/models/*.tflite
+/models/*.npz
+
+# Private, uncurated results archive retained locally. The public, sanitized
+# and documented result set lives in /results/.
+/results2/
+
+# A reader still holds this verified byte-identical legacy soak duplicate open
+# on Windows. The authoritative public file is under /piResults/results/.
+/results/pi_research/
+
+# Private, uncurated Raspberry Pi research archive. The organized public
+# report, experiments, selected evidence, figures, and audit manifests live
+# in /piResults/.
+/piResults2/
+/piResultsL.zip
+
+# Superseded local snapshots. Their curated, public replacements are the
+# top-level source tree, /results/, and /piResults/.
+/Final Results/
+/crash-gpt/
+/crash-gpt.zip
+
+# Local review prompts, temporary research plans, and session hand-off notes.
+# Their implemented outcomes are documented in README.md, performance.md,
+# results/, and piResults/; raw working notes are not release artifacts.
+/changesToMake.txt
+/changesToMake2.txt
+/ExperimentsToPerform.txt
+/HelmX_Paper1_Deployment_Weaknesses_Correction_Revalidation_Plan.md
+/plan.txt
+/SESSION_CONTEXT.md
+/changes.md

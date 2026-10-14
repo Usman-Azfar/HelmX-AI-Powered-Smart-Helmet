@@ -1,0 +1,35 @@
+{
+  "label": "normal_helmx_workload",
+  "source_csv": "piResults/final_pi_results/timing_loads/normal_helmx_workload_dt.csv",
+  "n_samples": 398737,
+  "temporal_validity": {
+    "windows_scored": 26579,
+    "windows_invalidated": 0,
+    "V_T": 1.0
+  },
+  "decision_coverage": {
+    "nominal_decision_positions": 26579,
+    "scored_windows": 26579,
+    "invalidated_candidates": 0,
+    "never_formed_or_suppressed_positions": 0,
+    "C_D": 1.0
+  },
+  "contiguous_valid_runs": {
+    "n_runs": 1,
+    "run_length_samples_p50": 398737.0,
+    "run_length_samples_p95": 398737.0,
+    "run_length_samples_p99": 398737.0,
+    "run_length_samples_max": 398737,
+    "run_length_seconds_p50": 7974.74,
+    "run_length_seconds_p95": 7974.74,
+    "run_length_seconds_p99": 7974.74,
+    "run_length_seconds_max": 7974.74
+  },
+  "fraction_of_time_in_runs_long_enough_for": {
+    "one_60_sample_window": 1.0,
+    "one_75_sample_interval": 1.0,
+    "one_90_sample_3window_confirmation": 1.0
+  },
+  "p_valid_90_sample_confirmation_opportunity": 1.0,
+  "method": "V_T/C_D computed by replaying the captured dt sequence through the REAL deploy/crash_monitor.py SampleStreamGuard+WindowScorer state machine (synthetic sensor values -- scoring/invalidation is purely timing-driven). Contiguous-run analysis uses the same max_dt_s gap threshold as the deployed guard. '90-sample 3-window confirmation' approximates the real 3-consecutive-anomalous-window TriggerPolicy requirement as needing window_samples + 2*stride_samples=90 contiguous valid samples -- a necessary but not fully sufficient condition (it also requires all 3 windows to be classified anomalous, which is data-dependent and out of scope for this purely-timing analysis)."
+}

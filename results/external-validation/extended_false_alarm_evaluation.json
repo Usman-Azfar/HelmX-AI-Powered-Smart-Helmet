@@ -1,0 +1,37 @@
+{
+  "description": "Extended false-alarm evaluation on new real-world normal-riding data (potholes + speed bumps only -- see module docstring for why hard-braking/aggressive-acceleration/sharp-turns coverage could not be added from this particular source), evaluated with the already-deployed model (no retraining).",
+  "source_citation": "Khandakar, A., Michelson, D. G., Naznine, M., Salam, A., Nahiduzzaman, Md., Khan, K., Suganthan, P. N., Ayari, M. A., Menouar, H., & Haider, J. (2024). STRIDE (Sensor Technologies for Road Insights and Driving Evaluation) Dataset [Data set]. Figshare. https://doi.org/10.6084/m9.figshare.25460755 (CC BY 4.0, verified via the Figshare API).",
+  "vehicle_caveat": "Recorded on a car, not a motorcycle -- evaluation-only, not used for training.",
+  "n_new_sessions": 14,
+  "n_new_windows": 3435,
+  "sessions_excluded_as_duplicates_of_data_road": [
+    "Driving Behaviour 1-6 (all)",
+    "Road Anomalies Bump 1",
+    "Road Anomalies Bump 2",
+    "Road Anomalies Pothole 10"
+  ],
+  "total_real_duration_hours_new_data_only": 0.2903333333333333,
+  "total_distance_km_new_data_only": 4.095668402489374,
+  "n_sessions_with_usable_gps": 14,
+  "n_sessions_total": 14,
+  "deployed_alert_simulation_new_data_only": {
+    "session_recall": null,
+    "n_anomaly_sessions": 0,
+    "n_normal_sessions": 14,
+    "total_false_alert_events": 1,
+    "cooldown_seconds": 60.0,
+    "cooldown_windows": 200,
+    "normal_exposure_hours": 0.2903333333333333,
+    "false_alerts_per_hour": 3.4443168771526986,
+    "false_alerts_per_km": 0.24416039135204243
+  },
+  "combined_with_existing_test_split_evidence": {
+    "existing_test_split_hours": 0.4177444444444445,
+    "existing_test_split_false_alert_events": 0,
+    "new_extended_data_hours": 0.2903333333333333,
+    "new_extended_data_false_alert_events": 1,
+    "combined_total_hours": 0.7080777777777778,
+    "combined_total_false_alert_events": 1,
+    "combined_false_alerts_per_hour": 1.4122742322720354
+  }
+}

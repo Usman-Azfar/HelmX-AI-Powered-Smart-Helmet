@@ -1,0 +1,77 @@
+{
+  "session": "darus_crash_Iso_312_2_Out",
+  "source_samples": [
+    0,
+    150
+  ],
+  "injected_samples": 120,
+  "onset": 1446.644753351,
+  "confirmation": 1449.026635978,
+  "first_anomaly": 1448.426995964,
+  "confirmation_triplet_times": [
+    1448.426995964,
+    1448.726763452,
+    1449.026635978
+  ],
+  "gpio_on_call_start": 1449.026948178,
+  "gpio_on_call_return": 1449.027121705,
+  "gpio_off_call_start": 1450.029690688,
+  "gpio_off_call_return": 1450.030661197,
+  "cancel_outcome": {
+    "cancelled": true,
+    "sms_attempted": false,
+    "sms_sent": false,
+    "gps_available": false
+  },
+  "decisions": [
+    {
+      "sample_index": 59,
+      "absolute_source_sample": 59,
+      "t_monotonic": 1447.827815473,
+      "crash_prob": 0.0,
+      "recon_error": 0.0,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 74,
+      "absolute_source_sample": 74,
+      "t_monotonic": 1448.128798164,
+      "crash_prob": 0.0,
+      "recon_error": 0.0,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 89,
+      "absolute_source_sample": 89,
+      "t_monotonic": 1448.426995964,
+      "crash_prob": 0.1484375,
+      "recon_error": 17.47809410095215,
+      "positive": true,
+      "triggered": false
+    },
+    {
+      "sample_index": 104,
+      "absolute_source_sample": 104,
+      "t_monotonic": 1448.726763452,
+      "crash_prob": 0.99609375,
+      "recon_error": 19.245540618896484,
+      "positive": true,
+      "triggered": false
+    },
+    {
+      "sample_index": 119,
+      "absolute_source_sample": 119,
+      "t_monotonic": 1449.026635978,
+      "crash_prob": 0.99609375,
+      "recon_error": 20.03107261657715,
+      "positive": true,
+      "triggered": true
+    }
+  ],
+  "cancellation_handler_start": 1449.026651997,
+  "cancellation_accepted": 1450.029669557,
+  "cancellation_handler_end": 1450.031119404,
+  "outcome": "triggered and controlled-cancelled"
+}

@@ -1,0 +1,477 @@
+[
+  {
+    "global_index": 3558,
+    "session": "road_2. Aggressive",
+    "source": "road",
+    "window_index": 944,
+    "label": 0,
+    "reference_scores": [
+      0.9442421793937683,
+      1.3195291757583618
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.9819153547286987
+    ],
+    "reference_margin": [
+      -0.04498332738876343,
+      -9.559206690788232
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -9.896820511817895
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 4984,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 2,
+    "label": 1,
+    "reference_scores": [
+      0.9518762826919556,
+      0.0831228494644165
+    ],
+    "transformed_scores": [
+      0.99609375,
+      0.0
+    ],
+    "reference_margin": [
+      -0.03734922409057617,
+      -10.795613017082177
+    ],
+    "transformed_margin": [
+      0.006868243217468262,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5040,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 58,
+    "label": 1,
+    "reference_scores": [
+      0.9821935296058655,
+      0.23273760080337524
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.19638307392597198
+    ],
+    "reference_margin": [
+      -0.00703197717666626,
+      -10.645998265743218
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.682352792620621
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5044,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 62,
+    "label": 1,
+    "reference_scores": [
+      0.9871196746826172,
+      0.2435544729232788
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.19638307392597198
+    ],
+    "reference_margin": [
+      -0.0021058320999145508,
+      -10.635181393623315
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.682352792620621
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5056,
+    "session": "near_fall_Acceleration On Curve",
+    "source": "near_fall",
+    "window_index": 74,
+    "label": 0,
+    "reference_scores": [
+      0.9197036027908325,
+      0.05645075440406799
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.0
+    ],
+    "reference_margin": [
+      -0.06952190399169922,
+      -10.822285112142525
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5140,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 2,
+    "label": 1,
+    "reference_scores": [
+      0.9158096313476562,
+      0.08154240995645523
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.0
+    ],
+    "reference_margin": [
+      -0.07341587543487549,
+      -10.797193456590138
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5247,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 109,
+    "label": 1,
+    "reference_scores": [
+      0.9943462610244751,
+      0.6829169988632202
+    ],
+    "transformed_scores": [
+      0.94140625,
+      0.39276614785194397
+    ],
+    "reference_margin": [
+      0.005120754241943359,
+      -10.195818867683373
+    ],
+    "transformed_margin": [
+      -0.04781925678253174,
+      -10.48596971869465
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5248,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 110,
+    "label": 1,
+    "reference_scores": [
+      0.9988386034965515,
+      0.7569473385810852
+    ],
+    "transformed_scores": [
+      0.98828125,
+      0.39276614785194397
+    ],
+    "reference_margin": [
+      0.009613096714019775,
+      -10.121788527965508
+    ],
+    "transformed_margin": [
+      -0.0009442567825317383,
+      -10.48596971869465
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5249,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 111,
+    "label": 1,
+    "reference_scores": [
+      0.9991288781166077,
+      1.4626288414001465
+    ],
+    "transformed_scores": [
+      0.98828125,
+      1.3746814727783203
+    ],
+    "reference_margin": [
+      0.009903371334075928,
+      -9.416107025146447
+    ],
+    "transformed_margin": [
+      -0.0009442567825317383,
+      -9.504054393768273
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5250,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 112,
+    "label": 1,
+    "reference_scores": [
+      0.9965083599090576,
+      1.544105052947998
+    ],
+    "transformed_scores": [
+      0.98828125,
+      1.3746814727783203
+    ],
+    "reference_margin": [
+      0.007282853126525879,
+      -9.334630813598595
+    ],
+    "transformed_margin": [
+      -0.0009442567825317383,
+      -9.504054393768273
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5286,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 148,
+    "label": 1,
+    "reference_scores": [
+      0.9732519388198853,
+      0.06718695163726807
+    ],
+    "transformed_scores": [
+      0.99609375,
+      0.0
+    ],
+    "reference_margin": [
+      -0.015973567962646484,
+      -10.811548914909325
+    ],
+    "transformed_margin": [
+      0.006868243217468262,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5287,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 149,
+    "label": 1,
+    "reference_scores": [
+      0.9575002789497375,
+      0.05136803165078163
+    ],
+    "transformed_scores": [
+      0.99609375,
+      0.0
+    ],
+    "reference_margin": [
+      -0.03172522783279419,
+      -10.827367834895812
+    ],
+    "transformed_margin": [
+      0.006868243217468262,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5333,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 195,
+    "label": 1,
+    "reference_scores": [
+      0.9600015878677368,
+      0.07717777043581009
+    ],
+    "transformed_scores": [
+      0.99609375,
+      0.19638307392597198
+    ],
+    "reference_margin": [
+      -0.029223918914794922,
+      -10.801558096110783
+    ],
+    "transformed_margin": [
+      0.006868243217468262,
+      -10.682352792620621
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5334,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 196,
+    "label": 1,
+    "reference_scores": [
+      0.972748339176178,
+      0.0627116709947586
+    ],
+    "transformed_scores": [
+      0.99609375,
+      0.0
+    ],
+    "reference_margin": [
+      -0.01647716760635376,
+      -10.816024195551835
+    ],
+    "transformed_margin": [
+      0.006868243217468262,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5335,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 197,
+    "label": 1,
+    "reference_scores": [
+      0.9495285749435425,
+      0.05952736362814903
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.0
+    ],
+    "reference_margin": [
+      -0.03969693183898926,
+      -10.819208502918444
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5336,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 198,
+    "label": 1,
+    "reference_scores": [
+      0.9239712357521057,
+      0.058318689465522766
+    ],
+    "transformed_scores": [
+      0.99609375,
+      0.0
+    ],
+    "reference_margin": [
+      -0.06525427103042603,
+      -10.82041717708107
+    ],
+    "transformed_margin": [
+      0.006868243217468262,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5337,
+    "session": "fall_fall-in-a-leaning",
+    "source": "fall",
+    "window_index": 199,
+    "label": 0,
+    "reference_scores": [
+      0.6640664935112,
+      0.034033238887786865
+    ],
+    "transformed_scores": [
+      0.9921875,
+      0.0
+    ],
+    "reference_margin": [
+      -0.3251590132713318,
+      -10.844702627658807
+    ],
+    "transformed_margin": [
+      0.0029619932174682617,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": false,
+    "in_transformed_confirmation_triplet": true
+  },
+  {
+    "global_index": 5407,
+    "session": "darus_crash_Iso_115_Out",
+    "source": "darus",
+    "window_index": 0,
+    "label": 0,
+    "reference_scores": [
+      1.0,
+      78.96678924560547
+    ],
+    "transformed_scores": [
+      0.0,
+      0.0
+    ],
+    "reference_margin": [
+      0.010774493217468262,
+      68.08805337905888
+    ],
+    "transformed_margin": [
+      -0.9892255067825317,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  },
+  {
+    "global_index": 5408,
+    "session": "darus_crash_Iso_115_Out",
+    "source": "darus",
+    "window_index": 1,
+    "label": 0,
+    "reference_scores": [
+      1.0,
+      283.91937255859375
+    ],
+    "transformed_scores": [
+      0.0,
+      0.0
+    ],
+    "reference_margin": [
+      0.010774493217468262,
+      273.04063669204714
+    ],
+    "transformed_margin": [
+      -0.9892255067825317,
+      -10.878735866546593
+    ],
+    "in_reference_confirmation_triplet": true,
+    "in_transformed_confirmation_triplet": false
+  }
+]

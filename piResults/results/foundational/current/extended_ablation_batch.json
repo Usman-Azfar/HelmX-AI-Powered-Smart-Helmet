@@ -1,0 +1,256 @@
+{
+  "device": {
+    "platform": "Linux-6.12.75+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "n_test_windows": 5437,
+  "3.23_threshold_margin_analysis": {
+    "classifier_threshold": 0.9892255067825317,
+    "counts": {
+      "within_0.001": 5,
+      "within_0.005": 20,
+      "within_0.01": 70,
+      "within_0.05": 315
+    },
+    "fraction_of_test_set": {
+      "within_0.001": 0.0009196247930844216,
+      "within_0.005": 0.0036784991723376862,
+      "within_0.01": 0.012874747103181901,
+      "within_0.05": 0.05793636196431856
+    },
+    "note": "How many held-out windows land within epsilon of the deployed decision boundary -- explains why INT8 quantization drift (Experiment D) rarely flips the real deployed decision: most windows sit far from the boundary either way."
+  },
+  "3.24_reconstruction_error_quantization": {
+    "recon_threshold": 10.878735866546593,
+    "fp16": {
+      "mean_abs_diff_vs_keras": 6.94916822423575e-05,
+      "max_abs_diff_vs_keras": 0.09051513671875,
+      "threshold_crossing_agreement_vs_keras": 1.0
+    },
+    "int8": {
+      "mean_abs_diff_vs_keras": 0.611727874226849,
+      "max_abs_diff_vs_keras": 702.5513534545898,
+      "threshold_crossing_agreement_vs_keras": 1.0
+    }
+  },
+  "3.25_or_rule_branch_contribution_window_level": {
+    "classifier_only_positive": 19,
+    "reconstruction_only_positive": 1,
+    "both_positive": 14,
+    "neither": 5403,
+    "total": 5437
+  },
+  "3.25_or_rule_branch_contribution_event_level": [
+    {
+      "session_id": "carla_onder",
+      "label": 0,
+      "event_fired": false,
+      "fired_by_branch": null
+    },
+    {
+      "session_id": "darus_crash_Iso_115_Out",
+      "label": 0,
+      "event_fired": true,
+      "fired_by_branch": "both"
+    },
+    {
+      "session_id": "darus_crash_Iso_312_2_Out",
+      "label": 0,
+      "event_fired": true,
+      "fired_by_branch": "both"
+    },
+    {
+      "session_id": "darus_crash_Iso_513_2_Out",
+      "label": 0,
+      "event_fired": true,
+      "fired_by_branch": "both"
+    },
+    {
+      "session_id": "darus_non_crash_Pothole_5_Out",
+      "label": 0,
+      "event_fired": false,
+      "fired_by_branch": null
+    },
+    {
+      "session_id": "darus_non_crash_Randomstate_60_Out",
+      "label": 0,
+      "event_fired": false,
+      "fired_by_branch": null
+    },
+    {
+      "session_id": "fall_fall-in-a-leaning",
+      "label": 1,
+      "event_fired": true,
+      "fired_by_branch": "classifier_only"
+    },
+    {
+      "session_id": "near_fall_Acceleration On Curve",
+      "label": 1,
+      "event_fired": true,
+      "fired_by_branch": "classifier_only"
+    },
+    {
+      "session_id": "road_2. Aggressive",
+      "label": 0,
+      "event_fired": false,
+      "fired_by_branch": null
+    },
+    {
+      "session_id": "road_2.Bump",
+      "label": 0,
+      "event_fired": false,
+      "fired_by_branch": null
+    }
+  ],
+  "3.26_detailed_causal_filter_comparison": {
+    "n_windows": 5437,
+    "prob_correlation_offline_vs_realtime": 0.9454068643245138,
+    "recon_correlation_offline_vs_realtime": 0.8906297609608698,
+    "prob_diff_distribution": {
+      "mean": 0.0016194017840720986,
+      "std": 0.12148228194274897,
+      "max_abs": 0.99609375,
+      "p95_abs": 0.23828125
+    },
+    "recon_diff_distribution": {
+      "mean": 0.008777098131021946,
+      "std": 0.9710377815628283,
+      "max_abs": 49.292152404785156,
+      "p95_abs": 0.19638307392597198
+    },
+    "by_source": {
+      "carla": {
+        "n": 2614,
+        "mean_abs_prob_diff": 0.01370026778882938,
+        "mean_abs_recon_diff": 0.019157492183006348
+      },
+      "darus": {
+        "n": 30,
+        "mean_abs_prob_diff": 0.28815104166666666,
+        "mean_abs_recon_diff": 4.562633606791496
+      },
+      "fall": {
+        "n": 269,
+        "mean_abs_prob_diff": 0.07359433085501858,
+        "mean_abs_recon_diff": 0.006570437749965483
+      },
+      "near_fall": {
+        "n": 156,
+        "mean_abs_prob_diff": 0.1277794471153846,
+        "mean_abs_recon_diff": 0.010070926867998563
+      },
+      "road": {
+        "n": 2368,
+        "mean_abs_prob_diff": 0.05802628800675676,
+        "mean_abs_recon_diff": 0.007629747905239866
+      }
+    },
+    "by_class": {
+      "normal(label=0)": {
+        "n": 4994,
+        "mean_abs_prob_diff": 0.035157814377252704,
+        "mean_abs_recon_diff": 0.014077921912318762
+      },
+      "crash_like(label=1)": {
+        "n": 443,
+        "mean_abs_prob_diff": 0.10387274266365688,
+        "mean_abs_recon_diff": 0.3116417745502485
+      }
+    }
+  },
+  "3.22_fp16_vs_int8_event_level_agreement": {
+    "n_sessions": 10,
+    "agreement": 1.0,
+    "sessions_fp16_fired_int8_missed": [],
+    "sessions_int8_fired_fp16_missed": [],
+    "fp16_events": {
+      "carla_onder": {
+        "fired": false,
+        "trigger_window_idx": null
+      },
+      "darus_crash_Iso_115_Out": {
+        "fired": true,
+        "trigger_window_idx": 2
+      },
+      "darus_crash_Iso_312_2_Out": {
+        "fired": true,
+        "trigger_window_idx": 4
+      },
+      "darus_crash_Iso_513_2_Out": {
+        "fired": true,
+        "trigger_window_idx": 4
+      },
+      "darus_non_crash_Pothole_5_Out": {
+        "fired": false,
+        "trigger_window_idx": null
+      },
+      "darus_non_crash_Randomstate_60_Out": {
+        "fired": false,
+        "trigger_window_idx": null
+      },
+      "fall_fall-in-a-leaning": {
+        "fired": true,
+        "trigger_window_idx": 111
+      },
+      "near_fall_Acceleration On Curve": {
+        "fired": true,
+        "trigger_window_idx": 56
+      },
+      "road_2. Aggressive": {
+        "fired": false,
+        "trigger_window_idx": null
+      },
+      "road_2.Bump": {
+        "fired": false,
+        "trigger_window_idx": null
+      }
+    },
+    "int8_events": {
+      "carla_onder": {
+        "fired": false,
+        "trigger_window_idx": null
+      },
+      "darus_crash_Iso_115_Out": {
+        "fired": true,
+        "trigger_window_idx": 2
+      },
+      "darus_crash_Iso_312_2_Out": {
+        "fired": true,
+        "trigger_window_idx": 4
+      },
+      "darus_crash_Iso_513_2_Out": {
+        "fired": true,
+        "trigger_window_idx": 4
+      },
+      "darus_non_crash_Pothole_5_Out": {
+        "fired": false,
+        "trigger_window_idx": null
+      },
+      "darus_non_crash_Randomstate_60_Out": {
+        "fired": false,
+        "trigger_window_idx": null
+      },
+      "fall_fall-in-a-leaning": {
+        "fired": true,
+        "trigger_window_idx": 111
+      },
+      "near_fall_Acceleration On Curve": {
+        "fired": true,
+        "trigger_window_idx": 55
+      },
+      "road_2. Aggressive": {
+        "fired": false,
+        "trigger_window_idx": null
+      },
+      "road_2.Bump": {
+        "fired": false,
+        "trigger_window_idx": null
+      }
+    }
+  }
+}

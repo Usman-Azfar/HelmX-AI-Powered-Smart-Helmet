@@ -1,0 +1,92 @@
+[
+  {
+    "t_monotonic": 23530.113106791,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 23530.113472158,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 23659.436727447,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 23659.437562126,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 23788.784618795,
+    "phase": "start",
+    "generation": 1
+  },
+  {
+    "t_monotonic": 23788.795982657,
+    "phase": "stop",
+    "generation": 1
+  },
+  {
+    "t_monotonic": 23918.318997252,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 23918.319263583,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24047.658985872,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24047.659376091,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24177.006725038,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24177.00698611,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24306.327053798,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24306.327310333,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24435.72823146,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24435.728487921,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24565.208165914,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 24565.208418393,
+    "phase": "stop",
+    "generation": 0
+  }
+]

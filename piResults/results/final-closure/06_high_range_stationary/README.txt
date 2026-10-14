@@ -1,0 +1,322 @@
+
+C2 — 06_high_range_stationary
+Status: PASS (UNATTENDED PHYSICAL CONDITIONS)
+UTC: 2026-09-30T14:12:49.393564+00:00
+Evidence: piResults/final_pi_review_closure/06_high_range_stationary
+{
+  "mode": "polling",
+  "seconds_requested": 600.0,
+  "elapsed_s": 600.006393784,
+  "samples": 30000,
+  "achieved_samples_per_s": 49.99946719034445,
+  "filtered": true,
+  "high_range": true,
+  "i2c_errors": 0,
+  "overflows": 0,
+  "exception": null,
+  "raw": {
+    "ax": {
+      "mean": 400.9501333333333,
+      "std": 2.733553239934345,
+      "rms": 400.959451482732,
+      "min": 384.0,
+      "max": 420.0,
+      "p1": 396.0,
+      "p50": 401.0,
+      "p99": 408.0,
+      "negative_rail": 0,
+      "positive_rail": 0
+    },
+    "ay": {
+      "mean": -347.1352,
+      "std": 1.859261760305238,
+      "rms": 347.14017908236053,
+      "min": -366.0,
+      "max": -325.0,
+      "p1": -351.0,
+      "p50": -347.0,
+      "p99": -343.0,
+      "negative_rail": 0,
+      "positive_rail": 0
+    },
+    "az": {
+      "mean": -1974.2481666666667,
+      "std": 2.9425351834014757,
+      "rms": 1974.2503595289024,
+      "min": -2010.0,
+      "max": -1913.0,
+      "p1": -1981.0,
+      "p50": -1974.0,
+      "p99": -1968.0,
+      "negative_rail": 0,
+      "positive_rail": 0
+    },
+    "gx": {
+      "mean": -3.9131666666666667,
+      "std": 0.6800195871362007,
+      "rms": 3.9718131879533307,
+      "min": -12.0,
+      "max": 1.0,
+      "p1": -5.0,
+      "p50": -4.0,
+      "p99": -2.0,
+      "negative_rail": 0,
+      "positive_rail": 0
+    },
+    "gy": {
+      "mean": 34.2763,
+      "std": 0.9901977799072937,
+      "rms": 34.29059978089233,
+      "min": 20.0,
+      "max": 46.0,
+      "p1": 32.0,
+      "p50": 34.0,
+      "p99": 37.0,
+      "negative_rail": 0,
+      "positive_rail": 0
+    },
+    "gz": {
+      "mean": 17.915366666666667,
+      "std": 2.0396414388045976,
+      "rms": 18.03109813627556,
+      "min": -44.0,
+      "max": 75.0,
+      "p1": 13.0,
+      "p50": 18.0,
+      "p99": 23.0,
+      "negative_rail": 0,
+      "positive_rail": 0
+    }
+  },
+  "physical": {
+    "ax": {
+      "mean": 1.9199109497330729,
+      "std": 0.013089355410352596,
+      "rms": 1.9199555687905927,
+      "min": 1.838746875,
+      "max": 2.01112939453125,
+      "p1": 1.89620771484375,
+      "p50": 1.9201497314453124,
+      "p99": 1.9536685546875
+    },
+    "ay": {
+      "mean": -1.6622233442773435,
+      "std": 0.008902895186375657,
+      "rms": 1.662247186131851,
+      "min": -1.7525556152343749,
+      "max": -1.5562310791015623,
+      "p1": -1.6807295654296874,
+      "p50": -1.6615759521484375,
+      "p99": -1.6424223388671875
+    },
+    "az": {
+      "mean": -9.453496476387532,
+      "std": 0.014090045242335958,
+      "rms": 9.453506976696342,
+      "min": -9.624690673828125,
+      "max": -9.160215551757812,
+      "p1": -9.485826977539062,
+      "p50": -9.452308154296874,
+      "p99": -9.423577734375
+    },
+    "gx": {
+      "mean": -0.23860772357723584,
+      "std": 0.041464608971719566,
+      "rms": 0.2421837309727641,
+      "min": -0.7317073170731708,
+      "max": 0.06097560975609757,
+      "p1": -0.30487804878048785,
+      "p50": -0.24390243902439027,
+      "p99": -0.12195121951219513
+    },
+    "gy": {
+      "mean": 2.090018292682927,
+      "std": 0.06037791340898136,
+      "rms": 2.0908902305422155,
+      "min": 1.2195121951219514,
+      "max": 2.804878048780488,
+      "p1": 1.9512195121951221,
+      "p50": 2.073170731707317,
+      "p99": 2.25609756097561
+    },
+    "gz": {
+      "mean": 1.0924004065040651,
+      "std": 0.1243683804149145,
+      "rms": 1.0994572034314367,
+      "min": -2.682926829268293,
+      "max": 4.573170731707317,
+      "p1": 0.7926829268292683,
+      "p50": 1.0975609756097562,
+      "p99": 1.402439024390244
+    }
+  },
+  "accel_magnitude": {
+    "mean": 9.788661550305628,
+    "std": 0.013939366839618049,
+    "rms": 9.7886714753525,
+    "min": 9.497673356173443,
+    "max": 9.960828484238098,
+    "p1": 9.756959340343142,
+    "p50": 9.788509536059728,
+    "p99": 9.820751202191357
+  },
+  "gyro_magnitude": {
+    "mean": 2.3737499402708906,
+    "std": 0.06776635570832094,
+    "rms": 2.3747170479663557,
+    "min": 1.7819072190490803,
+    "max": 5.02447904254943,
+    "p1": 2.2237295766842036,
+    "p50": 2.3662936477966166,
+    "p99": 2.54789049283196
+  },
+  "quantization_step": {
+    "ax": 0.0047884033203125,
+    "ay": 0.0047884033203125,
+    "az": 0.0047884033203125,
+    "gx": 0.06097560975609757,
+    "gy": 0.06097560975609757,
+    "gz": 0.06097560975609757
+  },
+  "temperature_raw": {
+    "mean": 4419.527433333334,
+    "std": 146.2426580974656,
+    "rms": 4421.946364332491,
+    "min": 4090.0,
+    "max": 4587.0,
+    "p1": 4099.0,
+    "p50": 4474.0,
+    "p99": 4579.0
+  },
+  "temperature_c_map_estimate": {
+    "mean": 34.237270294825336,
+    "std": 0.438022757652576,
+    "rms": 34.24007215496414,
+    "min": 33.25027705394315,
+    "max": 34.73888040255189,
+    "p1": 33.277233653817355,
+    "p50": 34.40042531524246,
+    "p99": 34.71491898044149
+  },
+  "temperature_note": "Raw signed counts preserved. Celsius estimate uses compatible MPU6500 map: raw/333.87+21; untrimmed internal sensor, not calibrated ambient temperature. Temperature is not enabled in the six-axis FIFO packets.",
+  "temperature_source": "TDK MPU6500 product specification section 3.3.2: https://product.tdk.com/system/files/dam/doc/product/sensor/mortion-inertial/imu/data_sheet/mpu-6500-datasheet2.pdf",
+  "decoded_configuration": {
+    "AFS_SEL": 3,
+    "FS_SEL": 3,
+    "DLPF_CFG": 4,
+    "FCHOICE_B": 0,
+    "A_DLPF_CFG": 4,
+    "SMPLRT_DIV": 19,
+    "nominal_output_rate_hz": 50,
+    "host_target_rate_hz": 50,
+    "rate_note": "50 Hz is the configured nominal ODR, not an independent measurement of silicon timing. FIFO observed output rate and host polling throughput are reported separately."
+  },
+  "host_interval_ms": {
+    "mean": 20.0000999419314,
+    "std": 1.4589647554251055,
+    "rms": 20.053243524298434,
+    "min": 3.4971049999512616,
+    "max": 35.73138800004472,
+    "p1": 15.993836560001,
+    "p50": 19.9521619999814,
+    "p99": 24.32854517989199
+  },
+  "fifo_packet_bytes": null,
+  "fifo_sample_bytes_read": null,
+  "timestamp_note": "Host read completion times, not physical sample timestamps. FIFO batch samples share host time; never interpret those intervals as sensor dt.",
+  "conditions": "Unattended; no physical mounting/stationarity confirmation from user. No inference, GPIO, or SMS.",
+  "configuration_note": "Filtered 50-Hz ODR changes CONFIG/ACCEL_CONFIG2/SMPLRT_DIV from deployment. Polling equivalence must use these SAME settings.",
+  "low_range_comparison": {
+    "baseline_file": "piResults/final_pi_review_closure/04_polling_fifo_equivalence/polling/summary.json",
+    "baseline_sha256": "7b3971bafba2437c8b122f3dd4acfb2b468b252f3d5c52e53b6d785801460800",
+    "configuration": "Sequential coherent-burst polling captures with identical corrected filter/divider settings; low range +/-2g, +/-250deg/s versus high range +/-16g, +/-2000deg/s.",
+    "axes": {
+      "ax": {
+        "high_minus_low_mean": 0.5049992397083536,
+        "high_over_low_std": 1.1395883014189687,
+        "low_range_physical": {
+          "mean": 1.4149117100247193,
+          "std": 0.011486038768609914,
+          "rms": 1.41495833021742,
+          "min": 1.3365630767822265,
+          "max": 1.4832079284667967,
+          "p1": 1.3880384124755858,
+          "p50": 1.4149731811523436,
+          "p99": 1.4425065002441406
+        }
+      },
+      "ay": {
+        "high_minus_low_mean": -0.7314122467997232,
+        "high_over_low_std": 0.9255686180694022,
+        "low_range_physical": {
+          "mean": -0.9308110974776204,
+          "std": 0.009618838638831301,
+          "rms": 0.9308607958466464,
+          "min": -1.0235212097167967,
+          "max": -0.8403647827148437,
+          "p1": -0.9528922607421875,
+          "p50": -0.9307458953857422,
+          "p99": -0.9080009796142577
+        }
+      },
+      "az": {
+        "high_minus_low_mean": 0.17400566854675326,
+        "high_over_low_std": 0.9928842560916943,
+        "low_range_physical": {
+          "mean": -9.627502144934285,
+          "std": 0.014191024941616882,
+          "rms": 9.627512603777943,
+          "min": -9.725247143554688,
+          "max": -9.31464155883789,
+          "p1": -9.66000514831543,
+          "p50": -9.627683425903319,
+          "p99": -9.59476315307617
+        }
+      },
+      "gx": {
+        "high_minus_low_mean": -0.09966828337367348,
+        "high_over_low_std": 0.5430597538465761,
+        "low_range_physical": {
+          "mean": -0.13893944020356236,
+          "std": 0.07635367687997377,
+          "rms": 0.1585372259665556,
+          "min": -0.6870229007633587,
+          "max": 0.4351145038167939,
+          "p1": -0.32061068702290074,
+          "p50": -0.13740458015267176,
+          "p99": 0.03816793893129771
+        }
+      },
+      "gy": {
+        "high_minus_low_mean": -0.05295346304226367,
+        "high_over_low_std": 0.4269569986216022,
+        "low_range_physical": {
+          "mean": 2.1429717557251906,
+          "std": 0.1414145068564441,
+          "rms": 2.147632652151051,
+          "min": 1.450381679389313,
+          "max": 3.2213740458015265,
+          "p1": 1.8015267175572518,
+          "p50": 2.145038167938931,
+          "p99": 2.4732824427480917
+        }
+      },
+      "gz": {
+        "high_minus_low_mean": -0.04066855023893745,
+        "high_over_low_std": 0.37115742830863174,
+        "low_range_physical": {
+          "mean": 1.1330689567430026,
+          "std": 0.3350825577751805,
+          "rms": 1.1815775815662013,
+          "min": -1.3129770992366412,
+          "max": 3.7862595419847325,
+          "p1": 0.29000000000000004,
+          "p50": 1.129770992366412,
+          "p99": 1.9923664122137403
+        }
+      }
+    },
+    "limitation": "Sequential unattended placement, not confirmed identical motion/temperature. Low-range baseline did not preserve temperature; no temperature-matched noise attribution."
+  },
+  "stationary_physical_plausibility_gate": true
+}

@@ -1,0 +1,61 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "i2c_bus": 1,
+  "i2c_address": "0x68",
+  "i2c_baudrate": "100000 Hz (device-tree clock-frequency)",
+  "raw_hex": {
+    "SMPLRT_DIV": "0x0",
+    "CONFIG": "0x0",
+    "GYRO_CONFIG": "0x0",
+    "ACCEL_CONFIG": "0x0",
+    "FIFO_EN": "0x0",
+    "INT_ENABLE": "0x0",
+    "INT_STATUS": "0x5",
+    "PWR_MGMT_1": "0x1",
+    "PWR_MGMT_2": "0x0",
+    "WHO_AM_I": "0x70",
+    "USER_CTRL": "0x0"
+  },
+  "raw_binary": {
+    "SMPLRT_DIV": "0b00000000",
+    "CONFIG": "0b00000000",
+    "GYRO_CONFIG": "0b00000000",
+    "ACCEL_CONFIG": "0b00000000",
+    "FIFO_EN": "0b00000000",
+    "INT_ENABLE": "0b00000000",
+    "INT_STATUS": "0b00000101",
+    "PWR_MGMT_1": "0b00000001",
+    "PWR_MGMT_2": "0b00000000",
+    "WHO_AM_I": "0b01110000",
+    "USER_CTRL": "0b00000000"
+  },
+  "decoded": {
+    "accel_full_scale": "+/-2g",
+    "accel_afs_sel_raw": 0,
+    "gyro_full_scale": "+/-250 deg/s",
+    "gyro_fs_sel_raw": 0,
+    "dlpf_mode_bandwidth": "260Hz accel / 256Hz gyro (DLPF off)",
+    "dlpf_cfg_raw": 0,
+    "smplrt_div_raw": 0,
+    "gyro_output_rate_hz_before_divider": 8000,
+    "configured_sample_rate_hz": 8000.0,
+    "device_clock_source": "PLL with X gyro reference",
+    "clksel_raw": 1,
+    "sleep_mode": false,
+    "fifo_enabled_register_nonzero": false,
+    "fifo_en_raw": 0,
+    "data_ready_interrupt_enabled": false,
+    "int_enable_raw": 0,
+    "int_status_data_ready": true,
+    "who_am_i": "0x70",
+    "who_am_i_expected_0x68": false
+  }
+}

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use HelmX software, please cite this repository and the upstream datasets separately."
+type: software
+title: "HelmX: AI-Based Motorcycle Crash Detection"
+authors:
+  - family-names: "Azfar"
+    given-names: "Usman"
+    affiliation: "PUCIT, University of the Punjab"
+repository-code: "https://github.com/Usman-Azfar/Crash-Detection"
+license: MIT
+abstract: "Research software and Raspberry Pi measurement harnesses for inertial motorcycle crash detection. Source datasets retain their own licenses; see DATA_LICENSES.md."
+keywords:
+  - crash detection
+  - inertial sensors
+  - Raspberry Pi
+  - TensorFlow Lite

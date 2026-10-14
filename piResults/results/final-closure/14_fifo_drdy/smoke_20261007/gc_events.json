@@ -1,0 +1,32 @@
+[
+  {
+    "t_monotonic": 6596.04781696,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 6596.048341913,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 6608.50093872,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 6608.501206706,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 6620.856863076,
+    "phase": "start",
+    "generation": 1
+  },
+  {
+    "t_monotonic": 6620.860404191,
+    "phase": "stop",
+    "generation": 1
+  }
+]

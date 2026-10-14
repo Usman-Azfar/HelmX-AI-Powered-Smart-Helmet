@@ -1,0 +1,1668 @@
+[
+  {
+    "t_monotonic": 1036.215948798,
+    "cpu_pct": 0.0,
+    "rss_bytes": 49987584,
+    "ctx_voluntary": 80,
+    "ctx_involuntary": 563,
+    "minor_faults": 8176,
+    "major_faults": 0,
+    "cpu_temp_c": 50.634,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4896
+  },
+  {
+    "t_monotonic": 1037.21639875,
+    "cpu_pct": 8.0,
+    "rss_bytes": 50008064,
+    "ctx_voluntary": 830,
+    "ctx_involuntary": 591,
+    "minor_faults": 8181,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1038.229641333,
+    "cpu_pct": 9.9,
+    "rss_bytes": 50675712,
+    "ctx_voluntary": 1544,
+    "ctx_involuntary": 652,
+    "minor_faults": 8242,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1039.246836753,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50679808,
+    "ctx_voluntary": 2310,
+    "ctx_involuntary": 668,
+    "minor_faults": 8243,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1040.24883062,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50679808,
+    "ctx_voluntary": 3061,
+    "ctx_involuntary": 688,
+    "minor_faults": 8243,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1041.26741539,
+    "cpu_pct": 9.8,
+    "rss_bytes": 50683904,
+    "ctx_voluntary": 3826,
+    "ctx_involuntary": 742,
+    "minor_faults": 8244,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1042.270855476,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50683904,
+    "ctx_voluntary": 4577,
+    "ctx_involuntary": 749,
+    "minor_faults": 8244,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1043.279558686,
+    "cpu_pct": 9.9,
+    "rss_bytes": 50688000,
+    "ctx_voluntary": 5326,
+    "ctx_involuntary": 797,
+    "minor_faults": 8245,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1044.287877862,
+    "cpu_pct": 10.9,
+    "rss_bytes": 50688000,
+    "ctx_voluntary": 6073,
+    "ctx_involuntary": 900,
+    "minor_faults": 8245,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1045.306137786,
+    "cpu_pct": 8.8,
+    "rss_bytes": 50696192,
+    "ctx_voluntary": 6839,
+    "ctx_involuntary": 927,
+    "minor_faults": 8247,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1046.325990115,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50700288,
+    "ctx_voluntary": 7605,
+    "ctx_involuntary": 938,
+    "minor_faults": 8248,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4896
+  },
+  {
+    "t_monotonic": 1047.329651413,
+    "cpu_pct": 7.0,
+    "rss_bytes": 50700288,
+    "ctx_voluntary": 8356,
+    "ctx_involuntary": 963,
+    "minor_faults": 8248,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1048.33181735,
+    "cpu_pct": 10.9,
+    "rss_bytes": 50704384,
+    "ctx_voluntary": 9104,
+    "ctx_involuntary": 1017,
+    "minor_faults": 8249,
+    "major_faults": 0,
+    "cpu_temp_c": 50.634,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1049.351544501,
+    "cpu_pct": 8.8,
+    "rss_bytes": 50708480,
+    "ctx_voluntary": 9870,
+    "ctx_involuntary": 1053,
+    "minor_faults": 8249,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1050.371752896,
+    "cpu_pct": 7.8,
+    "rss_bytes": 50712576,
+    "ctx_voluntary": 10636,
+    "ctx_involuntary": 1072,
+    "minor_faults": 8251,
+    "major_faults": 0,
+    "cpu_temp_c": 50.634,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1051.371838567,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50716672,
+    "ctx_voluntary": 11387,
+    "ctx_involuntary": 1078,
+    "minor_faults": 8252,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1052.373446664,
+    "cpu_pct": 8.0,
+    "rss_bytes": 50716672,
+    "ctx_voluntary": 12138,
+    "ctx_involuntary": 1095,
+    "minor_faults": 8252,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4832
+  },
+  {
+    "t_monotonic": 1053.393907262,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50720768,
+    "ctx_voluntary": 12904,
+    "ctx_involuntary": 1106,
+    "minor_faults": 8253,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1054.415243967,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50720768,
+    "ctx_voluntary": 13670,
+    "ctx_involuntary": 1113,
+    "minor_faults": 8253,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1055.415987903,
+    "cpu_pct": 8.0,
+    "rss_bytes": 50724864,
+    "ctx_voluntary": 14416,
+    "ctx_involuntary": 1149,
+    "minor_faults": 8254,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1056.438144822,
+    "cpu_pct": 9.8,
+    "rss_bytes": 50728960,
+    "ctx_voluntary": 15141,
+    "ctx_involuntary": 1212,
+    "minor_faults": 8255,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1057.44624574,
+    "cpu_pct": 8.0,
+    "rss_bytes": 50733056,
+    "ctx_voluntary": 15892,
+    "ctx_involuntary": 1239,
+    "minor_faults": 8256,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1058.457953596,
+    "cpu_pct": 9.8,
+    "rss_bytes": 50733056,
+    "ctx_voluntary": 16657,
+    "ctx_involuntary": 1300,
+    "minor_faults": 8256,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1059.460231037,
+    "cpu_pct": 11.0,
+    "rss_bytes": 50737152,
+    "ctx_voluntary": 17407,
+    "ctx_involuntary": 1338,
+    "minor_faults": 8257,
+    "major_faults": 0,
+    "cpu_temp_c": 51.608,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1060.475633879,
+    "cpu_pct": 7.8,
+    "rss_bytes": 50741248,
+    "ctx_voluntary": 18172,
+    "ctx_involuntary": 1359,
+    "minor_faults": 8258,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4832
+  },
+  {
+    "t_monotonic": 1061.475636083,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50741248,
+    "ctx_voluntary": 18923,
+    "ctx_involuntary": 1370,
+    "minor_faults": 8258,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1062.480897855,
+    "cpu_pct": 7.0,
+    "rss_bytes": 50745344,
+    "ctx_voluntary": 19673,
+    "ctx_involuntary": 1386,
+    "minor_faults": 8259,
+    "major_faults": 0,
+    "cpu_temp_c": 50.634,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4880
+  },
+  {
+    "t_monotonic": 1063.499948199,
+    "cpu_pct": 6.9,
+    "rss_bytes": 50745344,
+    "ctx_voluntary": 20439,
+    "ctx_involuntary": 1415,
+    "minor_faults": 8259,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1064.519992463,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50749440,
+    "ctx_voluntary": 21205,
+    "ctx_involuntary": 1438,
+    "minor_faults": 8260,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1065.539173185,
+    "cpu_pct": 6.9,
+    "rss_bytes": 50753536,
+    "ctx_voluntary": 21971,
+    "ctx_involuntary": 1462,
+    "minor_faults": 8261,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1066.540987996,
+    "cpu_pct": 7.0,
+    "rss_bytes": 50753536,
+    "ctx_voluntary": 22722,
+    "ctx_involuntary": 1488,
+    "minor_faults": 8261,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1067.541222282,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50757632,
+    "ctx_voluntary": 23473,
+    "ctx_involuntary": 1503,
+    "minor_faults": 8262,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4896
+  },
+  {
+    "t_monotonic": 1068.54122542,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50757632,
+    "ctx_voluntary": 24224,
+    "ctx_involuntary": 1520,
+    "minor_faults": 8262,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1069.56263693,
+    "cpu_pct": 7.8,
+    "rss_bytes": 50761728,
+    "ctx_voluntary": 24990,
+    "ctx_involuntary": 1553,
+    "minor_faults": 8263,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1070.579581217,
+    "cpu_pct": 6.9,
+    "rss_bytes": 50761728,
+    "ctx_voluntary": 25756,
+    "ctx_involuntary": 1568,
+    "minor_faults": 8263,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1071.594650337,
+    "cpu_pct": 8.9,
+    "rss_bytes": 50765824,
+    "ctx_voluntary": 26506,
+    "ctx_involuntary": 1590,
+    "minor_faults": 8264,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1072.613970713,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50765824,
+    "ctx_voluntary": 27271,
+    "ctx_involuntary": 1614,
+    "minor_faults": 8264,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1073.635791977,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50774016,
+    "ctx_voluntary": 28037,
+    "ctx_involuntary": 1622,
+    "minor_faults": 8266,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1074.663635478,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50778112,
+    "ctx_voluntary": 28803,
+    "ctx_involuntary": 1632,
+    "minor_faults": 8267,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1075.670821139,
+    "cpu_pct": 8.9,
+    "rss_bytes": 50782208,
+    "ctx_voluntary": 29548,
+    "ctx_involuntary": 1696,
+    "minor_faults": 8267,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4832
+  },
+  {
+    "t_monotonic": 1076.676500422,
+    "cpu_pct": 8.9,
+    "rss_bytes": 50790400,
+    "ctx_voluntary": 30298,
+    "ctx_involuntary": 1731,
+    "minor_faults": 8270,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1077.676595209,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50790400,
+    "ctx_voluntary": 31049,
+    "ctx_involuntary": 1740,
+    "minor_faults": 8270,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1078.678665784,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50790400,
+    "ctx_voluntary": 31800,
+    "ctx_involuntary": 1752,
+    "minor_faults": 8270,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1079.702679367,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50790400,
+    "ctx_voluntary": 32566,
+    "ctx_involuntary": 1760,
+    "minor_faults": 8270,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1080.71972541,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50790400,
+    "ctx_voluntary": 33332,
+    "ctx_involuntary": 1765,
+    "minor_faults": 8270,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1081.737367992,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50794496,
+    "ctx_voluntary": 34098,
+    "ctx_involuntary": 1770,
+    "minor_faults": 8271,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1082.740530603,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50794496,
+    "ctx_voluntary": 34849,
+    "ctx_involuntary": 1779,
+    "minor_faults": 8271,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1083.740836938,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50798592,
+    "ctx_voluntary": 35600,
+    "ctx_involuntary": 1795,
+    "minor_faults": 8272,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1084.756674956,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50798592,
+    "ctx_voluntary": 36366,
+    "ctx_involuntary": 1800,
+    "minor_faults": 8272,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1085.776326055,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50802688,
+    "ctx_voluntary": 37132,
+    "ctx_involuntary": 1807,
+    "minor_faults": 8273,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1086.795631344,
+    "cpu_pct": 9.8,
+    "rss_bytes": 50806784,
+    "ctx_voluntary": 37880,
+    "ctx_involuntary": 1856,
+    "minor_faults": 8274,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1087.796299546,
+    "cpu_pct": 12.0,
+    "rss_bytes": 50810880,
+    "ctx_voluntary": 38630,
+    "ctx_involuntary": 1891,
+    "minor_faults": 8275,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1088.813561038,
+    "cpu_pct": 8.8,
+    "rss_bytes": 50810880,
+    "ctx_voluntary": 39396,
+    "ctx_involuntary": 1926,
+    "minor_faults": 8275,
+    "major_faults": 0,
+    "cpu_temp_c": 51.121,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1089.834750331,
+    "cpu_pct": 9.8,
+    "rss_bytes": 50810880,
+    "ctx_voluntary": 40162,
+    "ctx_involuntary": 1965,
+    "minor_faults": 8275,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1090.835568502,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50810880,
+    "ctx_voluntary": 40913,
+    "ctx_involuntary": 1969,
+    "minor_faults": 8275,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1091.854478615,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50810880,
+    "ctx_voluntary": 41679,
+    "ctx_involuntary": 1981,
+    "minor_faults": 8275,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1092.854888751,
+    "cpu_pct": 7.0,
+    "rss_bytes": 50814976,
+    "ctx_voluntary": 42430,
+    "ctx_involuntary": 2009,
+    "minor_faults": 8276,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1093.873072207,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50814976,
+    "ctx_voluntary": 43196,
+    "ctx_involuntary": 2024,
+    "minor_faults": 8276,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1094.874063046,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50819072,
+    "ctx_voluntary": 43947,
+    "ctx_involuntary": 2049,
+    "minor_faults": 8276,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1095.884800673,
+    "cpu_pct": 9.9,
+    "rss_bytes": 50819072,
+    "ctx_voluntary": 44679,
+    "ctx_involuntary": 2109,
+    "minor_faults": 8277,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1096.892122852,
+    "cpu_pct": 9.9,
+    "rss_bytes": 50823168,
+    "ctx_voluntary": 45428,
+    "ctx_involuntary": 2149,
+    "minor_faults": 8278,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1097.90930876,
+    "cpu_pct": 7.8,
+    "rss_bytes": 50827264,
+    "ctx_voluntary": 46194,
+    "ctx_involuntary": 2188,
+    "minor_faults": 8279,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1098.911810518,
+    "cpu_pct": 7.0,
+    "rss_bytes": 50827264,
+    "ctx_voluntary": 46945,
+    "ctx_involuntary": 2209,
+    "minor_faults": 8279,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1099.931844173,
+    "cpu_pct": 6.9,
+    "rss_bytes": 50827264,
+    "ctx_voluntary": 47711,
+    "ctx_involuntary": 2235,
+    "minor_faults": 8279,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1100.933274188,
+    "cpu_pct": 4.0,
+    "rss_bytes": 50831360,
+    "ctx_voluntary": 48462,
+    "ctx_involuntary": 2246,
+    "minor_faults": 8279,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1101.933815312,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50831360,
+    "ctx_voluntary": 49213,
+    "ctx_involuntary": 2249,
+    "minor_faults": 8280,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1102.954244061,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50831360,
+    "ctx_voluntary": 49979,
+    "ctx_involuntary": 2254,
+    "minor_faults": 8280,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1103.970867092,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50831360,
+    "ctx_voluntary": 50745,
+    "ctx_involuntary": 2264,
+    "minor_faults": 8280,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1104.976125013,
+    "cpu_pct": 8.0,
+    "rss_bytes": 50831360,
+    "ctx_voluntary": 51495,
+    "ctx_involuntary": 2298,
+    "minor_faults": 8280,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1105.976865158,
+    "cpu_pct": 11.0,
+    "rss_bytes": 50835456,
+    "ctx_voluntary": 52245,
+    "ctx_involuntary": 2353,
+    "minor_faults": 8280,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4704
+  },
+  {
+    "t_monotonic": 1106.994838966,
+    "cpu_pct": 6.9,
+    "rss_bytes": 50835456,
+    "ctx_voluntary": 53011,
+    "ctx_involuntary": 2377,
+    "minor_faults": 8281,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1108.014004579,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50835456,
+    "ctx_voluntary": 53776,
+    "ctx_involuntary": 2397,
+    "minor_faults": 8281,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1109.019774866,
+    "cpu_pct": 8.0,
+    "rss_bytes": 50835456,
+    "ctx_voluntary": 54527,
+    "ctx_involuntary": 2414,
+    "minor_faults": 8281,
+    "major_faults": 0,
+    "cpu_temp_c": 50.634,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1110.039046063,
+    "cpu_pct": 8.8,
+    "rss_bytes": 50839552,
+    "ctx_voluntary": 55292,
+    "ctx_involuntary": 2477,
+    "minor_faults": 8282,
+    "major_faults": 0,
+    "cpu_temp_c": 50.634,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1111.04528026,
+    "cpu_pct": 9.9,
+    "rss_bytes": 50839552,
+    "ctx_voluntary": 56042,
+    "ctx_involuntary": 2528,
+    "minor_faults": 8282,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1112.045883854,
+    "cpu_pct": 8.0,
+    "rss_bytes": 50839552,
+    "ctx_voluntary": 56793,
+    "ctx_involuntary": 2553,
+    "minor_faults": 8282,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4752
+  },
+  {
+    "t_monotonic": 1113.064357671,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50839552,
+    "ctx_voluntary": 57559,
+    "ctx_involuntary": 2568,
+    "minor_faults": 8282,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1114.065325491,
+    "cpu_pct": 8.0,
+    "rss_bytes": 50839552,
+    "ctx_voluntary": 58311,
+    "ctx_involuntary": 2590,
+    "minor_faults": 8282,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4752
+  },
+  {
+    "t_monotonic": 1115.083625788,
+    "cpu_pct": 6.9,
+    "rss_bytes": 50843648,
+    "ctx_voluntary": 59077,
+    "ctx_involuntary": 2610,
+    "minor_faults": 8283,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1116.087110716,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50843648,
+    "ctx_voluntary": 59828,
+    "ctx_involuntary": 2630,
+    "minor_faults": 8283,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1117.104507082,
+    "cpu_pct": 6.9,
+    "rss_bytes": 50843648,
+    "ctx_voluntary": 60594,
+    "ctx_involuntary": 2660,
+    "minor_faults": 8283,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1118.105139677,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50847744,
+    "ctx_voluntary": 61345,
+    "ctx_involuntary": 2671,
+    "minor_faults": 8284,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1119.123555645,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50855936,
+    "ctx_voluntary": 62111,
+    "ctx_involuntary": 2680,
+    "minor_faults": 8286,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1120.14546361,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50855936,
+    "ctx_voluntary": 62877,
+    "ctx_involuntary": 2691,
+    "minor_faults": 8286,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4752
+  },
+  {
+    "t_monotonic": 1121.145692817,
+    "cpu_pct": 9.0,
+    "rss_bytes": 50864128,
+    "ctx_voluntary": 63628,
+    "ctx_involuntary": 2726,
+    "minor_faults": 8288,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1122.146058666,
+    "cpu_pct": 9.0,
+    "rss_bytes": 50864128,
+    "ctx_voluntary": 64378,
+    "ctx_involuntary": 2765,
+    "minor_faults": 8288,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4704
+  },
+  {
+    "t_monotonic": 1123.147048444,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50864128,
+    "ctx_voluntary": 65129,
+    "ctx_involuntary": 2792,
+    "minor_faults": 8288,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1124.165680154,
+    "cpu_pct": 3.9,
+    "rss_bytes": 50864128,
+    "ctx_voluntary": 65895,
+    "ctx_involuntary": 2801,
+    "minor_faults": 8288,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4848
+  },
+  {
+    "t_monotonic": 1125.187268853,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50868224,
+    "ctx_voluntary": 66661,
+    "ctx_involuntary": 2809,
+    "minor_faults": 8288,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4816
+  },
+  {
+    "t_monotonic": 1126.205460049,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50868224,
+    "ctx_voluntary": 67427,
+    "ctx_involuntary": 2820,
+    "minor_faults": 8289,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1127.205500744,
+    "cpu_pct": 7.0,
+    "rss_bytes": 50872320,
+    "ctx_voluntary": 68178,
+    "ctx_involuntary": 2854,
+    "minor_faults": 8290,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1128.225077164,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50872320,
+    "ctx_voluntary": 68944,
+    "ctx_involuntary": 2870,
+    "minor_faults": 8290,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4656
+  },
+  {
+    "t_monotonic": 1129.245231662,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50872320,
+    "ctx_voluntary": 69710,
+    "ctx_involuntary": 2876,
+    "minor_faults": 8290,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4608
+  },
+  {
+    "t_monotonic": 1130.245387681,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50872320,
+    "ctx_voluntary": 70461,
+    "ctx_involuntary": 2881,
+    "minor_faults": 8290,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1131.249539704,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50872320,
+    "ctx_voluntary": 71212,
+    "ctx_involuntary": 2892,
+    "minor_faults": 8290,
+    "major_faults": 0,
+    "cpu_temp_c": 47.712,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1132.267113379,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50876416,
+    "ctx_voluntary": 71978,
+    "ctx_involuntary": 2898,
+    "minor_faults": 8291,
+    "major_faults": 0,
+    "cpu_temp_c": 47.225,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4656
+  },
+  {
+    "t_monotonic": 1133.288091498,
+    "cpu_pct": 4.9,
+    "rss_bytes": 50880512,
+    "ctx_voluntary": 72744,
+    "ctx_involuntary": 2914,
+    "minor_faults": 8292,
+    "major_faults": 0,
+    "cpu_temp_c": 47.225,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1134.308652641,
+    "cpu_pct": 7.9,
+    "rss_bytes": 50880512,
+    "ctx_voluntary": 73510,
+    "ctx_involuntary": 2932,
+    "minor_faults": 8292,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4656
+  },
+  {
+    "t_monotonic": 1135.32969629,
+    "cpu_pct": 10.8,
+    "rss_bytes": 50880512,
+    "ctx_voluntary": 74275,
+    "ctx_involuntary": 3000,
+    "minor_faults": 8292,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4704
+  },
+  {
+    "t_monotonic": 1136.348324378,
+    "cpu_pct": 3.9,
+    "rss_bytes": 50880512,
+    "ctx_voluntary": 75041,
+    "ctx_involuntary": 3004,
+    "minor_faults": 8292,
+    "major_faults": 0,
+    "cpu_temp_c": 47.712,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1137.36644503,
+    "cpu_pct": 6.9,
+    "rss_bytes": 50880512,
+    "ctx_voluntary": 75807,
+    "ctx_involuntary": 3032,
+    "minor_faults": 8292,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1138.36656379,
+    "cpu_pct": 7.0,
+    "rss_bytes": 50888704,
+    "ctx_voluntary": 76558,
+    "ctx_involuntary": 3054,
+    "minor_faults": 8294,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1139.367581991,
+    "cpu_pct": 4.0,
+    "rss_bytes": 50888704,
+    "ctx_voluntary": 77309,
+    "ctx_involuntary": 3067,
+    "minor_faults": 8294,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4768
+  },
+  {
+    "t_monotonic": 1140.386260236,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50888704,
+    "ctx_voluntary": 78075,
+    "ctx_involuntary": 3071,
+    "minor_faults": 8294,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4704
+  },
+  {
+    "t_monotonic": 1141.38703516,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50888704,
+    "ctx_voluntary": 78826,
+    "ctx_involuntary": 3076,
+    "minor_faults": 8294,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1142.390482062,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50888704,
+    "ctx_voluntary": 79578,
+    "ctx_involuntary": 3090,
+    "minor_faults": 8294,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1143.409291352,
+    "cpu_pct": 9.8,
+    "rss_bytes": 50888704,
+    "ctx_voluntary": 80344,
+    "ctx_involuntary": 3111,
+    "minor_faults": 8294,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4704
+  },
+  {
+    "t_monotonic": 1144.412686046,
+    "cpu_pct": 11.0,
+    "rss_bytes": 50892800,
+    "ctx_voluntary": 81093,
+    "ctx_involuntary": 3154,
+    "minor_faults": 8295,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1145.42841538,
+    "cpu_pct": 7.8,
+    "rss_bytes": 50896896,
+    "ctx_voluntary": 81859,
+    "ctx_involuntary": 3167,
+    "minor_faults": 8296,
+    "major_faults": 0,
+    "cpu_temp_c": 49.66,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4752
+  },
+  {
+    "t_monotonic": 1146.428875819,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50896896,
+    "ctx_voluntary": 82610,
+    "ctx_involuntary": 3175,
+    "minor_faults": 8296,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1147.429043336,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50896896,
+    "ctx_voluntary": 83361,
+    "ctx_involuntary": 3187,
+    "minor_faults": 8296,
+    "major_faults": 0,
+    "cpu_temp_c": 48.199,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4784
+  },
+  {
+    "t_monotonic": 1148.448374863,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50896896,
+    "ctx_voluntary": 84127,
+    "ctx_involuntary": 3196,
+    "minor_faults": 8296,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1149.449247639,
+    "cpu_pct": 4.0,
+    "rss_bytes": 50900992,
+    "ctx_voluntary": 84878,
+    "ctx_involuntary": 3207,
+    "minor_faults": 8297,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1150.450994967,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50909184,
+    "ctx_voluntary": 85629,
+    "ctx_involuntary": 3233,
+    "minor_faults": 8298,
+    "major_faults": 0,
+    "cpu_temp_c": 49.173,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4640
+  },
+  {
+    "t_monotonic": 1151.45146834,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50909184,
+    "ctx_voluntary": 86380,
+    "ctx_involuntary": 3245,
+    "minor_faults": 8299,
+    "major_faults": 0,
+    "cpu_temp_c": 47.225,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1152.469538756,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50909184,
+    "ctx_voluntary": 87146,
+    "ctx_involuntary": 3262,
+    "minor_faults": 8299,
+    "major_faults": 0,
+    "cpu_temp_c": 47.712,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  },
+  {
+    "t_monotonic": 1153.469552653,
+    "cpu_pct": 6.0,
+    "rss_bytes": 50909184,
+    "ctx_voluntary": 87897,
+    "ctx_involuntary": 3278,
+    "minor_faults": 8299,
+    "major_faults": 0,
+    "cpu_temp_c": 50.147,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4704
+  },
+  {
+    "t_monotonic": 1154.470160961,
+    "cpu_pct": 5.0,
+    "rss_bytes": 50909184,
+    "ctx_voluntary": 88648,
+    "ctx_involuntary": 3282,
+    "minor_faults": 8299,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4672
+  },
+  {
+    "t_monotonic": 1155.488564087,
+    "cpu_pct": 5.9,
+    "rss_bytes": 50917376,
+    "ctx_voluntary": 89414,
+    "ctx_involuntary": 3299,
+    "minor_faults": 8301,
+    "major_faults": 0,
+    "cpu_temp_c": 48.686,
+    "cpu_frequency_khz": {
+      "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": 1800000
+    },
+    "sensor_temp_raw": 4720
+  }
+]

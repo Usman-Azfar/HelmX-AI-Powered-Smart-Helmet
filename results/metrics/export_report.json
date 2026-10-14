@@ -1,0 +1,22 @@
+{
+  "keras": {
+    "size_bytes": 792902,
+    "benchmark_this_machine": null
+  },
+  "fp16": {
+    "size_bytes": 133920,
+    "benchmark_this_machine": {
+      "mean_ms": 0.16200400002162496,
+      "p95_ms": 0.30537500001628354,
+      "n_runs": 100
+    }
+  },
+  "int8": {
+    "size_bytes": 83568,
+    "benchmark_this_machine": {
+      "mean_ms": 0.22503199998936907,
+      "p95_ms": 0.36270499936108536,
+      "n_runs": 100
+    }
+  }
+}

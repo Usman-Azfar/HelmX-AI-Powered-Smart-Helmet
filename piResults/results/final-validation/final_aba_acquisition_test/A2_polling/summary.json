@@ -1,0 +1,233 @@
+{
+  "label": "A2_polling",
+  "acquisition_mode": "polling",
+  "context": "HelmX_FINAL_Pi_ABA_Acquisition_Test.txt condition run",
+  "metadata": {
+    "date": "2026-09-20",
+    "start_epoch": 1789915723.2693026,
+    "duration_s": 1200.0013100980032,
+    "device": {
+      "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+      "machine": "aarch64",
+      "python": "3.11.2",
+      "cpu_count": 4,
+      "ram_gb": 7.64,
+      "model": "Raspberry Pi 4 Model B Rev 1.5",
+      "tflite_runtime_version": "2.14.0"
+    },
+    "register_dump": {
+      "raw_hex": {
+        "SMPLRT_DIV": "0x0",
+        "CONFIG": "0x0",
+        "GYRO_CONFIG": "0x0",
+        "ACCEL_CONFIG": "0x0",
+        "FIFO_EN": "0x0",
+        "INT_ENABLE": "0x0",
+        "INT_STATUS": "0x11",
+        "PWR_MGMT_1": "0x0",
+        "PWR_MGMT_2": "0x0",
+        "WHO_AM_I": "0x70",
+        "USER_CTRL": "0x0"
+      },
+      "who_am_i": "0x70"
+    },
+    "service_state": {
+      "services": {
+        "helmx-ble.service": "activating",
+        "mosquitto.service": "active",
+        "rhasspy.service": "active",
+        "helmx_assistant.service": "activating",
+        "wayvnc.service": "active",
+        "wayvnc-control.service": "active",
+        "rpi-connect.service": "inactive",
+        "rpi-connect-wayvnc.service": "inactive",
+        "bluetooth.service": "active"
+      },
+      "cpu_governor": "ondemand",
+      "cpu_frequency_khz": "1800000"
+    },
+    "fifo_meta": null
+  },
+  "model_score_analysis": {
+    "classifier_prob": {
+      "min": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "n_above_threshold": 0,
+      "threshold": 0.9892255067825317
+    },
+    "reconstruction_error": {
+      "min": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "p999": 0.0,
+      "max": 0.0,
+      "n_above_threshold": 0,
+      "threshold": 10.878735866546593,
+      "bands_around_threshold": {
+        "r_lt_8": 3986,
+        "8_le_r_lt_9": 0,
+        "9_le_r_lt_10": 0,
+        "10_le_r_lt_theta_r": 0,
+        "theta_r_le_r_lt_11.5": 0,
+        "11.5_le_r_lt_12.5": 0,
+        "r_ge_12.5": 0
+      }
+    }
+  },
+  "trigger_analysis": {
+    "classifier_only_positive_windows": 0,
+    "reconstruction_only_positive_windows": 0,
+    "both_positive_windows": 0,
+    "neither_positive_windows": 3986,
+    "total_or_positive_windows": 0,
+    "longest_consecutive_or_positive_run": 0,
+    "n_2window_sequences": 0,
+    "n_3window_confirmed_triggers": 0,
+    "total_confirmed_triggers": 0,
+    "trigger_events": []
+  },
+  "physical_sensor_summary": {
+    "ax_ms2": {
+      "min": -5.2265422241210935,
+      "max": -4.953603234863281,
+      "mean": -5.13963628324856,
+      "std": 0.02168439208267261,
+      "rms": 5.139682026832503,
+      "abs_max": 5.2265422241210935
+    },
+    "ay_ms2": {
+      "min": -8.157045056152343,
+      "max": -7.939172705078125,
+      "mean": -8.068162988100786,
+      "std": 0.021317367637541447,
+      "rms": 8.068191149986617,
+      "abs_max": 8.157045056152343
+    },
+    "az_ms2": {
+      "min": -2.4253262817382812,
+      "max": -2.1356278808593747,
+      "mean": -2.2917657507058307,
+      "std": 0.03517343309778028,
+      "rms": 2.292035651228868,
+      "abs_max": 2.4253262817382812
+    },
+    "gx_dps": {
+      "min": -0.8015267175572519,
+      "max": 0.3435114503816794,
+      "mean": -0.19733700396278872,
+      "std": 0.1324969745760239,
+      "rms": 0.2376916940172904,
+      "abs_max": 0.8015267175572519
+    },
+    "gy_dps": {
+      "min": 1.534351145038168,
+      "max": 2.7557251908396947,
+      "mean": 2.1296568683269403,
+      "std": 0.14277128097166092,
+      "rms": 2.1344371659719568,
+      "abs_max": 2.7557251908396947
+    },
+    "gz_dps": {
+      "min": 0.31297709923664124,
+      "max": 1.7709923664122138,
+      "mean": 1.0210383913523242,
+      "std": 0.16070435001282818,
+      "rms": 1.0336078969940135,
+      "abs_max": 1.7709923664122138
+    },
+    "accel_magnitude_ms2": {
+      "mean": 9.836918362861145,
+      "std": 0.0224570384696761,
+      "max": 9.92696294616081
+    },
+    "gyro_magnitude_dps": {
+      "mean": 2.3790060540825197,
+      "std": 0.1448959497512409,
+      "max": 3.055323843336098
+    }
+  },
+  "system_state": {
+    "resources_summary": {
+      "process_cpu_percent": {
+        "mean": 2.391835016835017,
+        "p95": 3.9,
+        "max": 5.0,
+        "min": 0.0
+      },
+      "process_rss_mb": {
+        "mean": 77.00737189604376,
+        "p95": 102.49394531249999,
+        "max": 105.30078125,
+        "min": 48.09375
+      },
+      "system_cpu_percent": {
+        "mean": 7.847222222222222,
+        "p95": 20.1,
+        "max": 58.7,
+        "min": 1.2
+      },
+      "temperature_c": {
+        "mean": 55.28804713804713,
+        "p95": 56.4,
+        "max": 57.9,
+        "min": 53.5
+      }
+    },
+    "throttling_status": {
+      "raw_hex": "0x0",
+      "under_voltage_now": false,
+      "arm_freq_capped_now": false,
+      "currently_throttled": false,
+      "soft_temp_limit_now": false,
+      "under_voltage_occurred": false,
+      "arm_freq_capped_occurred": false,
+      "throttling_occurred": false,
+      "soft_temp_limit_occurred": false
+    }
+  },
+  "timing_and_latency": {
+    "label": "A2_polling",
+    "acquisition_mode": "polling",
+    "duration_s": 1200.0013100980032,
+    "n_raw_samples": 59999,
+    "achieved_sample_rate_hz": 49.999112080219255,
+    "nominal_decision_positions": 3996,
+    "scored_windows": 3986,
+    "invalidated_windows": 3,
+    "never_formed_or_suppressed_positions": 10,
+    "V_T": 0.9992479318124843,
+    "C_D": 0.9974974974974975,
+    "timing_gaps": 3,
+    "gaps_per_min": 0.1499998362379284,
+    "dt_lt_10ms_count": 1,
+    "too_fast_per_min": 0.0499999454126428,
+    "dropped_equivalent_samples": 3,
+    "dropped_equivalent_per_min": 0.1499998362379284,
+    "dt_mean_ms": 20.0003533394113,
+    "dt_p50_ms": 19.99584249824693,
+    "dt_p95_ms": 20.187830701797793,
+    "dt_p99_ms": 21.059054020115582,
+    "dt_p999_ms": 22.994850611805337,
+    "dt_max_ms": 36.65349099901505,
+    "i2c_failures": 0,
+    "reconnects": 0,
+    "exceptions": 0,
+    "latency_mean_ms": 1.6618421781143102,
+    "latency_p50_ms": 1.5921385020192247,
+    "latency_p95_ms": 1.9923865002056118,
+    "latency_p99_ms": 2.7488597004776247,
+    "latency_p999_ms": 5.70761211543868,
+    "latency_max_ms": 7.870473000366474,
+    "latency_count_gt_20ms": 0,
+    "latency_count_gt_50ms": 0,
+    "latency_count_gt_100ms": 0,
+    "latency_count_gt_300ms": 0
+  }
+}

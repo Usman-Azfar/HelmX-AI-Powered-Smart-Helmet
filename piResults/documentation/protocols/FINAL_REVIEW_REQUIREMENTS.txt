@@ -1,0 +1,1688 @@
+
+HELMX IEEE SENSORS JOURNAL
+FINAL COMPLETE RASPBERRY PI TEST / EVIDENCE REQUEST
+===================================================
+
+STATUS
+------
+This is the FINAL consolidated Pi-side test request for the current HelmX IEEE Sensors Journal paper.
+
+It combines:
+1. the original Pi evidence/test request,
+2. the previous review-driven Pi requests,
+3. the later A-B-A acquisition request,
+4. the latest reviewer criticisms,
+5. the earlier harsh review,
+6. all remaining Pi-side measurements that can still strengthen the paper without:
+   - a real-world road campaign,
+   - deliberate crash testing,
+   - a shaker table,
+   - a reference IMU,
+   - a USB power meter,
+   - an oscilloscope,
+   - a calibrated impact rig,
+   - or any other new external measurement device.
+
+IMPORTANT:
+Some items below are REQUIRED because they resolve current contradictions.
+Some are HIGH VALUE.
+Some are OPTIONAL.
+Some are ANALYSIS-ONLY and can be performed on the Pi or a desktop using existing logs/models.
+Some are FUTURE-ONLY because they require new external equipment.
+
+Do not interpret the presence of every item in this file as meaning every item must be completed before submission.
+The priority tiers near the end define what should actually be done first.
+
+
+===================================================
+A. CRITICAL TASK 1 — RECHECK SENSOR IDENTITY
+===================================================
+
+WHY THIS IS NEEDED
+------------------
+The physical breakout/module is confirmed by the author as labeled MPU6050.
+
+However, the archived register dump returned:
+
+WHO_AM_I = 0x70
+
+The paper cannot ignore a disagreement between:
+- physical module marking, and
+- register-level device identity.
+
+The objective is NOT to relabel the sensor without evidence.
+The objective is to create a clean, repeatable identity record.
+
+
+A1. THREE-BOOT IDENTITY TEST
+----------------------------
+
+Perform three completely separate Pi + sensor power cycles.
+
+For each boot:
+
+1. power the Pi and IMU off completely,
+2. wait at least 10 seconds,
+3. power on,
+4. confirm the device I2C address,
+5. read WHO_AM_I 100 times,
+6. save every returned value,
+7. read configuration registers,
+8. save i2cdetect output.
+
+Registers to capture:
+
+0x19  SMPLRT_DIV
+0x1A  CONFIG / DLPF_CFG
+0x1B  GYRO_CONFIG / FS_SEL
+0x1C  ACCEL_CONFIG / AFS_SEL
+0x23  FIFO_EN
+0x37  INT_PIN_CFG
+0x38  INT_ENABLE
+0x3A  INT_STATUS
+0x6A  USER_CTRL
+0x6B  PWR_MGMT_1
+0x6C  PWR_MGMT_2
+0x72  FIFO_COUNT_H
+0x73  FIFO_COUNT_L
+0x75  WHO_AM_I
+
+Also save:
+- I2C device address,
+- I2C bus number,
+- configured I2C baud,
+- OS/kernel,
+- script hash.
+
+Required output:
+identity_boot1.txt
+identity_boot2.txt
+identity_boot3.txt
+identity_summary.csv
+
+Summary fields:
+- boot number,
+- unique WHO_AM_I values observed,
+- count per value,
+- I2C address,
+- register values,
+- decoded accel range,
+- decoded gyro range,
+- decoded DLPF setting,
+- sample-rate-divider setting,
+- FIFO state,
+- DATA_RDY state.
+
+STOP CONDITION:
+If WHO_AM_I is identical across all 300 reads, record that result exactly.
+Do not "correct" it manually.
+
+
+===================================================
+B. CRITICAL TASK 2 — CORRECT AND REVALIDATE FIFO
+===================================================
+
+WHY THIS IS NOW CRITICAL
+------------------------
+The previous FIFO A-B-A experiment showed physically implausible full-scale motion while the helmet was stationary.
+
+Polling A1/A2 looked stationary.
+FIFO B showed multi-axis rail behavior.
+
+Before the FIFO experiment can be used scientifically, the FIFO implementation must be audited.
+
+The most important checks are:
+- FIFO packet byte order,
+- FIFO_EN contents,
+- accel/gyro order,
+- signed int16 conversion,
+- endianness,
+- sensitivity scale factors,
+- packet length,
+- FIFO count handling,
+- overflow handling,
+- decimation rule,
+- sample timestamp assignment.
+
+
+B1. DOCUMENT THE EXACT FIFO PACKET FORMAT
+----------------------------------------
+
+Before rerunning anything, create:
+
+fifo_packet_definition.txt
+
+Record:
+
+- FIFO_EN value used,
+- enabled sensor channels,
+- bytes per sample packet,
+- expected byte sequence,
+- actual unpack order in code,
+- endianness,
+- accel sensitivity constant,
+- gyro sensitivity constant,
+- physical-unit conversion formulas,
+- sensor internal output rate,
+- host drain rate,
+- FIFO read burst size,
+- FIFO overflow detection,
+- FIFO reset behavior,
+- decimation/subsampling rule,
+- whether samples are averaged or simply selected,
+- how timestamps are assigned to samples obtained in one burst.
+
+The parser must be independently checked against the register map used by the actual device.
+
+
+B2. STATIC FIFO SANITY TEST — NO MODEL
+--------------------------------------
+
+Helmet:
+- fully assembled,
+- stationary,
+- same position as polling test.
+
+Duration:
+- minimum 5 minutes,
+- preferred 10 minutes.
+
+DO NOT run inference yet.
+
+Capture raw FIFO samples only.
+
+Report per axis:
+
+raw int16:
+- mean
+- std
+- min
+- max
+- p1
+- p50
+- p99
+- rail-count -32768
+- rail-count +32767
+
+converted:
+- mean
+- std
+- RMS
+- min
+- max
+
+for:
+- ax
+- ay
+- az
+- gx
+- gy
+- gz
+
+Also:
+- accel magnitude mean/std/min/max,
+- gyro magnitude mean/std/min/max,
+- packet count,
+- FIFO overflow count,
+- malformed packet count,
+- bytes read,
+- effective output sample rate.
+
+PASS CRITERION:
+The stationary FIFO signal must be physically plausible and broadly consistent with polling stationary statistics.
+
+If stationary FIFO still reaches ±2 g / ±250 deg/s rails:
+STOP.
+Do not run model inference.
+Debug parser/configuration first.
+
+
+B3. POLLING-vs-FIFO RAW EQUIVALENCE TEST
+----------------------------------------
+
+Run:
+
+A = polling stationary for 10 min
+B = corrected FIFO stationary for 10 min
+
+Do not move helmet between conditions.
+
+Compare each axis:
+
+- mean difference,
+- std ratio,
+- RMS difference,
+- min/max,
+- magnitude statistics,
+- noise spectrum if convenient,
+- zero-frequency/bias shift.
+
+Also compare:
+- accel magnitude mean,
+- gyro magnitude mean,
+- temperature if available.
+
+Create:
+polling_fifo_raw_equivalence.csv
+polling_fifo_raw_equivalence.txt
+
+
+B4. FINAL CORRECTED A-B-A ACQUISITION TEST
+------------------------------------------
+
+Only run this after B2/B3 pass.
+
+A1:
+deployed polling — 20 min
+
+B:
+corrected FIFO acquisition — 20 min
+
+A2:
+deployed polling — 20 min
+
+Keep unchanged:
+- helmet position,
+- room,
+- physical surface,
+- model,
+- thresholds,
+- causal preprocessing,
+- CPU governor,
+- CPU frequency,
+- TFLite thread count,
+- background services,
+- scheduler policy,
+- Python environment.
+
+For every scored window save:
+- timestamp,
+- classifier probability,
+- reconstruction error,
+- classifier crossing,
+- reconstruction crossing,
+- OR decision,
+- consecutive positive count,
+- confirmed alert flag,
+- processing latency,
+- acquisition mode.
+
+For each condition report:
+
+TIMING
+- samples
+- actual sample rate
+- dt mean
+- dt std
+- dt RMS error from 20 ms
+- dt p50
+- dt p95
+- dt p99
+- dt p99.9
+- max dt
+- dt <10 ms count
+- dt 10–30 ms count
+- dt 30–60 ms count
+- dt >60 ms count
+- gaps/min
+- dropped-equivalent/min
+- I2C failures
+- FIFO overflows
+- reconnects
+- exceptions
+
+COVERAGE
+- nominal decision positions
+- scored windows
+- invalid candidates
+- suppressed/unformed decisions
+- V_T
+- C_D
+- 90-sample confirmation survival
+
+MODEL SCORES
+- classifier min/median/p95/p99/max
+- reconstruction min/median/p95/p99/p99.9/max
+- classifier threshold crossings
+- reconstruction threshold crossings
+- OR-positive windows
+- longest positive run
+- three-window confirmation sequences
+- actual cooldown-gated confirmed alert events
+
+RAW SIGNAL
+- all per-axis means/std/min/max/RMS
+- accel magnitude
+- gyro magnitude
+- clipping counts
+
+IMPORTANT:
+Report both:
+1. overlapping three-window confirmation positions,
+2. actual cooldown-gated alert events.
+
+Do not call them the same thing.
+
+
+B5. FIFO REPLAY DIAGNOSTIC
+--------------------------
+
+If corrected FIFO still changes scores:
+
+Save raw FIFO samples.
+
+Offline, replay those exact FIFO samples through:
+- the exact deployed EMA,
+- exact normalizer,
+- exact windowing,
+- exact INT8 model,
+- exact thresholds.
+
+Then verify whether the live score shift reproduces.
+
+Also replay polling raw samples through exactly the same offline pipeline.
+
+Goal:
+separate:
+- acquisition-data difference,
+- live implementation difference,
+- preprocessing difference,
+- model difference.
+
+
+===================================================
+C. CRITICAL TASK 3 — HIGH-RANGE / FILTERED SENSOR CONFIG
+===================================================
+
+PURPOSE
+-------
+Current physical configuration:
+- accel ±2 g,
+- gyro ±250 deg/s,
+- wide-band / DLPF-off-type configuration.
+
+Benign handling has already reached gyro saturation.
+
+This test does NOT validate crash detection.
+It evaluates whether a more physically plausible measurement envelope can be used without breaking the frozen pipeline.
+
+
+C1. HIGH-RANGE CONFIGURATION
+----------------------------
+
+Preferred configuration if supported by the confirmed sensor/register map:
+
+Accelerometer:
+±16 g
+
+Gyroscope:
+±2000 deg/s
+
+DLPF:
+choose one configuration that provides meaningful bandwidth limiting compatible with the 50-Hz model input.
+
+Preferred target:
+a bandwidth below or near the 25-Hz Nyquist region if available and appropriate.
+
+Do not guess the register values.
+Decode and document them.
+
+Record:
+- AFS_SEL,
+- FS_SEL,
+- DLPF_CFG,
+- SMPLRT_DIV,
+- actual internal ODR,
+- host target sampling rate,
+- exact sensitivity constants used.
+
+
+C2. HIGH-RANGE STATIONARY NOISE TEST
+------------------------------------
+
+Duration:
+10 minutes.
+
+Report all axis metrics:
+- mean,
+- std,
+- RMS,
+- min,
+- max,
+- quantization step size,
+- accel magnitude,
+- gyro magnitude,
+- temperature,
+- sample timing.
+
+Compare against current ±2 g / ±250 deg/s condition.
+
+
+C3. HIGH-RANGE BENIGN-MOTION BATTERY
+------------------------------------
+
+Repeat:
+1. stationary
+2. donning
+3. removing helmet
+4. gentle rotation
+5. repeated tilt
+6. moderate rotation
+7. moderate shake
+8. stronger safe shake
+9. soft placement
+10. controlled bump
+11. hand-carried walking-like motion
+
+For each:
+- duration
+- samples
+- scored windows
+- per-axis extrema
+- rail counts
+- classifier max
+- reconstruction max
+- classifier crossings
+- reconstruction crossings
+- OR-positive windows
+- confirmed alerts
+
+Primary question:
+Does the high-range configuration eliminate the benign-motion clipping seen at ±250 deg/s?
+
+
+C4. HIGH-RANGE 20-MIN LIVE POLLING RUN
+--------------------------------------
+
+20 minutes, stationary or otherwise explicitly documented.
+
+Report:
+- V_T
+- C_D
+- timing statistics
+- processing latency
+- classifier distribution
+- reconstruction distribution
+- alerts
+- CPU/RSS/temp
+- I2C failures
+
+Purpose:
+confirm technical compatibility of a wider-range sensor configuration with the frozen inference pipeline.
+
+Do NOT claim this proves crash detection performance.
+
+
+===================================================
+D. CRITICAL TASK 4 — TRUE DEPLOYMENT-REALISTIC LINUX RUN
+===================================================
+
+PURPOSE
+-------
+Previous "reduced" runs still retained interactive desktop/IDE/agent activity.
+
+Run a deployment-realistic Linux condition.
+
+
+D1. HEADLESS / NO-IDE POLLING RUN
+---------------------------------
+
+Use deployed polling path.
+
+Close/stop:
+- desktop session if practical,
+- VS Code,
+- interactive coding agent,
+- VNC/Pi Connect if not required,
+- other non-HelmX interactive applications.
+
+Keep only required HelmX/system services.
+
+Duration:
+20–30 minutes.
+
+Report complete timing/coverage/latency/resource metrics.
+
+
+D2. HEADLESS + SCHED_FIFO + CPU AFFINITY
+----------------------------------------
+
+Use:
+- deployed polling path,
+- true reduced interactive environment,
+- SCHED_FIFO or equivalent real-time scheduling,
+- explicit CPU affinity.
+
+Document:
+- priority,
+- CPU core,
+- process/thread structure,
+- exact command,
+- privileges,
+- whether acquisition and inference share one thread/process.
+
+Duration:
+20–30 minutes.
+
+Report:
+- V_T
+- C_D
+- 90-sample survival
+- gaps/min
+- dt distribution
+- processing latency
+- runqueue data if possible
+- I2C failures
+- CPU/RSS/temp.
+
+
+D3. OPTIONAL HEADLESS NORMAL-SCHEDULER CONTROL
+----------------------------------------------
+
+For clean attribution, run:
+
+A:
+headless normal scheduling
+
+B:
+headless + SCHED_FIFO + affinity
+
+same duration and setup.
+
+This isolates scheduling policy from merely removing the desktop.
+
+
+D4. OPTIONAL RANDOMIZED REPEATS
+-------------------------------
+
+If time permits:
+6–8 matched pairs.
+
+Randomize order:
+AB or BA.
+
+10–15 min each is sufficient.
+
+Purpose:
+obtain a more credible paired estimate than n=3.
+
+Report each pair individually.
+Do not hide reversals.
+
+===================================================
+E. SENSOR TIMING / JITTER CHARACTERIZATION
+===================================================
+
+E1. COMPLETE DELTA-T HISTOGRAM
+------------------------------
+
+Using raw timestamps already available or a new 20-min run, report:
+
+- mean dt
+- median
+- std
+- RMS timing error relative to 20 ms
+- p90
+- p95
+- p99
+- p99.9
+- maximum
+
+Counts:
+- <10 ms
+- 10–15 ms
+- 15–25 ms
+- 25–30 ms
+- 30–40 ms
+- 40–60 ms
+- 60–100 ms
+- >100 ms
+
+Also save histogram bins.
+
+
+E2. SUB-30-MS JITTER EFFECT
+---------------------------
+
+The current guard allows dt values below 30 ms to enter windows.
+
+Compute:
+- how often dt deviates from 20 ms by >2 ms,
+- >5 ms,
+- >8 ms,
+- whether score distributions correlate with local timing jitter.
+
+No new hardware needed.
+
+
+E3. EMA-vs-REAL-DT DIAGNOSTIC
+-----------------------------
+
+The deployed EMA uses a fixed alpha.
+
+Offline, compare:
+1. fixed alpha deployed behavior,
+2. alpha recomputed from actual measured dt.
+
+Use identical recorded live sequences.
+
+Report:
+- classifier score MAE,
+- reconstruction MAE,
+- decision agreement,
+- threshold flips.
+
+Purpose:
+quantify whether scheduler jitter changes the effective gravity-filter dynamics.
+
+
+===================================================
+F. STREAM-GUARD POLICY SENSITIVITY
+===================================================
+
+F1. INTERPOLATION SENSITIVITY
+-----------------------------
+
+Offline analysis using existing sequences.
+
+Compare:
+
+Policy A:
+current behavior:
+- dt >30 ms invalidates,
+- buffer reset,
+- 60 fresh samples required.
+
+Policy B:
+interpolate one isolated missing sample for short gaps.
+
+Suggested gap range:
+30–60 ms only.
+
+Optional Policy C:
+hold-last-sample for one isolated missing sample.
+
+Report:
+- recovered C_D,
+- class-specific F_D,
+- OR-decision changes,
+- confirmed event changes.
+
+Purpose:
+determine how much coverage loss is caused by scheduler gaps versus conservative guard policy.
+
+
+F2. GAP-THRESHOLD SENSITIVITY
+-----------------------------
+
+Offline only.
+
+Evaluate:
+- 25 ms
+- 30 ms deployed
+- 35 ms
+- 40 ms
+
+Do not retune model thresholds.
+
+Report:
+- V_T
+- C_D
+- score fidelity
+- event outcomes.
+
+This is a robustness analysis, not a recommendation to change deployed thresholds.
+
+
+===================================================
+G. TRACE-ONSET TO LOCAL GPIO TIMING
+===================================================
+
+OPTIONAL BUT HIGH-VALUE.
+
+Use controlled trace injection only.
+
+Select:
+10–20 held-out traces.
+
+For each:
+record timestamps for:
+- injected trace onset,
+- first anomalous decision,
+- second anomalous decision,
+- third anomalous decision,
+- confirmation,
+- GPIO rising edge,
+- GPIO falling edge.
+
+Report:
+- onset-to-first-anomaly
+- onset-to-confirmation
+- onset-to-GPIO
+- first-anomaly-to-confirmation
+- confirmation-to-GPIO
+
+Use:
+median / p95 / max.
+
+IMPORTANT:
+Call this:
+"controlled injected-trace onset-to-local-alert latency"
+
+Do NOT call it physical crash-onset latency.
+
+
+===================================================
+H. REBOOT / STATE REPEATABILITY
+===================================================
+
+H1. THREE-BOOT REPEATABILITY
+----------------------------
+
+On each of three boots:
+
+- identity register capture,
+- 5-min stationary baseline,
+- same short benign-motion sequence.
+
+Report:
+- axis bias/noise,
+- classifier baseline,
+- reconstruction baseline,
+- timing,
+- register consistency,
+- triggers.
+
+Do not interpret manually performed motion as amplitude-matched unless measured.
+
+
+H2. EMA STATE / LONG-PAUSE BEHAVIOR
+-----------------------------------
+
+Test:
+- normal run,
+- trigger/cancellation pause if applicable,
+- resume,
+- long idle >1 s,
+- resume.
+
+Record:
+- EMA state reset/preserved behavior,
+- first 120 samples after resume,
+- score transient.
+
+Purpose:
+verify no post-pause score artifact.
+
+
+===================================================
+I. TEMPERATURE / THERMAL OPTIONAL TESTS
+===================================================
+
+I1. LONG STATIONARY THERMAL RUN
+-------------------------------
+
+Already substantially covered by 90-min and 3-h soaks.
+
+No new run required unless desired.
+
+If repeated:
+- 3 h is enough.
+
+Record:
+- CPU temp
+- throttle flags
+- sensor temp if exposed
+- score drift over time
+- gap rate over time
+- bias drift over time
+
+
+I2. OPTIONAL WARM-START COMPARISON
+----------------------------------
+
+Compare first 10 min after boot versus after >=60 min operation.
+
+Report stationary:
+- accel bias/noise
+- gyro bias/noise
+- reconstruction baseline
+- classifier baseline
+
+Purpose:
+check warm-up drift without external equipment.
+
+
+===================================================
+J. DATA-READY INTERRUPT / KERNEL DRIVER OPTIONAL TESTS
+===================================================
+
+These are NOT mandatory if FIFO is corrected and the deployment scope remains polling-based.
+
+J1. DATA_RDY INTERRUPT ACQUISITION
+----------------------------------
+
+If GPIO wiring already exists / can be done with existing hardware only:
+
+Use sensor DATA_RDY interrupt.
+
+Run:
+20 min.
+
+Compare to polling:
+- dt distribution
+- V_T
+- C_D
+- CPU
+- latency
+- score distributions
+- I2C failures.
+
+Do not purchase new hardware for this test.
+
+
+J2. LINUX IIO BUFFERED DRIVER
+-----------------------------
+
+OPTIONAL.
+
+If supported by the current OS/kernel and device:
+
+try inv_mpu6050 / IIO buffered acquisition.
+
+Run:
+20 min.
+
+Report same metrics.
+
+This is useful as an acquisition baseline but not required.
+
+
+J3. FIFO + DATA_RDY
+-------------------
+
+OPTIONAL.
+
+Only after FIFO parser is verified.
+
+Use DATA_RDY to pace/drain FIFO.
+
+Report:
+- raw equivalence
+- timing
+- model-score equivalence.
+
+
+===================================================
+K. SCHEDULER PROFILING — OPTIONAL EXTENSION
+===================================================
+
+K1. 6–8 RANDOMIZED MATCHED PAIRS
+--------------------------------
+
+Only if stronger scheduler statistics are desired.
+
+Conditions:
+A = normal/deployment load
+B = reduced/headless
+
+Randomize order AB/BA.
+
+Duration:
+10–15 min each.
+
+Report:
+- each pair individually
+- paired difference in gaps/min
+- paired difference in V_T
+- paired difference in C_D
+- paired difference in 90-sample survival
+- paired difference in p99 processing
+- perf sched wait distribution
+
+Use:
+mean difference,
+median difference,
+95% interval,
+not just maxima.
+
+
+K2. GC / PYTHON PAUSE LOGGING
+-----------------------------
+
+Optional.
+
+Instrument:
+- Python garbage collection callbacks,
+- voluntary/involuntary context switches,
+- page faults.
+
+Correlate:
+- long dt events,
+- processing-latency tails,
+- GC timestamps.
+
+Purpose:
+identify whether interpreter/runtime pauses contribute.
+
+
+===================================================
+L. MODEL / QUANTIZATION ANALYSES THAT CAN RUN ON PI OR DESKTOP
+===================================================
+
+These are not physical Pi tests but require no external equipment.
+Include them in the final evidence package.
+
+L1. FULL COMPOSED DEPLOYED-CHAIN FIDELITY
+-----------------------------------------
+
+Reference:
+offline floating pipeline.
+
+Transformed:
+causal preprocessing
++ INT8
++ full classifier/reconstruction OR rule
++ 3-window confirmation.
+
+Report:
+- overall 2x2
+- normal 2x2
+- crash-like 2x2
+- precision
+- recall
+- F1
+- event trigger outcome
+- trigger-window index
+- branch attribution.
+
+This is one of the most important remaining analyses.
+
+
+L2. CAUSAL PREPROCESSING CRASH-CLASS 2x2
+----------------------------------------
+
+Publish exact transitions:
+
+reference negative -> causal negative
+reference negative -> causal positive
+reference positive -> causal negative
+reference positive -> causal positive
+
+Also:
+- session/source of each flipped crash-like window,
+- score margins,
+- whether flip participated in a 3-window confirmation,
+- trigger-time changes.
+
+
+L3. INT8 CLASS 2x2
+------------------
+
+Same structure as L2.
+
+Report:
+- normal
+- crash-like
+- classifier branch
+- reconstruction branch
+- final OR rule if available.
+
+
+L4. SESSION-CLUSTERED BOOTSTRAP
+-------------------------------
+
+Resample whole sessions.
+
+Do NOT bootstrap overlapping windows independently.
+
+Use for:
+- crash-like causal F_D
+- INT8 F_D
+- composed-chain precision/recall/F1
+- overall F_D.
+
+Report 95% intervals.
+
+
+L5. HIGH-RECALL OPERATING-POINT SENSITIVITY
+-------------------------------------------
+
+If a higher-recall threshold was frozen during original development, evaluate it as sensitivity only.
+
+Report:
+- precision
+- recall
+- F1
+- causal fidelity
+- INT8 fidelity
+- class-specific flips.
+
+Do not redefine deployed policy.
+
+
+L6. PHYSICAL FRONT-END EMULATION
+--------------------------------
+
+Emulate current deployed limits on held-out windows:
+
+Current:
+- accel clip ±2 g
+- gyro clip ±250 deg/s
+- 16-bit quantization
+
+Then run model pipeline.
+
+Report:
+- fraction normal windows clipped
+- fraction crash-like windows clipped
+- per-axis clipping
+- change in peak accel feature
+- change in peak gyro feature
+- change in peak jerk
+- decision fidelity
+- recall/precision/F1 change.
+
+Repeat with:
+- accel ±16 g
+- gyro ±2000 deg/s
+
+Purpose:
+quantify sensitivity to the physical range without claiming actual crash measurement.
+
+
+L7. INT8 CALIBRATION-RANGE AUDIT
+--------------------------------
+
+Compare:
+- 8 crash-like calibration windows
+- all 143 crash-like test windows
+- outlier 5410
+
+For each channel:
+- normalized min/max
+- physical min/max if available
+- percent outside calibration range.
+
+Report whether outlier exceeds representative-set amplitude coverage.
+
+
+L8. CRASH-ENRICHED INT8 DIAGNOSTIC CONVERSION
+---------------------------------------------
+
+Diagnostic only.
+
+Create:
+A = original calibration set
+B = crash-enriched representative set
+C = amplitude-stratified set
+
+Compare:
+- classifier MAE
+- reconstruction MAE
+- threshold agreement
+- outlier 5410
+- class-specific agreement.
+
+Do not replace deployed model in main experiment unless explicitly reframed.
+
+
+L9. OPERATOR-LEVEL OUTLIER TRACE
+--------------------------------
+
+If not already complete:
+
+trace window 5410.
+
+For every important tensor:
+- dtype
+- scale
+- zero-point
+- min
+- max
+- saturation count
+- mean.
+
+Identify first strong divergence if possible.
+
+If mechanism remains unclear:
+state that directly.
+
+
+L10. FEATURE ABLATION
+---------------------
+
+OPTIONAL.
+
+Train/evaluate or replay:
+1. temporal tensor only
+2. temporal tensor + seven scalars
+
+Report:
+- precision
+- recall
+- F1
+- PR-AUC if available.
+
+Purpose:
+answer reviewer question on whether auxiliary scalars contribute.
+
+If not feasible:
+retain explicit non-claim that their incremental contribution was not isolated.
+
+
+===================================================
+M. TRAINING / DATA PROVENANCE ANALYSES
+===================================================
+
+No new Pi hardware needed.
+
+M1. PER-SOURCE TABLE
+--------------------
+
+For every source:
+- source name
+- physical/simulated
+- sensor placement
+- native rate
+- original units
+- original full-scale if known
+- anti-alias preprocessing if known
+- session count
+- train/val/test count
+- normal/crash-like windows
+- resampling method
+- padding method
+- labeling type.
+
+If unknown:
+write "not available" instead of guessing.
+
+
+M2. WEAK-LABEL DISCLOSURE
+-------------------------
+
+Explicitly document:
+ANOMALY_TOP_FRACTION = 0.3
+
+Explain:
+top 30% highest-severity windows inside fall/near-fall sessions were assigned positive weak labels.
+
+Record exact severity metric.
+
+
+M3. TEST-SESSION COMPOSITION
+----------------------------
+
+For each of 10 held-out sessions:
+- source
+- class/session type
+- windows
+- positive weak labels
+- reference trigger yes/no
+- causal trigger yes/no
+- INT8 trigger yes/no
+- composed trigger yes/no
+- trigger-window indices.
+
+This resolves ambiguity around "10/10 session agreement."
+
+
+M4. SOURCE-STRATIFIED FIDELITY
+------------------------------
+
+If enough examples:
+report F_D by source/domain.
+
+Examples:
+- DaRUS
+- road
+- near-fall
+- fall
+- CARLA
+
+Do not over-interpret tiny groups.
+
+
+===================================================
+N. HIGH-VALUE PRESENTATION DATA TO GENERATE
+===================================================
+
+These are not new experiments.
+
+N1. RAW A-B-A SIGNAL FIGURE
+---------------------------
+
+After FIFO correction:
+plot synchronized short segments of:
+- ax/ay/az
+- gx/gy/gz
+
+for:
+A1 polling
+B FIFO
+A2 polling.
+
+Use same axes/units.
+
+
+N2. CLASS-FIDELITY FIGURE
+-------------------------
+
+Show:
+- normal agreement
+- crash-like agreement
+- 2x2 counts
+for:
+causal preprocessing,
+INT8,
+composed chain.
+
+
+N3. SCHEDULER PAIR FIGURE
+-------------------------
+
+Show each matched pair separately.
+Do not show only means.
+
+
+N4. DT DISTRIBUTION FIGURE
+--------------------------
+
+Show:
+- deployed loaded
+- reduced
+- headless
+- headless SCHED_FIFO
+if available.
+
+Mark:
+10 ms
+20 ms
+30 ms.
+
+
+N5. BENIGN-MOTION TABLE
+-----------------------
+
+Per phase:
+- windows
+- max classifier
+- max reconstruction
+- threshold crossings
+- confirmed alerts
+- gyro rail hits
+- accel rail hits.
+
+
+===================================================
+O. OPTIONAL GPIO / ALERT PATH TESTS
+===================================================
+
+O1. GPIO ACTUATION REPEATABILITY
+--------------------------------
+
+50 controlled software-triggered GPIO pulses.
+
+Measure:
+- requested activation timestamp
+- actual software GPIO-call timestamp
+- configured pulse duration
+
+Without oscilloscope, do NOT claim electrical edge timing accuracy.
+
+
+O2. MULTIPLE TRACE INJECTION TEST
+---------------------------------
+
+10–20 traces.
+
+Record:
+- trace onset
+- decisions
+- confirmation
+- GPIO command
+- cancellation start/end.
+
+
+===================================================
+P. OPTIONAL GPS/GSM TEST
+===================================================
+
+Only if existing GPS/GSM hardware is already connected.
+Do not purchase/connect new instrumentation solely for this paper.
+
+Run 5–10 smoke trials.
+
+Record:
+- GPS fix/no-fix
+- time-to-fix
+- modem command acceptance
+- SMS send request
+- receipt if manually verifiable.
+
+Do NOT claim network reliability.
+
+
+===================================================
+Q. ARCHIVE / REPRODUCIBILITY CHECKS
+===================================================
+
+Q1. THRESHOLD FILE CONFLICT
+---------------------------
+
+Archive contains old and deployed threshold values.
+
+Create one authoritative file:
+
+DEPLOYED_POLICY_THRESHOLDS.json
+
+Include exact:
+classifier threshold = 0.9892255067825317
+reconstruction threshold = 10.878735866546593
+
+Move old threshold files to:
+legacy_not_used_in_paper/
+
+Clearly label them.
+
+
+Q2. TRAINING CONFIG
+-------------------
+
+Record:
+- Adam learning rate
+- batch size
+- max epochs
+- early stopping
+- patience
+- loss weights
+- seeds
+- selected model seed
+- selection criterion.
+
+
+Q3. CLEAN PUBLIC ARCHIVE
+------------------------
+
+Remove:
+- __pycache__
+- .scratch
+- build artifacts
+- duplicate notebooks
+- temporary logs
+- reviewer files
+- AI/tool working files
+- sandbox paths
+- .aux/.log/.out from LaTeX builds.
+
+Keep:
+- source
+- model files
+- exact configs
+- hashes
+- raw results
+- scripts needed to reproduce tables/figures.
+
+
+Q4. DOI-BACKED DEPOSIT
+----------------------
+
+Before final acceptance if possible:
+deposit legally shareable archive in Zenodo/Figshare or equivalent.
+
+Do not fabricate DOI before deposit.
+
+
+===================================================
+R. TESTS REQUESTED IN EARLIER REVIEWS THAT ARE ALREADY SATISFIED
+===================================================
+
+These should remain in the evidence package but generally do NOT require repetition:
+
+- full sensor register capture
+- original stationary noise test
+- per-axis clipping test
+- 90-min soak
+- 3-h soak
+- 12-min live pipeline
+- 20-min reduced run
+- direct perf sched loaded/reduced profile
+- three scheduler repeat pairs
+- thread-count 1/2/4 study
+- 50,000 inference tail benchmark
+- raw unpaced acquisition-headroom test
+- 15-min paced replay
+- controlled DaRUS injection + GPIO
+- benign-motion battery
+- reboot repeatability
+- EMA cutoff sensitivity 0.1–0.5 Hz
+- same-order causal Butterworth control
+- class-stratified causal fidelity
+- class-stratified INT8 classifier fidelity
+- detector operating-point metrics
+- branch attribution
+- INT8 calibration-set reconstruction
+- outlier localization
+- stream-guard overhead
+- V_T and C_D
+- contiguous-valid-run analysis where logs permit.
+
+Do not rerun these unless the raw files are missing or inconsistent.
+
+
+===================================================
+S. TESTS THAT REQUIRE EXTERNAL EQUIPMENT — DO NOT BLOCK CURRENT PAPER
+===================================================
+
+These are scientifically valuable but are excluded from the current Pi-only request.
+
+S1. direct electrical power measurement
+Requires:
+- USB power meter,
+- inline voltage/current logger,
+- or equivalent.
+
+S2. helmet-to-sensor transfer function
+Requires:
+- shaker,
+- reference accelerometer,
+- co-located reference IMU,
+- or calibrated excitation.
+
+S3. crash-like physical impact calibration
+Requires:
+- drop tower,
+- pendulum,
+- headform,
+- impact rig,
+- reference instrumentation.
+
+S4. anti-alias characterization with controlled high-frequency input
+Requires:
+- vibration source / shaker.
+
+S5. electrical GPIO edge timing
+Requires:
+- oscilloscope / logic analyzer if true electrical timing is claimed.
+
+S6. real-world road false-alert campaign
+Requires:
+- riding / real-world use.
+
+S7. natural or controlled crash validation
+Requires:
+- physical crash experiment.
+
+S8. GSM current transient
+Requires:
+- power instrumentation.
+
+These remain future work.
+
+
+===================================================
+T. FINAL PRIORITY ORDER
+===================================================
+
+TIER 0 — MUST DO BEFORE USING CURRENT FIFO RESULT
+-------------------------------------------------
+1. Audit FIFO packet format/order/scale.
+2. Stationary FIFO raw-signal sanity test.
+3. Polling-vs-FIFO raw equivalence.
+4. Corrected A1-B-A rerun.
+
+If FIFO parser was wrong:
+- discard old FIFO scientific interpretation,
+- preserve old run only as debugging provenance.
+
+
+TIER 1 — STRONGLY RECOMMENDED BEFORE SUBMISSION
+-----------------------------------------------
+5. Three-boot WHO_AM_I/register identity check.
+6. High-range + filtered sensor compatibility test.
+7. True headless polling run.
+8. Headless + SCHED_FIFO + CPU-affinity run.
+9. Full dt/jitter characterization.
+10. Composed deployed-chain fidelity.
+11. Crash-class 2x2 + trigger-time shifts.
+12. Physical-front-end clipping/quantization emulation.
+13. INT8 calibration-range audit.
+14. Clean archive + threshold conflict resolution.
+
+
+TIER 2 — HIGH-VALUE
+-------------------
+15. Crash-enriched INT8 diagnostic conversion.
+16. Session-clustered bootstrap uncertainty.
+17. Higher-recall threshold sensitivity.
+18. Trace-onset-to-GPIO controlled timing.
+19. Stream-guard interpolation sensitivity.
+20. Fixed-alpha vs dt-adaptive-alpha diagnostic.
+21. Source/session provenance tables.
+22. Rebuild main figures from raw evidence.
+
+
+TIER 3 — OPTIONAL
+-----------------
+23. 6–8 randomized scheduler pairs.
+24. DATA_RDY interrupt run.
+25. Linux IIO buffered-driver run.
+26. FIFO + DATA_RDY run.
+27. warm-start bias/noise comparison.
+28. GC/runtime-pause correlation.
+29. feature ablation.
+30. GPIO repeatability.
+31. GPS/GSM smoke test.
+
+
+===================================================
+U. FINAL STOPPING RULE
+===================================================
+
+For the current IEEE Sensors Journal submission, Pi-side testing should stop after:
+
+1. sensor identity discrepancy is documented reproducibly,
+2. FIFO parser/configuration is corrected and the A-B-A result is rerun,
+3. a deployment-realistic headless/SCHED_FIFO polling condition is measured,
+4. one higher-range / bandwidth-limited configuration compatibility test is completed,
+5. all remaining important analyses are generated from the existing data.
+
+After those items, additional Pi testing is unlikely to improve the paper enough to justify delaying submission.
+
+Do NOT delay the paper for:
+- power instrumentation,
+- shaker testing,
+- calibrated impacts,
+- road riding,
+- PREEMPT_RT installation,
+- RTOS port,
+- destructive tests,
+- reference IMU testing,
+unless an actual IEEE reviewer specifically requires them.
+
+
+===================================================
+V. REQUIRED FOLDER FOR NEW RESULTS
+===================================================
+
+Create:
+
+final_pi_review_closure/
+
+Suggested layout:
+
+final_pi_review_closure/
+  01_identity_three_boots/
+  02_fifo_parser_audit/
+  03_fifo_stationary_sanity/
+  04_polling_fifo_equivalence/
+  05_corrected_aba/
+  06_high_range_stationary/
+  07_high_range_benign_motion/
+  08_high_range_20min/
+  09_headless_polling/
+  10_headless_sched_fifo/
+  11_dt_jitter/
+  12_trace_to_gpio/
+  13_optional_drdy/
+  14_optional_iio/
+  metadata/
+  hashes/
+  summaries/
+
+Every new experiment must contain:
+- README.txt
+- exact command
+- exact code hash
+- date/time
+- duration
+- service state
+- CPU governor/frequency
+- scheduler policy
+- CPU affinity
+- acquisition mode
+- model hash
+- deployed threshold hash
+- register dump
+- raw data
+- summary
+- generated metrics.
+
+
+===================================================
+W. CLAIM-SAFETY RULES FOR ALL NEW TESTS
+===================================================
+
+Never convert these tests into claims they do not support.
+
+Do not claim:
+- real crash sensitivity,
+- real-road false-alert rate,
+- physical crash onset-to-alert latency,
+- hard real-time guarantees,
+- power efficiency without a meter,
+- mount transfer function,
+- anti-alias rejection without controlled excitation,
+- universal MPU6050 behavior,
+- FIFO superiority/inferiority from one implementation,
+- headless result portability to RTOS,
+- no crash-time clipping from benign motion,
+- GPS/GSM reliability from smoke tests.
+
+Safe claims include:
+- host-observed acquisition timing,
+- decision coverage,
+- processing latency,
+- score distributions,
+- parser correctness,
+- raw-signal equivalence,
+- operating-point fidelity,
+- configuration-specific observations,
+- controlled-trace timing,
+- controlled benign-motion behavior.
+
+
+===================================================
+END OF FINAL PI TEST REQUEST
+===================================================

@@ -1,0 +1,49 @@
+{
+  "boot": 4,
+  "capture": "warm_stationary",
+  "checks": {
+    "raw_rows_match": true,
+    "score_rows_match": true,
+    "full_requested_duration": true,
+    "protocol_duration_met": true,
+    "no_exception": true,
+    "indices_contiguous": true,
+    "timestamps_increasing": true,
+    "configuration_restored": true,
+    "identity_100_reads": true,
+    "identity_counts_match": true,
+    "identity_baseline_same_boot": true,
+    "replay_endpoints_exact": true,
+    "replay_scores_exact": true,
+    "replay_policy_exact": true,
+    "event_count_matches": true,
+    "warm_start_after_one_hour": true
+  },
+  "identity_counts": {
+    "0x70": 100
+  },
+  "power_off_seconds_user_reported": 10,
+  "first_sample_uptime_s": 3803.725261616,
+  "samples": 29999,
+  "windows": 1996,
+  "elapsed_s": 600.0022906589998,
+  "sample_rate_hz": 49.99814245217504,
+  "i2c_failures": 0,
+  "gap_count": 0,
+  "confirmed_policy_events": 0,
+  "rail_counts": {
+    "ax": 0,
+    "ay": 0,
+    "az": 0,
+    "gx": 0,
+    "gy": 0,
+    "gz": 0
+  },
+  "source_hashes": {
+    "raw_sensor.csv": "87105f81cbbd5ae278819b10fb643985ccd5676e66413dc6690eae09ff4e7a98",
+    "window_scores.csv": "f04eb60d690e634ef01f9dd7c8770996d1b37d5d90ea42e9b794871279421513",
+    "summary.json": "cab7f6ce26d63bc59d53f73b80773b72cc6d9e4b364c3ff67ac67d282779619b",
+    "metadata.json": "21c6ff9c608c39ad1eea5b831810cfc4240b526b5409280d1ddf785e2d25c2f5"
+  },
+  "scope": "Offline verification only; physical conditions require operator attestation. H1 requires baseline and guided motion on three boots independently of A1 identity completion. Late recordings cannot supply I2 first-ten-minute coverage."
+}

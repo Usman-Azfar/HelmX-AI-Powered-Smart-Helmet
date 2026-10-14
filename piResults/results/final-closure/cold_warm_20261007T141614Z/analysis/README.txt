@@ -1,0 +1,131 @@
+
+ — Earlier-start cold/warm comparison
+Status: VERIFIED COMPARISON; STARTUP COVERAGE AND ATTESTATION QUALIFICATIONS
+UTC: 2026-10-11T14:14:54.556404+00:00
+Evidence: piResults/final_pi_review_closure/cold_warm_20261007T141614Z/analysis
+{
+  "checks": {
+    "cold_full_duration": true,
+    "cold_raw_rows": true,
+    "cold_time_order": true,
+    "cold_restored": true,
+    "warm_full_duration": true,
+    "warm_raw_rows": true,
+    "warm_time_order": true,
+    "warm_restored": true,
+    "same_configuration": true,
+    "warm_after_one_hour": true
+  },
+  "phases": {
+    "cold": {
+      "first_sample_uptime_s": 97.842863698,
+      "last_sample_uptime_s": 697.821405247,
+      "n_samples": 30000,
+      "n_scored_windows": 1997,
+      "axes": {
+        "ax": {
+          "mean": -5.86537007422048,
+          "std": 0.01453373897393731
+        },
+        "ay": {
+          "mean": -0.8254765793529255,
+          "std": 0.010187522042605254
+        },
+        "az": {
+          "mean": -7.798051635753785,
+          "std": 0.013596936730166131
+        },
+        "gx": {
+          "mean": -0.22269592875318067,
+          "std": 0.03368068921149409
+        },
+        "gy": {
+          "mean": 2.075465139949109,
+          "std": 0.10594875054618064
+        },
+        "gz": {
+          "mean": 1.0448211195928754,
+          "std": 0.033570957684661416
+        }
+      },
+      "sensor_temperature_raw_mean": 4699.090433333334,
+      "score_distributions": {
+        "classifier": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "100": 0.0
+        },
+        "reconstruction": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "100": 0.0
+        }
+      },
+      "raw_sha256": "a33b6102c9b5b003da92b2e3e3b7fa7e86331a04bc7f14152e4788010082705c"
+    },
+    "warm": {
+      "first_sample_uptime_s": 3600.057247351,
+      "last_sample_uptime_s": 4200.037352715,
+      "n_samples": 30000,
+      "n_scored_windows": 1997,
+      "axes": {
+        "ax": {
+          "mean": -5.860056782089538,
+          "std": 0.008095639951441061
+        },
+        "ay": {
+          "mean": -0.833004986859843,
+          "std": 0.008304597382841707
+        },
+        "az": {
+          "mean": -7.792708874990742,
+          "std": 0.013226415353872456
+        },
+        "gx": {
+          "mean": -0.2179470737913486,
+          "std": 0.03244696173405095
+        },
+        "gy": {
+          "mean": 2.0942743002544533,
+          "std": 0.1291372972597444
+        },
+        "gz": {
+          "mean": 1.0436954198473283,
+          "std": 0.033553515239148256
+        }
+      },
+      "sensor_temperature_raw_mean": 4545.7503,
+      "score_distributions": {
+        "classifier": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "100": 0.0
+        },
+        "reconstruction": {
+          "0": 0.0,
+          "50": 0.0,
+          "95": 0.0,
+          "99": 0.0,
+          "100": 0.0
+        }
+      },
+      "raw_sha256": "4d704aabd3df70bec64bf691d5f9708595c3137547af371ac5a64d5c72e5c3fe"
+    }
+  },
+  "missing_startup_seconds": 97.842863698,
+  "warm_minus_cold_axis_mean": {
+    "ax": 0.005313292130941782,
+    "ay": -0.007528407506917523,
+    "az": 0.00534276076304252,
+    "gx": 0.004748854961832083,
+    "gy": 0.018809160305344186,
+    "gz": -0.001125699745547104
+  },
+  "scope": "I2 early/warm comparison only. Nonzero startup delay cannot supply literal first-ten-minute coverage. Scores are offline replay, not online latency measurements. Power removal, stationarity and unchanged orientation require operator confirmation."
+}

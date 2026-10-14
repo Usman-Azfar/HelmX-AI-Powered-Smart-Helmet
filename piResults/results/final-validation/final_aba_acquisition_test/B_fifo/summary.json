@@ -1,0 +1,419 @@
+{
+  "label": "B_fifo",
+  "acquisition_mode": "fifo",
+  "context": "HelmX_FINAL_Pi_ABA_Acquisition_Test.txt condition run",
+  "metadata": {
+    "date": "2026-09-20",
+    "start_epoch": 1789914498.1582503,
+    "duration_s": 1200.0681232310017,
+    "device": {
+      "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+      "machine": "aarch64",
+      "python": "3.11.2",
+      "cpu_count": 4,
+      "ram_gb": 7.64,
+      "model": "Raspberry Pi 4 Model B Rev 1.5",
+      "tflite_runtime_version": "2.14.0"
+    },
+    "register_dump": {
+      "raw_hex": {
+        "SMPLRT_DIV": "0x0",
+        "CONFIG": "0x0",
+        "GYRO_CONFIG": "0x0",
+        "ACCEL_CONFIG": "0x0",
+        "FIFO_EN": "0x0",
+        "INT_ENABLE": "0x0",
+        "INT_STATUS": "0x1",
+        "PWR_MGMT_1": "0x0",
+        "PWR_MGMT_2": "0x0",
+        "WHO_AM_I": "0x70",
+        "USER_CTRL": "0x0"
+      },
+      "who_am_i": "0x70"
+    },
+    "service_state": {
+      "services": {
+        "helmx-ble.service": "active",
+        "mosquitto.service": "active",
+        "rhasspy.service": "active",
+        "helmx_assistant.service": "activating",
+        "wayvnc.service": "active",
+        "wayvnc-control.service": "active",
+        "rpi-connect.service": "inactive",
+        "rpi-connect-wayvnc.service": "inactive",
+        "bluetooth.service": "active"
+      },
+      "cpu_governor": "ondemand",
+      "cpu_frequency_khz": "1800000"
+    },
+    "fifo_meta": {
+      "measured_native_hz": 482.6199199212685,
+      "decimation_n": 10,
+      "max_fifo_bytes_seen_during_calibration": 512,
+      "n_fifo_overflow_suspected": 0
+    }
+  },
+  "model_score_analysis": {
+    "classifier_prob": {
+      "min": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "n_above_threshold": 0,
+      "threshold": 0.9892255067825317
+    },
+    "reconstruction_error": {
+      "min": 3.534895420074463,
+      "mean": 8.339751204107976,
+      "median": 8.248088836669922,
+      "p90": 10.408303260803223,
+      "p95": 10.997451782226562,
+      "p99": 12.372133255004883,
+      "p999": 13.958123348236178,
+      "max": 15.12149715423584,
+      "n_above_threshold": 220,
+      "threshold": 10.878735866546593,
+      "bands_around_threshold": {
+        "r_lt_8": 1654,
+        "8_le_r_lt_9": 981,
+        "9_le_r_lt_10": 684,
+        "10_le_r_lt_theta_r": 386,
+        "theta_r_le_r_lt_11.5": 116,
+        "11.5_le_r_lt_12.5": 72,
+        "r_ge_12.5": 32
+      }
+    }
+  },
+  "trigger_analysis": {
+    "classifier_only_positive_windows": 0,
+    "reconstruction_only_positive_windows": 220,
+    "both_positive_windows": 0,
+    "neither_positive_windows": 3705,
+    "total_or_positive_windows": 220,
+    "longest_consecutive_or_positive_run": 6,
+    "n_2window_sequences": 51,
+    "n_3window_confirmed_triggers": 33,
+    "total_confirmed_triggers": 12,
+    "trigger_events": [
+      {
+        "window_idx": 17,
+        "t_monotonic": 23423.039505719,
+        "crash_prob": 0.0,
+        "recon_error": 13.943198204040527,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.9964760029106401,
+        "inference_ms": 0.8378649981750641,
+        "total_ms": 1.8343410010857042,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 285,
+        "t_monotonic": 23504.904136607285,
+        "crash_prob": 0.0,
+        "recon_error": 11.782984733581543,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.7814029995643068,
+        "inference_ms": 0.7691989994782489,
+        "total_ms": 1.5506019990425557,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 719,
+        "t_monotonic": 23637.243643249858,
+        "crash_prob": 0.0,
+        "recon_error": 12.175750732421875,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.8006800017028581,
+        "inference_ms": 1.1083079989475664,
+        "total_ms": 1.9089880006504245,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 929,
+        "t_monotonic": 23701.289957740286,
+        "crash_prob": 0.0,
+        "recon_error": 11.97936725616455,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.7901989993115421,
+        "inference_ms": 0.795809999544872,
+        "total_ms": 1.586008998856414,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 1171,
+        "t_monotonic": 23775.021823840285,
+        "crash_prob": 0.0,
+        "recon_error": 11.782984733581543,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.8066619993769564,
+        "inference_ms": 0.8220320014515892,
+        "total_ms": 1.6286940008285455,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 1441,
+        "t_monotonic": 23857.392686426858,
+        "crash_prob": 0.0,
+        "recon_error": 11.97936725616455,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.7791619973431807,
+        "inference_ms": 0.8612910023657605,
+        "total_ms": 1.6404529997089412,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 1661,
+        "t_monotonic": 23924.48078349257,
+        "crash_prob": 0.0,
+        "recon_error": 11.97936725616455,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.7802360014466103,
+        "inference_ms": 0.8124759988277219,
+        "total_ms": 1.5927120002743322,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 1916,
+        "t_monotonic": 24002.21610514857,
+        "crash_prob": 0.0,
+        "recon_error": 11.390218734741211,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.8645880006952211,
+        "inference_ms": 0.8343839981534984,
+        "total_ms": 1.6989719988487195,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 2367,
+        "t_monotonic": 24139.82041631586,
+        "crash_prob": 0.0,
+        "recon_error": 12.175750732421875,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.7804769993526861,
+        "inference_ms": 0.7619770003657322,
+        "total_ms": 1.5424539997184183,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 2794,
+        "t_monotonic": 24270.074149854856,
+        "crash_prob": 0.0,
+        "recon_error": 11.193835258483887,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.7756619997962844,
+        "inference_ms": 0.8318289983435534,
+        "total_ms": 1.6074909981398378,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 3218,
+        "t_monotonic": 24399.338972179714,
+        "crash_prob": 0.0,
+        "recon_error": 13.354048728942871,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.8328469994012266,
+        "inference_ms": 0.7652550011698622,
+        "total_ms": 1.5981020005710889,
+        "acquisition_mode": "fifo"
+      },
+      {
+        "window_idx": 3536,
+        "t_monotonic": 24496.232485566,
+        "crash_prob": 0.0,
+        "recon_error": 12.764900207519531,
+        "classifier_crossed": false,
+        "recon_crossed": true,
+        "or_positive": true,
+        "anomaly_streak": 0,
+        "confirmed_triggered": true,
+        "windowing_ms": 0.7865879997552838,
+        "inference_ms": 0.7592549991386477,
+        "total_ms": 1.5458429988939315,
+        "acquisition_mode": "fifo"
+      }
+    ]
+  },
+  "physical_sensor_summary": {
+    "ax_ms2": {
+      "min": -19.610905798339843,
+      "max": 19.28050596923828,
+      "mean": -0.36869203248136145,
+      "std": 6.872535854446556,
+      "rms": 6.882418389306821,
+      "abs_max": 19.610905798339843
+    },
+    "ay_ms2": {
+      "min": -19.59893479003906,
+      "max": 19.33796680908203,
+      "mean": -0.3979627181513798,
+      "std": 6.865922388445506,
+      "rms": 6.87744607897406,
+      "abs_max": 19.59893479003906
+    },
+    "az_ms2": {
+      "min": -19.6133,
+      "max": 19.603723193359375,
+      "mean": -0.4168210177134493,
+      "std": 6.877315291376855,
+      "rms": 6.889935077909922,
+      "abs_max": 19.6133
+    },
+    "gx_dps": {
+      "min": -250.10687022900763,
+      "max": 250.0763358778626,
+      "mean": -5.441998153720037,
+      "std": 87.0307243788746,
+      "rms": 87.20070142961424,
+      "abs_max": 250.10687022900763
+    },
+    "gy_dps": {
+      "min": -250.0763358778626,
+      "max": 249.4351145038168,
+      "mean": -4.642216152591955,
+      "std": 87.84728582416125,
+      "rms": 87.96985732328584,
+      "abs_max": 250.0763358778626
+    },
+    "gz_dps": {
+      "min": -250.13740458015266,
+      "max": 250.01526717557252,
+      "mean": -5.329519518982664,
+      "std": 87.0358884654084,
+      "rms": 87.19890858987989,
+      "abs_max": 250.13740458015266
+    },
+    "accel_magnitude_ms2": {
+      "mean": 10.187233615835293,
+      "std": 6.193417803513123,
+      "max": 33.82584156085962
+    },
+    "gyro_magnitude_dps": {
+      "mean": 129.44240430981787,
+      "std": 78.68272842915317,
+      "max": 431.0608637664521
+    }
+  },
+  "system_state": {
+    "resources_summary": {
+      "process_cpu_percent": {
+        "mean": 2.7747008547008543,
+        "p95": 3.9,
+        "max": 5.8,
+        "min": 1.0
+      },
+      "process_rss_mb": {
+        "mean": 77.43621461004274,
+        "p95": 103.56699218749999,
+        "max": 106.42578125,
+        "min": 48.125
+      },
+      "system_cpu_percent": {
+        "mean": 6.4687179487179485,
+        "p95": 19.0,
+        "max": 58.4,
+        "min": 1.0
+      },
+      "temperature_c": {
+        "mean": 52.244615384615386,
+        "p95": 54.5,
+        "max": 55.5,
+        "min": 48.2
+      }
+    },
+    "throttling_status": {
+      "raw_hex": "0x0",
+      "under_voltage_now": false,
+      "arm_freq_capped_now": false,
+      "currently_throttled": false,
+      "soft_temp_limit_now": false,
+      "under_voltage_occurred": false,
+      "arm_freq_capped_occurred": false,
+      "throttling_occurred": false,
+      "soft_temp_limit_occurred": false
+    }
+  },
+  "timing_and_latency": {
+    "label": "B_fifo",
+    "acquisition_mode": "fifo",
+    "duration_s": 1200.0681232310017,
+    "n_raw_samples": 58926,
+    "achieved_sample_rate_hz": 49.102212498862706,
+    "nominal_decision_positions": 3925,
+    "scored_windows": 3925,
+    "invalidated_windows": 0,
+    "never_formed_or_suppressed_positions": 0,
+    "V_T": 1.0,
+    "C_D": 1.0,
+    "timing_gaps": 0,
+    "gaps_per_min": 0.0,
+    "dt_lt_10ms_count": 3,
+    "too_fast_per_min": 0.14999148507951138,
+    "dropped_equivalent_samples": 0,
+    "dropped_equivalent_per_min": 0.0,
+    "dt_mean_ms": 20.32956847462675,
+    "dt_p50_ms": 20.208016667311313,
+    "dt_p95_ms": 21.184227026969893,
+    "dt_p99_ms": 22.074546623189242,
+    "dt_p999_ms": 23.300087618103134,
+    "dt_max_ms": 28.470840239606332,
+    "i2c_failures": 0,
+    "reconnects": 0,
+    "exceptions": 0,
+    "latency_mean_ms": 1.6661602379611447,
+    "latency_p50_ms": 1.5923979990475345,
+    "latency_p95_ms": 1.9997579991468228,
+    "latency_p99_ms": 3.057877519895553,
+    "latency_p999_ms": 6.420818236802019,
+    "latency_max_ms": 9.188242998789065,
+    "latency_count_gt_20ms": 0,
+    "latency_count_gt_50ms": 0,
+    "latency_count_gt_100ms": 0,
+    "latency_count_gt_300ms": 0
+  }
+}

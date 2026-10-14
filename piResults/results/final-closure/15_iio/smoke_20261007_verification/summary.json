@@ -1,0 +1,166 @@
+{
+  "label": "15_iio/smoke_20261007",
+  "checks": {
+    "frozen_artifacts_unchanged": true,
+    "full_duration": true,
+    "no_exception": true,
+    "raw_rows_match": true,
+    "window_rows_match": true,
+    "nonempty": true,
+    "indices_contiguous": true,
+    "times_nondecreasing": true,
+    "registers_restored": true,
+    "cleanup_success": true,
+    "replay_endpoints_exact": true,
+    "replay_scores_exact": true,
+    "replay_policy_exact": true,
+    "gap_count_matches": true,
+    "iio_complete_records": true,
+    "iio_record_count": true,
+    "iio_raw_decode_exact": true,
+    "iio_timestamp_decode_exact": true,
+    "iio_rate_configured": true
+  },
+  "metrics": {
+    "mode": "iio",
+    "elapsed_s": 30.007593693000672,
+    "sample_rate_hz": 50.053996843817046,
+    "n_samples": 1502,
+    "n_windows": 97,
+    "gap_count": 0,
+    "C_D": 1.0,
+    "V_T_scored_over_scored_plus_resets": 1.0,
+    "p_valid_90_sample_position": 1.0,
+    "timing": {
+      "n": 1501,
+      "mean_ms": 19.985926315789836,
+      "median_ms": 19.985900005849544,
+      "std_ms": 0.010203702075631564,
+      "rms_error_from_20ms": 0.017383443942317226,
+      "p90_ms": 19.986280000011902,
+      "p95_ms": 19.986719998996705,
+      "p99_ms": 19.998420000774786,
+      "p99.9_ms": 19.998619998659706,
+      "max_ms": 20.003620003990363,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        0,
+        0,
+        1501,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 0,
+        "5": 0,
+        "8": 0
+      }
+    },
+    "processing_ms": {
+      "50": 2.401639001618605,
+      "95": 6.683096400229251,
+      "99": 9.341576561564539,
+      "100": 14.350053999805823
+    },
+    "i2c_failures": null,
+    "confirmed_alert_events": 0,
+    "score_distributions": {
+      "classifier": {
+        "0": 0.0,
+        "50": 0.0,
+        "95": 0.0,
+        "99": 0.0,
+        "100": 0.0
+      },
+      "reconstruction": {
+        "0": 0.0,
+        "50": 0.0,
+        "95": 0.0,
+        "99": 0.0,
+        "100": 0.0
+      }
+    },
+    "physical_axes": {
+      "ax": {
+        "mean": -5.8280315579227695,
+        "std": 0.008003483408829332,
+        "min": -5.853822,
+        "max": -5.8023940000000005
+      },
+      "ay": {
+        "mean": -0.8147240386151797,
+        "std": 0.008166056438952324,
+        "min": -0.839592,
+        "max": -0.789958
+      },
+      "az": {
+        "mean": -7.77175411584554,
+        "std": 0.013226762265844919,
+        "min": -7.82184,
+        "max": -7.723768
+      },
+      "gx": {
+        "mean": -2.488368683158639,
+        "std": 0.031202194442265335,
+        "min": -2.5926684004346825,
+        "max": -2.356278046277403
+      },
+      "gy": {
+        "mean": 0.13592876900062306,
+        "std": 0.12062974403536154,
+        "min": -0.45752971772376755,
+        "max": 0.5871631377455017
+      },
+      "gz": {
+        "mean": 2.2138508525243785,
+        "std": 0.03175927693628526,
+        "min": 2.104636701529331,
+        "max": 2.30289957920963
+      }
+    },
+    "resources": {
+      "cpu_pct": {
+        "min": 2.9,
+        "max": 5.9,
+        "mean": 4.236666666666667
+      },
+      "rss_bytes": {
+        "min": 49737728,
+        "max": 50479104,
+        "mean": 50402372.266666666
+      },
+      "cpu_temp_c": {
+        "min": 44.79,
+        "max": 49.66,
+        "mean": 46.575666666666656
+      }
+    }
+  },
+  "source_hashes": {
+    "raw_sensor.csv": "bd408189bf5c63a0eedbe5a4c951611c2020ec225855edf287a192e883503eb1",
+    "README.txt": "90941c43ae5ed8a1c309ffb28cbd97844dceb42cbdfbafa2adc1aab688e832c2",
+    "window_scores.csv": "da991cf2521527a4bf30c37e530e12274d9a39ab737fe1a259b0cecc484f866f",
+    "metadata.json": "f5478faf4953f4edb4384dc47e06fb29b7d46e35ef9d53f6041d0966c587c3c4",
+    "registers_restored.json": "8653ee928584842bfd6ee4789da50d2162c1f46baf60b6a000446f41e7344142",
+    "registers_before.json": "8653ee928584842bfd6ee4789da50d2162c1f46baf60b6a000446f41e7344142",
+    "iio_configuration.json": "fcbf2ea159cecd41b8d8c1f6f3183ab78d168013d8ed9797c0520babcef0d4f9",
+    "iio_buffer.bin": "582bd7e5d2b64d9b54e7d011b6e881d7736042fb378f220c51ae0ee5ae370415",
+    "configuration.json": "6c7fce2e496de288e22029a3f364b2f07cbd96fe7709dda5623e358f803cc88b",
+    "summary.json": "caf37687cab95963e79d2aed05bbccc39eaa0842ba9a3ca67d2f3b98897b7677",
+    "resources.json": "d6afa3018b2d4a39c09fc44ff15b6f69c756271b012053e570cabdcd6c814416"
+  },
+  "scope": "Offline replay and byte integrity. FIFO shared host times are not physical sample jitter. Physical conditions require operator attestation."
+}

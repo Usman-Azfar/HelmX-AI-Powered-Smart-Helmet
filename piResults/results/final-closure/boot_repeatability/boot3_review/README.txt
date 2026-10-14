@@ -1,0 +1,35 @@
+
+ — Boot 3 baseline and guided motion operator review
+Status: COMPLETE CAPTURES; H1 SERIES INCOMPLETE
+UTC: 2026-10-05T17:04:41.114806+00:00
+Evidence: piResults/final_pi_review_closure/boot_repeatability/boot3_review
+{
+  "operator_reply": "yes",
+  "question_answered": "Completed three left/right and three forward/back cycles after START and returned helmet to rest; preceding five-minute baseline untouched.",
+  "baseline_stationarity_user_attested": true,
+  "guided_sequence_completion_user_attested": true,
+  "baseline_samples": 14988,
+  "motion_samples": 5985,
+  "baseline_windows": 996,
+  "motion_windows": 396,
+  "baseline_confirmed_events": 0,
+  "motion_confirmed_events": 1,
+  "motion_rail_counts": {
+    "ax": 2,
+    "ay": 0,
+    "az": 0,
+    "gx": 0,
+    "gy": 4,
+    "gz": 11
+  },
+  "baseline_verification": "boot3_baseline_review",
+  "motion_verification": "boot3_guided_motion_verification",
+  "limitations": [
+    "Manual movements are not amplitude-matched.",
+    "One false policy event during user-attested benign motion; preserve acceleration and gyro rail hits.",
+    "Baseline user-attested untouched; brief recorded signal excursions retained, not removed.",
+    "No physical alarm or SMS sent.",
+    "This boot baseline begins after 60 minutes uptime, not during cold start.",
+    "H1 incomplete because boot2 motion is empty; another complete boot is needed."
+  ]
+}

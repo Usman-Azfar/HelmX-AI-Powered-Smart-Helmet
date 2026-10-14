@@ -1,0 +1,176 @@
+{
+  "session": "road_2. Aggressive",
+  "source_samples": [
+    0,
+    300
+  ],
+  "injected_samples": 300,
+  "onset": 1426.66375527,
+  "confirmation": null,
+  "first_anomaly": null,
+  "confirmation_triplet_times": [],
+  "gpio_on_call_start": null,
+  "gpio_on_call_return": null,
+  "gpio_off_call_start": null,
+  "gpio_off_call_return": null,
+  "cancel_outcome": null,
+  "decisions": [
+    {
+      "sample_index": 59,
+      "absolute_source_sample": 59,
+      "t_monotonic": 1427.855711989,
+      "crash_prob": 0.00390625,
+      "recon_error": 0.7855322957038879,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 74,
+      "absolute_source_sample": 74,
+      "t_monotonic": 1428.164931376,
+      "crash_prob": 0.01171875,
+      "recon_error": 1.3746814727783203,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 89,
+      "absolute_source_sample": 89,
+      "t_monotonic": 1428.447252947,
+      "crash_prob": 0.00390625,
+      "recon_error": 1.7674477100372314,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 104,
+      "absolute_source_sample": 104,
+      "t_monotonic": 1428.74668696,
+      "crash_prob": 0.00390625,
+      "recon_error": 1.7674477100372314,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 119,
+      "absolute_source_sample": 119,
+      "t_monotonic": 1429.046375926,
+      "crash_prob": 0.00390625,
+      "recon_error": 1.5710645914077759,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 134,
+      "absolute_source_sample": 134,
+      "t_monotonic": 1429.345658652,
+      "crash_prob": 0.09375,
+      "recon_error": 1.3746814727783203,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 149,
+      "absolute_source_sample": 149,
+      "t_monotonic": 1429.645658411,
+      "crash_prob": 0.109375,
+      "recon_error": 0.7855322957038879,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 164,
+      "absolute_source_sample": 164,
+      "t_monotonic": 1429.945719949,
+      "crash_prob": 0.73828125,
+      "recon_error": 0.7855322957038879,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 179,
+      "absolute_source_sample": 179,
+      "t_monotonic": 1430.245652706,
+      "crash_prob": 0.08203125,
+      "recon_error": 0.5891492366790771,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 194,
+      "absolute_source_sample": 194,
+      "t_monotonic": 1430.547116941,
+      "crash_prob": 0.01171875,
+      "recon_error": 0.5891492366790771,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 209,
+      "absolute_source_sample": 209,
+      "t_monotonic": 1430.847612753,
+      "crash_prob": 0.0234375,
+      "recon_error": 0.7855322957038879,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 224,
+      "absolute_source_sample": 224,
+      "t_monotonic": 1431.151156993,
+      "crash_prob": 0.015625,
+      "recon_error": 0.39276614785194397,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 239,
+      "absolute_source_sample": 239,
+      "t_monotonic": 1431.445940068,
+      "crash_prob": 0.12890625,
+      "recon_error": 0.39276614785194397,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 254,
+      "absolute_source_sample": 254,
+      "t_monotonic": 1431.746583789,
+      "crash_prob": 0.19921875,
+      "recon_error": 0.39276614785194397,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 269,
+      "absolute_source_sample": 269,
+      "t_monotonic": 1432.045735178,
+      "crash_prob": 0.2265625,
+      "recon_error": 0.39276614785194397,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 284,
+      "absolute_source_sample": 284,
+      "t_monotonic": 1432.350012861,
+      "crash_prob": 0.33203125,
+      "recon_error": 0.39276614785194397,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 299,
+      "absolute_source_sample": 299,
+      "t_monotonic": 1432.64575048,
+      "crash_prob": 0.5,
+      "recon_error": 0.19638307392597198,
+      "positive": false,
+      "triggered": false
+    }
+  ],
+  "cancellation_handler_start": null,
+  "cancellation_accepted": null,
+  "cancellation_handler_end": null,
+  "outcome": "no trigger within injected segment"
+}

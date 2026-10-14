@@ -1,0 +1,10 @@
+{
+  "date_pkt": "2026-10-11",
+  "user_statement_verbatim": "yes",
+  "question_confirmed": "Did the helmet remain untouched, in the same position and orientation, throughout both successful studies?",
+  "runs": {
+    "D4": "randomized_D4_20261011T065644991406Z",
+    "K1": "randomized_K1_20261011T103536168830Z"
+  },
+  "scope": "Operator confirmation applies to the two successful full studies only. Earlier interrupted K1 attempts remain failed and are excluded from the six-pair analysis."
+}

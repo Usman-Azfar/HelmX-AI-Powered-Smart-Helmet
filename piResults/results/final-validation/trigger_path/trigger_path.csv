@@ -1,0 +1,17 @@
+stage,event,value
+1,n_windows_live_baseline,4
+1,n_anomalous_live_baseline,0
+1,n_triggered_live_baseline,0
+2,injected_session_id,darus_crash_Iso_312_2_Out
+2,injected_session_source,darus
+2,injected_session_label,1
+2,n_windows_injected,10
+2,n_anomalous_injected,5
+2,n_trigger_events,1
+2,trigger_window_index,112
+2,crash_prob_at_trigger,0.9961
+2,recon_error_at_trigger,18.8528
+2,alarm_fired_real_gpio,True
+2,gpio_pin,18
+3,n_windows_resume,4
+3,n_sensor_read_errors_resume,0

@@ -1,0 +1,52 @@
+[
+  {
+    "t_monotonic": 162.990612408,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 162.99114086,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 292.377429846,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 292.377898771,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 421.755870994,
+    "phase": "start",
+    "generation": 1
+  },
+  {
+    "t_monotonic": 421.759547184,
+    "phase": "stop",
+    "generation": 1
+  },
+  {
+    "t_monotonic": 551.175877718,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 551.176195409,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 680.516129163,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 680.516487531,
+    "phase": "stop",
+    "generation": 0
+  }
+]

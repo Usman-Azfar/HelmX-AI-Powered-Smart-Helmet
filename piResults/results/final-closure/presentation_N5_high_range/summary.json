@@ -1,0 +1,14 @@
+{
+  "source": "piResults/final_pi_review_closure/motion_C3_completed",
+  "table": "benign_motion.csv",
+  "table_sha256": "e76864a3ea4d241f7578b4c2d7a7fff338fa2042df8a7d14668d59d244a212db",
+  "limitations": [
+    "Saved guided captures, not new physical trials. Motion identity is based on recorded instructions/operator statements, not independent observation.",
+    "Donning cue preceded recorder initialization; full donning onset coverage is unproven. Operator reported additional movement after donning. A repeat is needed for an onset-complete donning claim.",
+    "First repeated-tilt attempt is excluded and preserved as discarded; the replacement capture and its operator confirmation are used.",
+    "Separate trials reset gravity, window and cooldown state. Summed events are not a continuous-session or road false-alert rate.",
+    "No rail hits were observed in these recorded phases; this does not prove elimination of clipping under amplitude-matched motion or crashes.",
+    "Policy events only: this battery did not activate GPIO, execute alarm countdowns, or send SMS."
+  ],
+  "historical_table_retained": "piResults/final_pi_review_closure/presentation_N5"
+}

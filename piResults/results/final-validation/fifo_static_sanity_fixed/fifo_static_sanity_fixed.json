@@ -1,0 +1,34 @@
+{
+  "duration_s": 300.433592157,
+  "n_samples": 128693,
+  "packet_count": 128693,
+  "bytes_read": 1544316,
+  "malformed_packets": 0,
+  "fifo_overflow_count": 0,
+  "i2c_failures": 0,
+  "sample_rate_hz": 428.3575122545383,
+  "accel_magnitude_ms2": {
+    "mean": 18.424640823825616,
+    "std": 4.7647355631077755,
+    "min": 0.11851298217773437,
+    "max": 33.83096665750945
+  },
+  "gyro_magnitude_dps": {
+    "mean": 241.61820288850544,
+    "std": 68.7672543320245,
+    "min": 1.5114503816793894,
+    "max": 431.4088538816808
+  },
+  "timing_ms": {
+    "mean": 97.91427904862927,
+    "p95": 108.22610324989908,
+    "max": 168.94113200032734
+  },
+  "max_abs_ax_ms2": 19.6133,
+  "max_abs_ay_ms2": 19.610905798339843,
+  "max_abs_az_ms2": 19.610905798339843,
+  "max_abs_gx_dps": 250.13740458015266,
+  "max_abs_gy_dps": 250.13740458015266,
+  "max_abs_gz_dps": 250.0763358778626,
+  "passed": false
+}

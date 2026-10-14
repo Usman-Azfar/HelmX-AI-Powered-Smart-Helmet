@@ -1,0 +1,7 @@
+{
+  "segment": "Seconds 60\u201365 from each sequential corrected trial, identical y axes per sensor type. Traces are NOT physically simultaneous.",
+  "files": [
+    "raw_aba.png",
+    "raw_aba.pdf"
+  ]
+}

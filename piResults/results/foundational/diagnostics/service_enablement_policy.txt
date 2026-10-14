@@ -1,0 +1,32 @@
+=== systemctl show helmx-ble.service (Restart= policy fields) ===
+Restart=always
+RestartUSec=3s
+ExecStart={ path=/usr/bin/python3 ; argv[]=/usr/bin/python3 <user-home>/bluetooth.py ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }
+ActiveState=active
+UnitFileState=enabled
+
+=== systemctl show rhasspy.service ===
+Restart=always
+RestartUSec=5s
+ExecStart={ path=/usr/bin/rhasspy ; argv[]=/usr/bin/rhasspy --profile en ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }
+ActiveState=active
+UnitFileState=enabled
+
+=== helmx-crash-monitor.service: NOT installed on this system ===
+Unit helmx-crash-monitor.service could not be found.
+
+=== repo template file (deploy/helmx-crash-monitor.service), for reference only -- not active ===
+[Unit]
+Description=HelmX crash detection monitor
+After=multi-user.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/HelmX/Crash Detection
+ExecStart=/usr/bin/python3 /home/pi/HelmX/Crash Detection/deploy/crash_monitor.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

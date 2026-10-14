@@ -1,0 +1,17 @@
+{
+  "SMPLRT_DIV": 0,
+  "CONFIG": 0,
+  "GYRO_CONFIG": 0,
+  "ACCEL_CONFIG": 0,
+  "ACCEL_CONFIG2": 0,
+  "FIFO_EN": 0,
+  "INT_PIN_CFG": 0,
+  "INT_ENABLE": 0,
+  "INT_STATUS": 1,
+  "USER_CTRL": 0,
+  "PWR_MGMT_1": 0,
+  "PWR_MGMT_2": 0,
+  "FIFO_COUNT_H": 0,
+  "FIFO_COUNT_L": 0,
+  "WHO_AM_I": 112
+}

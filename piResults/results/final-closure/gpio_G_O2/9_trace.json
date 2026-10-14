@@ -1,0 +1,86 @@
+{
+  "session": "darus_non_crash_Randomstate_60_Out",
+  "source_samples": [
+    0,
+    150
+  ],
+  "injected_samples": 150,
+  "onset": 1456.423796143,
+  "confirmation": null,
+  "first_anomaly": 1458.507922314,
+  "confirmation_triplet_times": [],
+  "gpio_on_call_start": null,
+  "gpio_on_call_return": null,
+  "gpio_off_call_start": null,
+  "gpio_off_call_return": null,
+  "cancel_outcome": null,
+  "decisions": [
+    {
+      "sample_index": 59,
+      "absolute_source_sample": 59,
+      "t_monotonic": 1457.606261757,
+      "crash_prob": 0.171875,
+      "recon_error": 6.2842583656311035,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 74,
+      "absolute_source_sample": 74,
+      "t_monotonic": 1457.907753522,
+      "crash_prob": 0.0,
+      "recon_error": 8.444472312927246,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 89,
+      "absolute_source_sample": 89,
+      "t_monotonic": 1458.210988097,
+      "crash_prob": 0.01953125,
+      "recon_error": 8.837238311767578,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 104,
+      "absolute_source_sample": 104,
+      "t_monotonic": 1458.507922314,
+      "crash_prob": 0.0,
+      "recon_error": 11.390218734741211,
+      "positive": true,
+      "triggered": false
+    },
+    {
+      "sample_index": 119,
+      "absolute_source_sample": 119,
+      "t_monotonic": 1458.808102656,
+      "crash_prob": 0.0,
+      "recon_error": 9.819153785705566,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 134,
+      "absolute_source_sample": 134,
+      "t_monotonic": 1459.106537386,
+      "crash_prob": 0.0,
+      "recon_error": 8.837238311767578,
+      "positive": false,
+      "triggered": false
+    },
+    {
+      "sample_index": 149,
+      "absolute_source_sample": 149,
+      "t_monotonic": 1459.412178296,
+      "crash_prob": 0.0,
+      "recon_error": 8.051706314086914,
+      "positive": false,
+      "triggered": false
+    }
+  ],
+  "cancellation_handler_start": null,
+  "cancellation_accepted": null,
+  "cancellation_handler_end": null,
+  "outcome": "no trigger within injected segment"
+}

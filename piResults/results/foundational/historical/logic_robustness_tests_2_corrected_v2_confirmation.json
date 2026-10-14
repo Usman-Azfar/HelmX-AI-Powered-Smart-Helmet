@@ -1,0 +1,30 @@
+{
+  "3.19_sampling_jitter": {
+    "n_windows": 156,
+    "identical_regardless_of_real_time_spacing": true,
+    "note": "WindowScorer.append()/try_score() are driven purely by SAMPLE COUNT (a deque with maxlen + a new_samples counter), not by wall-clock timestamps -- they never see the real time between samples at all. So as long as samples keep arriving (no drops), +/-2ms, +/-5ms jitter, or delayed samples cannot change crash_prob/recon_error even in principle -- confirmed empirically: replaying the identical sample sequence twice produces bit-identical output regardless of any timing simulated around the calls. The real place jitter could matter is the caller's OWN real-time pacing loop (next_tick logic in crash_monitor.py main() / exp_a4's replay loop), which 3.1 above already measured directly (0 deadline misses over 15 real minutes)."
+  },
+  "3.20_dropped_sample_simulation": {
+    "baseline_n_samples": 2397,
+    "baseline_n_windows": 156,
+    "sparse_drop_n_samples": 2277,
+    "sparse_drop_n_windows": 148,
+    "burst_drop_n_samples": 2367,
+    "burst_drop_n_windows": 154,
+    "no_exception_on_either": true,
+    "note": "Both sparse (1-in-20) and burst (30 consecutive) sample drops run through WindowScorer with NO exception and NO detection/logging of the gap -- the deployed code has no drop counter or gap-detection logic at all. A dropped sample silently means the window it would have joined just has one fewer real distinct reading spread over more real elapsed time; the model scores whatever samples DID arrive as if they were perfectly regular. This is a real, worth-flagging gap for the paper's robustness discussion: sample loss is currently invisible to the running system."
+  },
+  "3.27_causal_filter_state_reset": {
+    "cold_start_first_output_is_zero": true,
+    "cold_start_note": "CausalGravityFilter.apply()'s first-ever call initializes self.gravity = accel_xyz.copy(), so the very first output is always exactly [0,0,0] regardless of the true reading -- a known, real startup transient bias, not a bug, just worth stating explicitly.",
+    "WindowScorer.clear_leaves_gravity_filter_state_untouched": true,
+    "clear_note": "WindowScorer.clear() (called in crash_monitor.py main() right after a 30s alarm countdown) only clears the sample buffer and new_samples counter -- it does NOT reset gravity_filter. So after every alarm-countdown gap, the causal gravity EMA resumes from its STALE pre-gap estimate rather than re-initializing fresh, and needs roughly a few EMA time constants (~1-2s at this filter's 0.3Hz cutoff) of new real samples to reconverge. Not necessarily wrong (arguably better than a fresh cold-start-zero transient right after a real crash event), but genuinely undocumented behavior worth stating for the paper."
+  },
+  "3.28_startup_grace_period": {
+    "first_valid_decision_at_sample_count": 60,
+    "expected_minimum_sample_count": 60,
+    "matches_expected": true,
+    "time_until_first_decision_s": 1.2,
+    "note": "try_score() returns None (TriggerPolicy.update() is never even called) until the buffer holds a full window_samples=60 readings AND a full stride_samples=15 have accumulated -- confirmed empirically: the first non-None result appears at exactly sample #60, matching config exactly. No partial window is ever scored, and no alert can fire before 1.2s (60 samples @ 50Hz) of continuous real sampling has occurred from a cold start or after any buffer clear."
+  }
+}

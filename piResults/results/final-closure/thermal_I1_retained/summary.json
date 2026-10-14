@@ -1,0 +1,90 @@
+{
+  "source": "piResults/final_pi_results/long_soak/long_soak_summary.json",
+  "sha256": "c7e618ea3ee1472820a7aa6657a50e40237f89091d230ee5c1768d0d3a9e2d09",
+  "basis": "last_test.txt I1 explicitly says no new run is required; section R preserves the existing 90-minute and three-hour soaks.",
+  "recorded_evidence": {
+    "config": {
+      "requested_duration_min": 180.0,
+      "actual_duration_min": 180.00034345334998,
+      "sample_rate_hz": 50,
+      "window_samples": 60,
+      "stride_samples": 15,
+      "stride_budget_ms": 300.0,
+      "timing_guard": {
+        "max_dt_s": 0.03,
+        "min_dt_s": 0.01,
+        "long_gap_reset_s": 1.0
+      }
+    },
+    "n_input_samples": 539981,
+    "n_windows_generated": 33734,
+    "n_triggers": 0,
+    "n_sensor_read_failures": 0,
+    "n_reconnects": 0,
+    "n_exceptions": 0,
+    "deadline_miss_count_gt_stride_budget": 0,
+    "resources": {
+      "process_cpu_percent": {
+        "mean": 2.3977081384471464,
+        "p95": 3.9,
+        "max": 8.9,
+        "min": 0.0
+      },
+      "system_cpu_percent": {
+        "mean": 4.938344246959776,
+        "p95": 16.7,
+        "max": 80.9,
+        "min": 0.0
+      },
+      "process_rss_mb": {
+        "mean": 51.613653604420016,
+        "p95": 54.8515625,
+        "max": 55.19921875,
+        "min": 47.05859375
+      },
+      "system_ram_used_mb": {
+        "mean": 2053.1869664990645,
+        "p95": 2070.8046875,
+        "max": 2157.1328125,
+        "min": 2023.0859375
+      },
+      "swap_used_mb": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      },
+      "temperature_c": {
+        "mean": 46.575275958840045,
+        "p95": 52.5,
+        "max": 55.0,
+        "min": 42.8
+      },
+      "cpu_freq_mhz": {
+        "mean": 1800.440024031431,
+        "p95": 1800.457088,
+        "max": 1800.457088,
+        "min": 1800.404352
+      },
+      "n_resource_samples": 10690
+    },
+    "memory_leak_check": {
+      "slope_mb_per_min": 0.04095574257803796,
+      "first_quarter_mean_mb": 48.86325493544162,
+      "last_quarter_mean_mb": 54.32144402601048,
+      "verdict": "stable plateau"
+    },
+    "throttling_status": {
+      "raw_hex": "0x0",
+      "under_voltage_now": false,
+      "arm_freq_capped_now": false,
+      "currently_throttled": false,
+      "soft_temp_limit_now": false,
+      "under_voltage_occurred": false,
+      "arm_freq_capped_occurred": false,
+      "throttling_occurred": false,
+      "soft_temp_limit_occurred": false
+    }
+  },
+  "limits": "No fresh three-hour measurement. Historical resource series supports CPU/RSS/temperature observations, but not missing per-axis bias drift or sensor-temperature records. Positive RSS drift is retained; the old stable-plateau label is not proof of zero memory drift."
+}

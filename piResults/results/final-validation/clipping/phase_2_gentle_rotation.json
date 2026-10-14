@@ -1,0 +1,70 @@
+{
+  "phase": "2_gentle_rotation",
+  "n_samples": 6018,
+  "duration_s": 120.32452271599999,
+  "n_windows_scored": 402,
+  "clipping_per_axis_raw_int16": {
+    "ax": {
+      "min_raw": -9200,
+      "max_raw": 5732,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "ay": {
+      "min_raw": -29376,
+      "max_raw": -9016,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "az": {
+      "min_raw": -6236,
+      "max_raw": 7048,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gx": {
+      "min_raw": -12712,
+      "max_raw": 7181,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gy": {
+      "min_raw": -21443,
+      "max_raw": 19731,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gz": {
+      "min_raw": -21490,
+      "max_raw": 23494,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    }
+  },
+  "max_classifier_score": 0.96875,
+  "max_reconstruction_error": 0.19638307392597198,
+  "n_classifier_threshold_crossings": 0,
+  "n_recon_threshold_crossings": 0,
+  "n_or_positive_windows": 0,
+  "n_confirmed_triggers": 0,
+  "accel_magnitude_ms2_max": 18.499480477514346,
+  "gyro_magnitude_dps_max": 184.3471767941723
+}

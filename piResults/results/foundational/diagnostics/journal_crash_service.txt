@@ -1,0 +1,32 @@
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.3, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.4, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Reading error: Checksum did not validate. Try again.
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.4, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: File updated
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.4, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.4, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.4, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: File updated
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.4, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: File updated
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.4, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: File updated
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.0, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: File updated
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: File updated
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.6, "air_quality": "Clean Air", "destination": ""}
+Aug 30 17:00:10 helx-pi python3[26395]: Sent: {"temperature": 37.1, "humidity": 64.5, "air_quality": "Clean Air", "destination": ""}
+-- No entries --
+note: no helmx-crash-monitor.service is installed on this system (deploy/helmx-crash-monitor.service is a repo template only, referencing a path /home/pi/HelmX/... that does not match this deployment)

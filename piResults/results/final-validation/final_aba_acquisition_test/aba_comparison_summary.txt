@@ -1,0 +1,115 @@
+HelmX A1(polling) -> B(FIFO) -> A2(polling) Matched Acquisition-Method Test
+==============================================================================
+Source protocol: piResults/HelmX_FINAL_Pi_ABA_Acquisition_Test.txt
+Run: 2026-09-20, three 20-minute conditions back-to-back, same session, no Pi
+restart, same physical mounting/location/orientation throughout, same
+deployed INT8 model/thresholds/preprocessing/3-window policy, same CPU
+governor/frequency/thread count/background services/desktop+IDE state
+(all held constant per the doc's "CRITICAL CONTROL REQUIREMENTS" list).
+
+Physical sensor module: user-confirmed MPU6050 by marking; register readback
+throughout this whole campaign has consistently found WHO_AM_I=0x70, the
+value associated with the MPU6500/ICM-2060x family rather than the classic
+MPU6050 -- both facts are true simultaneously (documented mismatch, not a
+new finding here; see Section B1). Not altered between conditions.
+
+RESULT -- THE MOST CLEAR-CUT FINDING OF THIS ENTIRE PI CAMPAIGN
+------------------------------------------------------------------------------
+                                A1 (polling)   B (FIFO)      A2 (polling)
+samples                         60,000         58,926        59,999
+scored windows                   3,993          3,925         3,986
+V_T                              0.9997         1.0000        0.9992
+C_D                              0.9990         1.0000        0.9975
+dt p99 (ms)                      21.09          22.07         21.06
+dt max (ms)                      52.07          28.47         36.65
+processing latency p99 (ms)       2.68           3.06          2.75
+classifier max                    0.0            0.0           0.0
+reconstruction median              0.0            8.25           0.0
+reconstruction p95                 0.0           10.997          0.0
+reconstruction p99                 0.0           12.372          0.0
+reconstruction max                 0.0           15.121          0.0
+classifier threshold crossings       0              0              0
+reconstruction threshold crossings   0            220              0
+OR-positive windows                  0            220              0
+confirmed 3-window triggers          0             33              0
+I2C failures                         0              0              0
+temperature max (C)               49.1           55.5           57.9
+
+(Full table: aba_comparison.csv. Per-condition raw data/scores/timing/system
+metrics: A1_polling/, B_fifo/, A2_polling/ -- each with raw_sensor.csv,
+window_scores.csv, timing.csv, system_metrics.csv, summary.json, summary.txt.)
+
+THE HEADLINE NUMBER: reconstruction_error was EXACTLY 0.0 (not just low) for
+ALL 3,993 A1 windows and ALL 3,986 A2 windows -- checked directly against the
+raw per-window CSVs, 100% of windows in both polling runs, zero variance.
+Under FIFO acquisition, B's reconstruction_error was NEVER zero across any of
+its 3,925 windows -- 56 distinct values spanning [3.53, 15.12], with 220
+windows (5.6%) crossing the deployed threshold of 10.8787 and 33 confirmed
+(3-window OR-gated) triggers. Classifier probability stayed exactly 0.0 in
+ALL THREE conditions throughout -- this is purely a reconstruction-branch
+effect.
+
+INTERPRETATION (per the source doc's own Scenario framework)
+------------------------------------------------------------------------------
+This matches SCENARIO 1 exactly: A1 = no reconstruction triggers, B =
+reconstruction triggers, A2 = no reconstruction triggers. Per the doc's own
+rule: "Strong evidence that the acquisition-path change is associated with
+the altered reconstruction behavior under this matched test." A1 and A2
+being not just similar but IDENTICAL in this metric (both exactly zero,
+zero variance) is about as clean a return-to-baseline as this kind of test
+can produce -- rules out time drift, gradual environmental change, or
+gradual sensor/temperature change as an explanation (Scenario 3, "A1 differs
+from A2 substantially," is clearly NOT what happened -- A1 and A2 are
+identical on every reconstruction-related metric).
+
+Per the doc's explicit instruction, the PRECISE MECHANISM is NOT claimed here.
+One coherent, plausible hypothesis worth stating (not proven, not the only
+possibility): the polling path takes one on-demand I2C transaction per
+20ms tick; if the sensor is genuinely undisturbed (this desk, no vibration),
+consecutive raw digitized ADC readings can be bit-for-bit identical at this
+read cadence (i.e. the physical/electrical noise floor at 50Hz single-shot
+sampling can sit below one LSB of change), which would make every window
+in the buffer literally constant -- and a model whose reconstruction task is
+learned on real (non-constant) motion could plausibly reconstruct a truly
+constant window to near-perfect (here, INT8-quantized to bit-exact zero)
+error. The FIFO path samples the SAME physically-static scene at a much
+higher native rate (~480-495Hz measured) before software-decimating 1-in-10
+-- if the sensor's real analog/ADC noise floor is not exactly stationary
+at that faster timescale, the decimated ~50Hz samples it hands to the model
+would carry slightly more genuine sample-to-sample variation than the
+polling path's samples do, even under identical macroscopic stillness --
+enough to move the window off the "perfectly constant" input the model
+reconstructs to zero error, without moving it anywhere near "crash-like."
+This is offered as the most parsimonious explanation consistent with every
+number above, NOT as a proven mechanism -- confirming it would need directly
+comparing raw sample bit-patterns between the two paths (out of scope here).
+
+CLAIM LIMITS (per the doc's own "IMPORTANT CLAIM LIMITS" section)
+------------------------------------------------------------------------------
+This result does NOT establish, and should NOT be cited as establishing:
+- that FIFO acquisition is inherently unsafe or inferior,
+- that polling acquisition is inherently superior (the "zero error" result
+  it produces here may equally reflect an idle test condition that doesn't
+  resemble real riding, where the sensor is never truly motionless),
+- a specific internal mechanism for why the two paths diverge,
+- that this generalizes to all MPU6050/MPU6500 systems or mountings,
+- any real-road false-alert-rate conclusion (both conditions were stationary,
+  desk-based, unattended captures -- see Section V's existing claim limits).
+
+What IS established: under carefully matched, back-to-back, same-session
+conditions with everything else held constant, switching only the
+acquisition method from polling to FIFO/decimated reproducibly and
+completely changes the reconstruction-error distribution from "always
+exactly zero" to "always measurably nonzero, occasionally above threshold."
+This resolves the open question left by the E2/E3/E4/H2 round
+(acquisition_compare/acquisition_comparison.txt) in favor of the acquisition
+method being the driving factor, not coincidence -- the E2/E3 finding was
+real and reproducible, not a fluke.
+
+STOPPING RULE
+------------------------------------------------------------------------------
+Per the source doc's own instruction, this is the final targeted Pi
+experiment recommended for the current IEEE Sensors Journal paper. No
+further Raspberry Pi testing is recommended unless a reviewer specifically
+requests something new. Remaining work moves to final data analysis,
+manuscript/supplement revision, figures/tables, and submission preparation.

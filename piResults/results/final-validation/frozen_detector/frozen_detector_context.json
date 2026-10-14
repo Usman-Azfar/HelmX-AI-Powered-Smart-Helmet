@@ -1,0 +1,67 @@
+{
+  "source_files": [
+    "results/test_metrics.json",
+    "results/hybrid_ablation.json",
+    "results/pi_research/extended_ablation_batch.json"
+  ],
+  "classifier_only_balanced": {
+    "accuracy": 0.9786647048004414,
+    "precision": 0.9354838709677419,
+    "recall": 0.20279720279720279,
+    "f1": 0.3333333333333333,
+    "confusion_matrix": [
+      [
+        5292,
+        2
+      ],
+      [
+        114,
+        29
+      ]
+    ],
+    "n_windows": 5437,
+    "window_level_trigger_rate_per_hour": 4.787616033194137,
+    "threshold": 0.9892255067825317,
+    "roc_auc": 0.9459237400302758,
+    "pr_auc": 0.5393709255767394
+  },
+  "hybrid_or_tuned": {
+    "confusion_matrix": {
+      "TP": 30,
+      "TN": 5292,
+      "FP": 2,
+      "FN": 113
+    },
+    "accuracy": 0.9788486297590583,
+    "precision": 0.9375,
+    "recall_sensitivity": 0.2097902097902098,
+    "specificity": 0.9996222138269739,
+    "f1_score": 0.34285714285714286,
+    "f2_score": 0.24834437086092714,
+    "balanced_accuracy": 0.6047062118085919,
+    "matthews_corrcoef": 0.43811648230608957,
+    "roc_auc": 0.6047062118085919,
+    "pr_auc": 0.2174618420020296,
+    "threshold": 0.5,
+    "n_windows": 5437,
+    "tuned_clf_threshold": 0.9881946760780957,
+    "tuned_recon_threshold": 212.5227813720703,
+    "validation_f1_at_tuning_time": 0.587378640776699
+  },
+  "or_rule_branch_attribution_window_level": {
+    "classifier_only_positive": 19,
+    "reconstruction_only_positive": 1,
+    "both_positive": 14,
+    "neither": 5403,
+    "total": 5437
+  },
+  "doc_cited_values_to_verify": {
+    "or_precision": 0.906,
+    "or_recall": 0.203,
+    "or_f1": 0.331,
+    "classifier_only": 19,
+    "reconstruction_only": 1,
+    "both": 14,
+    "neither": 5403
+  }
+}

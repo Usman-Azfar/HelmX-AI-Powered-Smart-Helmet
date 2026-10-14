@@ -1,0 +1,10 @@
+{
+  "mean_axis_tolerances": {
+    "acceleration_ms2": 0.3,
+    "gyro_deg_s": 2
+  },
+  "other_gate": "Both physical sanity checks pass, no rail hits, no I2C error, no FIFO overflow.",
+  "purpose": "Conservative engineering plausibility/equivalence gate, NOT a formal statistical equivalence test.",
+  "configuration": "Both modes use CONFIG=4, ACCEL_CONFIG2=4, SMPLRT_DIV=19, +/-2g and +/-250 dps. Different from original unfiltered deployment.",
+  "conditions": "Unattended in existing physical placement; physical assembly/mounting not independently confirmed."
+}

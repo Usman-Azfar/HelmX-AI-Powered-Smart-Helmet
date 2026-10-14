@@ -1,0 +1,34 @@
+{
+  "model_int8": {
+    "path": "models/helmx_crash_model_int8.tflite",
+    "sha256": "2e59379601b02706e97832a93e72bb954a5b62e4ba77ccd82acbcbaa0a515bd6"
+  },
+  "model_fp16": {
+    "path": "models/helmx_crash_model_fp16.tflite",
+    "sha256": "008ee756a5cf6cf5b7ac7dd13fe84a531365666af7add608760581cd11305b0a"
+  },
+  "model_keras": {
+    "path": "models/helmx_crash_model.keras",
+    "sha256": "1bb4f6ba26cb2767c9cc636658670650939a0201c2b55ada3d8b4fb51ee54b98"
+  },
+  "normalizer": {
+    "path": "models/normalizer.npz",
+    "sha256": "747b123d2741c0adf7e42b9cd1dea945128d341168a4b55adb85f781b45336b5"
+  },
+  "thresholds": {
+    "path": "models/thresholds.json",
+    "sha256": "f61e2fa4122d9b1944c36d67eddaf4c20dde53961c2822804a032875ac2b50de"
+  },
+  "config_yaml": {
+    "path": "deploy/config.yaml",
+    "sha256": "09003222f92707df8033cd9587de873ae671489c9b93ac255c278ee4036d17b8"
+  },
+  "crash_monitor_py": {
+    "path": "deploy/crash_monitor.py",
+    "sha256": "42532ba14c604303a972bd40f189010ce3c63b3af2b8697b024e20ce6939bee7"
+  },
+  "reproducibility_manifest": {
+    "path": "results/reproducibility_manifest.json",
+    "sha256": "a9694c8bc0235a7ffbf38bbb118d9ac333a4ea4af18f7b525808cbc7bbec4e6b"
+  }
+}

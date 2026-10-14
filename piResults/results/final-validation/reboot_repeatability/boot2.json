@@ -1,0 +1,25 @@
+{
+  "boot": 2,
+  "context": "This session, after the unplanned reboot (and after a second, user-initiated reboot before this script ran).",
+  "register_dump": {
+    "who_am_i": "0x70"
+  },
+  "stationary": {
+    "n_samples": 3497,
+    "duration_s": 69.91881852699998,
+    "gyro_magnitude_dps_max": 6.089139336099756,
+    "accel_magnitude_ms2_max": 9.880538990969455,
+    "max_classifier_score": 0.0,
+    "max_reconstruction_error": 0.0,
+    "n_confirmed_triggers": 0
+  },
+  "gentle_rotation": {
+    "n_samples": 2865,
+    "duration_s": 57.262067560000105,
+    "gyro_magnitude_dps_max": 301.7875182877478,
+    "accel_magnitude_ms2_max": 21.207125547042175,
+    "max_classifier_score": 0.99609375,
+    "max_reconstruction_error": 0.9819153547286987,
+    "n_confirmed_triggers": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "cue_prepared_monotonic": 2309.718200389,
+  "samples_before_cue": 756,
+  "instruction": "Remove helmet normally, place gently on surface, then leave untouched.",
+  "timing_scope": "Timestamp just before chat START cue; message display and human reaction delay are not measured."
+}

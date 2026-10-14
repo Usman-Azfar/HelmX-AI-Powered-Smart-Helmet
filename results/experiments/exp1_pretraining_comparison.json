@@ -1,0 +1,422 @@
+{
+  "description": "Experiment 1 (updated ExperimentsToPerform.txt): B / A0-cold-start / A1-pretrained-finetune / A2-pretrained-warmup, all trained fresh with an identical metric set (ROC-AUC, PR-AUC, F1, precision, recall, recall at 95% specificity, event-level session recall).",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "pretrain_epochs_max": 60,
+  "finetune_epochs_max": 60,
+  "warmup_epochs": 5,
+  "finetune_lr": 0.0001,
+  "n_train_windows": 18720,
+  "n_val_windows": 4713,
+  "n_test_windows": 5437,
+  "summary_mean_std": {
+    "B": {
+      "roc_auc": {
+        "mean": 0.9580191059412819,
+        "std": 0.013735449142739109
+      },
+      "pr_auc": {
+        "mean": 0.5813868318088247,
+        "std": 0.07993112367826558
+      },
+      "f1_score": {
+        "mean": 0.3394672190897235,
+        "std": 0.06436000744733947
+      },
+      "precision": {
+        "mean": 0.945045045045045,
+        "std": 0.03646590454968941
+      },
+      "recall_sensitivity": {
+        "mean": 0.20839160839160836,
+        "std": 0.04519019418574409
+      },
+      "specificity": {
+        "mean": 0.9996977710615791,
+        "std": 0.00019263390682255452
+      },
+      "recall_at_95pct_specificity": {
+        "mean": 0.7482517482517482,
+        "std": 0.08094990841112044
+      },
+      "specificity_achieved_for_recall_at_spec": {
+        "mean": 0.9544012089157536,
+        "std": 0.004556358108990933
+      },
+      "event_level_session_recall": {
+        "mean": 0.9199999999999999,
+        "std": 0.09797958971132709
+      }
+    },
+    "A0_cold_start": {
+      "roc_auc": {
+        "mean": 0.9513321585856531,
+        "std": 0.010638708562651556
+      },
+      "pr_auc": {
+        "mean": 0.5267397097282381,
+        "std": 0.05011088513498546
+      },
+      "f1_score": {
+        "mean": 0.3169219263055922,
+        "std": 0.0578908519100719
+      },
+      "precision": {
+        "mean": 0.8570167249324646,
+        "std": 0.08735436991217771
+      },
+      "recall_sensitivity": {
+        "mean": 0.19860139860139858,
+        "std": 0.04936884641880501
+      },
+      "specificity": {
+        "mean": 0.9989044200982244,
+        "std": 0.0011545679478606903
+      },
+      "recall_at_95pct_specificity": {
+        "mean": 0.7370629370629371,
+        "std": 0.04836815794626736
+      },
+      "specificity_achieved_for_recall_at_spec": {
+        "mean": 0.9522100491122025,
+        "std": 0.0025286287163855995
+      },
+      "event_level_session_recall": {
+        "mean": 0.96,
+        "std": 0.07999999999999999
+      }
+    },
+    "A1_pretrained_full_finetune": {
+      "roc_auc": {
+        "mean": 0.9430583772102473,
+        "std": 0.01957769142060655
+      },
+      "pr_auc": {
+        "mean": 0.44853761448581697,
+        "std": 0.07930588035327339
+      },
+      "f1_score": {
+        "mean": 0.37719121804869965,
+        "std": 0.06734699669608075
+      },
+      "precision": {
+        "mean": 0.5301086779903977,
+        "std": 0.1569454121888359
+      },
+      "recall_sensitivity": {
+        "mean": 0.32167832167832167,
+        "std": 0.08472800688593543
+      },
+      "specificity": {
+        "mean": 0.9894597657725728,
+        "std": 0.009186808999783433
+      },
+      "recall_at_95pct_specificity": {
+        "mean": 0.6643356643356643,
+        "std": 0.12602943022174892
+      },
+      "specificity_achieved_for_recall_at_spec": {
+        "mean": 0.951001133358519,
+        "std": 0.0004867434350859337
+      },
+      "event_level_session_recall": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    },
+    "A2_pretrained_warmup_finetune": {
+      "roc_auc": {
+        "mean": 0.9466388918976755,
+        "std": 0.006994889607252694
+      },
+      "pr_auc": {
+        "mean": 0.4521645906733262,
+        "std": 0.03290518377508426
+      },
+      "f1_score": {
+        "mean": 0.3810587137096969,
+        "std": 0.023482829403956223
+      },
+      "precision": {
+        "mean": 0.5911469327822807,
+        "std": 0.26842353764857324
+      },
+      "recall_sensitivity": {
+        "mean": 0.4,
+        "std": 0.21821767680942197
+      },
+      "specificity": {
+        "mean": 0.9810351341140914,
+        "std": 0.025947227855487087
+      },
+      "recall_at_95pct_specificity": {
+        "mean": 0.6867132867132868,
+        "std": 0.02980038566805946
+      },
+      "specificity_achieved_for_recall_at_spec": {
+        "mean": 0.9514544767661505,
+        "std": 0.0010207220314398507
+      },
+      "event_level_session_recall": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    }
+  },
+  "winning_variant_by_pr_auc": "A0_cold_start",
+  "per_seed_runs": {
+    "B": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9489367828997599,
+        "pr_auc": 0.47488620996585984,
+        "f1_score": 0.3236994219653179,
+        "precision": 0.9333333333333333,
+        "recall_sensitivity": 0.1958041958041958,
+        "specificity": 0.9996222138269739,
+        "recall_at_95pct_specificity": 0.6713286713286714,
+        "specificity_achieved_for_recall_at_spec": 0.9506989044200982,
+        "event_level_session_recall": 0.8
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.9419384921840531,
+        "pr_auc": 0.5348179675370196,
+        "f1_score": 0.375,
+        "precision": 1.0,
+        "recall_sensitivity": 0.23076923076923078,
+        "specificity": 1.0,
+        "recall_at_95pct_specificity": 0.6993006993006993,
+        "specificity_achieved_for_recall_at_spec": 0.9516433698526634,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.9555348316209669,
+        "pr_auc": 0.5536512675574018,
+        "f1_score": 0.4,
+        "precision": 0.972972972972973,
+        "recall_sensitivity": 0.2517482517482518,
+        "specificity": 0.999811106913487,
+        "recall_at_95pct_specificity": 0.6783216783216783,
+        "specificity_achieved_for_recall_at_spec": 0.9520211560256895,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9821839475220661,
+        "pr_auc": 0.6974738508212861,
+        "f1_score": 0.37777777777777777,
+        "precision": 0.918918918918919,
+        "recall_sensitivity": 0.23776223776223776,
+        "specificity": 0.9994333207404609,
+        "recall_at_95pct_specificity": 0.8601398601398601,
+        "specificity_achieved_for_recall_at_spec": 0.9631658481299584,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9615014754795639,
+        "pr_auc": 0.646104863162556,
+        "f1_score": 0.22085889570552147,
+        "precision": 0.9,
+        "recall_sensitivity": 0.1258741258741259,
+        "specificity": 0.9996222138269739,
+        "recall_at_95pct_specificity": 0.8321678321678322,
+        "specificity_achieved_for_recall_at_spec": 0.9544767661503589,
+        "event_level_session_recall": 0.8
+      }
+    ],
+    "A0_cold_start": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9459237400302758,
+        "pr_auc": 0.5393709255767394,
+        "f1_score": 0.3333333333333333,
+        "precision": 0.9354838709677419,
+        "recall_sensitivity": 0.20279720279720279,
+        "specificity": 0.9996222138269739,
+        "recall_at_95pct_specificity": 0.6853146853146853,
+        "specificity_achieved_for_recall_at_spec": 0.9514544767661504,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.9675037844663836,
+        "pr_auc": 0.6054860803726421,
+        "f1_score": 0.3314285714285714,
+        "precision": 0.90625,
+        "recall_sensitivity": 0.20279720279720279,
+        "specificity": 0.9994333207404609,
+        "recall_at_95pct_specificity": 0.8111888111888111,
+        "specificity_achieved_for_recall_at_spec": 0.9503211182470721,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.941168389600577,
+        "pr_auc": 0.4866289672779591,
+        "f1_score": 0.3023255813953488,
+        "precision": 0.896551724137931,
+        "recall_sensitivity": 0.18181818181818182,
+        "specificity": 0.9994333207404609,
+        "recall_at_95pct_specificity": 0.7132867132867133,
+        "specificity_achieved_for_recall_at_spec": 0.9518322629391764,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9602967867040402,
+        "pr_auc": 0.5415534707523681,
+        "f1_score": 0.39800995024875624,
+        "precision": 0.6896551724137931,
+        "recall_sensitivity": 0.27972027972027974,
+        "specificity": 0.9965999244427654,
+        "recall_at_95pct_specificity": 0.7762237762237763,
+        "specificity_achieved_for_recall_at_spec": 0.9571212693615414,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.941768092126989,
+        "pr_auc": 0.46065910466148186,
+        "f1_score": 0.21951219512195122,
+        "precision": 0.8571428571428571,
+        "recall_sensitivity": 0.1258741258741259,
+        "specificity": 0.9994333207404609,
+        "recall_at_95pct_specificity": 0.6993006993006993,
+        "specificity_achieved_for_recall_at_spec": 0.9503211182470721,
+        "event_level_session_recall": 0.8
+      }
+    ],
+    "A1_pretrained_full_finetune": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9377716163700297,
+        "pr_auc": 0.44257810514815643,
+        "f1_score": 0.37037037037037035,
+        "precision": 0.547945205479452,
+        "recall_sensitivity": 0.27972027972027974,
+        "specificity": 0.9937665281450699,
+        "recall_at_95pct_specificity": 0.6643356643356644,
+        "specificity_achieved_for_recall_at_spec": 0.9508877975066112,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.9253363749963675,
+        "pr_auc": 0.381561380923855,
+        "f1_score": 0.3209169054441261,
+        "precision": 0.27184466019417475,
+        "recall_sensitivity": 0.3916083916083916,
+        "specificity": 0.971666037023045,
+        "recall_at_95pct_specificity": 0.5524475524475524,
+        "specificity_achieved_for_recall_at_spec": 0.9501322251605592,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.9324819494823273,
+        "pr_auc": 0.4201181182781664,
+        "f1_score": 0.33695652173913043,
+        "precision": 0.7560975609756098,
+        "recall_sensitivity": 0.21678321678321677,
+        "specificity": 0.9981110691348697,
+        "recall_at_95pct_specificity": 0.6363636363636364,
+        "specificity_achieved_for_recall_at_spec": 0.9514544767661504,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9386546585262112,
+        "pr_auc": 0.39679045269381535,
+        "f1_score": 0.34977578475336324,
+        "precision": 0.4875,
+        "recall_sensitivity": 0.2727272727272727,
+        "specificity": 0.9922553834529656,
+        "recall_at_95pct_specificity": 0.5664335664335665,
+        "specificity_achieved_for_recall_at_spec": 0.9514544767661504,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9810472866763006,
+        "pr_auc": 0.6016400153850915,
+        "f1_score": 0.5079365079365079,
+        "precision": 0.5871559633027523,
+        "recall_sensitivity": 0.44755244755244755,
+        "specificity": 0.9914998111069135,
+        "recall_at_95pct_specificity": 0.9020979020979021,
+        "specificity_achieved_for_recall_at_spec": 0.9510766905931243,
+        "event_level_session_recall": 1.0
+      }
+    ],
+    "A2_pretrained_warmup_finetune": [
+      {
+        "seed": 42,
+        "roc_auc": 0.9521479653704814,
+        "pr_auc": 0.4837190923927436,
+        "f1_score": 0.4247104247104247,
+        "precision": 0.47413793103448276,
+        "recall_sensitivity": 0.38461538461538464,
+        "specificity": 0.988477521722705,
+        "recall_at_95pct_specificity": 0.6713286713286714,
+        "specificity_achieved_for_recall_at_spec": 0.9518322629391764,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 43,
+        "roc_auc": 0.936921597480721,
+        "pr_auc": 0.43406677067298693,
+        "f1_score": 0.3828125,
+        "precision": 0.4336283185840708,
+        "recall_sensitivity": 0.34265734265734266,
+        "specificity": 0.9879108424631659,
+        "recall_at_95pct_specificity": 0.6713286713286714,
+        "specificity_achieved_for_recall_at_spec": 0.9503211182470721,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 44,
+        "roc_auc": 0.9491349225009974,
+        "pr_auc": 0.4822064354819068,
+        "f1_score": 0.3707865168539326,
+        "precision": 0.9428571428571428,
+        "recall_sensitivity": 0.23076923076923078,
+        "specificity": 0.9996222138269739,
+        "recall_at_95pct_specificity": 0.7342657342657343,
+        "specificity_achieved_for_recall_at_spec": 0.9514544767661504,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 45,
+        "roc_auc": 0.9400059706066507,
+        "pr_auc": 0.4638964010503867,
+        "f1_score": 0.35555555555555557,
+        "precision": 0.8648648648648649,
+        "recall_sensitivity": 0.22377622377622378,
+        "specificity": 0.9990555345674348,
+        "recall_at_95pct_specificity": 0.7062937062937062,
+        "specificity_achieved_for_recall_at_spec": 0.9531545145447676,
+        "event_level_session_recall": 1.0
+      },
+      {
+        "seed": 46,
+        "roc_auc": 0.9549840035295268,
+        "pr_auc": 0.39693425376860686,
+        "f1_score": 0.37142857142857144,
+        "precision": 0.2402464065708419,
+        "recall_sensitivity": 0.8181818181818182,
+        "specificity": 0.9301095579901776,
+        "recall_at_95pct_specificity": 0.6503496503496503,
+        "specificity_achieved_for_recall_at_spec": 0.9505100113335851,
+        "event_level_session_recall": 1.0
+      }
+    ]
+  }
+}

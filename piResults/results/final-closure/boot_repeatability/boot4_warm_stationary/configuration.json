@@ -1,0 +1,42 @@
+{
+  "model_path": "models/helmx_crash_model_int8.tflite",
+  "normalizer_path": "models/normalizer.npz",
+  "thresholds_path": "models/thresholds.json",
+  "sensor": {
+    "i2c_address": 104,
+    "sample_rate_hz": 50,
+    "window_samples": 60,
+    "stride_samples": 15,
+    "timing_guard": {
+      "max_dt_s": 0.06,
+      "min_dt_s": 0.01,
+      "long_gap_reset_s": 1.0
+    }
+  },
+  "gravity_filter": {
+    "cutoff_hz": 0.3
+  },
+  "thresholds": {
+    "consecutive_windows": 3,
+    "cooldown_seconds": 60
+  },
+  "alarm": {
+    "countdown_seconds": 30,
+    "gpio_pin": 18,
+    "cancel_signal_file": "/tmp/helmx_cancel_alert"
+  },
+  "gps": {
+    "timeout_seconds": 15
+  },
+  "gsm": {
+    "port": "/dev/ttyUSB0",
+    "baudrate": 9600,
+    "recipient_number": "+92XXXXXXXXXX"
+  },
+  "logging": {
+    "log_file": "logs/crash_monitor.log",
+    "level": "INFO",
+    "max_bytes": 5000000,
+    "backup_count": 3
+  }
+}

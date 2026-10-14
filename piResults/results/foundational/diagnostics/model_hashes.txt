@@ -1,0 +1,101 @@
+=== models/thresholds.json ===
+{
+  "recon_error": 10.878735866546593,
+  "recon_error_peak": 134.2400975036617,
+  "classifier_prob_balanced": 0.9892255067825317,
+  "classifier_prob_moderate_recall": 0.9772439002990723,
+  "classifier_prob_high_recall": 0.76202392578125,
+  "classifier_prob": 0.9892255067825317
+}
+
+=== deploy/config.yaml ===
+model_path: "models/helmx_crash_model_int8.tflite"
+normalizer_path: "models/normalizer.npz"
+thresholds_path: "models/thresholds.json"
+
+sensor:
+  i2c_address: 0x68
+  sample_rate_hz: 50
+  window_samples: 60
+  stride_samples: 15
+
+gravity_filter:
+  cutoff_hz: 0.3
+
+# classifier_prob / recon_error are loaded directly from `thresholds_path`
+# above (models/thresholds.json: classifier_prob_balanced / recon_error, the
+# F1-optimal operating point) at startup -- NOT duplicated here. A previous
+# version of this file hardcoded copies of those two numbers, which drifted
+# out of sync with the actual trained model after a retrain (changesToMake2.txt
+# item 1: "the current deployment config is not synchronized with the current
+# model artifacts"). Re-run scripts/train.py to regenerate thresholds.json;
+# this file will pick up the new values automatically, with nothing to edit.
+#
+# consecutive_windows/cooldown_seconds below are deployment *policy*, not
+# model calibration -- they aren't retrained, so they stay here. With this
+# confirmation logic, the balanced operating point reached 100% session-level
+# recall on the held-out test set with zero false alert events -- see
+# results/test_metrics.json -> deployed_alert_simulation (real-duration-based,
+# real-cooldown-based numbers as of changesToMake2.txt item 2).
+# Every trigger goes through the cancellation window below before an SMS is ever
+# sent, so this threshold controls how often the rider gets a check-in buzz, not
+# how often an emergency contact gets messaged.
+# classifier_prob_high_recall in thresholds.json is a more sensitive fallback
+# (same recall, more triggers) if you want extra margin given the test set is
+# still small.
+thresholds:
+  consecutive_windows: 3
+  cooldown_seconds: 60
+
+# When the model flags a crash, the alarm fires and the rider has this long to
+# cancel (via the voice-assistant module) before an SMS actually goes out.
+# See deploy/crash_monitor.py: CancellationListener for the file-based signal
+# the voice-assistant process should write to cancel a pending alert.
+alarm:
+  countdown_seconds: 30
+  gpio_pin: 18                                  # BCM pin driving the buzzer/vibration motor
+  cancel_signal_file: "/tmp/helmx_cancel_alert"  # touched/written by the voice-assistant module
+
+gps:
+  timeout_seconds: 15
+
+gsm:
+  port: "/dev/ttyUSB0"
+  baudrate: 9600
+  recipient_number: "+92XXXXXXXXXX"   # <-- set this before deploying
+
+logging:
+  log_file: "logs/crash_monitor.log"
+  level: "INFO"
+  max_bytes: 5000000
+  backup_count: 3
+
+=== sha256sum models/* ===
+26f4b222861bbb313cc2f1fbfbe753ee05c3d1baa53f7931cea8904e3c02eb47  models/helmx_autoencoder_only_denoising.keras
+1d116c51829bf7ee1d8acbf608fe1675144b50199c7fbef5197a9be0d1644107  models/helmx_autoencoder_only.keras
+b6096311f7e4b65d6dd45481e39a80a7850be93bd7ffe35e5effc429d7fe5dc6  models/helmx_classifier_only.keras
+008ee756a5cf6cf5b7ac7dd13fe84a531365666af7add608760581cd11305b0a  models/helmx_crash_model_fp16.tflite
+2e59379601b02706e97832a93e72bb954a5b62e4ba77ccd82acbcbaa0a515bd6  models/helmx_crash_model_int8.tflite
+1bb4f6ba26cb2767c9cc636658670650939a0201c2b55ada3d8b4fb51ee54b98  models/helmx_crash_model.keras
+dfb6b007a3f536141d220f8034ba355547af7e8597da3e87b1af2b55858c43bd  models/model_b_training_history.json
+a243ae1c3a9ef7480b3e143e6fdc775bb3cef4dab57b75421dda0fea8bc51449  models/model_c_training_history.json
+747b123d2741c0adf7e42b9cd1dea945128d341168a4b55adb85f781b45336b5  models/normalizer.npz
+f61e2fa4122d9b1944c36d67eddaf4c20dde53961c2822804a032875ac2b50de  models/thresholds.json
+ac36194ee5b49a7021d29068c7d77ce033075b7496f63eceecb14103a493cf29  models/training_history.json
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+=== TFLite model metadata (int8 + fp16) ===
+
+-- models/helmx_crash_model_int8.tflite --
+size_bytes: 83568
+mtime: 1788082299.7344284
+signatures: {'serving_default': {'inputs': ['aux', 'seq'], 'outputs': ['crash_prob', 'recon_error', 'reconstruction']}}
+input details: {'aux': {'name': 'serving_default_aux:0', 'index': 1, 'shape': array([1, 7], dtype=int32), 'shape_signature': array([-1,  7], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}, 'seq': {'name': 'serving_default_seq:0', 'index': 0, 'shape': array([ 1, 60,  6], dtype=int32), 'shape_signature': array([-1, 60,  6], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}}
+output details: {'crash_prob': {'name': 'StatefulPartitionedCall_1:0', 'index': 90, 'shape': array([1, 1], dtype=int32), 'shape_signature': array([-1,  1], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}, 'recon_error': {'name': 'StatefulPartitionedCall_1:1', 'index': 85, 'shape': array([1, 1], dtype=int32), 'shape_signature': array([-1,  1], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}, 'reconstruction': {'name': 'StatefulPartitionedCall_1:2', 'index': 81, 'shape': array([ 1, 60,  6], dtype=int32), 'shape_signature': array([-1, 60,  6], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}}
+
+-- models/helmx_crash_model_fp16.tflite --
+size_bytes: 133920
+mtime: 1788082299.7344284
+signatures: {'serving_default': {'inputs': ['aux', 'seq'], 'outputs': ['crash_prob', 'recon_error', 'reconstruction']}}
+input details: {'aux': {'name': 'serving_default_aux:0', 'index': 1, 'shape': array([1, 7], dtype=int32), 'shape_signature': array([-1,  7], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}, 'seq': {'name': 'serving_default_seq:0', 'index': 0, 'shape': array([ 1, 60,  6], dtype=int32), 'shape_signature': array([-1, 60,  6], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}}
+output details: {'crash_prob': {'name': 'StatefulPartitionedCall_1:0', 'index': 105, 'shape': array([1, 1], dtype=int32), 'shape_signature': array([-1,  1], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}, 'recon_error': {'name': 'StatefulPartitionedCall_1:1', 'index': 101, 'shape': array([1, 1], dtype=int32), 'shape_signature': array([-1,  1], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}, 'reconstruction': {'name': 'StatefulPartitionedCall_1:2', 'index': 98, 'shape': array([ 1, 60,  6], dtype=int32), 'shape_signature': array([-1, 60,  6], dtype=int32), 'dtype': <class 'numpy.float32'>, 'quantization': (0.0, 0), 'quantization_parameters': {'scales': array([], dtype=float32), 'zero_points': array([], dtype=int32), 'quantized_dimension': 0}, 'sparsity_parameters': {}}}

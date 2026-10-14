@@ -1,0 +1,5 @@
+{
+  "statement": "Tilts done; ready for rotation",
+  "phase": "05_repeated_tilt",
+  "next": "06_moderate_rotation"
+}

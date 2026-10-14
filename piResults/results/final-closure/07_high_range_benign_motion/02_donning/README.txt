@@ -1,0 +1,172 @@
+
+ — 07_high_range_benign_motion/02_donning
+Status: COMPLETE (GUIDED; OPERATOR-ATTESTED)
+UTC: 2026-10-02T15:23:50.348794+00:00
+Evidence: piResults/final_pi_review_closure/07_high_range_benign_motion/02_donning
+{
+  "mode": "polling",
+  "fifo_overflows": 0,
+  "seconds_requested": 60.0,
+  "elapsed_s": 60.00227159400015,
+  "n_samples": 2994,
+  "sample_rate_hz": 49.89811086251243,
+  "n_windows": 196,
+  "i2c_failures": 0,
+  "exception": null,
+  "timing": {
+    "n": 2993,
+    "mean_ms": 20.040734444370187,
+    "median_ms": 19.79488400002083,
+    "std_ms": 3.0858938905967714,
+    "rms_error_from_20ms": 3.08616273047625,
+    "p90_ms": 23.600739399989834,
+    "p95_ms": 24.908929199818886,
+    "p99_ms": 28.35211755996169,
+    "p99.9_ms": 36.34808404795292,
+    "max_ms": 43.059938999931546,
+    "histogram_edges_ms": [
+      0,
+      10,
+      15,
+      25,
+      30,
+      40,
+      60,
+      100,
+      "inf"
+    ],
+    "counts_left_closed_right_open": [
+      17,
+      115,
+      2717,
+      124,
+      17,
+      3,
+      0,
+      0
+    ],
+    "deviation_counts": {
+      "2": 1249,
+      "5": 276,
+      "8": 66
+    }
+  },
+  "nominal_positions_received_samples": 196,
+  "C_D": 1.0,
+  "V_T_scored_over_scored_plus_resets": 1.0,
+  "p_valid_90_sample_position": 1.0,
+  "gap_count": 0,
+  "processing_ms": {
+    "0": 1.8332450001707912,
+    "50": 3.462112999841338,
+    "95": 7.462507000127516,
+    "99": 11.760255599949692,
+    "99.9": 14.155628320126057,
+    "100": 14.634124000167503
+  },
+  "processing_over_300ms": 0,
+  "sensor_read_ms": {
+    "50": 7.574131999831479,
+    "95": 12.142208199986724,
+    "99": 16.42179056996387,
+    "100": 31.661820999943302
+  },
+  "confirmed_alert_events": 1,
+  "or_positive_windows": 15,
+  "rail_counts": {
+    "ax": 0,
+    "ay": 0,
+    "az": 0,
+    "gx": 0,
+    "gy": 0,
+    "gz": 0
+  },
+  "throttled_end": {
+    "command": [
+      "vcgencmd",
+      "get_throttled"
+    ],
+    "returncode": 0,
+    "stdout": "throttled=0x0\n",
+    "stderr": ""
+  },
+  "fifo_timing_note": "FIFO packets retain common host read-completion timestamps per batch. Zero dt within batches is intentional; these are host availability metrics, not direct physical-sample jitter measurements. No invented timestamps or decimation.",
+  "conditions": "Guided operator phase: donning: pick up helmet, put on gently, then remain seated and still; one natural donning action. User reported readiness; performed motion is not independently verified or amplitude-matched. Desktop/agent active. No alarm countdown or communication blocks; policy events recorded only.",
+  "memory_scope": "Raw samples stream to disk and are loaded only after capture. RSS still includes score/resource/GC research buffers; do not interpret their growth as a production-monitor leak.",
+  "timing_scope": "Processing latency excludes scheduled pacing sleep and raw file write; sensor reads reported separately. Stream dt includes harness logging/resource overhead. CPU temperature from sysfs; sensor temperature preserved RAW because device identity differs from MPU6050.",
+  "score_distributions": {
+    "classifier": {
+      "0": 0.0,
+      "50": 0.0,
+      "95": 0.9921875,
+      "99": 0.99609375,
+      "99.9": 0.99609375,
+      "100": 0.99609375
+    },
+    "reconstruction": {
+      "0": 0.0,
+      "50": 0.0,
+      "95": 0.7855322957038879,
+      "99": 1.5710645914077759,
+      "99.9": 1.7291530019044945,
+      "100": 1.7674477100372314
+    }
+  },
+  "overlapping_three_positive_positions": 8,
+  "classifier_crossings": 15,
+  "reconstruction_crossings": 0,
+  "physical_axes": {
+    "ax": {
+      "mean": 5.171937793205226,
+      "std": 5.86641543681345,
+      "min": -19.665972436523436,
+      "max": 14.891934326171874,
+      "rms": 7.820726987567568
+    },
+    "ay": {
+      "mean": -2.0803197433767275,
+      "std": 3.79015821493309,
+      "min": -19.05784521484375,
+      "max": 19.086575634765623,
+      "rms": 4.323543630970757
+    },
+    "az": {
+      "mean": 1.4041089113611338,
+      "std": 4.294461232131693,
+      "min": -11.066000073242186,
+      "max": 15.002067602539062,
+      "rms": 4.518176524799115
+    },
+    "gx": {
+      "mean": 3.0730566824706327,
+      "std": 32.51061742782773,
+      "min": -252.13414634146343,
+      "max": 281.82926829268297,
+      "rms": 32.65553433818307
+    },
+    "gy": {
+      "mean": -2.6688539680987997,
+      "std": 36.9581559409317,
+      "min": -334.45121951219517,
+      "max": 276.5243902439025,
+      "rms": 37.054393424495046
+    },
+    "gz": {
+      "mean": -0.5221214787298171,
+      "std": 51.926750564931204,
+      "min": -651.1585365853659,
+      "max": 506.5853658536586,
+      "rms": 51.92937545427573
+    }
+  },
+  "magnitudes": {
+    "accel": {
+      "mean": 9.96384671133125,
+      "max": 22.448094007738078
+    },
+    "gyro": {
+      "mean": 37.98906967239352,
+      "max": 700.5886823127049
+    }
+  }
+}

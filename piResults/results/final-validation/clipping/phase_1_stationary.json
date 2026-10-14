@@ -1,0 +1,70 @@
+{
+  "phase": "1_stationary",
+  "n_samples": 4040,
+  "duration_s": 80.77867988500003,
+  "n_windows_scored": 269,
+  "clipping_per_axis_raw_int16": {
+    "ax": {
+      "min_raw": -4400,
+      "max_raw": -4112,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "ay": {
+      "min_raw": -15876,
+      "max_raw": -15584,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "az": {
+      "min_raw": -2732,
+      "max_raw": -2272,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gx": {
+      "min_raw": -378,
+      "max_raw": 361,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gy": {
+      "min_raw": 66,
+      "max_raw": 512,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gz": {
+      "min_raw": 8,
+      "max_raw": 293,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    }
+  },
+  "max_classifier_score": 0.0,
+  "max_reconstruction_error": 0.0,
+  "n_classifier_threshold_crossings": 0,
+  "n_recon_threshold_crossings": 0,
+  "n_or_positive_windows": 0,
+  "n_confirmed_triggers": 0,
+  "accel_magnitude_ms2_max": 9.964400676385196,
+  "gyro_magnitude_dps_max": 4.877313041711278
+}

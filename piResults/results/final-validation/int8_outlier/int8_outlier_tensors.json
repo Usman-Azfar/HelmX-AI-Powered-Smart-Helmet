@@ -1,0 +1,1983 @@
+[
+  {
+    "name": "serving_default_seq:0",
+    "index": 0,
+    "dtype": "<class 'numpy.float32'>",
+    "shape": [
+      1,
+      60,
+      6
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -207.17250061035156,
+    "max": 141.91941833496094,
+    "mean": -0.9837446212768555
+  },
+  {
+    "name": "serving_default_aux:0",
+    "index": 1,
+    "dtype": "<class 'numpy.float32'>",
+    "shape": [
+      1,
+      7
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -0.4172245264053345,
+    "max": 59.46510696411133,
+    "mean": 21.963407516479492
+  },
+  {
+    "name": "arith.constant",
+    "index": 2,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -3.0,
+    "max": -3.0,
+    "mean": -3.0
+  },
+  {
+    "name": "arith.constant1",
+    "index": 3,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -1.0,
+    "max": 60.0,
+    "mean": 30.333333333333332
+  },
+  {
+    "name": "arith.constant2",
+    "index": 4,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "name": "arith.constant3",
+    "index": 5,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -1.0,
+    "max": 32.0,
+    "mean": 20.333333333333332
+  },
+  {
+    "name": "arith.constant4",
+    "index": 6,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -1.0,
+    "max": 64.0,
+    "mean": 31.0
+  },
+  {
+    "name": "arith.constant5",
+    "index": 7,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -1.0,
+    "max": 64.0,
+    "mean": 26.0
+  },
+  {
+    "name": "arith.constant6",
+    "index": 8,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 2.0,
+    "max": 2.0,
+    "mean": 2.0
+  },
+  {
+    "name": "arith.constant7",
+    "index": 9,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      4
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 2.0,
+    "mean": 1.25
+  },
+  {
+    "name": "arith.constant8",
+    "index": 10,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "name": "arith.constant9",
+    "index": 11,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "name": "arith.constant10",
+    "index": 12,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 30.0,
+    "max": 30.0,
+    "mean": 30.0
+  },
+  {
+    "name": "arith.constant11",
+    "index": 13,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 64.0,
+    "max": 64.0,
+    "mean": 64.0
+  },
+  {
+    "name": "arith.constant12",
+    "index": 14,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 60.0,
+    "max": 60.0,
+    "mean": 60.0
+  },
+  {
+    "name": "arith.constant13",
+    "index": 15,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -1.0,
+    "max": 60.0,
+    "mean": 21.666666666666668
+  },
+  {
+    "name": "arith.constant14",
+    "index": 16,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      2
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 2.0,
+    "mean": 1.5
+  },
+  {
+    "name": "arith.constant15",
+    "index": 17,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -1.0,
+    "max": -1.0,
+    "mean": -1.0
+  },
+  {
+    "name": "tfl.quantize",
+    "index": 18,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      7
+    ],
+    "quant_scales": [
+      0.19638307392597198
+    ],
+    "quant_zero_points": [
+      -124
+    ],
+    "min": -126.0,
+    "max": 127.0,
+    "mean": -19.428571428571427,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 1
+  },
+  {
+    "name": "tfl.pseudo_qconst",
+    "index": 19,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [
+      0.00048708677059039474
+    ],
+    "quant_zero_points": [
+      0
+    ],
+    "min": -33.0,
+    "max": -33.0,
+    "mean": -33.0
+  },
+  {
+    "name": "tfl.pseudo_qconst1",
+    "index": 20,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      32
+    ],
+    "quant_scales": [
+      0.004664854146540165
+    ],
+    "quant_zero_points": [
+      0
+    ],
+    "min": -127.0,
+    "max": 94.0,
+    "mean": -0.25,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "tfl.pseudo_qconst2",
+    "index": 21,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      32
+    ],
+    "quant_scales": [
+      0.0006497580325230956
+    ],
+    "quant_zero_points": [
+      0
+    ],
+    "min": -74.0,
+    "max": 110.0,
+    "mean": 26.40625
+  },
+  {
+    "name": "tfl.pseudo_qconst3",
+    "index": 22,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      32,
+      72
+    ],
+    "quant_scales": [
+      0.003308625426143408
+    ],
+    "quant_zero_points": [
+      0
+    ],
+    "min": -127.0,
+    "max": 116.0,
+    "mean": 1.2881944444444444,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "tfl.pseudo_qconst4",
+    "index": 23,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      6
+    ],
+    "quant_scales": [
+      0.0005619716248475015,
+      0.0007972083403728902,
+      0.0005559209384955466,
+      0.0005690201069228351,
+      0.0006208570557646453
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -43.0,
+    "max": 183.0,
+    "mean": 18.166666666666668
+  },
+  {
+    "name": "tfl.pseudo_qconst5",
+    "index": 24,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      6,
+      1,
+      5,
+      32
+    ],
+    "quant_scales": [
+      0.0018687110859900713,
+      0.002650938229635358,
+      0.0018485909095034003,
+      0.0018921493319794536,
+      0.002064521424472332
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -127.0,
+    "max": 127.0,
+    "mean": 0.7697916666666667,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 2
+  },
+  {
+    "name": "tfl.pseudo_qconst6",
+    "index": 25,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      32
+    ],
+    "quant_scales": [
+      0.0003291480243206024,
+      0.00044119302765466273,
+      0.0004090794827789068,
+      0.00038123366539366543,
+      0.000423947349190712
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -166.0,
+    "max": 198.0,
+    "mean": -23.96875
+  },
+  {
+    "name": "tfl.pseudo_qconst7",
+    "index": 26,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      32,
+      1,
+      5,
+      64
+    ],
+    "quant_scales": [
+      0.0011455187341198325,
+      0.0015354638453572989,
+      0.0014237005962058902,
+      0.0013267900794744492,
+      0.0014754445292055607
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -127.0,
+    "max": 127.0,
+    "mean": -2.38828125,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 25
+  },
+  {
+    "name": "tfl.pseudo_qconst8",
+    "index": 27,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      64
+    ],
+    "quant_scales": [
+      0.00046031299280002713,
+      0.0003443628957029432,
+      0.0003440668515395373,
+      0.0003696395142469555,
+      0.00047056222683750093
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -149.0,
+    "max": 115.0,
+    "mean": -41.890625
+  },
+  {
+    "name": "tfl.pseudo_qconst9",
+    "index": 28,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      64,
+      1,
+      5,
+      64
+    ],
+    "quant_scales": [
+      0.0012378483079373837,
+      0.0009260416845791042,
+      0.0009252455784007907,
+      0.000994014204479754,
+      0.001265409984625876
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -127.0,
+    "max": 127.0,
+    "mean": -7.17685546875,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 6
+  },
+  {
+    "name": "tfl.pseudo_qconst10",
+    "index": 29,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      64
+    ],
+    "quant_scales": [
+      0.0007732465746812522,
+      0.0006458144634962082,
+      0.0007232881034724414,
+      0.0007210939656943083,
+      0.0007341245654970407
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -185.0,
+    "max": 100.0,
+    "mean": -8.203125
+  },
+  {
+    "name": "tfl.pseudo_qconst11",
+    "index": 30,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      64,
+      1,
+      3,
+      64
+    ],
+    "quant_scales": [
+      0.0014267450897023082,
+      0.0011916154762730002,
+      0.001334564876742661,
+      0.0013305164175108075,
+      0.0013545596739277244
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -127.0,
+    "max": 127.0,
+    "mean": -1.9930013020833333,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 24
+  },
+  {
+    "name": "tfl.pseudo_qconst12",
+    "index": 31,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      64
+    ],
+    "quant_scales": [
+      0.0036598416045308113
+    ],
+    "quant_zero_points": [
+      127
+    ],
+    "min": -128.0,
+    "max": 54.0,
+    "mean": -19.984375,
+    "count_at_int8_min_-128": 1,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "tfl.pseudo_qconst13",
+    "index": 32,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      64
+    ],
+    "quant_scales": [
+      0.016187768429517746
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -86.0,
+    "max": 127.0,
+    "mean": -39.40625,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 1
+  },
+  {
+    "name": "tfl.pseudo_qconst14",
+    "index": 33,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      64
+    ],
+    "quant_scales": [
+      0.0004136465722694993,
+      0.0005549594643525779,
+      0.0004951709997840226,
+      0.000442224380094558,
+      0.0004657421086449176
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -193.0,
+    "max": 302.0,
+    "mean": 95.546875
+  },
+  {
+    "name": "tfl.pseudo_qconst15",
+    "index": 34,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      64,
+      1,
+      5,
+      32
+    ],
+    "quant_scales": [
+      0.0011717939050868154,
+      0.0015721104573458433,
+      0.0014027394354343414,
+      0.0012527501676231623,
+      0.0013193720951676369
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -127.0,
+    "max": 127.0,
+    "mean": -3.791015625,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 21
+  },
+  {
+    "name": "tfl.pseudo_qconst16",
+    "index": 35,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      32
+    ],
+    "quant_scales": [
+      0.002628398360684514
+    ],
+    "quant_zero_points": [
+      127
+    ],
+    "min": -128.0,
+    "max": 71.0,
+    "mean": 2.625,
+    "count_at_int8_min_-128": 1,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "tfl.pseudo_qconst17",
+    "index": 36,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      32
+    ],
+    "quant_scales": [
+      0.01901533454656601
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -81.0,
+    "max": 127.0,
+    "mean": -7.5625,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 1
+  },
+  {
+    "name": "tfl.pseudo_qconst18",
+    "index": 37,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      32
+    ],
+    "quant_scales": [
+      0.0008475480717606843,
+      0.0009910590015351772,
+      0.0008291320991702378,
+      0.0010296314721927047,
+      0.0009716463391669095
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -84.0,
+    "max": 209.0,
+    "mean": 67.65625
+  },
+  {
+    "name": "tfl.pseudo_qconst19",
+    "index": 38,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      32,
+      1,
+      5,
+      6
+    ],
+    "quant_scales": [
+      0.0014132768847048283,
+      0.0016525796381756663,
+      0.001382568385452032,
+      0.0017168988706544042,
+      0.0016202093102037907
+    ],
+    "quant_zero_points": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "min": -127.0,
+    "max": 127.0,
+    "mean": -3.521875,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 14
+  },
+  {
+    "name": "tfl.quantize1",
+    "index": 39,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      60,
+      6
+    ],
+    "quant_scales": [
+      0.5997042059898376
+    ],
+    "quant_zero_points": [
+      -8
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -7.808333333333334,
+    "count_at_int8_min_-128": 22,
+    "count_at_int8_max_127": 16
+  },
+  {
+    "name": "functional_1/conv1d_1/convolution/ExpandDims",
+    "index": 40,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      6
+    ],
+    "quant_scales": [
+      0.5997042059898376
+    ],
+    "quant_zero_points": [
+      -8
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -7.808333333333334,
+    "count_at_int8_min_-128": 22,
+    "count_at_int8_max_127": 16
+  },
+  {
+    "name": "functional_1/conv1d_1/Relu;functional_1/conv1d_1/BiasAdd;functional_1/conv1d_1/convolution/Squeeze;functional_1/conv1d_1/Squeeze;functional_1/conv1d_1/convolution",
+    "index": 41,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      32
+    ],
+    "quant_scales": [
+      0.35222959518432617
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 35.0,
+    "mean": -109.66875,
+    "count_at_int8_min_-128": 961,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/batch_normalization_1/batchnorm/mul_1;functional_1/conv1d_1/convolution/Squeeze;functional_1/conv1d_1/Relu;functional_1/conv1d_1/BiasAdd;functional_1/conv1d_1/Squeeze;functional_1/batch_normalization_1/batchnorm/mul",
+    "index": 42,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      32
+    ],
+    "quant_scales": [
+      0.35485801100730896
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -126.0,
+    "max": 127.0,
+    "mean": -86.47395833333333,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 22
+  },
+  {
+    "name": "functional_1/batch_normalization_1/batchnorm/add_1;functional_1/conv1d_1/convolution/Squeeze;functional_1/batch_normalization_1/batchnorm/mul_1;functional_1/conv1d_1/Relu;functional_1/conv1d_1/BiasAdd;functional_1/conv1d_1/Squeeze;functional_1/batch_normalization_1/batchnorm/mul;functional_1/batch_normalization_1/batchnorm/sub",
+    "index": 43,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      32
+    ],
+    "quant_scales": [
+      0.3530028462409973
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -87.25052083333334,
+    "count_at_int8_min_-128": 58,
+    "count_at_int8_max_127": 21
+  },
+  {
+    "name": "functional_1/batch_normalization_1/batchnorm/add_1;functional_1/conv1d_1/convolution/Squeeze;functional_1/batch_normalization_1/batchnorm/mul_1;functional_1/conv1d_1/Relu;functional_1/conv1d_1/BiasAdd;functional_1/conv1d_1/Squeeze;functional_1/batch_normalization_1/batchnorm/mul;functional_1/batch_normalization_1/batchnorm/sub1",
+    "index": 44,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      60,
+      32
+    ],
+    "quant_scales": [
+      0.3530028462409973
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -87.25052083333334,
+    "count_at_int8_min_-128": 58,
+    "count_at_int8_max_127": 21
+  },
+  {
+    "name": "functional_1/max_pooling1d_1/MaxPool1d/ExpandDims",
+    "index": 45,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      32
+    ],
+    "quant_scales": [
+      0.3530028462409973
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -87.25052083333334,
+    "count_at_int8_min_-128": 58,
+    "count_at_int8_max_127": 21
+  },
+  {
+    "name": "functional_1/max_pooling1d_1/MaxPool1d",
+    "index": 46,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      32
+    ],
+    "quant_scales": [
+      0.3530028462409973
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -84.23333333333333,
+    "count_at_int8_min_-128": 27,
+    "count_at_int8_max_127": 12
+  },
+  {
+    "name": "functional_1/max_pooling1d_1/MaxPool1d/Squeeze",
+    "index": 47,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      30,
+      32
+    ],
+    "quant_scales": [
+      0.3530028462409973
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -84.23333333333333,
+    "count_at_int8_min_-128": 27,
+    "count_at_int8_max_127": 12
+  },
+  {
+    "name": "functional_1/conv1d_1_2/convolution/ExpandDims",
+    "index": 48,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      32
+    ],
+    "quant_scales": [
+      0.3530028462409973
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -84.23333333333333,
+    "count_at_int8_min_-128": 27,
+    "count_at_int8_max_127": 12
+  },
+  {
+    "name": "functional_1/conv1d_1_2/Relu;functional_1/conv1d_1_2/BiasAdd;functional_1/conv1d_1_2/convolution/Squeeze;functional_1/conv1d_1_2/Squeeze;functional_1/conv1d_1_2/convolution",
+    "index": 49,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.5409495830535889
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 20.0,
+    "mean": -113.31354166666667,
+    "count_at_int8_min_-128": 1272,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/batch_normalization_1_2/batchnorm/mul_1;functional_1/conv1d_1_2/convolution/Squeeze;functional_1/conv1d_1_2/Relu;functional_1/conv1d_1_2/BiasAdd;functional_1/conv1d_1_2/Squeeze;functional_1/batch_normalization_1_2/batchnorm/mul",
+    "index": 50,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.5446094274520874
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -126.0,
+    "max": 104.0,
+    "mean": -108.45989583333333,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/batch_normalization_1_2/batchnorm/add_1;functional_1/conv1d_1_2/convolution/Squeeze;functional_1/batch_normalization_1_2/batchnorm/mul_1;functional_1/conv1d_1_2/Relu;functional_1/conv1d_1_2/BiasAdd;functional_1/conv1d_1_2/Squeeze;functional_1/batch_normalization_1_2/batchnorm/mul;functional_1/batch_normalization_1_2/batchnorm/sub",
+    "index": 51,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.5419654846191406
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 104.0,
+    "mean": -109.42395833333333,
+    "count_at_int8_min_-128": 130,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/batch_normalization_1_2/batchnorm/add_1;functional_1/conv1d_1_2/convolution/Squeeze;functional_1/batch_normalization_1_2/batchnorm/mul_1;functional_1/conv1d_1_2/Relu;functional_1/conv1d_1_2/BiasAdd;functional_1/conv1d_1_2/Squeeze;functional_1/batch_normalization_1_2/batchnorm/mul;functional_1/batch_normalization_1_2/batchnorm/sub1",
+    "index": 52,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.5419654846191406
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 104.0,
+    "mean": -109.42395833333333,
+    "count_at_int8_min_-128": 130,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/max_pooling1d_1_2/MaxPool1d/ExpandDims",
+    "index": 53,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.5419654846191406
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 104.0,
+    "mean": -109.42395833333333,
+    "count_at_int8_min_-128": 130,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/max_pooling1d_1_2/MaxPool1d",
+    "index": 54,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      15,
+      64
+    ],
+    "quant_scales": [
+      0.5419654846191406
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 104.0,
+    "mean": -106.63229166666666,
+    "count_at_int8_min_-128": 63,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/max_pooling1d_1_2/MaxPool1d/Squeeze",
+    "index": 55,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      15,
+      64
+    ],
+    "quant_scales": [
+      0.5419654846191406
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 104.0,
+    "mean": -106.63229166666666,
+    "count_at_int8_min_-128": 63,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/bottleneck_1/convolution/ExpandDims",
+    "index": 56,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      15,
+      64
+    ],
+    "quant_scales": [
+      0.5419654846191406
+    ],
+    "quant_zero_points": [
+      -126
+    ],
+    "min": -128.0,
+    "max": 104.0,
+    "mean": -106.63229166666666,
+    "count_at_int8_min_-128": 63,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/bottleneck_1/Relu;functional_1/bottleneck_1/BiasAdd;functional_1/bottleneck_1/convolution/Squeeze;functional_1/bottleneck_1/Squeeze;functional_1/bottleneck_1/convolution",
+    "index": 57,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      15,
+      64
+    ],
+    "quant_scales": [
+      0.3718654215335846
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 88.0,
+    "mean": -97.315625,
+    "count_at_int8_min_-128": 539,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/bottleneck_1/Relu;functional_1/bottleneck_1/BiasAdd;functional_1/bottleneck_1/convolution/Squeeze;functional_1/bottleneck_1/Squeeze",
+    "index": 58,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      15,
+      64
+    ],
+    "quant_scales": [
+      0.3718654215335846
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 88.0,
+    "mean": -97.315625,
+    "count_at_int8_min_-128": 539,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/global_average_pooling1d_1/Mean",
+    "index": 59,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      64
+    ],
+    "quant_scales": [
+      0.19638307392597198
+    ],
+    "quant_zero_points": [
+      -124
+    ],
+    "min": -124.0,
+    "max": 115.0,
+    "mean": -65.84375,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/up_sampling1d_1/Repeat/ExpandDims",
+    "index": 60,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      15,
+      1,
+      64
+    ],
+    "quant_scales": [
+      0.3718654215335846
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 88.0,
+    "mean": -97.315625,
+    "count_at_int8_min_-128": 539,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/up_sampling1d_1/Repeat/Tile",
+    "index": 61,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      15,
+      2,
+      64
+    ],
+    "quant_scales": [
+      0.3718654215335846
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 88.0,
+    "mean": -97.315625,
+    "count_at_int8_min_-128": 1078,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/up_sampling1d_1/Repeat/Shape",
+    "index": 62,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 64.0,
+    "mean": 26.666666666666668
+  },
+  {
+    "name": "functional_1/up_sampling1d_1/Repeat/strided_slice",
+    "index": 63,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "name": "functional_1/up_sampling1d_1/Repeat/concat",
+    "index": 64,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 64.0,
+    "mean": 31.666666666666668
+  },
+  {
+    "name": "functional_1/up_sampling1d_1/Repeat/Reshape_1",
+    "index": 65,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.3718654215335846
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 88.0,
+    "mean": -97.315625,
+    "count_at_int8_min_-128": 1078,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/conv1d_2_1/convolution/ExpandDims",
+    "index": 66,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.3718654215335846
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 88.0,
+    "mean": -97.315625,
+    "count_at_int8_min_-128": 1078,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/conv1d_2_1/Relu;functional_1/conv1d_2_1/BiasAdd;functional_1/conv1d_2_1/convolution/Squeeze;functional_1/conv1d_2_1/Squeeze;functional_1/conv1d_2_1/convolution",
+    "index": 67,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.2873353362083435
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 94.0,
+    "mean": -111.64010416666666,
+    "count_at_int8_min_-128": 1473,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/conv1d_2_1/Relu;functional_1/conv1d_2_1/BiasAdd;functional_1/conv1d_2_1/convolution/Squeeze;functional_1/conv1d_2_1/Squeeze",
+    "index": 68,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      30,
+      64
+    ],
+    "quant_scales": [
+      0.2873353362083435
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 94.0,
+    "mean": -111.64010416666666,
+    "count_at_int8_min_-128": 1473,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/up_sampling1d_1_2/Repeat/ExpandDims",
+    "index": 69,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      30,
+      1,
+      64
+    ],
+    "quant_scales": [
+      0.2873353362083435
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 94.0,
+    "mean": -111.64010416666666,
+    "count_at_int8_min_-128": 1473,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/up_sampling1d_1_2/Repeat/Tile",
+    "index": 70,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      30,
+      2,
+      64
+    ],
+    "quant_scales": [
+      0.2873353362083435
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 94.0,
+    "mean": -111.64010416666666,
+    "count_at_int8_min_-128": 2946,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/up_sampling1d_1_2/Repeat/Shape",
+    "index": 71,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 64.0,
+    "mean": 31.666666666666668
+  },
+  {
+    "name": "functional_1/up_sampling1d_1_2/Repeat/strided_slice",
+    "index": 72,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "name": "functional_1/up_sampling1d_1_2/Repeat/concat",
+    "index": 73,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 64.0,
+    "mean": 41.666666666666664
+  },
+  {
+    "name": "functional_1/up_sampling1d_1_2/Repeat/Reshape_1",
+    "index": 74,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      60,
+      64
+    ],
+    "quant_scales": [
+      0.2873353362083435
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 94.0,
+    "mean": -111.64010416666666,
+    "count_at_int8_min_-128": 2946,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/conv1d_3_1/convolution/ExpandDims",
+    "index": 75,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      64
+    ],
+    "quant_scales": [
+      0.2873353362083435
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 94.0,
+    "mean": -111.64010416666666,
+    "count_at_int8_min_-128": 2946,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/conv1d_3_1/Relu;functional_1/conv1d_3_1/BiasAdd;functional_1/conv1d_3_1/convolution/Squeeze;functional_1/conv1d_3_1/Squeeze;functional_1/conv1d_3_1/convolution",
+    "index": 76,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      32
+    ],
+    "quant_scales": [
+      0.30072686076164246
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 79.0,
+    "mean": -109.2296875,
+    "count_at_int8_min_-128": 1381,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/conv1d_3_1/Relu;functional_1/conv1d_3_1/BiasAdd;functional_1/conv1d_3_1/convolution/Squeeze;functional_1/conv1d_3_1/Squeeze",
+    "index": 77,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      60,
+      32
+    ],
+    "quant_scales": [
+      0.30072686076164246
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 79.0,
+    "mean": -109.2296875,
+    "count_at_int8_min_-128": 1381,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/reconstruction_1/convolution/ExpandDims",
+    "index": 78,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      32
+    ],
+    "quant_scales": [
+      0.30072686076164246
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 79.0,
+    "mean": -109.2296875,
+    "count_at_int8_min_-128": 1381,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "functional_1/reconstruction_1/BiasAdd;functional_1/reconstruction_1/convolution/Squeeze;functional_1/reconstruction_1/Squeeze;functional_1/reconstruction_1/convolution",
+    "index": 79,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      6
+    ],
+    "quant_scales": [
+      0.49473875761032104
+    ],
+    "quant_zero_points": [
+      15
+    ],
+    "min": -90.0,
+    "max": 99.0,
+    "mean": 17.933333333333334,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "StatefulPartitionedCall_1:21",
+    "index": 80,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      60,
+      6
+    ],
+    "quant_scales": [
+      0.49473875761032104
+    ],
+    "quant_zero_points": [
+      15
+    ],
+    "min": -90.0,
+    "max": 99.0,
+    "mean": 17.933333333333334,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "StatefulPartitionedCall_1:2",
+    "index": 81,
+    "dtype": "<class 'numpy.float32'>",
+    "shape": [
+      1,
+      60,
+      6
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -51.94757080078125,
+    "max": 41.55805587768555,
+    "mean": 1.4512336254119873
+  },
+  {
+    "name": "functional_1/recon_error_1/Square;functional_1/recon_error_1/sub",
+    "index": 82,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      60,
+      6
+    ],
+    "quant_scales": [
+      7.443699836730957
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -77.62777777777778,
+    "count_at_int8_min_-128": 49,
+    "count_at_int8_max_127": 23
+  },
+  {
+    "name": "functional_1/recon_error_1/Mean",
+    "index": 83,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [
+      0.19638307392597198
+    ],
+    "quant_zero_points": [
+      -124
+    ],
+    "min": 127.0,
+    "max": 127.0,
+    "mean": 127.0,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 1
+  },
+  {
+    "name": "StatefulPartitionedCall_1:11",
+    "index": 84,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1
+    ],
+    "quant_scales": [
+      0.19638307392597198
+    ],
+    "quant_zero_points": [
+      -124
+    ],
+    "min": 127.0,
+    "max": 127.0,
+    "mean": 127.0,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 1
+  },
+  {
+    "name": "StatefulPartitionedCall_1:1",
+    "index": 85,
+    "dtype": "<class 'numpy.float32'>",
+    "shape": [
+      1,
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 49.292152404785156,
+    "max": 49.292152404785156,
+    "mean": 49.292152404785156
+  },
+  {
+    "name": "functional_1/concatenate_1/concat",
+    "index": 86,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      72
+    ],
+    "quant_scales": [
+      0.19638307392597198
+    ],
+    "quant_zero_points": [
+      -124
+    ],
+    "min": -126.0,
+    "max": 127.0,
+    "mean": -58.65277777777778,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 2
+  },
+  {
+    "name": "functional_1/dense_1/MatMul;functional_1/dense_1/Relu;functional_1/dense_1/BiasAdd",
+    "index": 87,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      32
+    ],
+    "quant_scales": [
+      0.10441628843545914
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -71.375,
+    "count_at_int8_min_-128": 19,
+    "count_at_int8_max_127": 5
+  },
+  {
+    "name": "functional_1/crash_prob_1/MatMul;functional_1/crash_prob_1/Add",
+    "index": 88,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1
+    ],
+    "quant_scales": [
+      0.17398115992546082
+    ],
+    "quant_zero_points": [
+      34
+    ],
+    "min": 127.0,
+    "max": 127.0,
+    "mean": 127.0,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 1
+  },
+  {
+    "name": "StatefulPartitionedCall_1:01",
+    "index": 89,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1
+    ],
+    "quant_scales": [
+      0.00390625
+    ],
+    "quant_zero_points": [
+      -128
+    ],
+    "min": 127.0,
+    "max": 127.0,
+    "mean": 127.0,
+    "count_at_int8_min_-128": 0,
+    "count_at_int8_max_127": 1
+  },
+  {
+    "name": "StatefulPartitionedCall_1:0",
+    "index": 90,
+    "dtype": "<class 'numpy.float32'>",
+    "shape": [
+      1,
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 0.99609375,
+    "max": 0.99609375,
+    "mean": 0.99609375
+  },
+  {
+    "name": "",
+    "index": 91,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "name": "",
+    "index": 92,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "name": "",
+    "index": 93,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      64
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -1920.0,
+    "max": -25.0,
+    "mean": -1459.734375
+  },
+  {
+    "name": "",
+    "index": 94,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 0.0,
+    "max": 447687613.0,
+    "mean": 149229204.33333334
+  },
+  {
+    "name": "",
+    "index": 95,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "name": "",
+    "index": 96,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      2
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 1.0,
+    "max": 2.0,
+    "mean": 1.5
+  },
+  {
+    "name": "",
+    "index": 97,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      1
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -27946.0,
+    "max": -27946.0,
+    "mean": -27946.0
+  },
+  {
+    "name": "",
+    "index": 98,
+    "dtype": "<class 'numpy.int32'>",
+    "shape": [
+      3
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": 0.0,
+    "max": 462595657.0,
+    "mean": 154198552.33333334
+  },
+  {
+    "name": "",
+    "index": 111,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      30
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -7.827222222222222,
+    "count_at_int8_min_-128": 110,
+    "count_at_int8_max_127": 80
+  },
+  {
+    "name": "",
+    "index": 112,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      160
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -128.0,
+    "max": 127.0,
+    "mean": -85.496875,
+    "count_at_int8_min_-128": 129,
+    "count_at_int8_max_127": 60
+  },
+  {
+    "name": "",
+    "index": 113,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      15,
+      192
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -128.0,
+    "max": 104.0,
+    "mean": -107.42048611111112,
+    "count_at_int8_min_-128": 180,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "",
+    "index": 114,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      30,
+      320
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -128.0,
+    "max": 88.0,
+    "mean": -98.21625,
+    "count_at_int8_min_-128": 5570,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "",
+    "index": 115,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      320
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -128.0,
+    "max": 94.0,
+    "mean": -111.84369791666667,
+    "count_at_int8_min_-128": 14841,
+    "count_at_int8_max_127": 0
+  },
+  {
+    "name": "",
+    "index": 116,
+    "dtype": "<class 'numpy.int8'>",
+    "shape": [
+      1,
+      1,
+      60,
+      160
+    ],
+    "quant_scales": [],
+    "quant_zero_points": [],
+    "min": -128.0,
+    "max": 79.0,
+    "mean": -109.46333333333334,
+    "count_at_int8_min_-128": 6980,
+    "count_at_int8_max_127": 0
+  }
+]

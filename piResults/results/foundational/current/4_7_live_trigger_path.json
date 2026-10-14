@@ -1,0 +1,157 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "context": "Checklist 4.7 -- live sensor loop -> scorer -> TriggerPolicy -> LocalAlarm, with the crash-inducing portion done via safe replay injection (a real recorded DaRUS crash session) rather than a physical impact, per the checklist's own allowance for this item.",
+  "injected_session_id": "darus_crash_Iso_312_2_Out",
+  "injected_session_source": "darus",
+  "injected_session_label": 1,
+  "stage1_live_baseline": {
+    "n_windows": 4,
+    "n_anomalous": 0,
+    "n_triggered": 0,
+    "windows": [
+      {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "is_anomaly": false,
+        "triggered": false
+      }
+    ]
+  },
+  "stage2_injected_crash_replay": {
+    "n_windows": 10,
+    "n_anomalous": 5,
+    "n_triggered": 1,
+    "trigger_window_index": 112,
+    "alarm_fired_real_gpio": true,
+    "gpio_pin": 18,
+    "windows": [
+      {
+        "window_index": 7,
+        "crash_prob": 0.0,
+        "recon_error": 0.7855322957038879,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "window_index": 22,
+        "crash_prob": 0.0,
+        "recon_error": 1.5710645914077759,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "window_index": 37,
+        "crash_prob": 0.5,
+        "recon_error": 1.7674477100372314,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "window_index": 52,
+        "crash_prob": 0.98046875,
+        "recon_error": 1.5710645914077759,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "window_index": 67,
+        "crash_prob": 0.96875,
+        "recon_error": 0.9819153547286987,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "window_index": 82,
+        "crash_prob": 0.99609375,
+        "recon_error": 15.907029151916504,
+        "is_anomaly": true,
+        "triggered": false
+      },
+      {
+        "window_index": 97,
+        "crash_prob": 0.99609375,
+        "recon_error": 18.067243576049805,
+        "is_anomaly": true,
+        "triggered": false
+      },
+      {
+        "window_index": 112,
+        "crash_prob": 0.99609375,
+        "recon_error": 18.85277557373047,
+        "is_anomaly": true,
+        "triggered": true
+      },
+      {
+        "window_index": 127,
+        "crash_prob": 0.99609375,
+        "recon_error": 19.83469009399414,
+        "is_anomaly": true,
+        "triggered": false
+      },
+      {
+        "window_index": 142,
+        "crash_prob": 0.99609375,
+        "recon_error": 3.1421291828155518,
+        "is_anomaly": true,
+        "triggered": false
+      }
+    ]
+  },
+  "stage3_live_resume": {
+    "n_windows": 4,
+    "n_sensor_read_errors": 0,
+    "n_anomalous": 0,
+    "windows": [
+      {
+        "crash_prob": 0.91796875,
+        "recon_error": 1.5710645914077759,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "crash_prob": 0.87109375,
+        "recon_error": 0.39276614785194397,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "crash_prob": 0.87109375,
+        "recon_error": 0.0,
+        "is_anomaly": false,
+        "triggered": false
+      },
+      {
+        "crash_prob": 0.171875,
+        "recon_error": 0.0,
+        "is_anomaly": false,
+        "triggered": false
+      }
+    ]
+  }
+}

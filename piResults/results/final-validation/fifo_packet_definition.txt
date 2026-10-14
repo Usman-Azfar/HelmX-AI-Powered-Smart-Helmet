@@ -1,0 +1,72 @@
+HelmX FIFO Packet Audit
+======================
+
+Device identity
+---------------
+- I2C bus: 1
+- Sensor address: 0x68
+- WHO_AM_I: 0x70
+- This is consistent with a MPU6500-class device, not the classic MPU6050 identity value 0x68.
+
+Registers used in the audit
+---------------------------
+- SMPLRT_DIV: 0x19
+- CONFIG: 0x1A
+- FIFO_EN: 0x23
+- USER_CTRL: 0x6A
+- FIFO_COUNT_H: 0x72
+- FIFO_COUNT_L: 0x73
+- FIFO_R_W: 0x74
+- WHO_AM_I: 0x75
+
+FIFO configuration in the current test
+--------------------------------------
+- FIFO_EN value written: 0x78
+- Enabled channels: XG_FIFO_EN | YG_FIFO_EN | ZG_FIFO_EN | ACCEL_FIFO_EN
+- This means gyro X/Y/Z and accel X/Y/Z are enabled in the FIFO.
+- Packet size: 12 bytes per sample = 6 x int16 values
+- Data encoding: 6 consecutive signed int16 values packed big-endian
+- Candidate packet ordering under test: [ax, ay, az, gx, gy, gz]
+
+Exact decode presently used in the audited code
+----------------------------------------------
+struct.unpack(">hhhhhh", raw_bytes[i:i + 12])
+
+This corresponds to:
+- ax_r, ay_r, az_r, gx_r, gy_r, gz_r
+
+Physical conversion used
+-----------------------
+- Accel conversion: raw / 16384.0 * 9.80665 = m/s^2
+- Gyro conversion: raw / 131.0 = deg/s
+- Assumes the current confirmed config: accel ±2 g, gyro ±250 deg/s
+
+Observed hardware behavior
+--------------------------
+- FIFO count is nonzero and drains successfully.
+- FIFO packet count is consistent with a live stream.
+- Calculated native FIFO output rate from raw drain timing is approximately 428-431 Hz, not the textbook 50 Hz expected from a classic MPU6050/SMPLRT_DIV = 159 model.
+- This matches the earlier B1/B2 findings: the silicon is not behaving as a classic MPU6050 datasheet formula would predict.
+
+Key finding from the stationary sanity gate
+------------------------------------------
+The corrected packet-order interpretation was re-run in a 5-minute stationary check. The result still failed the physical plausibility gate.
+
+Observed data from the corrected capture:
+- n_samples = 128,693
+- accel magnitude mean = 18.42 m/s^2
+- accel magnitude std = 4.76 m/s^2
+- accel magnitude max = 33.83 m/s^2
+- gyro magnitude mean = 241.62 deg/s
+- gyro magnitude std = 68.77 deg/s
+- gyro magnitude max = 431.41 deg/s
+- passed = false
+
+Conclusion
+----------
+The FIFO packet definition is not yet trustworthy enough for B3/B4 comparisons.
+Even after correcting the obvious packet ordering, the raw stationary FIFO stream is still not physically plausible and therefore the acquisition path remains blocked.
+
+This means the remaining FIFO-dependent tasks must be deferred until a truly independent audit of the sensor FIFO stream is completed. The current evidence supports the following statement:
+
+"The hardware FIFO stream on this MPU6500-class device is not yet fully decoded or validated; the currently configured FIFO parser is insufficient to support model-level acquisition validation."

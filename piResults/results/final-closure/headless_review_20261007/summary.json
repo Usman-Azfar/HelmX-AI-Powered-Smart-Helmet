@@ -1,0 +1,454 @@
+{
+  "run": "headless_20261006T194644Z",
+  "review_date_pkt": "2026-10-07",
+  "conditions": {
+    "normal": {
+      "checks": {
+        "exit_success": true,
+        "no_interactive_process_observed": true,
+        "full_duration": true,
+        "no_exception": true,
+        "samples_recorded": true,
+        "windows_scored": true,
+        "correct_affinity": true,
+        "correct_scheduler": true,
+        "correct_priority": true,
+        "n_samples_rows_match": true,
+        "n_windows_rows_match": true,
+        "configuration_restored": true,
+        "raw_count": true,
+        "window_count": true,
+        "indices_contiguous": true,
+        "timestamps_increasing": true,
+        "replay_endpoints_exact": true,
+        "replay_scores_exact": true,
+        "replay_policy_exact": true
+      },
+      "resources": {
+        "cpu_pct": {
+          "first": 0.0,
+          "last": 2.0,
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 2.171043771043778
+        },
+        "rss_bytes": {
+          "first": 50307072,
+          "last": 53129216,
+          "min": 50307072,
+          "max": 53129216,
+          "mean": 52047203.124579124
+        },
+        "cpu_temp_c": {
+          "first": 43.816,
+          "last": 43.816,
+          "min": 41.381,
+          "max": 45.277,
+          "mean": 43.3068636363633
+        }
+      },
+      "summary": {
+        "mode": "polling",
+        "fifo_overflows": 0,
+        "seconds_requested": 1200.0,
+        "elapsed_s": 1200.0021216810005,
+        "n_samples": 60000,
+        "sample_rate_hz": 49.99991159678128,
+        "n_windows": 3997,
+        "i2c_failures": 0,
+        "exception": null,
+        "timing": {
+          "n": 59999,
+          "mean_ms": 20.000001590326498,
+          "median_ms": 19.998389999727806,
+          "std_ms": 0.8237657621660328,
+          "rms_error_from_20ms": 0.823765762167568,
+          "p90_ms": 20.259310599794848,
+          "p95_ms": 21.65750070003014,
+          "p99_ms": 22.006959620157428,
+          "p99.9_ms": 24.303020979914017,
+          "max_ms": 33.78544499992131,
+          "histogram_edges_ms": [
+            0,
+            10,
+            15,
+            25,
+            30,
+            40,
+            60,
+            100,
+            "inf"
+          ],
+          "counts_left_closed_right_open": [
+            0,
+            49,
+            59905,
+            44,
+            1,
+            0,
+            0,
+            0
+          ],
+          "deviation_counts": {
+            "2": 1200,
+            "5": 94,
+            "8": 5
+          }
+        },
+        "nominal_positions_received_samples": 3997,
+        "C_D": 1.0,
+        "V_T_scored_over_scored_plus_resets": 1.0,
+        "p_valid_90_sample_position": 1.0,
+        "gap_count": 0,
+        "processing_ms": {
+          "0": 1.448926000193751,
+          "50": 1.5579320001961605,
+          "95": 1.9479646000945647,
+          "99": 2.6439901199955784,
+          "99.9": 3.6488754279999243,
+          "100": 5.992514999888954
+        },
+        "processing_over_300ms": 0,
+        "sensor_read_ms": {
+          "50": 5.868957500069882,
+          "95": 6.126369150069876,
+          "99": 6.618685550060948,
+          "100": 19.961518999480177
+        },
+        "confirmed_alert_events": 0,
+        "or_positive_windows": 0,
+        "rail_counts": {
+          "ax": 0,
+          "ay": 0,
+          "az": 0,
+          "gx": 0,
+          "gy": 0,
+          "gz": 0
+        },
+        "throttled_end": {
+          "command": [
+            "vcgencmd",
+            "get_throttled"
+          ],
+          "returncode": 0,
+          "stdout": "throttled=0x0\n",
+          "stderr": ""
+        },
+        "fifo_timing_note": "FIFO packets retain common host read-completion timestamps per batch. Zero dt within batches is intentional; these are host availability metrics, not direct physical-sample jitter measurements. No invented timestamps or decimation.",
+        "conditions": "Unattended, desktop/agent state in metadata. No physical mounting confirmation. No alarm countdown or communication blocks; policy events recorded only.",
+        "memory_scope": "Raw samples stream to disk and are loaded only after capture. RSS still includes score/resource/GC research buffers; do not interpret their growth as a production-monitor leak.",
+        "timing_scope": "Processing latency excludes scheduled pacing sleep and raw file write; sensor reads reported separately. Stream dt includes harness logging/resource overhead. CPU temperature from sysfs; sensor temperature preserved RAW because device identity differs from MPU6050.",
+        "score_distributions": {
+          "classifier": {
+            "0": 0.0,
+            "50": 0.0,
+            "95": 0.0,
+            "99": 0.0,
+            "99.9": 0.0,
+            "100": 0.0
+          },
+          "reconstruction": {
+            "0": 0.0,
+            "50": 0.0,
+            "95": 0.0,
+            "99": 0.0,
+            "99.9": 0.0,
+            "100": 0.0
+          }
+        },
+        "overlapping_three_positive_positions": 0,
+        "classifier_crossings": 0,
+        "reconstruction_crossings": 0,
+        "physical_axes": {
+          "ax": {
+            "mean": -5.8455643801654045,
+            "std": 0.04723555872668605,
+            "min": -7.8362220336914055,
+            "max": -3.727771984863281,
+            "rms": 5.8457552224384814
+          },
+          "ay": {
+            "mean": -0.7780971840047199,
+            "std": 0.05962428925085856,
+            "min": -5.286397265624999,
+            "max": 2.0638018310546875,
+            "rms": 0.7803782952035155
+          },
+          "az": {
+            "mean": -7.7857576496490495,
+            "std": 0.0542915729844176,
+            "min": -9.34696328125,
+            "max": -6.900089184570312,
+            "rms": 7.785946940094427
+          },
+          "gx": {
+            "mean": -0.2007586513994911,
+            "std": 0.5046478660754621,
+            "min": -27.221374045801525,
+            "max": 30.045801526717558,
+            "rms": 0.5431146332462972
+          },
+          "gy": {
+            "mean": 2.099168193384224,
+            "std": 0.6318352560756689,
+            "min": -39.52671755725191,
+            "max": 20.893129770992367,
+            "rms": 2.1921959070612718
+          },
+          "gz": {
+            "mean": 1.0721494910941476,
+            "std": 0.3366134256432946,
+            "min": -66.74809160305344,
+            "max": 5.847328244274809,
+            "rms": 1.123749584906154
+          }
+        },
+        "magnitudes": {
+          "accel": {
+            "mean": 9.767298606084811,
+            "max": 11.270249051660148
+          },
+          "gyro": {
+            "mean": 2.440080096848159,
+            "max": 72.95568891267837
+          }
+        }
+      },
+      "source_hashes": {
+        "raw_sensor.csv": "65a3c7bd99cff9d47479040c44463480530d0fad66382ac62f3b1f14295dbd83",
+        "window_scores.csv": "761b0d04f73ee45154ca1343189de107d3c37b6bfab8be3875b94c1663fd7215",
+        "summary.json": "4ed06cb2a2116a0ce69a6a513c9cc78f6b93855fa7a924a2b750c64ee807d984",
+        "resources.json": "bcc918651de395fae3fdc8ccc13b358734270c69fa4d987be70d3fcf08877dac",
+        "metadata.json": "8649c20cef2395458a9f8423dd2e9daf30633c7654b881c4743e8b1e88a92272"
+      }
+    },
+    "fifo": {
+      "checks": {
+        "exit_success": true,
+        "no_interactive_process_observed": true,
+        "full_duration": true,
+        "no_exception": true,
+        "samples_recorded": true,
+        "windows_scored": true,
+        "correct_affinity": true,
+        "correct_scheduler": true,
+        "correct_priority": true,
+        "n_samples_rows_match": true,
+        "n_windows_rows_match": true,
+        "configuration_restored": true,
+        "raw_count": true,
+        "window_count": true,
+        "indices_contiguous": true,
+        "timestamps_increasing": true,
+        "replay_endpoints_exact": true,
+        "replay_scores_exact": true,
+        "replay_policy_exact": true
+      },
+      "resources": {
+        "cpu_pct": {
+          "first": 0.0,
+          "last": 2.0,
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 2.1078282828282884
+        },
+        "rss_bytes": {
+          "first": 50311168,
+          "last": 53075968,
+          "min": 50311168,
+          "max": 53075968,
+          "mean": 52056984.565656565
+        },
+        "cpu_temp_c": {
+          "first": 44.303,
+          "last": 42.355,
+          "min": 40.894,
+          "max": 45.277,
+          "mean": 42.982196969696794
+        }
+      },
+      "summary": {
+        "mode": "polling",
+        "fifo_overflows": 0,
+        "seconds_requested": 1200.0,
+        "elapsed_s": 1200.0188396250005,
+        "n_samples": 59987,
+        "sample_rate_hz": 49.98838186469274,
+        "n_windows": 3982,
+        "i2c_failures": 0,
+        "exception": null,
+        "timing": {
+          "n": 59986,
+          "mean_ms": 20.0046408331444,
+          "median_ms": 19.998604499505745,
+          "std_ms": 1.0496250348102596,
+          "rms_error_from_20ms": 1.0496352942964107,
+          "p90_ms": 20.145354999840492,
+          "p95_ms": 21.676003750144446,
+          "p99_ms": 21.81627134982591,
+          "p99.9_ms": 23.281510735369014,
+          "max_ms": 156.6523409992442,
+          "histogram_edges_ms": [
+            0,
+            10,
+            15,
+            25,
+            30,
+            40,
+            60,
+            100,
+            "inf"
+          ],
+          "counts_left_closed_right_open": [
+            5,
+            3,
+            59969,
+            4,
+            1,
+            0,
+            2,
+            2
+          ],
+          "deviation_counts": {
+            "2": 691,
+            "5": 17,
+            "8": 12
+          }
+        },
+        "nominal_positions_received_samples": 3996,
+        "C_D": 0.9964964964964965,
+        "V_T_scored_over_scored_plus_resets": 0.9989964877069744,
+        "p_valid_90_sample_position": 0.9940565628234665,
+        "gap_count": 4,
+        "processing_ms": {
+          "0": 1.4809090007474879,
+          "50": 1.5973935001056816,
+          "95": 2.012035350207952,
+          "99": 2.646336999932828,
+          "99.9": 3.2329483094963662,
+          "100": 3.5129449988744454
+        },
+        "processing_over_300ms": 0,
+        "sensor_read_ms": {
+          "50": 5.852186000083748,
+          "95": 6.072906400095234,
+          "99": 6.384967499761842,
+          "100": 51.06173000058334
+        },
+        "confirmed_alert_events": 0,
+        "or_positive_windows": 0,
+        "rail_counts": {
+          "ax": 0,
+          "ay": 0,
+          "az": 0,
+          "gx": 0,
+          "gy": 0,
+          "gz": 0
+        },
+        "throttled_end": {
+          "command": [
+            "vcgencmd",
+            "get_throttled"
+          ],
+          "returncode": 0,
+          "stdout": "throttled=0x0\n",
+          "stderr": ""
+        },
+        "fifo_timing_note": "FIFO packets retain common host read-completion timestamps per batch. Zero dt within batches is intentional; these are host availability metrics, not direct physical-sample jitter measurements. No invented timestamps or decimation.",
+        "conditions": "Unattended, desktop/agent state in metadata. No physical mounting confirmation. No alarm countdown or communication blocks; policy events recorded only.",
+        "memory_scope": "Raw samples stream to disk and are loaded only after capture. RSS still includes score/resource/GC research buffers; do not interpret their growth as a production-monitor leak.",
+        "timing_scope": "Processing latency excludes scheduled pacing sleep and raw file write; sensor reads reported separately. Stream dt includes harness logging/resource overhead. CPU temperature from sysfs; sensor temperature preserved RAW because device identity differs from MPU6050.",
+        "score_distributions": {
+          "classifier": {
+            "0": 0.0,
+            "50": 0.0,
+            "95": 0.0,
+            "99": 0.0,
+            "99.9": 0.0,
+            "100": 0.0
+          },
+          "reconstruction": {
+            "0": 0.0,
+            "50": 0.0,
+            "95": 0.0,
+            "99": 0.0,
+            "99.9": 0.0,
+            "100": 0.0
+          }
+        },
+        "overlapping_three_positive_positions": 0,
+        "classifier_crossings": 0,
+        "reconstruction_crossings": 0,
+        "physical_axes": {
+          "ax": {
+            "mean": -5.840752594680222,
+            "std": 0.049165430006638595,
+            "min": -5.97592734375,
+            "max": -5.671863732910156,
+            "rms": 5.8409595197853825
+          },
+          "ay": {
+            "mean": -0.777450485751405,
+            "std": 0.05309491649921481,
+            "min": -0.9193734375,
+            "max": -0.6153098266601562,
+            "rms": 0.779261398988269
+          },
+          "az": {
+            "mean": -7.788759630947179,
+            "std": 0.05432615991243158,
+            "min": -7.967903124999999,
+            "max": -7.517793212890624,
+            "rms": 7.788949089596315
+          },
+          "gx": {
+            "mean": -0.20199732842879314,
+            "std": 0.4554244115026338,
+            "min": -1.9541984732824427,
+            "max": 2.549618320610687,
+            "rms": 0.4982111151759764
+          },
+          "gy": {
+            "mean": 2.101340277670849,
+            "std": 0.5876148865446398,
+            "min": 0.0,
+            "max": 3.900763358778626,
+            "rms": 2.181953761529027
+          },
+          "gz": {
+            "mean": 1.0712770209626845,
+            "std": 0.13898957320770086,
+            "min": 0.007633587786259542,
+            "max": 1.83206106870229,
+            "rms": 1.080255783184308
+          }
+        },
+        "magnitudes": {
+          "accel": {
+            "mean": 9.76673046671675,
+            "max": 9.99796826726091
+          },
+          "gyro": {
+            "mean": 2.4351626537779265,
+            "max": 4.548599968001189
+          }
+        }
+      },
+      "source_hashes": {
+        "raw_sensor.csv": "9f45e90c31b6f927267d8035c12f51e3a4fa95379e1db39eec6561367c1f68a4",
+        "window_scores.csv": "6cb5ccae74fe791ff485c470ed28038563f6276b01036d5e1f74ca0d1dd8caa5",
+        "summary.json": "988270da2ef68682f82a9828b876f12ebeb8e2b096f2146473bdc799f2239954",
+        "resources.json": "f74c7d4f66e61c395a5f6dcf1cb8481190b9171f8f755a69985468c48449fd37",
+        "metadata.json": "44d23017184f986e6d362f1db8af7a34fe91a44302519573e535530579b9bae6"
+      }
+    }
+  },
+  "operator_stationarity": "User confirmed helmet untouched throughout both runs on 2026-10-07: \"yes untouched\"",
+  "scope": "Both conditions use sensor polling. FIFO means SCHED_FIFO CPU scheduling. One sequential pair cannot establish a scheduler benefit or satisfy D4/K1.",
+  "operator_attestation": "operator_attestation.json",
+  "checklist_status": {
+    "D1": "COMPLETE (VERIFIED; OPERATOR-ATTESTED UNTOUCHED)",
+    "D2": "COMPLETE (VERIFIED; OPERATOR-ATTESTED UNTOUCHED)",
+    "D3": "COMPLETE (VERIFIED; OPERATOR-ATTESTED UNTOUCHED)"
+  }
+}

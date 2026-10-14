@@ -1,0 +1,96 @@
+HelmX Final Pi Requirements, Section B2 -- exact 50Hz acquisition/timestamp mechanism
+=======================================================================================
+Derived by reading the actual deployed source (deploy/crash_monitor.py, verified against
+deploy/pi_research_suite/exp_w2_live3_soak.py which runs the identical classes), cross-checked
+against the B1 register dump taken on this same Pi/sensor just before this doc was written.
+
+1. PACING MECHANISM: monotonic deadline scheduling, not a naive fixed sleep and not a busy wait.
+
+   crash_monitor.py: main() loop:
+       next_tick += period                      # period = 1/sample_rate_hz = 20ms
+       sample = read_sensor(sensor, logger)      # blocking I2C reads, see (2)
+       ...
+       sleep_for = next_tick - time.monotonic()
+       if sleep_for > 0: time.sleep(sleep_for)
+       else: next_tick = time.monotonic()        # falls behind -> resync rather than spiral
+
+   This accumulates a fixed-period deadline (next_tick) rather than sleeping a fixed
+   `period` seconds every iteration -- the latter would drift by however long the I2C
+   read + inference actually took each cycle. If a cycle overruns the deadline entirely
+   (sleep_for <= 0), the loop resyncs to "now" rather than trying to catch up by sleeping
+   negative time or spinning -- this is the source of the timing gaps SampleStreamGuard
+   detects (see D1/D2 in this campaign).
+
+2. RAW SAMPLE ACQUISITION: SMBus polling via the `mpu6050-raspberrypi` Python library
+   (sensor.get_accel_data() / get_gyro_data(), see crash_monitor.py: read_sensor()).
+   NOT FIFO, NOT the DATA_RDY interrupt, NOT a busy-wait register poll loop of our own --
+   two separate blocking smbus reads per sample (one for accel, one for gyro), each
+   returning the sensor's most recent instantaneous register value at read time.
+
+   B1's register dump on this exact hardware confirms: FIFO_EN=0x00 (FIFO not enabled),
+   INT_ENABLE=0x00 (DATA_RDY interrupt not enabled) -- consistent with this being pure
+   on-demand register polling, not an interrupt- or FIFO-paced acquisition path.
+
+   B1 ALSO found DLPF_CFG=0 (SMPLRT_DIV=0, CONFIG=0x00) -- the on-chip digital low-pass
+   filter is OFF and the sensor's internal output rate is a full 8kHz; the deployed 50Hz
+   rate exists ENTIRELY on the host side (the Python pacing loop above), not via any
+   on-chip sample-rate divider. Practically: every host-side read pulls whatever the
+   sensor's raw ADC currently holds, with no on-chip anti-alias filtering and no
+   hardware guarantee that two host reads 20ms apart correspond to physically distinct,
+   evenly-spaced samples -- this is a genuine, previously-undocumented characterization
+   finding (see B1 register dump for the full raw values) and should be disclosed
+   alongside any claim about the pipeline's effective sample-rate fidelity.
+
+3. TIMESTAMP SEMANTICS:
+   - Function: time.monotonic() (SampleStreamGuard.observe(now) in the live loop; wall-clock
+     time.time() only used for the resource-sample "t" field in the research scripts, never
+     for gap detection -- monotonic is immune to NTP/clock-step jumps).
+   - Capture point: AFTER both blocking I2C reads return (main(): `sample = read_sensor(...)`
+     then `now = time.monotonic()`), i.e. these are HOST/USERSPACE READ-COMPLETION
+     timestamps, not sensor-generated sample timestamps -- the MPU6050 in this polling
+     configuration has no internal timestamp to hand back; "when did this sample land"
+     necessarily means "when did this read call return," which folds in I2C transaction
+     time and any scheduling delay before the read even started.
+
+4. EMA ALPHA / VARIABLE dt: CausalGravityFilter's `alpha` is computed ONCE at construction
+   from the CONFIGURED cutoff_hz and sample_rate_hz (deploy/config.yaml: gravity_filter.cutoff_hz
+   = 0.3, sensor.sample_rate_hz = 50) and never recomputed from the REAL observed dt of any
+   given sample. If the real inter-sample interval drifts from the nominal 20ms (which D1's
+   timing-load characterization measures directly), the EMA's effective cutoff frequency
+   drifts with it -- alpha is fixed, not dt-adaptive. This is a known, currently undocumented-
+   until-now approximation; M1's EMA-cutoff-sensitivity sweep in this same campaign is the
+   closest existing evidence for how much this matters in practice.
+
+5. DUPLICATE-LIKE / TOO-FAST SAMPLES (dt < min_dt_s = 10ms): counted via
+   `duplicate_or_too_fast_samples` but NOT excluded from the pipeline -- SampleStreamGuard.observe()
+   only skips/invalidates on a GAP (dt > max_dt_s = 30ms); a too-fast read is still
+   scorer.append()'d and contributes to the buffer/window like any other sample. So a
+   burst of unusually-fast reads is visible in telemetry but not filtered out.
+
+6. BEHAVIOR AFTER A DETECTED GAP (dt > 30ms):
+   - scorer.clear() -- the in-flight window buffer is discarded entirely (not trimmed),
+     so no window spans the gap.
+   - guard.record_window_invalidated() -- counted in stream_guard_telemetry.
+   - If dt >= long_gap_reset_s (1.0s): gravity_filter.reset() ALSO fires, discarding the
+     EMA's running gravity estimate (next apply() call cold-starts, returning exactly
+     [0,0,0] per CausalGravityFilter.reset()'s own docstring) -- a short gap (30ms-1s)
+     clears the window buffer but keeps the gravity estimate; only a long gap (>=1s)
+     also resets gravity state.
+
+7. BEHAVIOR AFTER A LONG INTERRUPTION (e.g. sensor reconnect via connect_sensor()'s retry
+   loop): the next successful read simply resumes the main loop; SampleStreamGuard's
+   `last_ts` is still whatever it was before the interruption, so the very next `observe()`
+   call will see a large dt and go through the gap path above (clear + likely gravity reset)
+   -- there's no special-cased "reconnect" handling distinct from an ordinary long gap.
+
+8. BEHAVIOR AFTER THE ALERT COUNTDOWN/COOLDOWN: handle_suspected_crash()'s up-to-30s
+   cancellation wait blocks the main loop entirely (no sensor reads happen during it).
+   Immediately after it returns, main() explicitly calls scorer.clear() AND
+   guard.reset_baseline() (which sets last_ts = None) AND resets next_tick = time.monotonic()
+   -- this is a KNOWN, already-handled gap, so the very next real sample after the countdown
+   is treated as a fresh start (no gap counted, no gravity reset triggered by this specific
+   transition) rather than being flagged as an unexpected timing anomaly.
+
+Sources: deploy/crash_monitor.py (SampleStreamGuard, CausalGravityFilter, main(), read_sensor(),
+handle_suspected_crash()); deploy/config.yaml (sensor.timing_guard, gravity_filter.cutoff_hz);
+piResults/final_pi_results/mpu_config/mpu6050_register_dump.{json,txt} (B1, same session).

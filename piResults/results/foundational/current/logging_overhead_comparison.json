@@ -1,0 +1,14 @@
+{
+  "no_logging": {
+    "mean_ms": 0.6268623470241437,
+    "median_ms": 0.5684815005224664
+  },
+  "minimal_logging_no_per_window": {
+    "mean_ms": 0.5794022010195476,
+    "median_ms": 0.4947779998474289
+  },
+  "verbose_per_window_info_logging": {
+    "mean_ms": 1.3997210040142818,
+    "median_ms": 1.2146025001129601
+  }
+}

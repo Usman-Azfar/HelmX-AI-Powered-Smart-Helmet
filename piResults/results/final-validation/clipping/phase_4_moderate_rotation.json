@@ -1,0 +1,70 @@
+{
+  "phase": "4_moderate_rotation",
+  "n_samples": 2831,
+  "duration_s": 56.58309847600003,
+  "n_windows_scored": 189,
+  "clipping_per_axis_raw_int16": {
+    "ax": {
+      "min_raw": -32768,
+      "max_raw": 5764,
+      "count_near_neg32768": 1,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.03532320734722713,
+      "pct_within_95pct_fullscale": 0.03532320734722713,
+      "pct_within_90pct_fullscale": 0.03532320734722713
+    },
+    "ay": {
+      "min_raw": -32768,
+      "max_raw": 3144,
+      "count_near_neg32768": 2,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.07064641469445426,
+      "pct_within_95pct_fullscale": 0.07064641469445426,
+      "pct_within_90pct_fullscale": 0.07064641469445426
+    },
+    "az": {
+      "min_raw": -16808,
+      "max_raw": 19176,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gx": {
+      "min_raw": -20260,
+      "max_raw": 32767,
+      "count_near_neg32768": 0,
+      "count_near_32767": 1,
+      "pct_within_99pct_fullscale": 0.03532320734722713,
+      "pct_within_95pct_fullscale": 0.03532320734722713,
+      "pct_within_90pct_fullscale": 0.03532320734722713
+    },
+    "gy": {
+      "min_raw": -23822,
+      "max_raw": 26840,
+      "count_near_neg32768": 0,
+      "count_near_32767": 0,
+      "pct_within_99pct_fullscale": 0.0,
+      "pct_within_95pct_fullscale": 0.0,
+      "pct_within_90pct_fullscale": 0.0
+    },
+    "gz": {
+      "min_raw": -19521,
+      "max_raw": 32767,
+      "count_near_neg32768": 0,
+      "count_near_32767": 2,
+      "pct_within_99pct_fullscale": 0.07064641469445426,
+      "pct_within_95pct_fullscale": 0.07064641469445426,
+      "pct_within_90pct_fullscale": 0.07064641469445426
+    }
+  },
+  "max_classifier_score": 0.99609375,
+  "max_reconstruction_error": 0.5891492366790771,
+  "n_classifier_threshold_crossings": 16,
+  "n_recon_threshold_crossings": 0,
+  "n_or_positive_windows": 16,
+  "n_confirmed_triggers": 1,
+  "accel_magnitude_ms2_max": 28.497098080442274,
+  "gyro_magnitude_dps_max": 356.4020016063658
+}

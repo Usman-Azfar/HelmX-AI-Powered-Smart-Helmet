@@ -1,0 +1,8 @@
+{
+  "recon_error": 10.878735866546593,
+  "recon_error_peak": 134.2400975036617,
+  "classifier_prob_balanced": 0.9892255067825317,
+  "classifier_prob_moderate_recall": 0.9772439002990723,
+  "classifier_prob_high_recall": 0.76202392578125,
+  "classifier_prob": 0.9892255067825317
+}

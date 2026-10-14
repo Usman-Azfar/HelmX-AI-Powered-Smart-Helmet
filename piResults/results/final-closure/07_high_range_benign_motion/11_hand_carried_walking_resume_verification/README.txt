@@ -1,0 +1,35 @@
+
+ — C3 saved phase verification: 11_hand_carried_walking
+Status: PASS (OFFLINE VERIFICATION)
+UTC: 2026-10-04T17:18:46.719284+00:00
+Evidence: piResults/final_pi_review_closure/07_high_range_benign_motion/11_hand_carried_walking_resume_verification
+{
+  "phase": "11_hand_carried_walking",
+  "checks": {
+    "sample_rows_match": true,
+    "window_rows_match": true,
+    "full_duration": true,
+    "no_exception": true,
+    "sample_indices_contiguous": true,
+    "timestamps_increasing": true,
+    "configuration_restored": true,
+    "high_range_filtered_readback": true,
+    "replay_endpoint_indices_exact": true,
+    "replay_scores_exact": true,
+    "replay_policy_exact": true,
+    "event_count_matches": true
+  },
+  "source_hashes": {
+    "raw_sensor.csv": "e7f9ed979233d25190e8911d6656c65ba40a073d0bdf432188cc9c50c012d8d1",
+    "window_scores.csv": "d63527104d0125bfdf099db725cb061ee45b2d12d862568ffaa32fe7a2ff894c",
+    "summary.json": "caa79109752e44836bc03e271efa52bffd624c6cf09b6d71449d6d16923c0550",
+    "metadata.json": "b9b1c7b30811194620abc1964543f1b2db98d7a4a15783f0eec7b60c983c9f12"
+  },
+  "max_abs_replay_score_error": [
+    0.0,
+    0.0
+  ],
+  "scope": "Offline integrity/replay verification of the saved capture, not a new physical trial. Policy replay uses recorded decision timestamps. Operator motion and reaction latency are not independently verified.",
+  "cue_after_first_sample_s": 9.607578037000167,
+  "recorded_time_after_cue_s": 80.37784848499996
+}

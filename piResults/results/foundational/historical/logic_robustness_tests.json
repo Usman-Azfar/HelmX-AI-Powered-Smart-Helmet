@@ -1,0 +1,94 @@
+{
+  "3.21_determinism": {
+    "session_id": "near_fall_Acceleration On Curve",
+    "n_windows": 156,
+    "bit_identical_across_two_replays": true,
+    "max_abs_prob_diff": 0.0
+  },
+  "3.18_malformed_input": {
+    "nan_sample": {
+      "exception": null,
+      "output": {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "crash_prob_is_nan": false,
+        "crash_prob_is_finite": true
+      }
+    },
+    "inf_sample": {
+      "exception": null,
+      "output": {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "crash_prob_is_nan": false,
+        "crash_prob_is_finite": true
+      }
+    },
+    "extreme_accel": {
+      "exception": null,
+      "output": {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "crash_prob_is_nan": false,
+        "crash_prob_is_finite": true
+      }
+    },
+    "extreme_gyro": {
+      "exception": null,
+      "output": {
+        "crash_prob": 0.0,
+        "recon_error": 49.292152404785156,
+        "crash_prob_is_nan": false,
+        "crash_prob_is_finite": true
+      }
+    },
+    "all_zero": {
+      "exception": null,
+      "output": {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "crash_prob_is_nan": false,
+        "crash_prob_is_finite": true
+      }
+    },
+    "constant_nonzero": {
+      "exception": null,
+      "output": {
+        "crash_prob": 0.0,
+        "recon_error": 0.0,
+        "crash_prob_is_nan": false,
+        "crash_prob_is_finite": true
+      }
+    }
+  },
+  "3.29_cooldown_logic": {
+    "first_trigger_fired": true,
+    "second_trigger_suppressed_within_cooldown": true,
+    "third_trigger_resumed_after_cooldown": true,
+    "all_correct": true
+  },
+  "3.30_cancel_window": {
+    "no_signal_returns_false": true,
+    "signal_present_returns_true": true,
+    "signal_file_deleted_after_consumption": true,
+    "stale_signal_cannot_double_fire": true
+  },
+  "3.30b_handle_suspected_crash_cancelled": {
+    "sms_sent": false,
+    "expected": false,
+    "elapsed_s": 0.6021937139994407,
+    "matches_expected": true
+  },
+  "3.32_gsm_gps_failure_path": {
+    "sms_sent_return_value": true,
+    "note": "send_sms() returns False (not an exception) when no GSM connection exists; get_gps_coordinates() returns None immediately (no real hardware timeout wait) -- both already-established facts confirmed again here via the real code path.",
+    "raised_exception": false,
+    "elapsed_s": 2.0064995550001186
+  },
+  "3.31_alarm_failure_fallback": {
+    "invalid_pin": 9999,
+    "degraded_to_log_only_mode": true,
+    "start_stop_raised_exception": null,
+    "safe_degradation_confirmed": true
+  }
+}

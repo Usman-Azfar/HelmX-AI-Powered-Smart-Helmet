@@ -1,0 +1,7 @@
+{
+  "cue_prepared_monotonic": 4260.756939087,
+  "first_sample_monotonic": 4248.022393239,
+  "raw_rows_before_cue": 635,
+  "sequence": "10s rest, three gentle left/right rotation cycles, three gentle forward/back tilt cycles, original resting position until STOP",
+  "operator_ready": "User yes before baseline; physical completion to be confirmed afterward"
+}

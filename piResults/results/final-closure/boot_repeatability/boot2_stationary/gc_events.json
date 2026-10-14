@@ -1,0 +1,22 @@
+[
+  {
+    "t_monotonic": 167.005199641,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 167.005836641,
+    "phase": "stop",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 296.268805576,
+    "phase": "start",
+    "generation": 0
+  },
+  {
+    "t_monotonic": 296.26916085,
+    "phase": "stop",
+    "generation": 0
+  }
+]

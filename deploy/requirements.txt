@@ -1,0 +1,7 @@
+tflite-runtime
+numpy
+pyserial
+pyyaml
+mpu6050-raspberrypi
+gpiozero
+psutil  # only needed by benchmark_device.py (CPU%/RSS sampling), not crash_monitor.py

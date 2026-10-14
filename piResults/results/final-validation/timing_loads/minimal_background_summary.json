@@ -1,0 +1,33 @@
+{
+  "device": {
+    "platform": "Linux-6.12.96+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "machine": "aarch64",
+    "python": "3.11.2",
+    "cpu_count": 4,
+    "ram_gb": 7.64,
+    "model": "Raspberry Pi 4 Model B Rev 1.5",
+    "tflite_runtime_version": "2.14.0"
+  },
+  "condition": "minimal_background",
+  "duration_requested_min": 12.0,
+  "total_samples": 399813,
+  "achieved_sample_rate_hz": 555.2958333333333,
+  "mean_dt_ms": 1.8008447264689398,
+  "p50_dt_ms": 1.7669110002316302,
+  "p95_dt_ms": 1.9482483497313294,
+  "p99_dt_ms": 2.46674424997764,
+  "p99_9_dt_ms": 4.171059922971026,
+  "max_dt_ms": 11.773079999784386,
+  "gap_threshold_ms": 30.0,
+  "gap_count_gt_threshold": 0,
+  "gaps_per_min": 0.0,
+  "too_fast_threshold_ms": 10.0,
+  "too_fast_count": 399810,
+  "too_fast_per_min": 33317.5,
+  "estimated_dropped_equivalent_samples": 0,
+  "dropped_equivalent_per_min": 0.0,
+  "i2c_failures": 0,
+  "reconnects": 0,
+  "exceptions": 0,
+  "errors_sample": []
+}

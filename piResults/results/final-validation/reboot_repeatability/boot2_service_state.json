@@ -1,0 +1,14 @@
+{
+  "services": {
+    "helmx-ble.service": "activating",
+    "mosquitto.service": "active",
+    "rhasspy.service": "active",
+    "helmx_assistant.service": "activating",
+    "wayvnc.service": "active",
+    "wayvnc-control.service": "active",
+    "rpi-connect.service": "inactive",
+    "rpi-connect-wayvnc.service": "inactive",
+    "bluetooth.service": "active"
+  },
+  "cpu_governor": "ondemand"
+}

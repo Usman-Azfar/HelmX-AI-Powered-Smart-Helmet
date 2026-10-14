@@ -1,0 +1,126 @@
+
+B3 — Matched filtered polling/FIFO raw comparison
+Status: COMPLETE (UNATTENDED)
+UTC: 2026-09-29T20:00:58.494549+00:00
+Evidence: piResults/final_pi_review_closure/04_polling_fifo_equivalence
+{
+  "axis_comparison": [
+    {
+      "axis": "ax",
+      "mean_difference_fifo_minus_polling": 0.0011141973871684474,
+      "std_ratio_fifo_over_polling": 0.9803929004981989,
+      "rms_difference": 0.001112351907381015,
+      "polling_min": 1.3365630767822265,
+      "polling_max": 1.4832079284667967,
+      "fifo_min": 1.2910732452392577,
+      "fifo_max": 1.5927426544189451
+    },
+    {
+      "axis": "ay",
+      "mean_difference_fifo_minus_polling": 4.657274050190452e-06,
+      "std_ratio_fifo_over_polling": 1.0231266322647274,
+      "rms_difference": -2.3317862022365077e-06,
+      "polling_min": -1.0235212097167967,
+      "polling_max": -0.8403647827148437,
+      "fifo_min": -1.1426327423095703,
+      "fifo_max": -0.7314286071777343
+    },
+    {
+      "axis": "az",
+      "mean_difference_fifo_minus_polling": -0.00042465638426314456,
+      "std_ratio_fifo_over_polling": 0.9953442296078894,
+      "rms_difference": 0.0004245587660562933,
+      "polling_min": -9.725247143554688,
+      "polling_max": -9.31464155883789,
+      "fifo_min": -9.811438403320311,
+      "fifo_max": -9.555857376098633
+    },
+    {
+      "axis": "gx",
+      "mean_difference_fifo_minus_polling": 0.0013551056355933233,
+      "std_ratio_fifo_over_polling": 1.0136836047661806,
+      "rms_difference": -0.0006766154857332785,
+      "polling_min": -0.6870229007633587,
+      "polling_max": 0.4351145038167939,
+      "fifo_min": -0.6259541984732824,
+      "fifo_max": 0.25190839694656486
+    },
+    {
+      "axis": "gy",
+      "mean_difference_fifo_minus_polling": -0.00037260349481194055,
+      "std_ratio_fifo_over_polling": 1.029025304913793,
+      "rms_difference": -9.75680697226089e-05,
+      "polling_min": 1.450381679389313,
+      "polling_max": 3.2213740458015265,
+      "fifo_min": 0.9465648854961831,
+      "fifo_max": 3.3206106870229006
+    },
+    {
+      "axis": "gz",
+      "mean_difference_fifo_minus_polling": 0.005144899652796964,
+      "std_ratio_fifo_over_polling": 1.0371782298787071,
+      "rms_difference": 0.008512779180873009,
+      "polling_min": -1.3129770992366412,
+      "polling_max": 3.7862595419847325,
+      "fifo_min": -8.717557251908397,
+      "fifo_max": 7.541984732824427
+    }
+  ],
+  "gate_passed": true,
+  "predeclared_gate": {
+    "mean_axis_tolerances": {
+      "acceleration_ms2": 0.3,
+      "gyro_deg_s": 2
+    },
+    "other_gate": "Both physical sanity checks pass, no rail hits, no I2C error, no FIFO overflow.",
+    "purpose": "Conservative engineering plausibility/equivalence gate, NOT a formal statistical equivalence test.",
+    "configuration": "Both modes use CONFIG=4, ACCEL_CONFIG2=4, SMPLRT_DIV=19, +/-2g and +/-250 dps. Different from original unfiltered deployment.",
+    "conditions": "Unattended in existing physical placement; physical assembly/mounting not independently confirmed."
+  },
+  "polling_rate_hz": 49.99917585066805,
+  "fifo_rate_hz": 50.039870762192706,
+  "polling_magnitudes": {
+    "accel": {
+      "mean": 9.775346973365215,
+      "std": 0.014120329973765486,
+      "rms": 9.77535717165358,
+      "min": 9.458664421382709,
+      "max": 9.875641667987404,
+      "p1": 9.743063010167464,
+      "p50": 9.775360979072996,
+      "p99": 9.80771326329872
+    },
+    "gyro": {
+      "mean": 2.450606456239405,
+      "std": 0.16767122144275723,
+      "rms": 2.4563358161827877,
+      "min": 1.5150893044601306,
+      "max": 4.489951486956629,
+      "p1": 2.087558355869462,
+      "p50": 2.440737483544693,
+      "p99": 2.9247298382999296
+    }
+  },
+  "fifo_magnitudes": {
+    "accel": {
+      "mean": 9.77592606040969,
+      "std": 0.01404721270603892,
+      "rms": 9.77593615275704,
+      "min": 9.703799271102154,
+      "max": 9.957301370752557,
+      "p1": 9.743358534198961,
+      "p50": 9.7760316703514,
+      "p99": 9.808426625600204
+    },
+    "gyro": {
+      "mean": 2.4535673207471804,
+      "std": 0.18206970919452667,
+      "rms": 2.4603133898844427,
+      "min": 1.3497642489584791,
+      "max": 9.170608073868179,
+      "p1": 2.089900540445444,
+      "p50": 2.442867363500373,
+      "p99": 2.9309112247007185
+    }
+  }
+}

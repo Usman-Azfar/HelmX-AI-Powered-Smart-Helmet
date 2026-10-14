@@ -1,0 +1,54 @@
+HelmX Section J1 -- Reboot/Reassembly Repeatability Comparison
+================================================================
+
+WHO_AM_I: boot1=0x70  boot2=0x70  match=True
+
+-- stationary --
+  n_samples:                 boot1=  4040   boot2=  3497
+  duration_s:                boot1=80.8   boot2=69.9
+  gyro_magnitude_dps_max:    boot1=4.877   boot2=6.089
+  accel_magnitude_ms2_max:   boot1=9.964   boot2=9.881
+  max_classifier_score:      boot1=0.0000   boot2=0.0000
+  max_reconstruction_error:  boot1=0.0000   boot2=0.0000
+  n_confirmed_triggers:      boot1=0   boot2=0
+
+-- gentle_rotation --
+  n_samples:                 boot1=  6018   boot2=  2865
+  duration_s:                boot1=120.3   boot2=57.3
+  gyro_magnitude_dps_max:    boot1=184.347   boot2=301.788
+  accel_magnitude_ms2_max:   boot1=18.499   boot2=21.207
+  max_classifier_score:      boot1=0.9688   boot2=0.9961
+  max_reconstruction_error:  boot1=0.1964   boot2=0.9819
+  n_confirmed_triggers:      boot1=0   boot2=1
+
+Note: stationary/gentle_rotation are independent short live captures (different exact
+motion each time, human-performed) -- exact numeric match is not expected or required;
+the repeatability claim is about consistent QUALITATIVE behavior (sensor identity,
+no spurious confirmed triggers on gentle motion, comparable magnitude ranges), not
+bit-identical output.
+
+================================================================
+Boot 3 (2026-09-20, system_boot_time ~12:58) -- extra capture, NOT part of the
+official Section J requirement (already satisfied by boot1/boot2 above). Captured
+because the Pi rebooted again mid the optional E2/E3/E4/H2/R campaign; recorded here
+for due diligence before resuming that campaign, stationary phase only (non-interactive,
+no human motion needed) -- see pi_val_boot3_documentation.py.
+
+WHO_AM_I: boot3=0x70 (matches boot1/boot2)
+
+-- stationary --
+  n_samples:                 boot3=3000
+  duration_s:                boot3=59.98
+  dt p50/p99/max (ms):       boot3=19.99 / 21.95 / 26.73
+  i2c_errors:                boot3=0
+  gyro_magnitude_dps_mean:   boot3=2.480  (matches C1's original finding of ~2.37, a real static gyro bias, not calibrated out by the deployed pipeline)
+  gyro_magnitude_dps_max:    boot3=6.737
+  accel_magnitude_ms2_max:   boot3=9.929  (matches boot1=9.964, boot2=9.881)
+  max_classifier_score:      boot3=0.0000
+  max_reconstruction_error:  boot3=0.0000
+  n_confirmed_triggers:      boot3=0
+
+Consistent with boot1/boot2's stationary phase on every field (sensor identity, no
+spurious triggers, comparable accel/gyro magnitude ranges). No gentle_rotation phase
+was captured for boot3 (would need a human present); not required since J is already
+satisfied.

@@ -1,0 +1,102 @@
+{
+  "outlier_window_index_test_split": 5410,
+  "session_id": "darus_crash_Iso_115_Out",
+  "weak_label": 1,
+  "reference_outputs": {
+    "keras": {
+      "classifier_prob": 1.0,
+      "recon_error": 751.843505859375
+    },
+    "fp16_tflite": {
+      "classifier_prob": 1.0,
+      "recon_error": 751.8385009765625
+    },
+    "int8_tflite": {
+      "classifier_prob": 0.99609375,
+      "recon_error": 49.292152404785156
+    }
+  },
+  "operational_decisions": {
+    "keras": {
+      "classifier_threshold_crossed": true,
+      "recon_threshold_crossed": true,
+      "or_rule_positive": true
+    },
+    "fp16": {
+      "classifier_threshold_crossed": true,
+      "recon_threshold_crossed": true,
+      "or_rule_positive": true
+    },
+    "int8": {
+      "classifier_threshold_crossed": true,
+      "recon_threshold_crossed": true,
+      "or_rule_positive": true
+    }
+  },
+  "input_characterization": {
+    "seq_normalized_min": -207.17250061035156,
+    "seq_normalized_max": 141.91941833496094,
+    "per_channel_min": [
+      -137.88475036621094,
+      -0.35327306389808655,
+      -207.17250061035156,
+      0.014764885418117046,
+      -0.0004914868623018265,
+      0.22826750576496124
+    ],
+    "per_channel_max": [
+      38.028324127197266,
+      0.3000293970108032,
+      141.91941833496094,
+      0.02355489693582058,
+      0.9788397550582886,
+      0.23256824910640717
+    ],
+    "aux_normalized_values": [
+      59.46510696411133,
+      26.066314697265625,
+      41.75090789794922,
+      -0.4172245264053345,
+      -0.4081365168094635,
+      -0.38643327355384827,
+      27.673322677612305
+    ]
+  },
+  "quantization_characterization": {
+    "input_details": [
+      {
+        "name": "serving_default_seq:0",
+        "dtype": "<class 'numpy.float32'>",
+        "scale": null,
+        "zero_point": null
+      },
+      {
+        "name": "serving_default_aux:0",
+        "dtype": "<class 'numpy.float32'>",
+        "scale": null,
+        "zero_point": null
+      }
+    ],
+    "output_details": [
+      {
+        "name": "StatefulPartitionedCall_1:1",
+        "dtype": "<class 'numpy.float32'>",
+        "scale": null,
+        "zero_point": null
+      },
+      {
+        "name": "StatefulPartitionedCall_1:0",
+        "dtype": "<class 'numpy.float32'>",
+        "scale": null,
+        "zero_point": null
+      },
+      {
+        "name": "StatefulPartitionedCall_1:2",
+        "dtype": "<class 'numpy.float32'>",
+        "scale": null,
+        "zero_point": null
+      }
+    ]
+  },
+  "first_layer_note": "See int8_outlier_tensors.json for the full per-tensor trace (preserve_all_tensors). No cause is asserted here beyond what the tensor min/max/saturation-count data directly shows -- do not guess the mechanism if the trace doesn't clearly localize it."
+}

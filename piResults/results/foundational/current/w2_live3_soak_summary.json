@@ -1,0 +1,36 @@
+{
+  "status": "verified_hardware_result",
+  "device": "Raspberry Pi 4 Model B Rev 1.5",
+  "source_artifact": "../raw/w2_live3_soak.json",
+  "duration_minutes": 180.00034345334998,
+  "input_samples": 539981,
+  "windows_scored": 33734,
+  "triggers": 0,
+  "sensor_read_failures": 0,
+  "reconnects": 0,
+  "exceptions": 0,
+  "latency_ms": {
+    "mean": 1.7814644448312007,
+    "median": 1.6992310011119116,
+    "p95": 2.1551173993429984,
+    "p99": 3.030877709225023,
+    "max": 11.040390000744082
+  },
+  "stride_budget_ms": 300.0,
+  "deadline_misses": 0,
+  "stream_guard": {
+    "max_dt_s_used_by_this_run": 0.03,
+    "timing_gaps": 674,
+    "suspected_dropped_samples": 677,
+    "duplicate_or_too_fast_samples": 694,
+    "max_sample_interval_ms": 56.42135500056611
+  },
+  "resources": {
+    "mean_process_cpu_percent": 2.3977081384471464,
+    "mean_process_rss_mb": 51.613653604420016,
+    "max_temperature_c": 55.0,
+    "thermal_throttling_occurred": false,
+    "memory_verdict": "stable plateau"
+  },
+  "provenance_note": "This run used a 30 ms timing-gap threshold. The later deployment configuration uses 60 ms; the latency, sensor-failure, thermal, and deadline measurements remain direct observations, while timing-gap counts must be interpreted using the recorded 30 ms configuration."
+}

@@ -1,0 +1,9 @@
+{
+  "command": [
+    "vcgencmd",
+    "get_throttled"
+  ],
+  "returncode": 0,
+  "stdout": "throttled=0x0\n",
+  "stderr": ""
+}

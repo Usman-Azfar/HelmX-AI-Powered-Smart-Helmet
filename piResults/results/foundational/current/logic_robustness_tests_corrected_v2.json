@@ -1,0 +1,236 @@
+{
+  "W1-R1_cancellation": {
+    "cancelled": true,
+    "sms_attempted": false,
+    "sms_sent": false,
+    "gps_available": false,
+    "sms_calls_made": 0,
+    "expected": {
+      "cancelled": true,
+      "sms_attempted": false,
+      "sms_sent": false,
+      "gps_available": false
+    },
+    "matches_expected": true
+  },
+  "W1-R2_sms_success": {
+    "cancelled": false,
+    "sms_attempted": true,
+    "sms_sent": true,
+    "gps_available": true,
+    "expected": {
+      "cancelled": false,
+      "sms_attempted": true,
+      "sms_sent": true,
+      "gps_available": true
+    },
+    "matches_expected": true
+  },
+  "W1-R3_sms_failure": {
+    "cancelled": false,
+    "sms_attempted": true,
+    "sms_sent": false,
+    "gps_available": true,
+    "expected": {
+      "cancelled": false,
+      "sms_attempted": true,
+      "sms_sent": false,
+      "gps_available": true
+    },
+    "matches_expected": true,
+    "note": "This is the exact case that was silently mis-reported as success pre-fix (evaluated-v1 handle_suspected_crash() returned True here). Corrected result reports sms_sent=False, matching what actually happened."
+  },
+  "W1-R4_gps_unavailable": {
+    "sms_success_case": {
+      "gps_available": false,
+      "sms_sent": true,
+      "matches_expected": true
+    },
+    "sms_failure_case": {
+      "gps_available": false,
+      "sms_sent": false,
+      "matches_expected": true
+    },
+    "note": "gps_available=False is independent of sms_sent in both directions -- GPS absence never implies or masks SMS outcome."
+  },
+  "W1-R5_caller_regression": {
+    "raised_exception": null,
+    "result": {
+      "cancelled": false,
+      "sms_attempted": true,
+      "sms_sent": false,
+      "gps_available": false
+    },
+    "expected": {
+      "cancelled": false,
+      "sms_attempted": true,
+      "sms_sent": false,
+      "gps_available": false
+    },
+    "matches_expected": true,
+    "note": "Real (unmocked) GsmModule with no GSM/GPS hardware present -- same condition as evaluated-v1's 3.30c/3.32 tests. sms_sent=False now correctly distinguishes this from the cancelled case, unlike evaluated-v1's unconditional return True."
+  },
+  "W2-R1_no_gap_regression_crash_session": {
+    "n_windows_v1": 156,
+    "n_windows_v2": 156,
+    "bit_identical_outputs": true,
+    "max_abs_prob_diff": 0.0,
+    "window_decision_agreement": 1.0,
+    "event_trigger_agreement": true,
+    "corrected_guard_timing_gaps": 0,
+    "corrected_guard_windows_invalidated": 0,
+    "all_pass": true
+  },
+  "W2-R1_no_gap_regression_normal_session": {
+    "n_windows_v1": 2286,
+    "n_windows_v2": 2286,
+    "bit_identical_outputs": true,
+    "max_abs_prob_diff": 0.0,
+    "window_decision_agreement": 1.0,
+    "event_trigger_agreement": true,
+    "corrected_guard_timing_gaps": 0,
+    "corrected_guard_windows_invalidated": 0,
+    "all_pass": true
+  },
+  "W2-R2_isolated_single_drop": {
+    "early": {
+      "dropped_sample_index": 239,
+      "no_exception": true,
+      "exception": null,
+      "gap_detected": true,
+      "n_gaps_detected": 1,
+      "windows_invalidated": 1,
+      "windows_scored": 152,
+      "buffer_len_at_gap_before_clear": 60
+    },
+    "middle": {
+      "dropped_sample_index": 1198,
+      "no_exception": true,
+      "exception": null,
+      "gap_detected": true,
+      "n_gaps_detected": 1,
+      "windows_invalidated": 1,
+      "windows_scored": 152,
+      "buffer_len_at_gap_before_clear": 60
+    },
+    "crash_transient_late": {
+      "dropped_sample_index": 2157,
+      "no_exception": true,
+      "exception": null,
+      "gap_detected": true,
+      "n_gaps_detected": 1,
+      "windows_invalidated": 1,
+      "windows_scored": 152,
+      "buffer_len_at_gap_before_clear": 60
+    }
+  },
+  "W2-R3_sparse_periodic_drop": {
+    "1_in_100": {
+      "n_dropped": 344,
+      "n_delivered": 33999,
+      "no_exception": true,
+      "gap_count": 343,
+      "windows_invalidated": 343,
+      "windows_scored": 1029,
+      "approx_pct_time_invalidated": 59.92836551064282,
+      "false_trigger_vs_no_drop_baseline": false,
+      "event_outcome_matches_baseline": true
+    },
+    "1_in_500": {
+      "n_dropped": 69,
+      "n_delivered": 34274,
+      "no_exception": true,
+      "gap_count": 68,
+      "windows_invalidated": 68,
+      "windows_scored": 2059,
+      "approx_pct_time_invalidated": 11.88084214205172,
+      "false_trigger_vs_no_drop_baseline": false,
+      "event_outcome_matches_baseline": true
+    }
+  },
+  "W2-R4_burst_drop": {
+    "burst_2": {
+      "no_exception": true,
+      "n_gap_events": 1,
+      "gap_events_equal_one": true,
+      "gap_dt_ms": [
+        60.0
+      ],
+      "windows_invalidated": 1,
+      "windows_scored": 2283,
+      "gravity_filter_reset_triggered": false
+    },
+    "burst_5": {
+      "no_exception": true,
+      "n_gap_events": 1,
+      "gap_events_equal_one": true,
+      "gap_dt_ms": [
+        120.0
+      ],
+      "windows_invalidated": 1,
+      "windows_scored": 2283,
+      "gravity_filter_reset_triggered": false
+    },
+    "burst_10": {
+      "no_exception": true,
+      "n_gap_events": 1,
+      "gap_events_equal_one": true,
+      "gap_dt_ms": [
+        220.0
+      ],
+      "windows_invalidated": 1,
+      "windows_scored": 2282,
+      "gravity_filter_reset_triggered": false
+    },
+    "burst_30": {
+      "no_exception": true,
+      "n_gap_events": 1,
+      "gap_events_equal_one": true,
+      "gap_dt_ms": [
+        620.0
+      ],
+      "windows_invalidated": 1,
+      "windows_scored": 2281,
+      "gravity_filter_reset_triggered": false
+    }
+  },
+  "W2-R4_old_new_samples_never_mixed": {
+    "buffer_always_empty_immediately_after_clear_on_detected_gap": true,
+    "note": "SampleStreamGuard calls scorer.clear() BEFORE the arriving sample is appended -- checked directly here (buffer length read right after clear(), before the new sample is appended) -- so the buffer is provably empty at that point on every detected gap; a scored window can never span samples from before and after a detected gap. (The buffer length BEFORE clear() is normally nonzero -- that's the stale in-flight window being correctly discarded, not a violation.)"
+  },
+  "W2-R5_delayed_sample": {
+    "delay_30ms": {
+      "sample_dropped": false,
+      "no_exception": true,
+      "gap_detected": true,
+      "observed_dt_ms": 50.0,
+      "windows_invalidated": 1,
+      "accepted_not_discarded": true
+    },
+    "delay_50ms": {
+      "sample_dropped": false,
+      "no_exception": true,
+      "gap_detected": true,
+      "observed_dt_ms": 70.0,
+      "windows_invalidated": 1,
+      "accepted_not_discarded": true
+    },
+    "delay_100ms": {
+      "sample_dropped": false,
+      "no_exception": true,
+      "gap_detected": true,
+      "observed_dt_ms": 120.0,
+      "windows_invalidated": 1,
+      "accepted_not_discarded": true
+    },
+    "delay_300ms": {
+      "sample_dropped": false,
+      "no_exception": true,
+      "gap_detected": true,
+      "observed_dt_ms": 320.0,
+      "windows_invalidated": 1,
+      "accepted_not_discarded": true
+    }
+  },
+  "W2-R5_note": "This harness only constructs monotonically increasing synthetic timestamps, so it cannot simulate a genuinely out-of-order/duplicate-timestamp arrival -- that scenario is deferred to real hardware (W2-LIVE-1) since it depends on real I2C/driver behavior, not something a software replay harness can honestly fabricate."
+}

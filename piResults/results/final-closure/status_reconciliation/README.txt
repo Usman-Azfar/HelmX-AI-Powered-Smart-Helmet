@@ -1,0 +1,37 @@
+
+ — Campaign status reconciliation
+Status: AUTONOMOUS WORK COMPLETE; USER PHASE PENDING
+UTC: 2026-10-05T17:06:24.599062+00:00
+Evidence: piResults/final_pi_review_closure/status_reconciliation
+{
+  "items_with_evidence": 43,
+  "checklist_items": 55,
+  "pending_ids": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "H1",
+    "I2",
+    "J1",
+    "J2",
+    "J3",
+    "K1",
+    "Q4",
+    "P"
+  ],
+  "motion_totals": {
+    "duration_s": 900.1016990790004,
+    "samples": 44935,
+    "windows": 2952,
+    "classifier_crossings": 48,
+    "reconstruction_crossings": 0,
+    "or_positive_windows": 48,
+    "confirmed_alerts": 6,
+    "accel_rail_hits": 0,
+    "gyro_rail_hits": 0
+  },
+  "archive": "piResults/final_pi_review_closure/release_candidate_20261005T220539",
+  "integrity_checks_passed": true,
+  "scope": "Status reconciliation and saved-data verification; no new power cycle, headless capture, interrupt capture, or modem trial claimed."
+}

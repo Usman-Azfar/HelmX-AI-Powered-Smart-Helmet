@@ -1,0 +1,21 @@
+{
+  "n_runs": 10,
+  "n_succeeded": 10,
+  "mean_s": 0.7097944576000372,
+  "median_s": 0.7119747679998909,
+  "min_s": 0.6364072520009358,
+  "max_s": 0.8301316409997526,
+  "raw_s": [
+    0.8301316409997526,
+    0.6450111390004167,
+    0.7097343549994548,
+    0.7291394539988687,
+    0.6431681880003453,
+    0.7699604339995858,
+    0.6786618700007239,
+    0.7415150619999622,
+    0.714215181000327,
+    0.6364072520009358
+  ],
+  "note": "Time from fresh process launch to the 'Loaded thresholds' log line, which crash_monitor.py logs immediately before CrashModel() (TFLite load) and right after config/logging setup. connect_sensor() (which blocks forever with no MPU6050) runs after this point, so this is the furthest this process can get without hardware -- a real cold-start-to-ready proxy."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "CAPTURED; OFFLINE ANALYSIS AND OPERATOR ATTESTATION PENDING",
+  "boot_id": "<redacted-boot-id>",
+  "cold": {
+    "samples": 30000,
+    "elapsed_s": 600.00009429,
+    "seconds_requested": 600,
+    "first_sample_uptime_s": 97.842863698,
+    "last_sample_uptime_s": 697.821405247,
+    "exception": null,
+    "cleanup_error": null,
+    "scope": "Matched filtered coherent-burst polling at nominal 50 Hz. No inference during acquisition. Offline score comparison required."
+  },
+  "warm": {
+    "samples": 30000,
+    "elapsed_s": 600.0001275870004,
+    "seconds_requested": 600,
+    "first_sample_uptime_s": 3600.057247351,
+    "last_sample_uptime_s": 4200.037352715,
+    "exception": null,
+    "cleanup_error": null,
+    "scope": "Matched filtered coherent-burst polling at nominal 50 Hz. No inference during acquisition. Offline score comparison required."
+  },
+  "missing_startup_seconds": 97.842863698
+}

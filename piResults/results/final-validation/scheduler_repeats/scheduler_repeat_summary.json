@@ -1,0 +1,415 @@
+{
+  "method": "3 matched loaded/reduced pairs, 20 min each, run back-to-back (not interleaved -- single MPU6050, cannot parallelize). 'loaded'=all default HelmX services active (bluetooth, helmx-ble, mosquitto, rhasspy, helmx_assistant, wayvnc, wayvnc-control); 'reduced'=those (except bluetooth) stopped. Desktop + VS Code + AI coding agent were active throughout ALL 6 runs (disclosed confound, consistent with Round 9's own finding that this stack -- not the targeted BLE/MQTT/voice-assistant services -- was the actual top scheduler-contention source in that round's single pair too).",
+  "per_run": {
+    "loaded": [
+      {
+        "pair": 1,
+        "condition": "loaded",
+        "duration_min": 20.0,
+        "windows_scored": 3425,
+        "gaps_per_min": 8.8,
+        "V_T": 0.9507829977628636,
+        "C_D": 0.851063829787234,
+        "p_valid_90sample_confirmation": 0.7803456625198296,
+        "dropped_equivalent_per_min": 8.95,
+        "decision_latency_p50_ms": 1.772929000253498,
+        "decision_latency_p95_ms": 2.948432200173556,
+        "decision_latency_p99_ms": 4.581358559662471,
+        "decision_latency_max_ms": 11.700234000272758,
+        "deadline_misses_gt_300ms": 0,
+        "i2c_failures": 0,
+        "reconnects": 0,
+        "exceptions": 0,
+        "process_cpu_percent_mean": 3.6393608074011774,
+        "max_temperature_c": 62.8,
+        "context_switches_per_sec_system": 726.02,
+        "cpu_migrations_per_sec_system": 5.06,
+        "page_faults_per_sec_system": 512.128,
+        "process_context_switches": 909201,
+        "process_cpu_migrations": 1694,
+        "process_page_faults": 112760,
+        "sched_max_runqueue_delay_ms_any_task": 786.286
+      },
+      {
+        "pair": 2,
+        "condition": "loaded",
+        "duration_min": 20.0,
+        "windows_scored": 3545,
+        "gaps_per_min": 6.7,
+        "V_T": 0.9634478996181124,
+        "C_D": 0.8838838838838838,
+        "p_valid_90sample_confirmation": 0.8247658480391339,
+        "dropped_equivalent_per_min": 6.7,
+        "decision_latency_p50_ms": 1.7705079990264494,
+        "decision_latency_p95_ms": 2.753714000027685,
+        "decision_latency_p99_ms": 3.7833513599980506,
+        "decision_latency_max_ms": 7.84820599892555,
+        "deadline_misses_gt_300ms": 0,
+        "i2c_failures": 0,
+        "reconnects": 0,
+        "exceptions": 0,
+        "process_cpu_percent_mean": 3.4925147182506304,
+        "max_temperature_c": 57.4,
+        "context_switches_per_sec_system": 695.928,
+        "cpu_migrations_per_sec_system": 3.747,
+        "page_faults_per_sec_system": 498.263,
+        "process_context_switches": 908547,
+        "process_cpu_migrations": 1212,
+        "process_page_faults": 112733,
+        "sched_max_runqueue_delay_ms_any_task": 705.877
+      },
+      {
+        "pair": 3,
+        "condition": "loaded",
+        "duration_min": 20.0,
+        "windows_scored": 3609,
+        "gaps_per_min": 5.65,
+        "V_T": 0.9695663883652034,
+        "C_D": 0.9009009009009009,
+        "p_valid_90sample_confirmation": 0.8477538687544864,
+        "dropped_equivalent_per_min": 5.65,
+        "decision_latency_p50_ms": 1.7592479998711497,
+        "decision_latency_p95_ms": 2.7665696001349716,
+        "decision_latency_p99_ms": 4.197090760935681,
+        "decision_latency_max_ms": 10.041982000984717,
+        "deadline_misses_gt_300ms": 0,
+        "i2c_failures": 0,
+        "reconnects": 0,
+        "exceptions": 0,
+        "process_cpu_percent_mean": 3.484356602186711,
+        "max_temperature_c": 58.9,
+        "context_switches_per_sec_system": 683.829,
+        "cpu_migrations_per_sec_system": 3.482,
+        "page_faults_per_sec_system": 498.28,
+        "process_context_switches": 908455,
+        "process_cpu_migrations": 1110,
+        "process_page_faults": 112752,
+        "sched_max_runqueue_delay_ms_any_task": 719.667
+      }
+    ],
+    "reduced": [
+      {
+        "pair": 1,
+        "condition": "reduced",
+        "duration_min": 20.0,
+        "windows_scored": 3742,
+        "gaps_per_min": 3.75,
+        "V_T": 0.9802839116719243,
+        "C_D": 0.9331831831831832,
+        "p_valid_90sample_confirmation": 0.8951725979835748,
+        "dropped_equivalent_per_min": 3.75,
+        "decision_latency_p50_ms": 1.7470194998168154,
+        "decision_latency_p95_ms": 2.1816851492985734,
+        "decision_latency_p99_ms": 3.340581450411287,
+        "decision_latency_max_ms": 11.537135999788006,
+        "deadline_misses_gt_300ms": 0,
+        "i2c_failures": 0,
+        "reconnects": 0,
+        "exceptions": 0,
+        "process_cpu_percent_mean": 3.072053872053872,
+        "max_temperature_c": 54.0,
+        "context_switches_per_sec_system": 662.53,
+        "cpu_migrations_per_sec_system": 2.768,
+        "page_faults_per_sec_system": 181.192,
+        "process_context_switches": 908118,
+        "process_cpu_migrations": 871,
+        "process_page_faults": 112551,
+        "sched_max_runqueue_delay_ms_any_task": 16.116
+      },
+      {
+        "pair": 2,
+        "condition": "reduced",
+        "duration_min": 20.0,
+        "windows_scored": 3754,
+        "gaps_per_min": 3.55,
+        "V_T": 0.9813746065057712,
+        "C_D": 0.9361861861861862,
+        "p_valid_90sample_confirmation": 0.9003305067770582,
+        "dropped_equivalent_per_min": 3.55,
+        "decision_latency_p50_ms": 1.7464969996581203,
+        "decision_latency_p95_ms": 2.2504755993395515,
+        "decision_latency_p99_ms": 3.4072264302994864,
+        "decision_latency_max_ms": 6.9469349982682616,
+        "deadline_misses_gt_300ms": 0,
+        "i2c_failures": 0,
+        "reconnects": 0,
+        "exceptions": 0,
+        "process_cpu_percent_mean": 3.0303872053872047,
+        "max_temperature_c": 57.9,
+        "context_switches_per_sec_system": 661.362,
+        "cpu_migrations_per_sec_system": 2.491,
+        "page_faults_per_sec_system": 184.752,
+        "process_context_switches": 908247,
+        "process_cpu_migrations": 972,
+        "process_page_faults": 112593,
+        "sched_max_runqueue_delay_ms_any_task": 15.81
+      },
+      {
+        "pair": 3,
+        "condition": "reduced",
+        "duration_min": 20.0,
+        "windows_scored": 3576,
+        "gaps_per_min": 6.55,
+        "V_T": 0.9644793926247288,
+        "C_D": 0.8903629536921152,
+        "p_valid_90sample_confirmation": 0.8364027984171244,
+        "dropped_equivalent_per_min": 6.8,
+        "decision_latency_p50_ms": 1.7644214995016227,
+        "decision_latency_p95_ms": 2.4045382497206447,
+        "decision_latency_p99_ms": 4.312287998800457,
+        "decision_latency_max_ms": 11.667024999042042,
+        "deadline_misses_gt_300ms": 0,
+        "i2c_failures": 0,
+        "reconnects": 0,
+        "exceptions": 0,
+        "process_cpu_percent_mean": 3.3146464646464646,
+        "max_temperature_c": 59.9,
+        "context_switches_per_sec_system": 725.97,
+        "cpu_migrations_per_sec_system": 4.562,
+        "page_faults_per_sec_system": 215.783,
+        "process_context_switches": 908868,
+        "process_cpu_migrations": 1691,
+        "process_page_faults": 112531,
+        "sched_max_runqueue_delay_ms_any_task": 19.694
+      }
+    ]
+  },
+  "aggregate_by_condition": {
+    "loaded": {
+      "gaps_per_min": {
+        "mean": 7.050000000000001,
+        "std": 1.6039014932345441,
+        "median": 6.7,
+        "min": 5.65,
+        "max": 8.8,
+        "n": 3
+      },
+      "V_T": {
+        "mean": 0.9612657619153931,
+        "std": 0.009579939161875639,
+        "median": 0.9634478996181124,
+        "min": 0.9507829977628636,
+        "max": 0.9695663883652034,
+        "n": 3
+      },
+      "C_D": {
+        "mean": 0.8786162048573396,
+        "std": 0.025332681382794688,
+        "median": 0.8838838838838838,
+        "min": 0.851063829787234,
+        "max": 0.9009009009009009,
+        "n": 3
+      },
+      "p_valid_90sample_confirmation": {
+        "mean": 0.8176217931044834,
+        "std": 0.0342672541594083,
+        "median": 0.8247658480391339,
+        "min": 0.7803456625198296,
+        "max": 0.8477538687544864,
+        "n": 3
+      },
+      "dropped_equivalent_per_min": {
+        "mean": 7.1,
+        "std": 1.685971530008736,
+        "median": 6.7,
+        "min": 5.65,
+        "max": 8.95,
+        "n": 3
+      },
+      "decision_latency_p50_ms": {
+        "mean": 1.767561666383699,
+        "std": 0.007300897198067965,
+        "median": 1.7705079990264494,
+        "min": 1.7592479998711497,
+        "max": 1.772929000253498,
+        "n": 3
+      },
+      "decision_latency_p95_ms": {
+        "mean": 2.8229052667787373,
+        "std": 0.10889937956278724,
+        "median": 2.7665696001349716,
+        "min": 2.753714000027685,
+        "max": 2.948432200173556,
+        "n": 3
+      },
+      "decision_latency_p99_ms": {
+        "mean": 4.187266893532067,
+        "std": 0.3990942920628348,
+        "median": 4.197090760935681,
+        "min": 3.7833513599980506,
+        "max": 4.581358559662471,
+        "n": 3
+      },
+      "decision_latency_max_ms": {
+        "mean": 9.863474000061009,
+        "std": 1.9322082601484951,
+        "median": 10.041982000984717,
+        "min": 7.84820599892555,
+        "max": 11.700234000272758,
+        "n": 3
+      },
+      "context_switches_per_sec_system": {
+        "mean": 701.9256666666666,
+        "std": 21.72554082947842,
+        "median": 695.928,
+        "min": 683.829,
+        "max": 726.02,
+        "n": 3
+      },
+      "cpu_migrations_per_sec_system": {
+        "mean": 4.096333333333333,
+        "std": 0.8450126231798747,
+        "median": 3.747,
+        "min": 3.482,
+        "max": 5.06,
+        "n": 3
+      },
+      "page_faults_per_sec_system": {
+        "mean": 502.89033333333333,
+        "std": 8.000058520619332,
+        "median": 498.28,
+        "min": 498.263,
+        "max": 512.128,
+        "n": 3
+      },
+      "sched_max_runqueue_delay_ms_any_task": {
+        "mean": 737.2766666666666,
+        "std": 42.99973360770194,
+        "median": 719.667,
+        "min": 705.877,
+        "max": 786.286,
+        "n": 3
+      },
+      "process_cpu_percent_mean": {
+        "mean": 3.53874404261284,
+        "std": 0.08723209691267231,
+        "median": 3.4925147182506304,
+        "min": 3.484356602186711,
+        "max": 3.6393608074011774,
+        "n": 3
+      },
+      "total_deadline_misses": 0,
+      "total_i2c_failures": 0,
+      "total_reconnects": 0,
+      "total_exceptions": 0
+    },
+    "reduced": {
+      "gaps_per_min": {
+        "mean": 4.616666666666666,
+        "std": 1.6772994167212165,
+        "median": 3.75,
+        "min": 3.55,
+        "max": 6.55,
+        "n": 3
+      },
+      "V_T": {
+        "mean": 0.9753793036008082,
+        "std": 0.009455339669730837,
+        "median": 0.9802839116719243,
+        "min": 0.9644793926247288,
+        "max": 0.9813746065057712,
+        "n": 3
+      },
+      "C_D": {
+        "mean": 0.9199107743538282,
+        "std": 0.025633177449383395,
+        "median": 0.9331831831831832,
+        "min": 0.8903629536921152,
+        "max": 0.9361861861861862,
+        "n": 3
+      },
+      "p_valid_90sample_confirmation": {
+        "mean": 0.8773019677259192,
+        "std": 0.03551348396584833,
+        "median": 0.8951725979835748,
+        "min": 0.8364027984171244,
+        "max": 0.9003305067770582,
+        "n": 3
+      },
+      "dropped_equivalent_per_min": {
+        "mean": 4.7,
+        "std": 1.8214005600086982,
+        "median": 3.75,
+        "min": 3.55,
+        "max": 6.8,
+        "n": 3
+      },
+      "decision_latency_p50_ms": {
+        "mean": 1.7526459996588528,
+        "std": 0.010201227818957144,
+        "median": 1.7470194998168154,
+        "min": 1.7464969996581203,
+        "max": 1.7644214995016227,
+        "n": 3
+      },
+      "decision_latency_p95_ms": {
+        "mean": 2.2788996661195897,
+        "std": 0.11411319718231326,
+        "median": 2.2504755993395515,
+        "min": 2.1816851492985734,
+        "max": 2.4045382497206447,
+        "n": 3
+      },
+      "decision_latency_p99_ms": {
+        "mean": 3.6866986265037434,
+        "std": 0.5428000878629458,
+        "median": 3.4072264302994864,
+        "min": 3.340581450411287,
+        "max": 4.312287998800457,
+        "n": 3
+      },
+      "decision_latency_max_ms": {
+        "mean": 10.050365332366104,
+        "std": 2.6884340547948695,
+        "median": 11.537135999788006,
+        "min": 6.9469349982682616,
+        "max": 11.667024999042042,
+        "n": 3
+      },
+      "context_switches_per_sec_system": {
+        "mean": 683.2873333333333,
+        "std": 36.96888666613231,
+        "median": 662.53,
+        "min": 661.362,
+        "max": 725.97,
+        "n": 3
+      },
+      "cpu_migrations_per_sec_system": {
+        "mean": 3.2736666666666667,
+        "std": 1.1242928147655014,
+        "median": 2.768,
+        "min": 2.491,
+        "max": 4.562,
+        "n": 3
+      },
+      "page_faults_per_sec_system": {
+        "mean": 193.909,
+        "std": 19.02688379635508,
+        "median": 184.752,
+        "min": 181.192,
+        "max": 215.783,
+        "n": 3
+      },
+      "sched_max_runqueue_delay_ms_any_task": {
+        "mean": 17.206666666666667,
+        "std": 2.1595206258179918,
+        "median": 16.116,
+        "min": 15.81,
+        "max": 19.694,
+        "n": 3
+      },
+      "process_cpu_percent_mean": {
+        "mean": 3.139029180695847,
+        "std": 0.15350928504302808,
+        "median": 3.072053872053872,
+        "min": 3.0303872053872047,
+        "max": 3.3146464646464646,
+        "n": 3
+      },
+      "total_deadline_misses": 0,
+      "total_i2c_failures": 0,
+      "total_reconnects": 0,
+      "total_exceptions": 0
+    }
+  }
+}

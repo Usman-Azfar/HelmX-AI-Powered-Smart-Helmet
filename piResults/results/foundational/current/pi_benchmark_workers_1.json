@@ -1,0 +1,48 @@
+{
+  "device_info": {
+    "platform": "Linux aarch64",
+    "cpu_count": 4
+  },
+  "model_path": "models/helmx_crash_model_int8.tflite",
+  "model_load_time_ms": 3.1304879994422663,
+  "power_now_microwatts": null,
+  "power_note": "None means no sysfs power-supply fuel-gauge was found on this device (expected on a plain Pi 4 with no UPS/power-monitoring HAT) -- this is reported honestly as unavailable, not estimated.",
+  "solo": {
+    "latency": {
+      "n_runs": 300,
+      "mean_ms": 0.6558298700717083,
+      "p50_ms": 0.6039330000930931,
+      "p95_ms": 1.0152837983696372,
+      "p99_ms": 1.2773761108110189,
+      "max_ms": 5.281830999592785,
+      "throughput_windows_per_sec": 1524.785688536358
+    },
+    "resources": {
+      "cpu_percent_mean": 215.25,
+      "cpu_percent_max": 816.0,
+      "rss_mb_mean": 42.09765625,
+      "rss_mb_max": 42.09765625,
+      "n_samples": 6
+    }
+  },
+  "concurrent": {
+    "n_busy_workers": 1,
+    "note": "Busy-loop worker processes simulate CPU contention from another always-on workload (e.g. drowsiness detection); this is a proxy, not the actual drowsiness-detection module's real CPU profile.",
+    "latency": {
+      "n_runs": 300,
+      "mean_ms": 1.2880260200836346,
+      "p50_ms": 0.9351630014862167,
+      "p95_ms": 3.177061250244151,
+      "p99_ms": 4.707524808763983,
+      "max_ms": 11.077752998971846,
+      "throughput_windows_per_sec": 776.3818311178742
+    },
+    "resources": {
+      "cpu_percent_mean": 128.53333333333333,
+      "cpu_percent_max": 375.3,
+      "rss_mb_mean": 42.5859375,
+      "rss_mb_max": 42.5859375,
+      "n_samples": 6
+    }
+  }
+}

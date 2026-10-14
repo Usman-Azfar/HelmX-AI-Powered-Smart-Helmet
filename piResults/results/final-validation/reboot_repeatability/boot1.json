@@ -1,0 +1,46 @@
+{
+  "boot": 1,
+  "context": "Same-day earlier campaign, before the unplanned reboot that interrupted the motion session -- register dump from mpu_config/, stationary + gentle_rotation phases from benign_motion/ (Sections B1/C1/I data reused, not rerun).",
+  "register_dump": {
+    "who_am_i": "0x70",
+    "decoded_summary": {
+      "accel_full_scale": "+/-2g",
+      "accel_afs_sel_raw": 0,
+      "gyro_full_scale": "+/-250 deg/s",
+      "gyro_fs_sel_raw": 0,
+      "dlpf_mode_bandwidth": "260Hz accel / 256Hz gyro (DLPF off)",
+      "dlpf_cfg_raw": 0,
+      "smplrt_div_raw": 0,
+      "gyro_output_rate_hz_before_divider": 8000,
+      "configured_sample_rate_hz": 8000.0,
+      "device_clock_source": "PLL with X gyro reference",
+      "clksel_raw": 1,
+      "sleep_mode": false,
+      "fifo_enabled_register_nonzero": false,
+      "fifo_en_raw": 0,
+      "data_ready_interrupt_enabled": false,
+      "int_enable_raw": 0,
+      "int_status_data_ready": true,
+      "who_am_i": "0x70",
+      "who_am_i_expected_0x68": false
+    }
+  },
+  "stationary": {
+    "n_samples": 4040,
+    "duration_s": 80.77867988500003,
+    "gyro_magnitude_dps_max": 4.877313041711278,
+    "accel_magnitude_ms2_max": 9.964400676385196,
+    "max_classifier_score": 0.0,
+    "max_reconstruction_error": 0.0,
+    "n_confirmed_triggers": 0
+  },
+  "gentle_rotation": {
+    "n_samples": 6018,
+    "duration_s": 120.32452271599999,
+    "gyro_magnitude_dps_max": 184.3471767941723,
+    "accel_magnitude_ms2_max": 18.499480477514346,
+    "max_classifier_score": 0.96875,
+    "max_reconstruction_error": 0.19638307392597198,
+    "n_confirmed_triggers": 0
+  }
+}

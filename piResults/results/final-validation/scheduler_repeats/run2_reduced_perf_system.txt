@@ -1,0 +1,12 @@
+# started on Sat Sep 19 15:40:13 2026
+
+
+ Performance counter stats for 'system wide':
+
+      4,800,055.26 msec task-clock                       #    4.000 CPUs utilized             
+         3,174,575      context-switches                 #  661.362 /sec                      
+            11,959      cpu-migrations                   #    2.491 /sec                      
+           886,822      page-faults                      #  184.752 /sec                      
+
+    1200.003547875 seconds time elapsed
+

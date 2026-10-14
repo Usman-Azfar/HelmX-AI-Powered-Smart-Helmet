@@ -1,0 +1,124 @@
+{
+  "device": "/sys/bus/iio/devices/iio:device0",
+  "attrs": {
+    "sampling_frequency": "50",
+    "in_anglvel_scale": "0.000133090",
+    "in_accel_scale": "0.000598",
+    "current_timestamp_clock": "monotonic",
+    "name": "mpu6500"
+  },
+  "channels": [
+    [
+      "in_accel_x",
+      0,
+      "be:s16/16>>0"
+    ],
+    [
+      "in_accel_y",
+      1,
+      "be:s16/16>>0"
+    ],
+    [
+      "in_accel_z",
+      2,
+      "be:s16/16>>0"
+    ],
+    [
+      "in_anglvel_x",
+      4,
+      "be:s16/16>>0"
+    ],
+    [
+      "in_anglvel_y",
+      5,
+      "be:s16/16>>0"
+    ],
+    [
+      "in_anglvel_z",
+      6,
+      "be:s16/16>>0"
+    ],
+    [
+      "in_timestamp",
+      7,
+      "le:s64/64>>0"
+    ]
+  ],
+  "layout": [
+    {
+      "name": "in_accel_x",
+      "index": 0,
+      "endian": "be",
+      "signed": true,
+      "bits": 16,
+      "size": 2,
+      "shift": 0,
+      "offset": 0
+    },
+    {
+      "name": "in_accel_y",
+      "index": 1,
+      "endian": "be",
+      "signed": true,
+      "bits": 16,
+      "size": 2,
+      "shift": 0,
+      "offset": 2
+    },
+    {
+      "name": "in_accel_z",
+      "index": 2,
+      "endian": "be",
+      "signed": true,
+      "bits": 16,
+      "size": 2,
+      "shift": 0,
+      "offset": 4
+    },
+    {
+      "name": "in_anglvel_x",
+      "index": 4,
+      "endian": "be",
+      "signed": true,
+      "bits": 16,
+      "size": 2,
+      "shift": 0,
+      "offset": 6
+    },
+    {
+      "name": "in_anglvel_y",
+      "index": 5,
+      "endian": "be",
+      "signed": true,
+      "bits": 16,
+      "size": 2,
+      "shift": 0,
+      "offset": 8
+    },
+    {
+      "name": "in_anglvel_z",
+      "index": 6,
+      "endian": "be",
+      "signed": true,
+      "bits": 16,
+      "size": 2,
+      "shift": 0,
+      "offset": 10
+    },
+    {
+      "name": "in_timestamp",
+      "index": 7,
+      "endian": "le",
+      "signed": true,
+      "bits": 64,
+      "size": 8,
+      "shift": 0,
+      "offset": 16
+    }
+  ],
+  "record_bytes": 24,
+  "accel_scale": 0.000598,
+  "gyro_scale_dps": 0.0076254952953961255,
+  "source": "Raspberry Pi Linux rpi-6.12.y inv_mpu6050 driver",
+  "timestamp_scope": "Kernel driver timestamps; may reconstruct FIFO sample times from IRQ and ODR, not physical timestamp ground truth."
+}

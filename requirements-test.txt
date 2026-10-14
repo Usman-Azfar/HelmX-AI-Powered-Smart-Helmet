@@ -1,0 +1,6 @@
+# Lightweight dependencies for hardware-independent CI checks.
+numpy==1.26.4
+pandas==3.0.5
+scipy==1.17.1
+pyyaml==6.0.3
+pyserial>=3.5,<4

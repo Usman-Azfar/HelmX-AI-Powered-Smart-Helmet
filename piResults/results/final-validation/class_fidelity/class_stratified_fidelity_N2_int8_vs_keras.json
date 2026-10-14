@@ -1,0 +1,48 @@
+{
+  "method": "reference=Keras float32 classifier decision at the deployed threshold, transformed=INT8 TFLite classifier decision, same threshold, per-window on the full test split.",
+  "normal_windows": {
+    "group": "normal (label=0)",
+    "n": 5294,
+    "ref_neg_to_trans_neg": 5292,
+    "ref_neg_to_trans_pos": 0,
+    "ref_pos_to_trans_neg": 0,
+    "ref_pos_to_trans_pos": 2,
+    "agreement_rate": 1.0
+  },
+  "crash_like_windows": {
+    "group": "crash_like (label=1)",
+    "n": 143,
+    "ref_neg_to_trans_neg": 110,
+    "ref_neg_to_trans_pos": 4,
+    "ref_pos_to_trans_neg": 2,
+    "ref_pos_to_trans_pos": 27,
+    "agreement_rate": 0.958041958041958
+  },
+  "overall": {
+    "group": "all",
+    "n": 5437,
+    "ref_neg_to_trans_neg": 5402,
+    "ref_neg_to_trans_pos": 4,
+    "ref_pos_to_trans_neg": 2,
+    "ref_pos_to_trans_pos": 29,
+    "agreement_rate": 0.9988964502482987
+  },
+  "or_rule_normal_windows": {
+    "group": "normal (OR rule)",
+    "n": 5294,
+    "ref_neg_to_trans_neg": 5291,
+    "ref_neg_to_trans_pos": 0,
+    "ref_pos_to_trans_neg": 0,
+    "ref_pos_to_trans_pos": 3,
+    "agreement_rate": 1.0
+  },
+  "or_rule_crash_like_windows": {
+    "group": "crash_like (OR rule)",
+    "n": 143,
+    "ref_neg_to_trans_neg": 110,
+    "ref_neg_to_trans_pos": 4,
+    "ref_pos_to_trans_neg": 2,
+    "ref_pos_to_trans_pos": 27,
+    "agreement_rate": 0.958041958041958
+  }
+}

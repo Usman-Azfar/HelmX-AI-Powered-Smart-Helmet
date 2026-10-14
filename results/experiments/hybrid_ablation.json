@@ -1,0 +1,217 @@
+{
+  "classifier_only": {
+    "confusion_matrix": {
+      "TP": 29,
+      "TN": 5292,
+      "FP": 2,
+      "FN": 114
+    },
+    "accuracy": 0.9786647048004414,
+    "precision": 0.9354838709677419,
+    "recall_sensitivity": 0.20279720279720279,
+    "specificity": 0.9996222138269739,
+    "f1_score": 0.3333333333333333,
+    "f2_score": 0.24046434494195687,
+    "balanced_accuracy": 0.6012097083120883,
+    "matthews_corrcoef": 0.4302226673098108,
+    "roc_auc": 0.9459237400302758,
+    "pr_auc": 0.5393709255767394,
+    "threshold": 0.9892255067825317,
+    "n_windows": 5437
+  },
+  "reconstruction_only_mean": {
+    "confusion_matrix": {
+      "TP": 12,
+      "TN": 5291,
+      "FP": 3,
+      "FN": 131
+    },
+    "accuracy": 0.9753540555453375,
+    "precision": 0.8,
+    "recall_sensitivity": 0.08391608391608392,
+    "specificity": 0.9994333207404609,
+    "f1_score": 0.1518987341772152,
+    "f2_score": 0.10221465076660988,
+    "balanced_accuracy": 0.5416747023282724,
+    "matthews_corrcoef": 0.2542945796515797,
+    "roc_auc": 0.7183075707820703,
+    "pr_auc": 0.12521392992740776,
+    "threshold": 10.878735866546593,
+    "n_windows": 5437
+  },
+  "reconstruction_only_peak": {
+    "confusion_matrix": {
+      "TP": 12,
+      "TN": 5288,
+      "FP": 6,
+      "FN": 131
+    },
+    "accuracy": 0.9748022806694868,
+    "precision": 0.6666666666666666,
+    "recall_sensitivity": 0.08391608391608392,
+    "specificity": 0.9988666414809217,
+    "f1_score": 0.14906832298136646,
+    "f2_score": 0.1016949152542373,
+    "balanced_accuracy": 0.5413913626985029,
+    "matthews_corrcoef": 0.23062367025501174,
+    "roc_auc": 0.7342842272951832,
+    "pr_auc": 0.1421708108502868,
+    "threshold": 134.2400975036617,
+    "n_windows": 5437
+  },
+  "hybrid_or_naive": {
+    "confusion_matrix": {
+      "TP": 29,
+      "TN": 5291,
+      "FP": 3,
+      "FN": 114
+    },
+    "accuracy": 0.9784807798418246,
+    "precision": 0.90625,
+    "recall_sensitivity": 0.20279720279720279,
+    "specificity": 0.9994333207404609,
+    "f1_score": 0.3314285714285714,
+    "f2_score": 0.24006622516556292,
+    "balanced_accuracy": 0.6011152617688318,
+    "matthews_corrcoef": 0.4230910662168077,
+    "roc_auc": 0.6011152617688318,
+    "pr_auc": 0.20475241031728983,
+    "threshold": 0.5,
+    "n_windows": 5437
+  },
+  "hybrid_or_tuned": {
+    "confusion_matrix": {
+      "TP": 30,
+      "TN": 5292,
+      "FP": 2,
+      "FN": 113
+    },
+    "accuracy": 0.9788486297590583,
+    "precision": 0.9375,
+    "recall_sensitivity": 0.2097902097902098,
+    "specificity": 0.9996222138269739,
+    "f1_score": 0.34285714285714286,
+    "f2_score": 0.24834437086092714,
+    "balanced_accuracy": 0.6047062118085919,
+    "matthews_corrcoef": 0.43811648230608957,
+    "roc_auc": 0.6047062118085919,
+    "pr_auc": 0.2174618420020296,
+    "threshold": 0.5,
+    "n_windows": 5437,
+    "tuned_clf_threshold": 0.9881946760780957,
+    "tuned_recon_threshold": 212.5227813720703,
+    "validation_f1_at_tuning_time": 0.587378640776699
+  },
+  "hybrid_stacked_3feature": {
+    "confusion_matrix": {
+      "TP": 16,
+      "TN": 5291,
+      "FP": 3,
+      "FN": 127
+    },
+    "accuracy": 0.976089755379805,
+    "precision": 0.8421052631578947,
+    "recall_sensitivity": 0.11188811188811189,
+    "specificity": 0.9994333207404609,
+    "f1_score": 0.19753086419753085,
+    "f2_score": 0.1353637901861252,
+    "balanced_accuracy": 0.5556607163142864,
+    "matthews_corrcoef": 0.3018856525260419,
+    "roc_auc": 0.9446794233345045,
+    "pr_auc": 0.4873912271365231,
+    "threshold": 0.804982602596283,
+    "n_windows": 5437,
+    "selected_C": 0.01,
+    "validation_f1_at_selected_C": 0.6347607052896725,
+    "features": [
+      "crash_prob",
+      "recon_error",
+      "recon_error_peak"
+    ]
+  },
+  "hybrid_stacked_extended": {
+    "confusion_matrix": {
+      "TP": 10,
+      "TN": 5284,
+      "FP": 10,
+      "FN": 133
+    },
+    "accuracy": 0.9736987309177856,
+    "precision": 0.5,
+    "recall_sensitivity": 0.06993006993006994,
+    "specificity": 0.9981110691348697,
+    "f1_score": 0.12269938650306748,
+    "f2_score": 0.08445945945945946,
+    "balanced_accuracy": 0.5340205695324698,
+    "matthews_corrcoef": 0.17986105936520597,
+    "roc_auc": 0.8775906752861795,
+    "pr_auc": 0.18545531816611138,
+    "threshold": 0.872887134552002,
+    "n_windows": 5437,
+    "selected_C": 0.01,
+    "validation_f1_at_selected_C": 0.7064676616915423,
+    "features": [
+      "crash_prob",
+      "recon_error",
+      "recon_error_peak",
+      "accel_mag_mean",
+      "accel_mag_std",
+      "accel_mag_peak",
+      "gyro_mag_mean",
+      "gyro_mag_std",
+      "gyro_mag_peak",
+      "jerk_peak"
+    ],
+    "overfitting_note": "Higher validation F1 (0.706 vs. the 3-feature stacker's 0.635) but far worse test F1 (0.123 vs. 0.198) -- classic overfitting on a 219-positive validation split with 10 free parameters. Prefer the 3-feature stacker if a stacked model is reported at all."
+  },
+  "hybrid_stacked": {
+    "confusion_matrix": {
+      "TP": 16,
+      "TN": 5291,
+      "FP": 3,
+      "FN": 127
+    },
+    "accuracy": 0.976089755379805,
+    "precision": 0.8421052631578947,
+    "recall_sensitivity": 0.11188811188811189,
+    "specificity": 0.9994333207404609,
+    "f1_score": 0.19753086419753085,
+    "f2_score": 0.1353637901861252,
+    "balanced_accuracy": 0.5556607163142864,
+    "matthews_corrcoef": 0.3018856525260419,
+    "roc_auc": 0.9446794233345045,
+    "pr_auc": 0.4873912271365231,
+    "threshold": 0.804982602596283,
+    "n_windows": 5437,
+    "selected_C": 0.01,
+    "validation_f1_at_selected_C": 0.6347607052896725,
+    "features": [
+      "crash_prob",
+      "recon_error",
+      "recon_error_peak"
+    ]
+  },
+  "significance_tests": {
+    "hybrid_or_tuned_vs_classifier_only": {
+      "metric": "f1",
+      "n_bootstrap": 2000,
+      "point_estimate_diff": 0.009523809523809545,
+      "bootstrap_mean_diff": 0.00916818761632327,
+      "ci_95_low": 0.0,
+      "ci_95_high": 0.03152048611508772,
+      "fraction_of_resamples_b_not_better": 0.3765,
+      "significant_at_0.05_two_sided": false
+    },
+    "hybrid_stacked_3feature_vs_classifier_only": {
+      "metric": "f1",
+      "n_bootstrap": 2000,
+      "point_estimate_diff": -0.13580246913580246,
+      "bootstrap_mean_diff": -0.13485533719136772,
+      "ci_95_low": -0.20350456552454046,
+      "ci_95_high": -0.0698893667499363,
+      "fraction_of_resamples_b_not_better": 1.0,
+      "significant_at_0.05_two_sided": true
+    }
+  },
+  "conclusion": "'hybrid_or_tuned' has a higher point-estimate F1 on test (0.343 vs. classifier-only's 0.333, hybrid_or_tuned recovers only one additional true positive at no extra false-positive cost), but the bootstrap 95% CI for the F1 difference [0.000, 0.032] includes zero -- there is not yet statistical evidence this is a significant improvement on this test set size. Phrase this in the paper as 'joint threshold calibration yielded a modest, not-yet-statistically-significant improvement over classifier-only inference', not 'hybrid fusion significantly outperformed supervised classification' (changesToMake2.txt item 4)."
+}
