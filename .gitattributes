@@ -1,0 +1,19 @@
+* text=auto
+
+*.py text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+
+*.wav binary
+*.pdf binary
+*.xlsx binary
+*.h5 binary
+*.onnx binary
+*.pt binary
+*.pth binary
+*.task binary

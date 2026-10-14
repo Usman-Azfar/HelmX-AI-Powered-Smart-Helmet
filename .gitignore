@@ -1,0 +1,65 @@
+# Python environments, caches, and build products
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+site/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Datasets and generated research artifacts
+data/
+UTARLDD/
+artifacts/
+runs/
+checkpoints/
+outputs/
+wandb/
+mlruns/
+
+# Model and array artifacts
+*.h5
+*.keras
+*.onnx
+*.onnx.data
+*.ort
+*.pt
+*.pth
+*.task
+*.npy
+*.npz
+
+# Local reports and unrelated project material
+HelmX Report.pdf
+HelmX_Hybrid_Crash_Literature_Comparison_Matrix_UPDATED.xlsx
+session_context.md
+alarm.wav
+
+# Previous workspace copies; the repository root is the canonical project
+/drowsiness gpt/
+/drowsiness-detection-model/
+/.claude/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini

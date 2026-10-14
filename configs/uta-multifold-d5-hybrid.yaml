@@ -1,0 +1,59 @@
+schema_version: 1
+seed: 13
+
+data:
+  manifest: data/processed/uta-rldd/manifest_development_validation5.csv
+  image_size: 160
+  sequence_length: 24
+  sample_fps: 8.0
+  calibration_seconds: 5.0
+  window_stride: 240
+  num_workers: 4
+  augmentation: true
+  label_names: [alert, low_vigilance, drowsy]
+
+model:
+  fusion_mode: quality_gated
+  backbone: mobilenetv3_small_100
+  pretrained: true
+  eye_pretraining_checkpoint: runs/mrl-eye/best_eye_backbone.pt
+  physiology_features: 12
+  physiology_standardized_clip: 10.0
+  hidden_size: 192
+  temporal_blocks: 4
+  dropout: 0.20
+  num_classes: 3
+
+training:
+  supervision_unit: window
+  classification_objective: categorical_with_ordinal_regularization
+  checkpoint_selection_unit: video
+  test_evaluation: disabled
+  epochs: 40
+  batch_size: 2
+  learning_rate: 0.0003
+  backbone_learning_rate: 0.00003
+  weight_decay: 0.0001
+  label_smoothing: 0.05
+  mixed_precision: true
+  gradient_accumulation: 8
+  early_stopping_patience: 8
+  seeds: [13]
+  loss_weights:
+    classification: 1.0
+    eye_closure: 0.0
+    yawn: 0.0
+    head_pose: 0.0
+    quality: 0.0
+
+alert:
+  caution_probability: 0.55
+  warning_probability: 0.72
+  critical_probability: 0.88
+  release_probability: 0.40
+  caution_seconds: 1.5
+  warning_seconds: 2.0
+  critical_seconds: 3.5
+  release_seconds: 2.0
+  unavailable_seconds: 1.0
+  alarm_cooldown_seconds: 3.0

@@ -1,0 +1,68 @@
+schema_version: 1
+seed: 2026
+
+data:
+  manifest: data/processed/manifest.csv
+  image_size: 160
+  sequence_length: 24
+  sample_fps: 8.0
+  calibration_seconds: 5.0
+  # Sparse 30-second spacing prevents heavily correlated windows and bounds storage.
+  window_stride: 240
+  num_workers: 4
+  augmentation: true
+  label_names: [alert, low_vigilance, drowsy]
+
+model:
+  fusion_mode: quality_gated
+  backbone: mobilenetv3_small_100
+  pretrained: true
+  eye_pretraining_checkpoint: runs/mrl-eye/best_eye_backbone.pt
+  physiology_features: 12
+  # Official UTA pilot diagnostics found rare robust-scaled magnitudes above 600 because some
+  # neutral MAR baselines are near zero. Bound every standardized physiology feature before its
+  # learned projection; the unclipped values remain preserved in NPZs and diagnostic reports.
+  physiology_standardized_clip: 10.0
+  hidden_size: 192
+  temporal_blocks: 4
+  dropout: 0.20
+  num_classes: 3
+
+training:
+  epochs: 40
+  batch_size: 2
+  learning_rate: 0.0003
+  # 10x lower than the head/temporal rate: the visual backbone is pretrained (MRL Eye or
+  # ImageNet) and the UTA-RLDD split is far smaller than that pretraining data, so fine-tuning
+  # it at the same rate as the freshly initialized layers risks overwriting what it learned.
+  backbone_learning_rate: 0.00003
+  weight_decay: 0.0001
+  label_smoothing: 0.05
+  mixed_precision: true
+  gradient_accumulation: 8
+  early_stopping_patience: 8
+  seeds: [13, 37, 73, 101, 137]
+  # Auxiliary heads (eye/yawn/head-pose/quality) stay at zero weight: no dataset in the
+  # current manifest supplies eye_closure, yawn, head_pose, or quality_target labels, so a
+  # nonzero weight here would not add supervision, only misrepresent this run as multi-task
+  # when only the classification head is actually trained. Re-enable per-head once MRL Eye
+  # and/or YawDD are mixed into the manifest with real masked targets (see docs/DATASETS.md
+  # and docs/ARCHITECTURE.md).
+  loss_weights:
+    classification: 1.0
+    eye_closure: 0.0
+    yawn: 0.0
+    head_pose: 0.0
+    quality: 0.0
+
+alert:
+  caution_probability: 0.55
+  warning_probability: 0.72
+  critical_probability: 0.88
+  release_probability: 0.40
+  caution_seconds: 1.5
+  warning_seconds: 2.0
+  critical_seconds: 3.5
+  release_seconds: 2.0
+  unavailable_seconds: 1.0
+  alarm_cooldown_seconds: 3.0
