@@ -35,6 +35,9 @@
 - [What the helmet does](#what-the-helmet-does)
 - [The prototype](#the-prototype)
 - [Repository map](#repository-map)
+- [System architecture](#system-architecture)
+- [Helmet hardware](#helmet-hardware)
+- [Raspberry Pi platform](#raspberry-pi-platform)
 - [Getting the code](#getting-the-code)
 - [Team](#team)
 - [Responsible use](#responsible-use)
@@ -150,6 +153,106 @@ This repository holds the whole HelmX project. **Each part lives on its own bran
 - Loads the 3D configurator only when needed, follows reduced-motion settings and is covered by Vitest tests.
 
 </details>
+
+---
+
+## System architecture
+
+```mermaid
+flowchart LR
+    subgraph Helmet["🪖 HelmX helmet · Raspberry Pi 4"]
+        direction TB
+        IMU["MPU6050 IMU<br/>I2C 0x68"] --> CRASH["Crash monitor<br/>INT8 TFLite"]
+        CAM["Cameras<br/>Pi CSI + USB"] --> DROWSY["Drowsiness runtime<br/>ONNX + MediaPipe"]
+        ENV["DHT22 + MQ135<br/>GPIO"] --> BLE["BLE server<br/>bluetooth.py"]
+        MIC["Microphone"] --> RH["Rhasspy<br/>wake word + STT + TTS"]
+        RH <--> MQTT[("Mosquitto<br/>MQTT")]
+        MQTT <--> ASSIST["Voice assistant<br/>helmx_assistant.py"]
+        ASSIST --> NAVJSON[/"navigation_target.json"/]
+        NAVJSON --> BLE
+        CRASH --> ALARM["Alarm GPIO18<br/>30 s cancel"]
+        ALARM --> GSM["GPS NEO-6M +<br/>GSM SIM800L"]
+        ASSIST --> SPK["Speakers"]
+    end
+
+    subgraph Phone["📱 Android app"]
+        APP["Live data · alerts ·<br/>navigation · rides"]
+    end
+
+    subgraph Cloud["☁️ Online services"]
+        FB[("Firebase<br/>Auth + Firestore")]
+        WEB["Web platform<br/>Next.js + Stripe"]
+    end
+
+    BLE -- "BLE notify<br/>FFE0 / FFE1" --> APP
+    GSM -- "SMS with location" --> EC(["Emergency contact"])
+    APP -- "SMS / call" --> EC
+    APP <--> FB
+```
+
+- **Safety-critical paths stay on the helmet.** Crash detection, the alarm and the GSM alert do not depend on the phone or the internet.
+- **The phone adds to the helmet.** It shows live data, adds its own alerts and automatic response, and handles navigation and ride history.
+
+---
+
+## Helmet hardware
+
+### Bill of materials
+
+| # | Component | Qty | Interface | Role |
+|---:|---|:---:|---|---|
+| 1 | **Raspberry Pi 4 Model B** Rev 1.5, 8 GB | 1 | — | Main computer: Cortex-A72 × 4 at 1.8 GHz, boots from SSD |
+| 2 | **Raspberry Pi IR night-vision camera** with two IR illuminators | 1 | CSI ribbon | Camera vision in daylight, low light and at night |
+| 3 | **USB camera** (icSpring, `32e6:9221`) | 1 | USB, `/dev/video0` | Video and microphone input for the assistant and media |
+| 4 | **MPU6050** 6-axis IMU | 1 | I2C1 · `0x68` | Accelerometer and gyroscope for crash detection |
+| 5 | **DHT22** | 1 | GPIO BCM22 (pin 15) | Temperature and humidity |
+| 6 | **MQ135** | 1 | GPIO BCM17 (pin 11) | Air quality (digital threshold output) |
+| 7 | **SIM800L** GSM | 1 | Serial · 9600 baud | Emergency SMS |
+| 8 | **NEO-6M** GPS | 1 | Serial | Location for the emergency SMS |
+| 9 | **Voice recognition module** | 1 | — | Voice input (next to the Rhasspy software stack) |
+| 10 | **Speakers** | 2 | Audio | Voice responses, alerts and music |
+| 11 | **Lithium battery**, 10,000 mAh | 2 | — | Portable power |
+| 12 | **SanDisk X400 SSD**, 128 GB | 1 | USB 3 · SATA bridge | Root filesystem |
+
+### GPIO and bus map
+
+```text
+                    Raspberry Pi 4 · 40-pin header (used pins)
+        ┌──────────────────────────────────────────────────────────┐
+        │  pin 3   BCM2  SDA1  ──────┐                             │
+        │  pin 5   BCM3  SCL1  ──────┴──  MPU6050 IMU  (I2C 0x68)  │
+        │  pin 8   BCM14 TXD   ──────┐                             │
+        │  pin 10  BCM15 RXD   ──────┴──  UART /dev/serial0        │
+        │  pin 11  BCM17       ─────────  MQ135 digital out        │
+        │  pin 12  BCM18       ─────────  Crash alarm output       │
+        │  pin 15  BCM22       ─────────  DHT22 data               │
+        └──────────────────────────────────────────────────────────┘
+          CSI ── Pi IR night-vision camera    USB ── webcam + mic, SSD
+```
+
+| Signal | Connection | Notes |
+|---|---|---|
+| IMU | I2C1, address `0x68`, 100 kHz | Accelerometer and gyroscope sampled at 50 Hz for crash detection |
+| DHT22 | BCM22 / physical pin 15 | Read by the BLE server through Adafruit Blinka |
+| MQ135 | BCM17 / physical pin 11 | Digital threshold, not calibrated ppm |
+| Alarm | BCM18 / physical pin 12 | Driven by the crash monitor during the 30-second countdown |
+| UART | `/dev/serial0` → `ttyS0`, BCM14/15 | `enable_uart=1` |
+| GSM / GPS | `/dev/ttyUSB0` at 9600 baud in the deployment config | |
+
+---
+
+## Raspberry Pi platform
+
+| | |
+|---|---|
+| **Board** | Raspberry Pi 4 Model B Rev 1.5 · 4 × Cortex-A72 · 7.6 GiB usable RAM · 512 MiB swap |
+| **OS** | Debian GNU/Linux 12 (Bookworm), arm64 · kernel `6.12.96+rpt-rpi-v8` |
+| **Firmware** | VideoCore build of 21 May 2026 · `arm_64bit=1`, `arm_boost=1`, `force_turbo=1` (fixed 1.8 GHz) |
+| **Storage** | 128 GB SanDisk X400 SSD through an ASMedia USB 3 SATA bridge · 25 % used |
+| **Interfaces enabled** | I2C, UART, audio, KMS graphics, automatic camera and display detection |
+| **Thermals** | 44.8–45.7 °C with a load average of about 4 · `throttled=0x0` (no throttling) |
+| **Networking** | Ethernet for development · BlueZ 5.66 for Bluetooth Low Energy |
+| **Python** | System Python 3.11.2 · separate research venv with TensorFlow 2.16.1 and tflite-runtime 2.14.0 |
 
 ---
 
