@@ -34,11 +34,11 @@ All ten component types are fitted, including two 10,000 mAh batteries and two s
 | **Raspberry Pi IR night-vision camera** | 1 | CSI ribbon camera with two infrared illuminators for low light and night riding |
 | **MQ135** air-quality sensor | 1 | Digital threshold input on BCM17 (physical pin 11), read by the BLE server |
 | **DHT22** temperature / humidity | 1 | BCM22 (physical pin 15), read by the BLE server through `board.D22` |
-| **SIM800L** GSM module | 1 | Cellular SMS for emergency alerts, 9600 baud |
-| **NEO-6M** GPS receiver | 1 | Position fix for the emergency SMS |
+| **SIM800L** GSM module | 1 | UART0 on BCM14/15 (pins 8/10), `/dev/serial0`, 9600 baud. Cellular SMS for emergency alerts |
+| **NEO-6M** GPS receiver | 1 | UART3 on BCM4/5 (pins 7/29), `/dev/ttyAMA3`, 9600 baud NMEA. Position fix for the emergency SMS |
 | **USB camera** | 1 | `/dev/video0`. icSpring Web Camera `32e6:9221` with a built-in USB microphone |
 | **Lithium battery**, 10,000 mAh | 2 | Portable power supply |
-| **Voice recognition module** | 1 | Voice input, works with the Rhasspy voice stack |
+| **Voice recognition module** | 1 | UART5 on BCM12/13 (pins 32/33), `/dev/ttyAMA5`, 9600 baud. Hardware voice commands alongside Rhasspy |
 | **Speakers** | 2 | Voice responses, alerts and music |
 | **MPU6050** IMU | 1 | I2C1, address `0x68`. Accelerometer and gyroscope for crash detection |
 
@@ -74,23 +74,30 @@ All ten component types are fitted, including two 10,000 mAh batteries and two s
  ────────────   ──────   ──────────   ─────────────────────────────────
       3         GPIO2    I2C1 SDA     MPU6050 IMU (0x68)
       5         GPIO3    I2C1 SCL     MPU6050 IMU (0x68)
-      8         GPIO14   UART TXD     /dev/serial0 → ttyS0
-     10         GPIO15   UART RXD     /dev/serial0 → ttyS0
+      7         GPIO4    UART3 TXD    NEO-6M GPS RX
+      8         GPIO14   UART0 TXD    SIM800L GSM RX   (/dev/serial0)
+     10         GPIO15   UART0 RXD    SIM800L GSM TX   (/dev/serial0)
      11         GPIO17   input        MQ135 digital output
      12         GPIO18   output       Crash alarm (buzzer / indicator)
      15         GPIO22   data         DHT22 data
+     29         GPIO5    UART3 RXD    NEO-6M GPS TX
+     32         GPIO12   UART5 TXD    Voice recognition module RX
+     33         GPIO13   UART5 RXD    Voice recognition module TX
 ```
 
-| Component | Connection | Notes |
-|---|---|---|
-| IMU | I2C1 `0x68`, SDA on pin 3 and SCL on pin 5, 100 kHz | Sampled at 50 Hz by the crash monitor |
-| DHT22 | BCM22, pin 15 | Read by the BLE server every 2.5 s |
-| MQ135 | BCM17, pin 11 | Digital air-quality threshold |
-| Alarm | BCM18, pin 12 | Driven by the crash monitor during the 30-second cancel window |
-| UART | `/dev/serial0` → `ttyS0`, BCM14/15 | `enable_uart=1` |
-| GSM / GPS | `/dev/ttyUSB0` at 9600 baud | SIM800L SMS and NEO-6M position |
-| IR night-vision camera | CSI | Two IR illuminators for low light |
-| USB camera / microphone | USB icSpring Web Camera `32e6:9221` | `/dev/video0` and USB audio capture |
+| Component | Connection | Device | Status |
+|---|---|---|:---:|
+| IMU | I2C1 `0x68`, SDA on pin 3 and SCL on pin 5, 100 kHz | `/dev/i2c-1` | ✅ Connected, sampled at 50 Hz |
+| GSM SIM800L | UART0, BCM14/15 (pins 8/10), 9600 baud | `/dev/serial0 → ttyS0` | ✅ Connected |
+| GPS NEO-6M | UART3, BCM4/5 (pins 7/29), 9600 baud NMEA | `/dev/ttyAMA3` | ✅ Connected |
+| Voice recognition module | UART5, BCM12/13 (pins 32/33), 9600 baud | `/dev/ttyAMA5` | ✅ Connected |
+| DHT22 | BCM22, pin 15 | GPIO | ✅ Read every 2.5 s |
+| MQ135 | BCM17, pin 11 | GPIO | ✅ Air-quality threshold |
+| Alarm | BCM18, pin 12 | GPIO | ✅ Driven during the 30 s cancel window |
+| IR night-vision camera | CSI, two IR illuminators | libcamera | ✅ Connected |
+| USB camera / microphone | USB icSpring Web Camera `32e6:9221` | `/dev/video0`, ALSA card 3 | ✅ Connected |
+
+Each serial module's TX goes to the Pi's RX and its RX to the Pi's TX. All modules share a common ground with the Pi.
 
 **Device nodes**
 
@@ -98,7 +105,7 @@ All ten component types are fitted, including two 10,000 mAh batteries and two s
 |---|---|
 | I2C | `/dev/i2c-1`, `/dev/i2c-20`, `/dev/i2c-21` |
 | GPIO | `/dev/gpiochip0`, `/dev/gpiochip1`, `/dev/gpiochip4 → gpiochip0` |
-| Serial | `/dev/serial0 → /dev/ttyS0` |
+| Serial | `/dev/serial0 → /dev/ttyS0` (GSM) · `/dev/ttyAMA3` (GPS) · `/dev/ttyAMA5` (voice module) |
 | Video | USB camera: `/dev/video0`, `/dev/video1`, `/dev/media1`. The others belong to the bcm2835 codec, ISP and HEVC decoder |
 
 ---
@@ -149,12 +156,14 @@ dtoverlay=dwc2,dr_mode=host
 
 [all]
 enable_uart=1
+dtoverlay=uart3              # NEO-6M GPS on GPIO4/5
+dtoverlay=uart5              # Voice recognition module on GPIO12/13
 #dtoverlay=disable-bt        # Bluetooth stays enabled for the BLE server
 force_turbo=1
 core_freq=250
 ```
 
-SPI and I2S are off. `core_freq=250` keeps the GPU core clock fixed, so the mini-UART baud rate stays stable.
+SPI and I2S are off. `core_freq=250` keeps the GPU core clock fixed, so the mini-UART baud rate used by the GSM module on `/dev/serial0` stays stable.
 
 ---
 
@@ -362,8 +371,8 @@ WantedBy=multi-user.target
 | Timing guard | Gap between samples 0.010–0.060 s · reset after a gap of more than 1.0 s |
 | Confirmation | 3 consecutive anomalous windows · 60 s cooldown |
 | Alarm | 30 s countdown on BCM18 · cancel signal `/tmp/helmx_cancel_alert` |
-| GPS | 15 s fix timeout |
-| GSM | SIM800L at 9600 baud |
+| GPS | NEO-6M on `/dev/ttyAMA3` · 15 s fix timeout |
+| GSM | SIM800L on `/dev/serial0` at 9600 baud |
 | Logging | `logs/crash_monitor.log`, INFO level, 5,000,000 bytes with 3 backups |
 
 **`models/thresholds.json`**
@@ -427,6 +436,16 @@ Research root: `piResults/final_pi_review_closure` · runner: `scripts/randomize
 | `bluetooth.service` | BlueZ Bluetooth stack | ✅ Running | ✅ |
 | `helmx-research-boot-capture.service` | Research capture (one-shot) | Armed on demand | ✅ |
 | `helmx-cold-warm-research.service` | Research capture (one-shot) | Armed on demand | ✅ |
+
+| Peripheral | Bus | State |
+|---|---|:---:|
+| MPU6050 IMU | I2C1 | ✅ Working |
+| SIM800L GSM | UART0 | ✅ Working |
+| NEO-6M GPS | UART3 | ✅ Working |
+| Voice recognition module | UART5 | ✅ Working |
+| DHT22 / MQ135 | GPIO | ✅ Working |
+| IR night-vision camera / USB camera | CSI / USB | ✅ Working |
+| Speakers | Audio | ✅ Working |
 
 ---
 

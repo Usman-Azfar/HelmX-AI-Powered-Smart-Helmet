@@ -73,7 +73,7 @@ Motorcycle riders are among the most vulnerable road users, and help often arriv
     </td>
     <td valign="top">
       <h3>🎙️ Offline voice assistant</h3>
-      Rhasspy runs on the helmet with a Porcupine wake word, Kaldi speech recognition and NanoTTS speech output. Speech is handled on the helmet itself. The rider can ask for sensor readings, a destination, music, a photo or a video clip.
+      Rhasspy runs on the helmet with a Porcupine wake word, Kaldi speech recognition and NanoTTS speech output. A dedicated voice recognition module on UART5 adds instant hardware command recognition. Speech is handled on the helmet itself. The rider can ask for sensor readings, a destination, music, a photo or a video clip.
     </td>
   </tr>
   <tr>
@@ -113,7 +113,7 @@ Motorcycle riders are among the most vulnerable road users, and help often arriv
 | Chin bar | USB camera with a built-in microphone (`/dev/video0`), used by the voice assistant and for media capture |
 | Left side | DHT22 temperature and humidity sensor |
 | Rear-side enclosure | Power pack (2 × 10,000 mAh lithium batteries) and wiring |
-| Inside the shell | MPU6050 IMU, MQ135 air-quality sensor, SIM800L GSM, NEO-6M GPS, voice module and 2 speakers |
+| Inside the shell | MPU6050 IMU, MQ135 air-quality sensor, SIM800L GSM, NEO-6M GPS, voice recognition module and 2 speakers |
 
 ---
 
@@ -166,15 +166,17 @@ flowchart LR
     subgraph Helmet["🪖 HelmX helmet · Raspberry Pi 4"]
         direction TB
         IMU["MPU6050 IMU<br/>I2C 0x68"] --> CRASH["Crash monitor<br/>INT8 TFLite"]
-        CAM["Cameras<br/>Pi CSI + USB"] --> DROWSY["Drowsiness runtime<br/>ONNX + MediaPipe"]
+        CAM["Cameras<br/>Pi IR CSI + USB"] --> DROWSY["Drowsiness runtime<br/>ONNX + MediaPipe"]
         ENV["DHT22 + MQ135<br/>GPIO"] --> BLE["BLE server<br/>bluetooth.py"]
-        MIC["Microphone"] --> RH["Rhasspy<br/>wake word + STT + TTS"]
+        MIC["USB microphone"] --> RH["Rhasspy<br/>wake word + STT + TTS"]
         RH <--> MQTT[("Mosquitto<br/>MQTT")]
         MQTT <--> ASSIST["Voice assistant<br/>helmx_assistant.py"]
+        VRM["Voice recognition module<br/>UART5"] --> ASSIST
         ASSIST --> NAVJSON[/"navigation_target.json"/]
         NAVJSON --> BLE
         CRASH --> ALARM["Alarm GPIO18<br/>30 s cancel"]
-        ALARM --> GSM["GPS NEO-6M +<br/>GSM SIM800L"]
+        GPS["GPS NEO-6M<br/>UART3"] --> GSM
+        ALARM --> GSM["GSM SIM800L<br/>UART0"]
         ASSIST --> SPK["Speakers"]
     end
 
@@ -182,15 +184,9 @@ flowchart LR
         APP["Live data · alerts ·<br/>navigation · rides"]
     end
 
-    subgraph Cloud["☁️ Online services"]
-        FB[("Firebase<br/>Auth + Firestore")]
-        WEB["Web platform<br/>Next.js + Stripe"]
-    end
-
     BLE -- "BLE notify<br/>FFE0 / FFE1" --> APP
     GSM -- "SMS with location" --> EC(["Emergency contact"])
     APP -- "SMS / call" --> EC
-    APP <--> FB
 ```
 
 - **Safety-critical paths stay on the helmet.** Crash detection, the alarm and the GSM alert do not depend on the phone or the internet.
@@ -210,9 +206,9 @@ flowchart LR
 | 4 | **MPU6050** 6-axis IMU | 1 | I2C1 · `0x68` | Accelerometer and gyroscope for crash detection |
 | 5 | **DHT22** | 1 | GPIO BCM22 (pin 15) | Temperature and humidity |
 | 6 | **MQ135** | 1 | GPIO BCM17 (pin 11) | Air quality (digital threshold output) |
-| 7 | **SIM800L** GSM | 1 | Serial · 9600 baud | Emergency SMS |
-| 8 | **NEO-6M** GPS | 1 | Serial | Location for the emergency SMS |
-| 9 | **Voice recognition module** | 1 | — | Voice input (next to the Rhasspy software stack) |
+| 7 | **SIM800L** GSM | 1 | UART0 · pins 8/10 · 9600 baud | Emergency SMS |
+| 8 | **NEO-6M** GPS | 1 | UART3 · pins 7/29 · 9600 baud | Location for the emergency SMS |
+| 9 | **Voice recognition module** | 1 | UART5 · pins 32/33 · 9600 baud | Hardware voice-command recognition alongside Rhasspy |
 | 10 | **Speakers** | 2 | Audio | Voice responses, alerts and music |
 | 11 | **Lithium battery**, 10,000 mAh | 2 | — | Portable power |
 | 12 | **SanDisk X400 SSD**, 128 GB | 1 | USB 3 · SATA bridge | Root filesystem |
@@ -221,26 +217,35 @@ flowchart LR
 
 ```text
                     Raspberry Pi 4 · 40-pin header (used pins)
-        ┌──────────────────────────────────────────────────────────┐
-        │  pin 3   BCM2  SDA1  ──────┐                             │
-        │  pin 5   BCM3  SCL1  ──────┴──  MPU6050 IMU  (I2C 0x68)  │
-        │  pin 8   BCM14 TXD   ──────┐                             │
-        │  pin 10  BCM15 RXD   ──────┴──  UART /dev/serial0        │
-        │  pin 11  BCM17       ─────────  MQ135 digital out        │
-        │  pin 12  BCM18       ─────────  Crash alarm output       │
-        │  pin 15  BCM22       ─────────  DHT22 data               │
-        └──────────────────────────────────────────────────────────┘
+        ┌──────────────────────────────────────────────────────────────┐
+        │  pin 3   BCM2  SDA1  ──────┐                                 │
+        │  pin 5   BCM3  SCL1  ──────┴──  MPU6050 IMU     (I2C1 0x68)  │
+        │  pin 8   BCM14 TXD0  ──────┐                                 │
+        │  pin 10  BCM15 RXD0  ──────┴──  SIM800L GSM     (UART0)      │
+        │  pin 7   BCM4  TXD3  ──────┐                                 │
+        │  pin 29  BCM5  RXD3  ──────┴──  NEO-6M GPS      (UART3)      │
+        │  pin 32  BCM12 TXD5  ──────┐                                 │
+        │  pin 33  BCM13 RXD5  ──────┴──  Voice module    (UART5)      │
+        │  pin 11  BCM17       ─────────  MQ135 digital out            │
+        │  pin 12  BCM18       ─────────  Crash alarm output           │
+        │  pin 15  BCM22       ─────────  DHT22 data                   │
+        └──────────────────────────────────────────────────────────────┘
           CSI ── Pi IR night-vision camera    USB ── webcam + mic, SSD
 ```
 
-| Signal | Connection | Notes |
-|---|---|---|
-| IMU | I2C1, address `0x68`, 100 kHz | Accelerometer and gyroscope sampled at 50 Hz for crash detection |
-| DHT22 | BCM22 / physical pin 15 | Read by the BLE server through Adafruit Blinka |
-| MQ135 | BCM17 / physical pin 11 | Digital threshold, not calibrated ppm |
-| Alarm | BCM18 / physical pin 12 | Driven by the crash monitor during the 30-second countdown |
-| UART | `/dev/serial0` → `ttyS0`, BCM14/15 | `enable_uart=1` |
-| GSM / GPS | `/dev/ttyUSB0` at 9600 baud in the deployment config | |
+Each serial module's TX goes to the Pi's RX and its RX to the Pi's TX. All grounds are shared.
+
+| Signal | Connection | Device | Status |
+|---|---|---|:---:|
+| IMU | I2C1 `0x68`, pins 3/5, 100 kHz | `/dev/i2c-1` | ✅ Connected |
+| GSM SIM800L | UART0, BCM14/15 (pins 8/10), 9600 baud | `/dev/serial0` | ✅ Connected |
+| GPS NEO-6M | UART3, BCM4/5 (pins 7/29), 9600 baud, NMEA | `/dev/ttyAMA3` | ✅ Connected |
+| Voice recognition module | UART5, BCM12/13 (pins 32/33), 9600 baud | `/dev/ttyAMA5` | ✅ Connected |
+| DHT22 | BCM22, pin 15 | GPIO | ✅ Connected |
+| MQ135 | BCM17, pin 11 | GPIO | ✅ Connected |
+| Crash alarm | BCM18, pin 12 | GPIO | ✅ Connected |
+| IR night-vision camera | CSI | libcamera | ✅ Connected |
+| USB camera + microphone | USB | `/dev/video0`, ALSA card 3 | ✅ Connected |
 
 ---
 
@@ -252,7 +257,7 @@ flowchart LR
 | **OS** | Debian GNU/Linux 12 (Bookworm), arm64 · kernel `6.12.96+rpt-rpi-v8` |
 | **Firmware** | VideoCore build of 21 May 2026 · `arm_64bit=1`, `arm_boost=1`, `force_turbo=1` (fixed 1.8 GHz) |
 | **Storage** | 128 GB SanDisk X400 SSD through an ASMedia USB 3 SATA bridge · 25 % used |
-| **Interfaces enabled** | I2C, UART, audio, KMS graphics, automatic camera and display detection |
+| **Interfaces enabled** | I2C1, UART0 + UART3 + UART5 (`dtoverlay=uart3`, `dtoverlay=uart5`), audio, KMS graphics, automatic camera and display detection |
 | **Thermals** | 44.8–45.7 °C with a load average of about 4 · `throttled=0x0` (no throttling) |
 | **Networking** | Ethernet for development · BlueZ 5.66 for Bluetooth Low Energy |
 | **Python** | System Python 3.11.2 · separate research venv with TensorFlow 2.16.1 and tflite-runtime 2.14.0 |
