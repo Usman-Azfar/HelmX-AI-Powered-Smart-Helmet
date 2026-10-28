@@ -38,6 +38,9 @@
 - [System architecture](#system-architecture)
 - [Helmet hardware](#helmet-hardware)
 - [Raspberry Pi platform](#raspberry-pi-platform)
+- [On-helmet software](#on-helmet-software)
+- [Helmet-to-phone Bluetooth contract](#helmet-to-phone-bluetooth-contract)
+- [Crash detection deployment](#crash-detection-deployment)
 - [Getting the code](#getting-the-code)
 - [Team](#team)
 - [Responsible use](#responsible-use)
@@ -253,6 +256,96 @@ flowchart LR
 | **Thermals** | 44.8–45.7 °C with a load average of about 4 · `throttled=0x0` (no throttling) |
 | **Networking** | Ethernet for development · BlueZ 5.66 for Bluetooth Low Energy |
 | **Python** | System Python 3.11.2 · separate research venv with TensorFlow 2.16.1 and tflite-runtime 2.14.0 |
+
+---
+
+## On-helmet software
+
+| Service | What it runs | Role |
+|---|---|---|
+| `helmx-ble.service` | `bluetooth.py` (Bless / BlueZ, as root) | Advertises the `HelmX` Bluetooth service, reads the DHT22 and MQ135, sends readings to the phone every 2.5 s and forwards voice-selected destinations |
+| `rhasspy.service` | Rhasspy 2.5.11, `en` profile | Offline voice pipeline: PyAudio microphone, Porcupine wake word, Kaldi speech recognition, fsticuffs intent recognition, NanoTTS speech output |
+| `mosquitto.service` | Mosquitto 2.0.11 | Local MQTT message bus between Rhasspy and the assistant |
+| `helmx_assistant.service` | `helmx_assistant.py` (paho-mqtt) | Handles voice requests: sensor answers, navigation, music (`mpg123`), photos and 10-second video (`fswebcam` / `ffmpeg`) |
+| `helmx-crash-monitor.service` | `crash_monitor.py` from the [`crash-detection`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/crash-detection) branch | Streams IMU data into the TFLite model, then runs the confirmation, alarm, cancel, GPS and GSM steps |
+| Research capture services | `boot_capture.py`, `cold_warm_capture.py` | One-shot boot-time experiment captures. They run only when armed with a flag file |
+
+### Voice interaction flow
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Rider
+    participant R as Rhasspy
+    participant M as Mosquitto MQTT
+    participant A as HelmX assistant
+    participant B as BLE server
+    participant P as Android app
+    Rider->>R: Wake word + "navigate to Liberty Market"
+    R->>R: Kaldi speech-to-text → intent
+    R->>M: Intent published
+    M->>A: Intent delivered
+    A->>B: navigation_target.json
+    B-->>P: BLE notify with destination = Liberty Market
+    P->>P: Search place → start turn-by-turn guidance
+    A->>R: Spoken confirmation via NanoTTS
+    R-->>Rider: "Navigating to Liberty Market"
+```
+
+---
+
+## Helmet-to-phone Bluetooth contract
+
+The helmet is a **Bluetooth Low Energy peripheral**, and the Android app connects to it as a central.
+
+| Item | Value |
+|---|---|
+| Advertised name | `HelmX` |
+| Service UUID | `0000FFE0-0000-1000-8000-00805F9B34FB` |
+| Characteristic (read / notify) | `0000FFE1-0000-1000-8000-00805F9B34FB` |
+| Update period | 2.5 s for notifications · `sensor_data.json` written every 10 s |
+| MTU requested by app | 512 bytes |
+
+```jsonc
+// JSON payload sent by bluetooth.py
+{ "temperature": 31.5, "humidity": 62, "air_quality": "Good", "destination": "Liberty Market" }
+
+// CSV formats also accepted by the app
+// battery,speed,drowsy,crash,distance   e.g.  95,42.5,0,0,3.2
+// temperature,humidity                  (legacy)
+```
+
+When `destination` has a value, the app starts navigation to it automatically. The helmet clears `navigation_target.json` after sending it.
+
+---
+
+## Crash detection deployment
+
+These settings come from `deploy/config.yaml` on the Pi, which is the deployed copy of the [`crash-detection`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/crash-detection) release:
+
+| Stage | Setting |
+|---|---|
+| Model | `helmx_crash_model_int8.tflite` + `normalizer.npz` + `thresholds.json` |
+| Sampling | 50 Hz · 60-sample window (1.2 s) · stride 15 samples |
+| Preprocessing | Gravity removal with a 0.3 Hz high-pass filter |
+| Timing guard | Sample gap allowed between 10 and 60 ms · stream reset after a gap of more than 1.0 s |
+| Decision | Classifier probability OR autoencoder reconstruction error → **3 consecutive windows** · 60 s cooldown |
+| Calibrated thresholds | Reconstruction error 10.88 · classifier probability 0.989 (balanced operating point) |
+| Alert | Alarm on BCM18 → **30 s cancel window** (`/tmp/helmx_cancel_alert`) → GPS fix (15 s timeout) → SIM800L SMS |
+| Logging | `logs/crash_monitor.log`, rotating at 5 MB with 3 backups |
+
+```mermaid
+flowchart LR
+    A["IMU @ 50 Hz"] --> B["Timing guard"] --> C["60-sample window"] --> D["Gravity removal<br/>+ normalise"]
+    D --> E["Shared Conv1D encoder"]
+    E --> F["Crash probability"]
+    E --> G["Reconstruction error"]
+    F --> H{"OR"}
+    G --> H
+    H --> I["3 consecutive windows"] --> J["🔔 Alarm · 30 s to cancel"]
+    J -->|cancelled| K["Resume monitoring"]
+    J -->|not cancelled| L["📍 GPS fix → ✉️ GSM SMS"]
+```
 
 ---
 
