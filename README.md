@@ -15,7 +15,7 @@
 ![Android](https://img.shields.io/badge/Android-Kotlin-3DDC84?logo=android&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Web-Next.js%2016-000000?logo=nextdotjs&logoColor=white)
 
-[**🌐 Live web demo**](https://helmx-silk.vercel.app/) · [**⬇ Android APK v1.0.0**](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0) · [**🧭 Branch guide**](#repository-map)
+[**🌐 Live web demo**](https://helmx-silk.vercel.app/) · [**⬇ Android APK v1.0.0**](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0) · [**🧭 Branch guide**](#repository-map) · [**🔧 Full Pi setup**](docs/hardware/PI_SETUP.md)
 
 <sub>Final Year Project · BS Computer Science · Department of Computer Science, FCIT, University of the Punjab, Lahore · Session 2025–2026</sub>
 
@@ -256,6 +256,8 @@ flowchart LR
 | **Thermals** | 44.8–45.7 °C with a load average of about 4 · `throttled=0x0` (no throttling) |
 | **Networking** | Ethernet for development · BlueZ 5.66 for Bluetooth Low Energy |
 | **Python** | System Python 3.11.2 · separate research venv with TensorFlow 2.16.1 and tflite-runtime 2.14.0 |
+
+📄 **The complete measured configuration is in [docs/hardware/PI_SETUP.md](docs/hardware/PI_SETUP.md).** It covers every service unit, firmware settings, device nodes, package versions, the crash-detection configuration and file hashes.
 
 ---
 
