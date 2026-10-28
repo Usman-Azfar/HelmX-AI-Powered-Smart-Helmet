@@ -15,7 +15,7 @@
 ![Android](https://img.shields.io/badge/Android-Kotlin-3DDC84?logo=android&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Web-Next.js%2016-000000?logo=nextdotjs&logoColor=white)
 
-[**🌐 Live web demo**](https://helmx-silk.vercel.app/) · [**⬇ Android APK v1.0.0**](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0)
+[**🌐 Live web demo**](https://helmx-silk.vercel.app/) · [**⬇ Android APK v1.0.0**](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0) · [**🧭 Branch guide**](#repository-map)
 
 <sub>Final Year Project · BS Computer Science · Department of Computer Science, FCIT, University of the Punjab, Lahore · Session 2025–2026</sub>
 
@@ -34,6 +34,8 @@
 - [Why HelmX](#why-helmx)
 - [What the helmet does](#what-the-helmet-does)
 - [The prototype](#the-prototype)
+- [Repository map](#repository-map)
+- [Getting the code](#getting-the-code)
 - [Team](#team)
 - [Responsible use](#responsible-use)
 
@@ -106,6 +108,70 @@ Motorcycle riders are among the most vulnerable road users, and help often arriv
 | Left side | DHT22 temperature and humidity sensor |
 | Rear-side enclosure | Power pack (2 × 10,000 mAh lithium batteries) and wiring |
 | Inside the shell | MPU6050 IMU, MQ135 air-quality sensor, SIM800L GSM, NEO-6M GPS, voice module and 2 speakers |
+
+---
+
+## Repository map
+
+This repository holds the whole HelmX project. **Each part lives on its own branch**, and each branch has its own history, README, build and licence. This `main` branch is the landing page.
+
+| Branch | What it is | Stack | Status |
+|---|---|---|---|
+| [`main`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/main) | **You are here.** Project overview, helmet prototype and the complete Raspberry Pi setup | Markdown | Landing page |
+| [`crash-detection`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/crash-detection) | IMU crash detection model, the Pi program that runs it, the 30-second cancel and SMS alert, and a large Raspberry Pi evaluation suite | Python 3.11, TensorFlow / TFLite | Research release · MIT |
+| [`drowsiness-detection-model`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/drowsiness-detection-model) | Camera-based drowsiness model combining image and per-rider features; training, calibration, ONNX export and live camera runtime | Python, PyTorch, ONNX Runtime, MediaPipe | Research prototype · MIT |
+| [`android-app`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/android-app) | Rider companion app: Bluetooth link to the helmet, safety alerts with automatic SMS and call, turn-by-turn navigation with an offline map, ride analytics | Kotlin, Firebase, MapLibre | [v1.0.0 released](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0) |
+| [`web-app`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/web-app) | Product website with a 3D helmet configurator, Stripe checkout with server-side pricing, receipt emails and a contact form | Next.js 16, React 19, Three.js, Prisma, PostgreSQL, Stripe | [Live demo](https://helmx-silk.vercel.app/) (Stripe test mode) |
+
+<details>
+<summary><b>Branch highlights</b></summary>
+
+**`crash-detection`**
+- A hybrid Conv1D model with a shared encoder, a classifier head and an autoencoder head reads 1.2-second, six-axis windows (60 samples at 50 Hz).
+- Train, validation and test sets are split by recording session, so overlapping windows from the same ride never leak between sets. The thresholds are calibrated once and shared by the evaluation and deployment code.
+- On the Raspberry Pi, the 99th-percentile decision latency was 3.03 ms, and a 180-minute live soak test scored 33,734 windows without errors.
+- Ablations, external-domain tests on scooter and bicycle data, and negative results are all kept. Datasets and trained model files are not published; only their hashes are.
+
+**`drowsiness-detection-model`**
+- The model uses only current and past frames. A neutral calibration period personalises the eye, mouth and head-pose measurements to each rider.
+- A learned gate weights the MobileNetV3 image features against the 12 per-rider features according to how reliable each one is at that moment.
+- An elapsed-time alert controller adds persistence, hysteresis, suppression when the input quality is poor, and cooldowns.
+- On the development data (UTA-RLDD, 146 videos, 48 subjects), macro-F1 is 0.642 and macro ROC-AUC is 0.779. These results come from development folds, not a final external validation.
+
+**`android-app`**
+- Connects to the helmet's Bluetooth service (named `HelmX`) and reconnects automatically if the link drops.
+- If the rider doesn't respond to a crash alert within 30 seconds, the app texts the rider's location to their emergency contacts and calls the primary contact.
+- Offers MapLibre navigation with Photon place search and OSRM routing, and works offline with the built-in Lahore District map.
+- Records rides in a foreground service and stores accounts and rides in Firebase Auth and Firestore.
+
+**`web-app`**
+- Uses one shared parts catalog for the user interface and the server, so a modified browser request can't change the price.
+- Finalises each payment in one step that can only succeed once, so every order sends exactly one receipt email.
+- Loads the 3D configurator only when needed, follows reduced-motion settings and is covered by Vitest tests.
+
+</details>
+
+---
+
+## Getting the code
+
+Each part of HelmX is a separate branch with no shared history, so clone only the part you need:
+
+```bash
+# Crash detection model + Raspberry Pi runtime
+git clone -b crash-detection https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet.git helmx-crash
+
+# Drowsiness detection model + live camera runtime
+git clone -b drowsiness-detection-model https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet.git helmx-drowsiness
+
+# Android companion app
+git clone -b android-app https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet.git helmx-android
+
+# Web platform
+git clone -b web-app https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet.git helmx-web
+```
+
+Each branch's README explains how to set it up, run it and test it.
 
 ---
 
