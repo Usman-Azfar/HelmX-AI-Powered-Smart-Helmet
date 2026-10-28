@@ -126,7 +126,7 @@ This repository holds the whole HelmX project. **Each part lives on its own bran
 | [`main`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/main) | **You are here.** Project overview, helmet prototype and the complete Raspberry Pi setup | Markdown | Landing page |
 | [`crash-detection`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/crash-detection) | IMU crash detection model, the Pi program that runs it, the 30-second cancel and SMS alert, and a large Raspberry Pi evaluation suite | Python 3.11, TensorFlow / TFLite | Research release · MIT |
 | [`drowsiness-detection-model`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/drowsiness-detection-model) | Camera-based drowsiness model combining image and per-rider features; training, calibration, ONNX export and live camera runtime | Python, PyTorch, ONNX Runtime, MediaPipe | Research prototype · MIT |
-| [`android-app`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/android-app) | Rider companion app: Bluetooth link to the helmet, safety alerts with automatic SMS and call, turn-by-turn navigation with an offline map, ride analytics | Kotlin, Firebase, MapLibre | [v1.0.0 released](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0) |
+| [`android-app`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/android-app) | Rider companion app: Bluetooth link to the helmet, safety alerts with automatic SMS and call, turn-by-turn navigation with an offline map, ride analytics | Kotlin, MapLibre, Bluetooth LE | [v1.0.0 released](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0) |
 | [`web-app`](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/web-app) | Product website with a 3D helmet configurator, Stripe checkout with server-side pricing, receipt emails and a contact form | Next.js 16, React 19, Three.js, Prisma, PostgreSQL, Stripe | [Live demo](https://helmx-silk.vercel.app/) (Stripe test mode) |
 
 <details>
@@ -148,7 +148,7 @@ This repository holds the whole HelmX project. **Each part lives on its own bran
 - Connects to the helmet's Bluetooth service (named `HelmX`) and reconnects automatically if the link drops.
 - If the rider doesn't respond to a crash alert within 30 seconds, the app texts the rider's location to their emergency contacts and calls the primary contact.
 - Offers MapLibre navigation with Photon place search and OSRM routing, and works offline with the built-in Lahore District map.
-- Records rides in a foreground service and stores accounts and rides in Firebase Auth and Firestore.
+- Records rides in a foreground service, with ride history and analytics.
 
 **`web-app`**
 - Uses one shared parts catalog for the user interface and the server, so a modified browser request can't change the price.
@@ -384,10 +384,10 @@ HelmX was built by BS Computer Science students as their Final Year Project at t
 
 | Member | Role | GitHub |
 |---|---|---|
-| **Usman Azfar** | Group leader · hardware and integration, cloud, safety, voice and environment systems, app | [@Usman-Azfar](https://github.com/Usman-Azfar) |
-| **Hamza Ahmad** | Web and app development, backend APIs, database, edge computing, ML testing | [@HamzaAhmad536](https://github.com/HamzaAhmad536) |
+| **Usman Azfar** | Group leader · hardware and integration, safety and environment systems, Android app | [@Usman-Azfar](https://github.com/Usman-Azfar) |
+| **Hamza Ahmad** | Web development, backend APIs, database, edge computing, ML testing | [@HamzaAhmad536](https://github.com/HamzaAhmad536) |
 | **Abdul Hannan** | ML models for crash and drowsiness detection, alerts, smart navigation, documentation | [@Rao-Abdul-Hannan](https://github.com/Rao-Abdul-Hannan) |
-| **Awais Imtiaz** | Hardware integration, prototype testing, web and app development, documentation | [@Awais-Imtiaz](https://github.com/Awais-Imtiaz) |
+| **Awais Imtiaz** | Voice recognition module and Rhasspy voice service, hardware integration, prototype testing, web development, documentation | [@Awais-Imtiaz](https://github.com/Awais-Imtiaz) |
 
 **Supervisor:** Dr. Tayyaba Tariq, Assistant Professor, Department of Computer Science, University of the Punjab
 
