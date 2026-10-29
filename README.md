@@ -177,8 +177,9 @@ flowchart LR
 
 - **Tamper-proof pricing.** One catalog module ([`lib/catalog.ts`](lib/catalog.ts)) drives both the UI and the server. The checkout API rejects unknown parts and computes the amount itself, so a modified request cannot change the price.
 - **Idempotent payment finalization.** The Stripe webhook and the success page both call one function ([`lib/orders.ts`](lib/orders.ts)) that performs an atomic `PENDING → PAID` update. Only the caller that wins the transition sends the receipt, so duplicate deliveries never send duplicate emails.
-- **Secure by default.** Webhook signatures are verified, all user input is HTML-escaped before it reaches an email, contact submissions are length-limited and rate-limited, and the developer test-email endpoint is disabled in production.
+- **Secure by default.** Webhook signatures are verified, all user input is HTML-escaped before it reaches an email, contact submissions are length-limited and rate-limited, the developer test-email endpoint is disabled in production, and every response carries hardened security headers (`nosniff`, frame and referrer policies, `Permissions-Policy`).
 - **Performance.** The three.js bundle and 3D model load only on the configurator page. WebGL and canvas animations stop rendering when scrolled off-screen, and the hero animation is pure CSS, so it doesn't wait for JavaScript.
+- **Discoverable.** Shared title template, Open Graph and Twitter cards for link previews, plus generated `robots.txt` and `sitemap.xml`.
 - **Accessibility.** Semantic labels, `aria-pressed` toggles, keyboard-reachable mobile menu, and `prefers-reduced-motion` support across all animations.
 
 ## Tech stack
@@ -265,11 +266,15 @@ app/
 │   └── debug/                # Dev-only SMTP check
 ├── buy/                      # Configurator and payment result pages
 ├── contact/                  # Contact page
+├── not-found.tsx             # Custom 404 page
+├── robots.ts · sitemap.ts    # Generated robots.txt and sitemap.xml
 └── page.tsx                  # Landing page
 components/                   # Page sections, 3D scene, animated backgrounds, shadcn/ui
 lib/
 ├── catalog.ts                # Parts, storage options, pricing
 ├── orders.ts                 # Order finalization and receipt email
+├── rate-limit.ts             # Contact form rate limiter
+├── site.ts                   # Canonical site URL for metadata and SEO
 ├── stripe.ts · prisma.ts · email.ts · validation.ts
 prisma/schema.prisma          # Order and ContactSubmission models
 tests/                        # Vitest unit tests
@@ -279,13 +284,13 @@ docs/screenshots/             # README images
 ## Testing and quality
 
 ```bash
-npm test          # pricing, validation, HTML escaping, receipt rendering
+npm test          # pricing, validation, HTML escaping, receipt rendering, rate limiting
 npm run lint
 npm run typecheck
 npm run build     # production builds fail on type errors
 ```
 
-Unit tests cover the logic that protects money and users: catalog pricing (including tampered and unknown IDs), email validation, HTML escaping, and receipt rendering.
+Unit tests cover the logic that protects money and users: catalog pricing (including tampered and unknown IDs), email validation, HTML escaping, receipt rendering, and contact-form rate limiting.
 
 ## Team
 
