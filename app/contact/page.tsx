@@ -11,7 +11,7 @@ import DotField from "@/components/dot-field"
 import { Mail, Phone, MapPin } from "lucide-react"
 
 export const metadata = {
-  title: "Contact Us | HelmX",
+  title: "Contact Us",
   description: "Get in touch with the HelmX team. We'd love to hear from you!",
 }
 
