@@ -8,44 +8,14 @@ import { NextRequest, NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { escapeHtml, sendSmtpEmail } from "@/lib/email"
 import { isValidEmail } from "@/lib/validation"
+import { clientIp, createRateLimiter } from "@/lib/rate-limit"
 
 // Falls back to the sending account so notifications never go to an address we don't own.
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || process.env.SMTP_USER || ""
 
 const LIMITS = { name: 100, subject: 200, message: 5000 } as const
 
-// Simple in-memory rate limiter: per server instance and reset on restart.
-// Use a shared store (e.g. Redis/Upstash) if this runs on multiple instances.
-const RATE_LIMIT_WINDOW_MS = 60_000
-const RATE_LIMIT_MAX = 5
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
-
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now()
-
-  // Drop expired entries so the map cannot grow without bound.
-  if (rateLimitMap.size > 1000) {
-    for (const [key, value] of rateLimitMap) {
-      if (now > value.resetTime) rateLimitMap.delete(key)
-    }
-  }
-
-  const limit = rateLimitMap.get(ip)
-  if (!limit || now > limit.resetTime) {
-    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS })
-    return true
-  }
-  if (limit.count >= RATE_LIMIT_MAX) return false
-
-  limit.count++
-  return true
-}
-
-function clientIp(request: NextRequest) {
-  // x-forwarded-for may be a comma-separated chain; the first entry is the original client.
-  const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
-  return forwarded || request.headers.get("x-real-ip") || "unknown"
-}
+const checkRateLimit = createRateLimiter({ windowMs: 60_000, max: 5 })
 
 function readField(body: Record<string, unknown>, key: keyof typeof LIMITS | "email") {
   const value = body[key]
@@ -53,7 +23,7 @@ function readField(body: Record<string, unknown>, key: keyof typeof LIMITS | "em
 }
 
 export async function POST(request: NextRequest) {
-  if (!checkRateLimit(clientIp(request))) {
+  if (!checkRateLimit(clientIp(request.headers))) {
     return NextResponse.json({ error: "Too many requests. Please try again later." }, { status: 429 })
   }
 
