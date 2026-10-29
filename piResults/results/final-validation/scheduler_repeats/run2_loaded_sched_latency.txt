@@ -70,7 +70,7 @@
   vcgencmd:(1188)       |   2122.553 ms |     2729 | avg:   0.064 ms | max:   5.577 ms | max start:  7691.746454 s | max end:  7691.752032 s
   rcu_preempt:18        |    618.272 ms |    25840 | avg:   0.061 ms | max:   4.089 ms | max start:  7947.732696 s | max end:  7947.736785 s
   gvfs-udisks2-vo:1118  |      2.157 ms |        2 | avg:   0.060 ms | max:   0.110 ms | max start:  7811.204585 s | max end:  7811.204695 s
-  claude:(21)           |   4267.310 ms |    14851 | avg:   0.054 ms | max:   9.945 ms | max start:  7885.506472 s | max end:  7885.516417 s
+  devtool_proc:(21)     |   4267.310 ms |    14851 | avg:   0.054 ms | max:   9.945 ms | max start:  7885.506472 s | max end:  7885.516417 s
   ksoftirqd/0:17        |     22.938 ms |      798 | avg:   0.053 ms | max:   3.968 ms | max start:  7540.307588 s | max end:  7540.311556 s
   kworker/2:1-the:14670 |    155.425 ms |     2526 | avg:   0.053 ms | max:   4.205 ms | max start:  7534.723512 s | max end:  7534.727717 s
   VizCompositorTh:(2)   |  10742.898 ms |    89128 | avg:   0.053 ms | max:  10.416 ms | max start:  7575.997131 s | max end:  7576.007546 s

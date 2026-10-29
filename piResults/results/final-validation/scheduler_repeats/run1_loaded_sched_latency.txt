@@ -63,7 +63,7 @@
   vcgencmd:(1188)       |   2160.279 ms |     2783 | avg:   0.111 ms | max:   8.100 ms | max start:  4961.696015 s | max end:  4961.704115 s
   supervisord:(2)       |    277.898 ms |     1217 | avg:   0.104 ms | max:   6.584 ms | max start:  5330.624577 s | max end:  5330.631161 s
   (udev-worker):10179   |      7.239 ms |       14 | avg:   0.104 ms | max:   0.361 ms | max start:  5312.747791 s | max end:  5312.748152 s
-  claude:(19)           |   8597.781 ms |    17863 | avg:   0.102 ms | max:  14.483 ms | max start:  4968.676382 s | max end:  4968.690865 s
+  devtool_proc:(19)     |   8597.781 ms |    17863 | avg:   0.102 ms | max:  14.483 ms | max start:  4968.676382 s | max end:  4968.690865 s
   Bun Pool 3:3433       |     81.959 ms |      661 | avg:   0.102 ms | max:   4.579 ms | max start:  4950.617126 s | max end:  4950.621705 s
   WebRTC_Signalin:2650  |     49.324 ms |      382 | avg:   0.100 ms | max:   4.656 ms | max start:  4962.961916 s | max end:  4962.966572 s
   kworker/2:2-eve:8133  |      0.222 ms |        4 | avg:   0.100 ms | max:   0.258 ms | max start:  5101.024540 s | max end:  5101.024799 s

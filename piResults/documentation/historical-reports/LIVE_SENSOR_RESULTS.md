@@ -532,7 +532,7 @@ gaps are explained by Linux/background-process scheduling contention rather than
 path itself being unreliable.
 
 **Before starting**, every non-essential background process/service was stopped — everything except
-VS Code and this Claude Code session itself (kept running per explicit user instruction, so this is
+VS Code and this coding-agent session itself (kept running per explicit user instruction, so this is
 a *reduced*-load run, not a zero-background-load one):
 
 | Stopped | What it was |
@@ -587,7 +587,7 @@ outlier. This is consistent with the recommendation's hypothesis: **the MPU6050/
 never the problem** (0 I2C failures in both runs, 0 deadline misses in both runs) — a meaningful share
 of the timing gaps came from Linux scheduler contention against this Pi's background
 services/processes, not sensor unreliability. At the same time, the gap rate did **not** drop to
-zero (84 gaps still occurred in 20 minutes, 4.20/min) — with VS Code and this Claude Code session
+zero (84 gaps still occurred in 20 minutes, 4.20/min) — with VS Code and this coding-agent session
 deliberately still running (per explicit instruction, so this is not a true zero-background
 baseline), some residual gap rate persists even under substantially reduced load, whether from VS
 Code's own footprint, unavoidable general-purpose-Linux-desktop scheduling noise, or a smaller

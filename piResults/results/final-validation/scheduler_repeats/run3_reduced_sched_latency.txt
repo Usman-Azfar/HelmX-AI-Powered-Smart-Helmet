@@ -59,7 +59,7 @@
   GpuWatchdog:(2)       |     12.253 ms |       80 | avg:   0.061 ms | max:   3.837 ms | max start: 11171.038958 s | max end: 11171.042794 s
   rcu_preempt:18        |    390.622 ms |    18566 | avg:   0.061 ms | max:   4.087 ms | max start: 11358.392147 s | max end: 11358.396234 s
   kworker/u17:1-e:19651 |    287.768 ms |     1448 | avg:   0.060 ms | max:   3.792 ms | max start: 11289.887650 s | max end: 11289.891443 s
-  claude:(21)           |   5128.756 ms |    15382 | avg:   0.060 ms | max:   8.845 ms | max start: 11592.219925 s | max end: 11592.228771 s
+  devtool_proc:(21)     |   5128.756 ms |    15382 | avg:   0.060 ms | max:   8.845 ms | max start: 11592.219925 s | max end: 11592.228771 s
   wf-panel-pi:1066      |    176.353 ms |      635 | avg:   0.057 ms | max:   2.520 ms | max start: 11592.011369 s | max end: 11592.013889 s
   NetworkManager:1834   |     13.571 ms |       57 | avg:   0.056 ms | max:   1.794 ms | max start: 11617.058111 s | max end: 11617.059905 s
   WorkerThread:(5)      |     63.577 ms |      377 | avg:   0.056 ms | max:   3.996 ms | max start: 11074.058113 s | max end: 11074.062109 s

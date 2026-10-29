@@ -1,0 +1,17 @@
+{
+  "scope": "Read-only host checks and a 120-second deployed-path diagnostic; desktop/IDE active, not K1 evidence.",
+  "bus_free_before": true,
+  "competing_capture_services": "all inactive",
+  "bus_clock_hz": 100000,
+  "sensor_identity": 112,
+  "current_throttled": "0x0",
+  "current_cpu_temp_c": 45.7,
+  "failed_capture_cpu_temp_c": [
+    38.459,
+    42.355
+  ],
+  "failed_capture_throttled": "0x0",
+  "kernel_log_failure_interval": "No entries returned for 10:09\u201310:13 UTC on 11 October 2026.",
+  "kernel_log_other": "Later vc4 display-driver warnings observed; no causal relationship to the earlier sensor-read error established.",
+  "limitation": "Cannot physically inspect jumper tightness, continuity, or transient sensor power from software. Root cause not established."
+}

@@ -4,7 +4,6 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 logs/
-.claude/
 .scratch/
 *.log
 *.pid

@@ -16,9 +16,16 @@
 # Usage: orchestrate_h2.sh   (duration is fixed at 180 min per the doc)
 set -uo pipefail
 
-ROOT="/home/helmx/Crash Detection/Crash-Detection"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="${HELMX_ROOT:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
 OUT="$ROOT/piResults/results/final-validation/long_soak"
-VENV_PY="$ROOT/.pi_research_venv/bin/python"
+VENV_PY="${HELMX_PYTHON:-$ROOT/.pi_research_venv/bin/python}"
+
+if [[ ! -x "$VENV_PY" ]]; then
+  echo "Python executable not found: $VENV_PY" >&2
+  echo "Set HELMX_PYTHON or create .pi_research_venv in the repository root." >&2
+  exit 2
+fi
 
 mkdir -p "$OUT"
 cd "$ROOT"

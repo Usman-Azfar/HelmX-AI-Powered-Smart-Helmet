@@ -10,7 +10,7 @@ existing ones and a SEPARATE raw CSV (motion_session_raw_part2.csv) so the
 original 84,100-row raw capture from phases 1-7(partial) is never touched or
 overwritten.
 
-Same marker-file protocol as the original: operator (Claude, coordinating
+Same marker-file protocol as the original: operator (coordinating
 live with the person moving the helmet) writes the next phase label to
 /tmp/helmx_motion_marker.txt on each transition; 'STOP_SESSION' ends it.
 Per-phase checkpointing is unchanged, so a second interruption would again

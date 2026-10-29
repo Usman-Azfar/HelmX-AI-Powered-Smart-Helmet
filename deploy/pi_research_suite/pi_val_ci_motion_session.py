@@ -6,7 +6,7 @@ exact classes from deploy/crash_monitor.py) at the deployed 50Hz pace,
 continuously, for the whole session.
 
 Phase boundaries are marked via a file (default /tmp/helmx_motion_marker.txt)
--- an operator (Claude, coordinating live with the person moving the helmet)
+-- an operator (coordinating live with the person moving the helmet)
 writes a new phase label to this file at each transition; this script polls
 it every sample and logs a phase-boundary event with an exact monotonic
 timestamp, matching the file-signal pattern deploy/crash_monitor.py already

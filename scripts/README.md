@@ -19,6 +19,18 @@ the parameters and output of each experiment remain auditable. Generated
 public artifacts belong in the categorized `results/` tree; raw datasets,
 temporary caches, and private device logs do not.
 
+Version 1.1 offline analyses (no hardware, deterministic; run after the core workflow):
+
+```powershell
+python scripts/baseline_simple_detector.py   # second detector under the same protocol
+python scripts/session_bootstrap.py          # session-clustered F1-difference CIs (--from-csv to reuse predictions)
+python scripts/jerk_feature_study.py         # closure test L11: jerk-formula isolation + benign-motion replay
+```
+
+The first two write to `results/experiments/`. The third writes to
+`piResults/results/final-closure/model_L11_jerk_isolation/` and reads the saved high-range
+benign-motion captures in `piResults/results/final-closure/07_high_range_benign_motion/`.
+
 `freeze_reproducibility.py` must run last. It hashes the canonical local
 `data/` inputs, records the session split, thresholds, package versions, and
 current Git commit, then writes the reproducibility manifest.

@@ -1,0 +1,777 @@
+{
+  "description": "Isolated training/runtime jerk-feature comparison (Part A) and original-vs-corrected replay of the saved high-range benign-motion captures (Part B). Frozen model, normalizer and thresholds; no retraining.",
+  "formulas": {
+    "training": "max |np.gradient(|a|, t)| over the window, m/s^3 (src/features.py)",
+    "runtime_original": "max |diff(|a|)|, m/s^2 per sample, no dt (deploy/crash_monitor.py)",
+    "corrected": "max |np.gradient(|a|, 1/50 s)| within the window, m/s^3"
+  },
+  "part_a_held_out_test": {
+    "n_windows": 5437,
+    "n_crash_like": 143,
+    "normal_hours": 0.4177444444444445,
+    "thresholds": {
+      "classifier_prob_balanced": 0.9892255067825317,
+      "recon_error": 10.878735866546593
+    },
+    "jerk_feature_scale": {
+      "training_jerk_median": 46.21527862548828,
+      "runtime_jerk_median": 1.3385388794492437,
+      "corrected_jerk_median": 47.62740879717952,
+      "median_ratio_training_over_runtime": 33.44109858105344,
+      "median_abs_rel_error_corrected_vs_training": 3.675570983654375e-08,
+      "normalized_z_training_p5_p50_p95": [
+        -0.4719764092752634,
+        -0.16972616133893798,
+        0.6228548792611465
+      ],
+      "normalized_z_runtime_p5_p50_p95": [
+        -0.4719764092752635,
+        -0.46322229764338385,
+        -0.44122146440622045
+      ],
+      "normalized_z_corrected_p5_p50_p95": [
+        -0.4719764092752634,
+        -0.1604907589524067,
+        0.6805458158813581
+      ],
+      "normalizer_jerk_mean_std": [
+        72.1670913696289,
+        152.90402221679688
+      ]
+    },
+    "A1_isolated_jerk_formula_keras_offline_windows": {
+      "runtime_formula": {
+        "classifier_metrics": {
+          "roc_auc": 0.9470438892426047,
+          "pr_auc": 0.5502937075686475,
+          "f1_score": 0.3236994219653179,
+          "precision": 0.9333333333333333,
+          "recall_sensitivity": 0.1958041958041958,
+          "specificity": 0.9996222138269739,
+          "confusion_matrix": {
+            "TP": 28,
+            "TN": 5292,
+            "FP": 2,
+            "FN": 115
+          }
+        },
+        "classifier_score_mae_vs_reference": 0.004289515782147646,
+        "recon_score_mae_vs_reference": 0.0,
+        "classifier_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 0.9998160750413831,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 1
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 0.993006993006993,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 1
+          }
+        },
+        "or_rule_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 0.9998160750413831,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 1
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 0.993006993006993,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 1
+          }
+        },
+        "or_rule_event_level": {
+          "session_recall": 1.0,
+          "n_anomaly_sessions": 5,
+          "n_normal_sessions": 5,
+          "total_false_alert_events": 0,
+          "cooldown_seconds": 60.0,
+          "cooldown_windows": 200,
+          "normal_exposure_hours": 0.4177444444444445,
+          "false_alerts_per_hour": 0.0
+        },
+        "or_rule_positive_windows": 31
+      },
+      "corrected_formula": {
+        "classifier_metrics": {
+          "roc_auc": 0.9459567632971486,
+          "pr_auc": 0.5392978994046114,
+          "f1_score": 0.34285714285714286,
+          "precision": 0.9375,
+          "recall_sensitivity": 0.2097902097902098,
+          "specificity": 0.9996222138269739,
+          "confusion_matrix": {
+            "TP": 30,
+            "TN": 5292,
+            "FP": 2,
+            "FN": 113
+          }
+        },
+        "classifier_score_mae_vs_reference": 0.00034455524291843176,
+        "recon_score_mae_vs_reference": 0.0,
+        "classifier_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 0.9998160750413831,
+            "ref_neg_to_new_pos": 1,
+            "ref_pos_to_new_neg": 0
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 0.993006993006993,
+            "ref_neg_to_new_pos": 1,
+            "ref_pos_to_new_neg": 0
+          }
+        },
+        "or_rule_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 0.9998160750413831,
+            "ref_neg_to_new_pos": 1,
+            "ref_pos_to_new_neg": 0
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 0.993006993006993,
+            "ref_neg_to_new_pos": 1,
+            "ref_pos_to_new_neg": 0
+          }
+        },
+        "or_rule_event_level": {
+          "session_recall": 1.0,
+          "n_anomaly_sessions": 5,
+          "n_normal_sessions": 5,
+          "total_false_alert_events": 0,
+          "cooldown_seconds": 60.0,
+          "cooldown_windows": 200,
+          "normal_exposure_hours": 0.4177444444444445,
+          "false_alerts_per_hour": 0.0
+        },
+        "or_rule_positive_windows": 33
+      },
+      "training_reference": {
+        "classifier_metrics": {
+          "roc_auc": 0.9459237400302758,
+          "pr_auc": 0.5393709255767394,
+          "f1_score": 0.3333333333333333,
+          "precision": 0.9354838709677419,
+          "recall_sensitivity": 0.20279720279720279,
+          "specificity": 0.9996222138269739,
+          "confusion_matrix": {
+            "TP": 29,
+            "TN": 5292,
+            "FP": 2,
+            "FN": 114
+          }
+        },
+        "classifier_score_mae_vs_reference": 0.0,
+        "recon_score_mae_vs_reference": 0.0,
+        "classifier_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          }
+        },
+        "or_rule_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 1.0,
+            "ref_neg_to_new_pos": 0,
+            "ref_pos_to_new_neg": 0
+          }
+        },
+        "or_rule_event_level": {
+          "session_recall": 1.0,
+          "n_anomaly_sessions": 5,
+          "n_normal_sessions": 5,
+          "total_false_alert_events": 0,
+          "cooldown_seconds": 60.0,
+          "cooldown_windows": 200,
+          "normal_exposure_hours": 0.4177444444444445,
+          "false_alerts_per_hour": 0.0
+        },
+        "or_rule_positive_windows": 32
+      }
+    },
+    "A2_causal_ema_int8_deployment_path": {
+      "runtime_formula": {
+        "classifier_metrics": {
+          "roc_auc": 0.9181260749073368,
+          "pr_auc": 0.44879760715385664,
+          "f1_score": 0.37777777777777777,
+          "precision": 0.918918918918919,
+          "recall_sensitivity": 0.23776223776223776,
+          "specificity": 0.9994333207404609,
+          "confusion_matrix": {
+            "TP": 34,
+            "TN": 5291,
+            "FP": 3,
+            "FN": 109
+          }
+        },
+        "classifier_score_mae_vs_reference": 0.07236919779586835,
+        "recon_score_mae_vs_reference": 0.6273458512760487,
+        "classifier_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 0.9963215008276624,
+            "ref_neg_to_new_pos": 13,
+            "ref_pos_to_new_neg": 7
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 0.9990555345674348,
+            "ref_neg_to_new_pos": 3,
+            "ref_pos_to_new_neg": 2
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 0.8951048951048951,
+            "ref_neg_to_new_pos": 10,
+            "ref_pos_to_new_neg": 5
+          }
+        },
+        "or_rule_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 0.9965054257862792,
+            "ref_neg_to_new_pos": 13,
+            "ref_pos_to_new_neg": 6
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 0.9990555345674348,
+            "ref_neg_to_new_pos": 3,
+            "ref_pos_to_new_neg": 2
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 0.9020979020979021,
+            "ref_neg_to_new_pos": 10,
+            "ref_pos_to_new_neg": 4
+          }
+        },
+        "or_rule_event_level": {
+          "session_recall": 1.0,
+          "n_anomaly_sessions": 5,
+          "n_normal_sessions": 5,
+          "total_false_alert_events": 0,
+          "cooldown_seconds": 60.0,
+          "cooldown_windows": 200,
+          "normal_exposure_hours": 0.4177444444444445,
+          "false_alerts_per_hour": 0.0
+        },
+        "or_rule_positive_windows": 39
+      },
+      "corrected_formula": {
+        "classifier_metrics": {
+          "roc_auc": 0.9196742056583387,
+          "pr_auc": 0.4579016748326587,
+          "f1_score": 0.40437158469945356,
+          "precision": 0.925,
+          "recall_sensitivity": 0.25874125874125875,
+          "specificity": 0.9994333207404609,
+          "confusion_matrix": {
+            "TP": 37,
+            "TN": 5291,
+            "FP": 3,
+            "FN": 106
+          }
+        },
+        "classifier_score_mae_vs_reference": 0.07346876283585424,
+        "recon_score_mae_vs_reference": 0.6273458512760487,
+        "classifier_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 0.9965054257862792,
+            "ref_neg_to_new_pos": 14,
+            "ref_pos_to_new_neg": 5
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 0.9990555345674348,
+            "ref_neg_to_new_pos": 3,
+            "ref_pos_to_new_neg": 2
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 0.9020979020979021,
+            "ref_neg_to_new_pos": 11,
+            "ref_pos_to_new_neg": 3
+          }
+        },
+        "or_rule_decision_agreement": {
+          "overall": {
+            "n": 5437,
+            "agreement": 0.9965054257862792,
+            "ref_neg_to_new_pos": 14,
+            "ref_pos_to_new_neg": 5
+          },
+          "normal": {
+            "n": 5294,
+            "agreement": 0.9990555345674348,
+            "ref_neg_to_new_pos": 3,
+            "ref_pos_to_new_neg": 2
+          },
+          "crash_like": {
+            "n": 143,
+            "agreement": 0.9020979020979021,
+            "ref_neg_to_new_pos": 11,
+            "ref_pos_to_new_neg": 3
+          }
+        },
+        "or_rule_event_level": {
+          "session_recall": 1.0,
+          "n_anomaly_sessions": 5,
+          "n_normal_sessions": 5,
+          "total_false_alert_events": 0,
+          "cooldown_seconds": 60.0,
+          "cooldown_windows": 200,
+          "normal_exposure_hours": 0.4177444444444445,
+          "false_alerts_per_hour": 0.0
+        },
+        "or_rule_positive_windows": 41
+      },
+      "n_windows_compared": 5437
+    }
+  },
+  "part_b_benign_motion_replay": {
+    "source": "piResults\\results\\final-closure\\07_high_range_benign_motion",
+    "phases": [
+      {
+        "phase": "01_stationary",
+        "accepted": true,
+        "windows": 196,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.0,
+          "classifier_crossings": 0,
+          "reconstruction_max": 0.0,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 0,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 0.02971564419567585
+        },
+        "corrected": {
+          "classifier_max": 0.0,
+          "classifier_crossings": 0,
+          "reconstruction_max": 0.0,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 0,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 0.79759281873703
+        }
+      },
+      {
+        "phase": "02_donning",
+        "accepted": true,
+        "windows": 196,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 15,
+          "reconstruction_max": 1.7674477100372314,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 15,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 0.8603889644145966
+        },
+        "corrected": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 17,
+          "reconstruction_max": 1.7674477100372314,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 17,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 27.277942657470703
+        }
+      },
+      {
+        "phase": "03_removing",
+        "accepted": true,
+        "windows": 242,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 14,
+          "reconstruction_max": 1.1782984733581543,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 14,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 1.1542673110961914
+        },
+        "corrected": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 14,
+          "reconstruction_max": 1.1782984733581543,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 14,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 28.81434440612793
+        }
+      },
+      {
+        "phase": "04_gentle_rotation",
+        "accepted": true,
+        "windows": 246,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 6,
+          "reconstruction_max": 1.3746814727783203,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 6,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 1.5155205130577087
+        },
+        "corrected": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 6,
+          "reconstruction_max": 1.3746814727783203,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 6,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 47.79464912414551
+        }
+      },
+      {
+        "phase": "05_repeated_tilt",
+        "accepted": true,
+        "windows": 296,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.98828125,
+          "classifier_crossings": 0,
+          "reconstruction_max": 0.19638307392597198,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 0,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 1.4718691110610962
+        },
+        "corrected": {
+          "classifier_max": 0.9921875,
+          "classifier_crossings": 1,
+          "reconstruction_max": 0.19638307392597198,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 1,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 43.960113525390625
+        }
+      },
+      {
+        "phase": "06_moderate_rotation",
+        "accepted": true,
+        "windows": 296,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 2,
+          "max_abs_classifier_diff": 0.03515625,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.9921875,
+          "classifier_crossings": 4,
+          "reconstruction_max": 0.19638307392597198,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 4,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 1.334547758102417
+        },
+        "corrected": {
+          "classifier_max": 0.9921875,
+          "classifier_crossings": 5,
+          "reconstruction_max": 0.19638307392597198,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 5,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 40.40800666809082
+        }
+      },
+      {
+        "phase": "07_moderate_shake",
+        "accepted": true,
+        "windows": 296,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.9921875,
+          "classifier_crossings": 1,
+          "reconstruction_max": 0.19638307392597198,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 1,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 1.754063367843628
+        },
+        "corrected": {
+          "classifier_max": 0.98828125,
+          "classifier_crossings": 0,
+          "reconstruction_max": 0.19638307392597198,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 0,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 69.38628005981445
+        }
+      },
+      {
+        "phase": "08_stronger_safe_shake",
+        "accepted": true,
+        "windows": 296,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 2,
+          "reconstruction_max": 0.5891492366790771,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 2,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 2.6524550914764404
+        },
+        "corrected": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 3,
+          "reconstruction_max": 0.5891492366790771,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 3,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 98.95816421508789
+        }
+      },
+      {
+        "phase": "09_soft_placement",
+        "accepted": true,
+        "windows": 296,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 1,
+          "max_abs_classifier_diff": 0.02734375,
+          "max_abs_recon_diff": 0.19638307392597198
+        },
+        "original": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 3,
+          "reconstruction_max": 0.39276614785194397,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 3,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 0.038813281804323196
+        },
+        "corrected": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 3,
+          "reconstruction_max": 0.39276614785194397,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 3,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 1.0601840019226074
+        }
+      },
+      {
+        "phase": "10_controlled_bump",
+        "accepted": true,
+        "windows": 296,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.0,
+          "classifier_crossings": 0,
+          "reconstruction_max": 0.0,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 0,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 0.03274554945528507
+        },
+        "corrected": {
+          "classifier_max": 0.0,
+          "classifier_crossings": 0,
+          "reconstruction_max": 0.0,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 0,
+          "confirmed_alerts": 0,
+          "jerk_feature_median": 0.9243891835212708
+        }
+      },
+      {
+        "phase": "11_hand_carried_walking",
+        "accepted": true,
+        "windows": 296,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.9921875,
+          "classifier_crossings": 3,
+          "reconstruction_max": 0.19638307392597198,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 3,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 1.5091907978057861
+        },
+        "corrected": {
+          "classifier_max": 0.9921875,
+          "classifier_crossings": 4,
+          "reconstruction_max": 0.19638307392597198,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 4,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 54.28347969055176
+        }
+      },
+      {
+        "phase": "05_repeated_tilt_DISCARDED_no_intended_tilting",
+        "accepted": false,
+        "windows": 282,
+        "original_replay_vs_live": {
+          "decisions_and_alerts_identical": true,
+          "windows_with_any_score_difference": 0,
+          "max_abs_classifier_diff": 0.0,
+          "max_abs_recon_diff": 0.0
+        },
+        "original": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 5,
+          "reconstruction_max": 1.1782984733581543,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 5,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 0.8844689130783081
+        },
+        "corrected": {
+          "classifier_max": 0.99609375,
+          "classifier_crossings": 5,
+          "reconstruction_max": 1.1782984733581543,
+          "reconstruction_crossings": 0,
+          "or_positive_windows": 5,
+          "confirmed_alerts": 1,
+          "jerk_feature_median": 25.258729934692383
+        }
+      }
+    ],
+    "accepted_phase_totals": {
+      "original": {
+        "classifier_crossings": 48,
+        "reconstruction_crossings": 0,
+        "or_positive_windows": 48,
+        "confirmed_alerts": 6
+      },
+      "corrected": {
+        "classifier_crossings": 53,
+        "reconstruction_crossings": 0,
+        "or_positive_windows": 53,
+        "confirmed_alerts": 6
+      }
+    },
+    "phases_with_alert_original": [
+      "02_donning",
+      "03_removing",
+      "04_gentle_rotation",
+      "06_moderate_rotation",
+      "09_soft_placement",
+      "11_hand_carried_walking"
+    ],
+    "phases_with_alert_corrected": [
+      "02_donning",
+      "03_removing",
+      "04_gentle_rotation",
+      "06_moderate_rotation",
+      "09_soft_placement",
+      "11_hand_carried_walking"
+    ],
+    "scope": "Offline replay of saved captures through the deployed code path; only the jerk term differs between runs. Not a new physical trial; operator motion is not amplitude-matched or independently verified (see guided_plan.json)."
+  }
+}

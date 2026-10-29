@@ -71,7 +71,7 @@
   HeapHelper:(33)       |    590.970 ms |     6871 | avg:   0.043 ms | max:   3.566 ms | max start:  8945.079166 s | max end:  8945.082732 s
   vcgencmd:(1188)       |   2006.538 ms |     2636 | avg:   0.042 ms | max:   3.512 ms | max start:  8728.529938 s | max end:  8728.533450 s
   kworker/u16:0-v:19231 |    247.805 ms |     9769 | avg:   0.038 ms | max:   3.425 ms | max start:  9078.328082 s | max end:  9078.331507 s
-  claude:(21)           |   4017.283 ms |    14944 | avg:   0.038 ms | max:   8.322 ms | max start:  8822.917154 s | max end:  8822.925476 s
+  devtool_proc:(21)     |   4017.283 ms |    14944 | avg:   0.038 ms | max:   8.322 ms | max start:  8822.917154 s | max end:  8822.925476 s
   VizCompositorTh:(2)   |   9455.291 ms |    89109 | avg:   0.038 ms | max:  11.956 ms | max start:  9031.639429 s | max end:  9031.651385 s
   mi-scavenger:3402     |   4183.190 ms |    17472 | avg:   0.036 ms | max:   5.504 ms | max start:  8791.876016 s | max end:  8791.881520 s
   supervisord:702       |    114.901 ms |      602 | avg:   0.036 ms | max:   2.965 ms | max start:  8961.735937 s | max end:  8961.738902 s

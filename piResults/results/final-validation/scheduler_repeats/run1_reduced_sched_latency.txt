@@ -72,7 +72,7 @@
   kworker/u16:1-v:10351 |    283.482 ms |    10949 | avg:   0.038 ms | max:   3.413 ms | max start:  6666.112775 s | max end:  6666.116188 s
   Bun Pool 0:3405       |     69.684 ms |      548 | avg:   0.038 ms | max:   3.799 ms | max start:  6340.513283 s | max end:  6340.517082 s
   gvfs-afc-volume:1142  |     22.099 ms |      603 | avg:   0.037 ms | max:   4.007 ms | max start:  6150.691307 s | max end:  6150.695315 s
-  claude:(21)           |   4119.181 ms |    14878 | avg:   0.036 ms | max:   7.540 ms | max start:  6172.127963 s | max end:  6172.135503 s
+  devtool_proc:(21)     |   4119.181 ms |    14878 | avg:   0.036 ms | max:   7.540 ms | max start:  6172.127963 s | max end:  6172.135503 s
   kworker/u16:2-v:12413 |    209.354 ms |     8406 | avg:   0.036 ms | max:   3.339 ms | max start:  6435.849888 s | max end:  6435.853227 s
   tokio-rt-worker:(2)   |     30.360 ms |      495 | avg:   0.035 ms | max:   3.798 ms | max start:  6453.194319 s | max end:  6453.198117 s
   NetworkManager:1834   |     13.157 ms |       50 | avg:   0.034 ms | max:   0.364 ms | max start:  6266.886042 s | max end:  6266.886406 s

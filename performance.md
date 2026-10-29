@@ -645,3 +645,55 @@ ranking metrics still tell a real, consistent story:
 **Reconstruction is again the best-ranking signal — a third independent dataset, domain, and
 anomaly type pointing the same direction as DaRUS (§12) and the scooter dataset (§21)**, though
 weaker and read as suggestive given the disclosed caveats, not equated with the first two.
+
+---
+
+## 23. Version 1.1 — second detector, session-clustered uncertainty, and jerk-feature isolation (offline)
+
+Added on 2026-10-28 for manuscript Version 1.1. All analyses are offline, use the frozen split,
+model, normalizer and thresholds, and involve no new Raspberry Pi runs.
+
+**23.1 Second, simpler detector under the same protocol**
+(`scripts/baseline_simple_detector.py`;
+[`results/experiments/BASELINE_AND_FILTER_SENSITIVITY.md`](results/experiments/BASELINE_AND_FILTER_SENSITIVITY.md)).
+
+Three non-neural detectors were run through the unchanged protocol: a peak-acceleration threshold,
+a peak-rotation-rate threshold, and a 7-feature logistic regression. On the held-out test split,
+the HelmX classifier (F1 0.333, 0 false alerts/h under the deployed event rule) beat all three:
+
+| Detector | F1 | False alerts/h |
+|---|---|---|
+| Logistic regression | 0.152 | 16.8 |
+| Accel-peak rule | 0.107 | 28.7 |
+| Gyro-peak rule | 0.051 | 67.0 |
+
+On the out-of-distribution sets (scooter, unseen DaRUS, SimRa), the simple rules ranked windows
+better than the HelmX classifier, but raised more false alerts at their calibrated thresholds.
+This mirrors the reconstruction-branch results in §12, §21 and §22. The causal-filter sensitivity
+pattern (0.3 Hz flat; 0.1 Hz worse; 0.4/0.5 Hz lose the `fall-in-a-leaning` event) also holds for
+the learned baseline. The original HelmX per-cutoff file (`ema_sensitivity.csv`, SHA-256
+`5b16c0a9…`) was located in the v1.0.0 archive and is documented in
+`piResults/results/final-validation/ema_sensitivity/README.md`.
+
+**23.2 Session-clustered bootstrap** (`scripts/session_bootstrap.py`;
+`results/experiments/session_bootstrap.json`).
+
+Resampling the 10 test sessions (stratified 5 + 5, 10,000 resamples) instead of windows widens
+the F1-difference intervals 3–7×. Logistic regression (−0.181 [−0.597, −0.035]) and the
+accel-peak rule (−0.227 [−0.770, −0.052]) remain significantly worse than HelmX. The gyro-peak
+rule (−0.283 [−0.944, +0.342]) does not. The earlier window-level intervals are superseded.
+
+**23.3 Jerk-feature isolation** (closure test L11, `scripts/jerk_feature_study.py`;
+[`piResults/results/final-closure/model_L11_jerk_isolation/`](piResults/results/final-closure/model_L11_jerk_isolation/README.md)).
+
+The training jerk feature is a time derivative, while the deployed runtime omits the division by
+dt. As a result, the runtime jerk input is about 33× smaller and essentially constant after
+normalization.
+- **In isolation**, the discrepancy changes 1 of 5,437 test decisions (classifier MAE 0.004).
+- **On the deployed path**, correcting it barely changes fidelity (crash-like agreement 0.895 →
+  0.902).
+- **Benign-motion replay:** replaying the 11 high-range benign-motion phases with the corrected
+  formula leaves the confirmed false alerts unchanged (6 → 6).
+
+The discrepancy is real but inconsequential. The deployed runtime is left unchanged so that the
+Pi evidence continues to describe the evaluated artefact.

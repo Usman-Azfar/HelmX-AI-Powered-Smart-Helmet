@@ -118,7 +118,7 @@ condition of this specific run.**
 
 This is because this run's environment — necessarily, since this document was produced by an AI
 coding agent working interactively on the device — has a full desktop session (`labwc`
-compositor, `wf-panel-pi`, `wayvnc` display), VS Code, and this Claude Code agent process itself
+compositor, `wf-panel-pi`, `wayvnc` display), VS Code, and this coding-agent process itself
 running throughout **both** conditions, none of which were part of either the "loaded" or
 "reduced" service definitions in the original manuscript or protocol. **The loaded-vs-reduced
 comparison above is still internally valid** (the same extra desktop/IDE/agent load was present in

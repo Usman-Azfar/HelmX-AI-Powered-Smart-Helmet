@@ -93,7 +93,7 @@
   Bun Pool 0:3405       |     79.838 ms |      578 | avg:   0.048 ms | max:   3.139 ms | max start: 10303.672881 s | max end: 10303.676020 s
   Bun Pool 3:3433       |     79.112 ms |      569 | avg:   0.046 ms | max:   2.443 ms | max start: 10178.635620 s | max end: 10178.638062 s
   HeapHelper:(30)       |    530.338 ms |     7435 | avg:   0.046 ms | max:   5.413 ms | max start: 10145.169902 s | max end: 10145.175315 s
-  claude:(21)           |   4097.625 ms |    15055 | avg:   0.046 ms | max:   5.072 ms | max start: 10370.919886 s | max end: 10370.924959 s
+  devtool_proc:(21)     |   4097.625 ms |    15055 | avg:   0.046 ms | max:   5.072 ms | max start: 10370.919886 s | max end: 10370.924959 s
   kworker/u16:1-v:22558 |    186.860 ms |     6839 | avg:   0.046 ms | max:   3.894 ms | max start: 10106.685792 s | max end: 10106.689686 s
   apt-helper:26265      |     19.294 ms |        9 | avg:   0.045 ms | max:   0.213 ms | max start: 10165.587378 s | max end: 10165.587591 s
   ksoftirqd/3:35        |     11.038 ms |      265 | avg:   0.044 ms | max:   4.014 ms | max start: 10022.010417 s | max end: 10022.014432 s

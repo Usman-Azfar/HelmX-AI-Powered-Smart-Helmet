@@ -1,0 +1,175 @@
+{
+  "label": "i2c_diagnostic_20261011",
+  "checks": {
+    "frozen_artifacts_unchanged": true,
+    "full_duration": true,
+    "no_exception": true,
+    "no_i2c_errors": true,
+    "raw_rows_match": true,
+    "window_rows_match": true,
+    "nonempty": true,
+    "indices_contiguous": true,
+    "times_nondecreasing": true,
+    "registers_restored": true,
+    "replay_endpoints_exact": true,
+    "replay_scores_exact": true,
+    "replay_policy_exact": true,
+    "gap_count_matches": true
+  },
+  "metrics": {
+    "mode": "polling",
+    "elapsed_s": 120.00377141799981,
+    "sample_rate_hz": 49.740103410655706,
+    "n_samples": 5969,
+    "n_windows": 394,
+    "gap_count": 0,
+    "C_D": 1.0,
+    "V_T_scored_over_scored_plus_resets": 1.0,
+    "p_valid_90_sample_position": 1.0,
+    "timing": {
+      "n": 5968,
+      "mean_ms": 20.102891671916982,
+      "median_ms": 19.884400499904586,
+      "std_ms": 3.426951226432708,
+      "rms_error_from_20ms": 3.4284955016010326,
+      "p90_ms": 23.788622799656878,
+      "p95_ms": 25.405270049941464,
+      "p99_ms": 30.700802630308313,
+      "p99.9_ms": 39.64210517868804,
+      "max_ms": 50.942365000082646,
+      "histogram_edges_ms": [
+        0,
+        10,
+        15,
+        25,
+        30,
+        40,
+        60,
+        100,
+        "inf"
+      ],
+      "counts_left_closed_right_open": [
+        39,
+        261,
+        5313,
+        280,
+        69,
+        6,
+        0,
+        0
+      ],
+      "deviation_counts": {
+        "2": 2583,
+        "5": 655,
+        "8": 215
+      }
+    },
+    "processing_ms": {
+      "0": 1.8269450010848232,
+      "50": 3.2593470004940173,
+      "95": 9.343453150177078,
+      "99": 18.52620055005899,
+      "99.9": 25.308536001855938,
+      "100": 26.861469999857945
+    },
+    "i2c_failures": 0,
+    "confirmed_alert_events": 0,
+    "score_distributions": {
+      "classifier": {
+        "0": 0.0,
+        "50": 0.0,
+        "95": 0.0,
+        "99": 0.0,
+        "99.9": 0.0,
+        "100": 0.0
+      },
+      "reconstruction": {
+        "0": 0.0,
+        "50": 0.0,
+        "95": 0.0,
+        "99": 0.0,
+        "99.9": 0.0,
+        "100": 0.0
+      }
+    },
+    "physical_axes": {
+      "ax": {
+        "mean": -5.893323174861704,
+        "std": 0.035907987079304725,
+        "min": -7.275978845214843,
+        "max": -5.2624552490234375,
+        "rms": 5.893432567434544
+      },
+      "ay": {
+        "mean": -0.9985742220548354,
+        "std": 0.02872514758897686,
+        "min": -1.5251064575195312,
+        "max": -0.24181436767578124,
+        "rms": 0.9989872927402171
+      },
+      "az": {
+        "mean": -7.688929897213892,
+        "std": 0.060127915838649876,
+        "min": -8.027758166503906,
+        "max": -7.1203557373046875,
+        "rms": 7.689164995663231
+      },
+      "gx": {
+        "mean": -0.10188134880086555,
+        "std": 0.7063290222250772,
+        "min": -5.259541984732825,
+        "max": 8.221374045801527,
+        "rms": 0.7136389121053568
+      },
+      "gy": {
+        "mean": 2.1135753556223698,
+        "std": 0.6318752090354371,
+        "min": -0.22137404580152673,
+        "max": 3.900763358778626,
+        "rms": 2.2060070407158276
+      },
+      "gz": {
+        "mean": 1.110598141287236,
+        "std": 0.16445369037369464,
+        "min": -1.465648854961832,
+        "max": 4.6106870229007635,
+        "rms": 1.1227079975257104
+      }
+    },
+    "resources": {
+      "cpu_pct": {
+        "min": 4.9,
+        "max": 19.2,
+        "mean": 8.77563025210084
+      },
+      "rss_bytes": {
+        "min": 50139136,
+        "max": 51064832,
+        "mean": 50946495.462184876
+      },
+      "cpu_temp_c": {
+        "min": 46.251,
+        "max": 50.634,
+        "mean": 47.863420168067236
+      }
+    }
+  },
+  "source_hashes": {
+    "connection_checks.json": "8378cbad26b923c2358c0fbfea3b139fb1c347d68650e576b58301cc1c9d6ecd",
+    "raw_sensor.csv": "f087b19441ce3ba81df73090be8cf9ed50f8af289f4c0120d45b3e1dc5b9452f",
+    "README.txt": "d11ce0994e066c433bd5c16c40721d1b021154f2966d6eae89c8c5e7e70ffbaf",
+    "window_scores.csv": "0ab74c4a55b06f4b28a441377816c888e5b38292218ac9d6190096629809903d",
+    "metadata.json": "fdbceb6ecf432568230055df3dc2060ee08f260d71bbb2cbecfad25d8f988fc9",
+    "fifo_batches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "registers_during.json": "31d645e3f093b9bb5d7da2a3532bf16639c8d12735ae911358b35a42bfd9f82e",
+    "registers_restored.json": "8653ee928584842bfd6ee4789da50d2162c1f46baf60b6a000446f41e7344142",
+    "registers_before.json": "8653ee928584842bfd6ee4789da50d2162c1f46baf60b6a000446f41e7344142",
+    "errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "configuration.json": "6c7fce2e496de288e22029a3f364b2f07cbd96fe7709dda5623e358f803cc88b",
+    "summary.json": "b1188cbf97dbae73d4045b2d5e745894111f9b56f81310fe787a0f178660556c",
+    "resources.json": "7f3c3d819683ac579b7af4e265991855593c7a23bac47fedbb18e4b32fe4c61a",
+    "throttled_start.json": "518a5b7e760f3e653fef809b35392a9839d13a23cf4bdbf3b298cf85fc8117f2",
+    "gc_events.json": "08e31ee70b43ca05b36ced09622b112bd8087e7c210be4e6cbfe451d4b003a68"
+  },
+  "scope": "Offline replay and byte integrity. FIFO shared host times are not physical sample jitter. Physical conditions require operator attestation."
+}

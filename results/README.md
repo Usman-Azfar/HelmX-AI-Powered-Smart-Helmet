@@ -51,6 +51,39 @@ The project deliberately includes negative results and out-of-distribution tests
 See [`external-validation/`](external-validation/) and [`experiments/`](experiments/) for the
 complete machine-readable results.
 
+### Second detector under the same validation protocol (v1.1, offline)
+
+To test whether the validation protocol depends on the HelmX network, three simple non-neural
+detectors were run through the same frozen protocol:
+- a single threshold on peak acceleration;
+- a single threshold on peak rotation rate;
+- a 7-feature logistic regression.
+
+The protocol covered the same split, validation-only thresholds, the deployed 3-window/60 s
+event rule, the frozen external sets, the unseen-DaRUS retrain, and the causal-filter replay.
+HelmX was re-scored by the same code, and all 8 checks against the archived numbers matched.
+
+| Finding | Result |
+|---|---|
+| Held-out test split | HelmX classifier: F1 0.333 with 0 false alerts/h. Logistic regression: F1 0.152, 16.8/h. Accel-peak rule: F1 0.107, 28.7/h. Gyro-peak rule: F1 0.051, 67.0/h. |
+| Paired F1 difference, session-clustered bootstrap (10 sessions, stratified, 10,000 resamples) | Logistic regression −0.181 [−0.597, −0.035]. Accel-peak −0.227 [−0.770, −0.052]. Gyro-peak −0.283 [−0.944, +0.342], which is not significant. These replace the window-level intervals, which treated overlapping windows as independent. |
+| Out-of-distribution sets | The simple rules ranked windows better than the HelmX classifier on scooter (ROC-AUC 0.84 vs 0.77), unseen DaRUS (0.80–0.93 vs 0.35) and SimRa, but at calibrated thresholds they raised more false alerts. This parallels the reconstruction-branch finding above. |
+| Filter-cutoff sensitivity | For the learned baseline, 0.3 Hz is on the flat part of the curve, 0.1 Hz is worse, and 0.4/0.5 Hz lose the same `fall-in-a-leaning` event as HelmX. The cutoff conclusion is therefore not specific to the network. |
+
+Caveat: outside DaRUS, crash labels are the top 30% of windows by peak acceleration in each
+session, so the accel-peak rule is partly scored against its own feature there. Results are also
+reported stratified by label source.
+
+Artifacts:
+- [`BASELINE_AND_FILTER_SENSITIVITY.md`](experiments/BASELINE_AND_FILTER_SENSITIVITY.md)
+- [`baseline_simple_detector.json`](experiments/baseline_simple_detector.json)
+- [`baseline_filter_sensitivity.csv`](experiments/baseline_filter_sensitivity.csv)
+- [`session_bootstrap.json`](experiments/session_bootstrap.json)
+- [`heldout_window_predictions.csv`](experiments/heldout_window_predictions.csv)
+
+The related training/runtime jerk-feature analysis is closure test L11 in
+[`piResults/results/final-closure/model_L11_jerk_isolation/`](../piResults/results/final-closure/model_L11_jerk_isolation/README.md).
+
 ### Raspberry Pi 4 deployment
 
 The deployed INT8 pipeline was tested on a Raspberry Pi 4 Model B with a physical MPU6050.

@@ -1,0 +1,98 @@
+
+Q2 — Training configuration audit
+Status: COMPLETE
+UTC: 2026-09-29T19:28:40.285160+00:00
+Evidence: piResults/final_pi_review_closure/archive_Q2
+{
+  "artifact_compile_config": {
+    "optimizer": {
+      "module": "keras.optimizers",
+      "class_name": "Adam",
+      "config": {
+        "name": "adam",
+        "learning_rate": 0.0010000000474974513,
+        "weight_decay": null,
+        "clipnorm": null,
+        "global_clipnorm": null,
+        "clipvalue": null,
+        "use_ema": false,
+        "ema_momentum": 0.99,
+        "ema_overwrite_frequency": null,
+        "loss_scale_factor": null,
+        "gradient_accumulation_steps": null,
+        "beta_1": 0.9,
+        "beta_2": 0.999,
+        "epsilon": 1e-07,
+        "amsgrad": false
+      },
+      "registered_name": null
+    },
+    "loss": {
+      "reconstruction": {
+        "module": "builtins",
+        "class_name": "function",
+        "config": "helmx>_windowed_mse",
+        "registered_name": "function"
+      },
+      "crash_prob": "binary_crossentropy",
+      "recon_error": "mse"
+    },
+    "loss_weights": {
+      "reconstruction": 2.0,
+      "crash_prob": 1.0,
+      "recon_error": 0.0
+    },
+    "metrics": {
+      "crash_prob": [
+        {
+          "module": "keras.metrics",
+          "class_name": "AUC",
+          "config": {
+            "name": "auc",
+            "dtype": "float32",
+            "num_thresholds": 200,
+            "curve": "ROC",
+            "summation_method": "interpolation",
+            "multi_label": false,
+            "num_labels": null,
+            "label_weights": null,
+            "from_logits": false
+          },
+          "registered_name": null
+        },
+        "accuracy"
+      ],
+      "reconstruction": [],
+      "recon_error": []
+    },
+    "weighted_metrics": null,
+    "run_eagerly": false,
+    "steps_per_execution": 1,
+    "jit_compile": false
+  },
+  "keras_metadata": {
+    "keras_version": "3.15.1",
+    "date_saved": "2026-08-26@22:29:12"
+  },
+  "batch_size_from_train_py": 128,
+  "max_epochs_from_train_py": 60,
+  "early_stopping": {
+    "monitor": "val_crash_prob_auc",
+    "mode": "max",
+    "patience": 8,
+    "restore_best_weights": true
+  },
+  "completed_history_epochs": 13,
+  "best_val_auc_epoch_1_based": 5,
+  "split_seed": 42,
+  "training_entrypoint_seed": 42,
+  "multi_seed_experiment_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "selection_criterion": "Maximum validation classifier AUC in train.py. Thresholds separately calibrated on validation data.",
+  "limitation": "The .keras artifact records optimizer/loss configuration, not the random seed. Seed 42 is the source entrypoint, not independently embedded execution provenance."
+}

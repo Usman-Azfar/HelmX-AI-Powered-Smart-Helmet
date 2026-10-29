@@ -198,6 +198,30 @@ measurement hardware was unavailable.
   result packages.
 - Assumption-based projections are explicitly separated from measured results.
 
+## Author and acknowledgements
+
+**Author:** Usman Azfar, Department of Computer Science, Faculty of Computing
+and Information Technology, University of the Punjab, Lahore, Pakistan.
+
+**Acknowledgements.** The author thanks Abdul Hanan (Department of Computer
+Science, Faculty of Computing and Information Technology, University of the
+Punjab) for contributions to this work. The author also gratefully
+acknowledges the creators of the public datasets used for training and
+evaluation:
+
+- the DaRUS ISO 13232 motorcycle crash-simulation dataset, University of
+  Stuttgart (doi:10.18419/darus-3301);
+- Boubezoul et al., the powered two-wheeler fall and critical-events dataset
+  (doi:10.1016/j.dib.2019.103828);
+- Khandakar et al., the STRIDE road-sensing dataset
+  (doi:10.6084/m9.figshare.25460755);
+- Sanchez-Iborra, Bernal-Escobedo and Santa, the personal-mobility-vehicle
+  riding and fall dataset (doi:10.5281/zenodo.14887437);
+- the SimRa project, TU Berlin (github.com/simra-project/dataset).
+
+Being named here does not imply authorship of, or endorsement by, the
+acknowledged people or projects.
+
 ## Citation
 
 Citation metadata is provided in [CITATION.cff](CITATION.cff). GitHub can use

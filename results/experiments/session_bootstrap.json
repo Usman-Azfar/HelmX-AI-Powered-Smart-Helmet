@@ -1,0 +1,282 @@
+{
+  "description": "Paired F1 difference (detector minus HelmX classifier) on the held-out test split, with session-clustered bootstrap CIs replacing the window-level CIs of baseline_simple_detector.py.",
+  "predictions_csv": "results\\experiments\\heldout_window_predictions.csv",
+  "n_windows": 5437,
+  "n_sessions": 10,
+  "n_crash_like": 143,
+  "n_bootstrap": 10000,
+  "seed": 0,
+  "session_bootstrap_stratified": {
+    "scheme": "stratified 5 crash-containing + 5 all-normal sessions",
+    "n_resamples_requested": 10000,
+    "n_resamples_used": 10000,
+    "n_resamples_skipped_no_positives": 0,
+    "n_crash_containing_sessions": 5,
+    "n_all_normal_sessions": 5,
+    "helmx_classifier_f1_ci_95": [
+      0.18772563176895307,
+      0.9523809523809523
+    ],
+    "paired_f1_difference_vs_helmx_classifier": {
+      "helmx_deployed_or_rule": {
+        "point_estimate_diff": -0.001904761904761909,
+        "bootstrap_mean_diff": -0.003870155171589371,
+        "ci_95_low": -0.024390243902439046,
+        "ci_95_high": 0.0,
+        "fraction_of_resamples_baseline_not_worse": 0.3251,
+        "ci_excludes_zero": false
+      },
+      "accel_peak_rule": {
+        "point_estimate_diff": -0.22650840751730958,
+        "bootstrap_mean_diff": -0.27366083021920545,
+        "ci_95_low": -0.7697408050363345,
+        "ci_95_high": -0.05235930975871117,
+        "fraction_of_resamples_baseline_not_worse": 0.0,
+        "ci_excludes_zero": true
+      },
+      "gyro_peak_rule": {
+        "point_estimate_diff": -0.28270042194092826,
+        "bootstrap_mean_diff": -0.29447026566950507,
+        "ci_95_low": -0.9439456929967263,
+        "ci_95_high": 0.3417578272350057,
+        "fraction_of_resamples_baseline_not_worse": 0.0762,
+        "ci_excludes_zero": false
+      },
+      "logreg_7feat": {
+        "point_estimate_diff": -0.18086696562032883,
+        "bootstrap_mean_diff": -0.21765484184010697,
+        "ci_95_low": -0.5974563738538894,
+        "ci_95_high": -0.03485878541771226,
+        "fraction_of_resamples_baseline_not_worse": 0.0,
+        "ci_excludes_zero": true
+      }
+    }
+  },
+  "session_bootstrap_unstratified": {
+    "scheme": "unstratified 10 sessions",
+    "n_resamples_requested": 10000,
+    "n_resamples_used": 9990,
+    "n_resamples_skipped_no_positives": 10,
+    "n_crash_containing_sessions": 5,
+    "n_all_normal_sessions": 5,
+    "helmx_classifier_f1_ci_95": [
+      0.1863799283154122,
+      0.9655172413793104
+    ],
+    "paired_f1_difference_vs_helmx_classifier": {
+      "helmx_deployed_or_rule": {
+        "point_estimate_diff": -0.001904761904761909,
+        "bootstrap_mean_diff": -0.006333525899537912,
+        "ci_95_low": -0.05714285714285705,
+        "ci_95_high": 0.0,
+        "fraction_of_resamples_baseline_not_worse": 0.35075075075075074,
+        "ci_excludes_zero": false
+      },
+      "accel_peak_rule": {
+        "point_estimate_diff": -0.22650840751730958,
+        "bootstrap_mean_diff": -0.2836183270434852,
+        "ci_95_low": -0.8511627906976744,
+        "ci_95_high": -0.04933162322542852,
+        "fraction_of_resamples_baseline_not_worse": 0.0,
+        "ci_excludes_zero": true
+      },
+      "gyro_peak_rule": {
+        "point_estimate_diff": -0.28270042194092826,
+        "bootstrap_mean_diff": -0.28435544647777167,
+        "ci_95_low": -0.9498831287055256,
+        "ci_95_high": 0.4408879911378964,
+        "fraction_of_resamples_baseline_not_worse": 0.10530530530530531,
+        "ci_excludes_zero": false
+      },
+      "logreg_7feat": {
+        "point_estimate_diff": -0.18086696562032883,
+        "bootstrap_mean_diff": -0.232009164177467,
+        "ci_95_low": -0.7323600626691354,
+        "ci_95_high": -0.03404008462357059,
+        "fraction_of_resamples_baseline_not_worse": 0.0,
+        "ci_excludes_zero": true
+      }
+    }
+  },
+  "window_bootstrap_for_comparison": {
+    "helmx_deployed_or_rule": {
+      "ci_95_low": -0.006452146579535134,
+      "ci_95_high": 0.0
+    },
+    "accel_peak_rule": {
+      "ci_95_low": -0.2961173726599606,
+      "ci_95_high": -0.15559126368674564
+    },
+    "gyro_peak_rule": {
+      "ci_95_low": -0.3698068174408497,
+      "ci_95_high": -0.191100937008167
+    },
+    "logreg_7feat": {
+      "ci_95_low": -0.2526321742701246,
+      "ci_95_high": -0.10966558143922946
+    }
+  },
+  "per_session_counts": [
+    {
+      "session_id": "carla_onder",
+      "source": "carla",
+      "n_windows": 2614,
+      "n_crash_like": 0,
+      "helmx_classifier_tp": 0,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 0,
+      "helmx_deployed_or_rule_fp": 0,
+      "accel_peak_rule_tp": 0,
+      "accel_peak_rule_fp": 45,
+      "gyro_peak_rule_tp": 0,
+      "gyro_peak_rule_fp": 2473,
+      "logreg_7feat_tp": 0,
+      "logreg_7feat_fp": 0
+    },
+    {
+      "session_id": "road_2. Aggressive",
+      "source": "road",
+      "n_windows": 2355,
+      "n_crash_like": 0,
+      "helmx_classifier_tp": 0,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 0,
+      "helmx_deployed_or_rule_fp": 0,
+      "accel_peak_rule_tp": 0,
+      "accel_peak_rule_fp": 114,
+      "gyro_peak_rule_tp": 0,
+      "gyro_peak_rule_fp": 2211,
+      "logreg_7feat_tp": 0,
+      "logreg_7feat_fp": 46
+    },
+    {
+      "session_id": "road_2.Bump",
+      "source": "road",
+      "n_windows": 13,
+      "n_crash_like": 0,
+      "helmx_classifier_tp": 0,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 0,
+      "helmx_deployed_or_rule_fp": 0,
+      "accel_peak_rule_tp": 0,
+      "accel_peak_rule_fp": 0,
+      "gyro_peak_rule_tp": 0,
+      "gyro_peak_rule_fp": 8,
+      "logreg_7feat_tp": 0,
+      "logreg_7feat_fp": 0
+    },
+    {
+      "session_id": "near_fall_Acceleration On Curve",
+      "source": "near_fall",
+      "n_windows": 156,
+      "n_crash_like": 50,
+      "helmx_classifier_tp": 11,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 11,
+      "helmx_deployed_or_rule_fp": 0,
+      "accel_peak_rule_tp": 0,
+      "accel_peak_rule_fp": 0,
+      "gyro_peak_rule_tp": 47,
+      "gyro_peak_rule_fp": 52,
+      "logreg_7feat_tp": 0,
+      "logreg_7feat_fp": 0
+    },
+    {
+      "session_id": "fall_fall-in-a-leaning",
+      "source": "fall",
+      "n_windows": 269,
+      "n_crash_like": 81,
+      "helmx_classifier_tp": 6,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 6,
+      "helmx_deployed_or_rule_fp": 0,
+      "accel_peak_rule_tp": 6,
+      "accel_peak_rule_fp": 0,
+      "gyro_peak_rule_tp": 69,
+      "gyro_peak_rule_fp": 29,
+      "logreg_7feat_tp": 5,
+      "logreg_7feat_fp": 0
+    },
+    {
+      "session_id": "darus_crash_Iso_115_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "n_crash_like": 4,
+      "helmx_classifier_tp": 4,
+      "helmx_classifier_fp": 2,
+      "helmx_deployed_or_rule_tp": 4,
+      "helmx_deployed_or_rule_fp": 2,
+      "accel_peak_rule_tp": 4,
+      "accel_peak_rule_fp": 2,
+      "gyro_peak_rule_tp": 4,
+      "gyro_peak_rule_fp": 0,
+      "logreg_7feat_tp": 4,
+      "logreg_7feat_fp": 2
+    },
+    {
+      "session_id": "darus_crash_Iso_312_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "n_crash_like": 4,
+      "helmx_classifier_tp": 4,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 4,
+      "helmx_deployed_or_rule_fp": 0,
+      "accel_peak_rule_tp": 4,
+      "accel_peak_rule_fp": 1,
+      "gyro_peak_rule_tp": 4,
+      "gyro_peak_rule_fp": 0,
+      "logreg_7feat_tp": 4,
+      "logreg_7feat_fp": 2
+    },
+    {
+      "session_id": "darus_crash_Iso_513_2_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "n_crash_like": 4,
+      "helmx_classifier_tp": 4,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 4,
+      "helmx_deployed_or_rule_fp": 0,
+      "accel_peak_rule_tp": 4,
+      "accel_peak_rule_fp": 2,
+      "gyro_peak_rule_tp": 4,
+      "gyro_peak_rule_fp": 0,
+      "logreg_7feat_tp": 4,
+      "logreg_7feat_fp": 2
+    },
+    {
+      "session_id": "darus_non_crash_Pothole_5_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "n_crash_like": 0,
+      "helmx_classifier_tp": 0,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 0,
+      "helmx_deployed_or_rule_fp": 0,
+      "accel_peak_rule_tp": 0,
+      "accel_peak_rule_fp": 6,
+      "gyro_peak_rule_tp": 0,
+      "gyro_peak_rule_fp": 6,
+      "logreg_7feat_tp": 0,
+      "logreg_7feat_fp": 5
+    },
+    {
+      "session_id": "darus_non_crash_Randomstate_60_Out",
+      "source": "darus",
+      "n_windows": 6,
+      "n_crash_like": 0,
+      "helmx_classifier_tp": 0,
+      "helmx_classifier_fp": 0,
+      "helmx_deployed_or_rule_tp": 0,
+      "helmx_deployed_or_rule_fp": 1,
+      "accel_peak_rule_tp": 0,
+      "accel_peak_rule_fp": 6,
+      "gyro_peak_rule_tp": 0,
+      "gyro_peak_rule_fp": 6,
+      "logreg_7feat_tp": 0,
+      "logreg_7feat_fp": 6
+    }
+  ],
+  "caveat": "Only 10 clusters (5 crash-containing, 5 all-normal). Percentile intervals from so few clusters are approximate and probably still somewhat narrow; the crash-like windows are concentrated in few sessions, which dominates the resampling variance."
+}

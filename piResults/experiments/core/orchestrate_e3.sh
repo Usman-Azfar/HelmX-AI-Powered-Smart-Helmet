@@ -17,10 +17,17 @@ DURATION_MIN="${1:-20}"
 CHRT_PRIORITY=10
 CPU_CORE=3
 
-ROOT="/home/helmx/Crash Detection/Crash-Detection"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="${HELMX_ROOT:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
 OUT="$ROOT/piResults/results/final-validation/acquisition_compare"
-VENV_PY="$ROOT/.pi_research_venv/bin/python"
+VENV_PY="${HELMX_PYTHON:-$ROOT/.pi_research_venv/bin/python}"
 LABEL="e3_sched_enhanced"
+
+if [[ ! -x "$VENV_PY" ]]; then
+  echo "Python executable not found: $VENV_PY" >&2
+  echo "Set HELMX_PYTHON or create .pi_research_venv in the repository root." >&2
+  exit 2
+fi
 
 cd "$ROOT"
 echo "[$(date)] Starting E3: SCHED_FIFO priority=$CHRT_PRIORITY, CPU affinity=core $CPU_CORE, duration_min=$DURATION_MIN"
