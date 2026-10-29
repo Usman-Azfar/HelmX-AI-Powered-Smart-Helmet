@@ -34,7 +34,7 @@ def make_plan():
         studies[name] = {'pairs': order, 'seconds_each': 600, 'core': 3,
             'A': 'SCHED_OTHER core 3, ' + ('headless' if name == 'D4' else 'originally active desktop/remote service profile'),
             'B': ('SCHED_FIFO priority 10 core 3, headless' if name == 'D4' else 'SCHED_OTHER core 3, desktop/remote services stopped'),
-            'limits': 'K1 compares service profiles with IDE/agent absent in both; no synthetic load. D4 changes scheduler only.'}
+            'limits': 'K1 compares service profiles with IDE absent in both; no synthetic load. D4 changes scheduler only.'}
     return {'version': 2, 'seed': 20261007, 'created_date_pkt': '2026-10-11', 'studies': studies,
             'supersedes': 'randomized_studies_20261007/plan.json (preserved unchanged)',
             'analysis': 'Within-pair B minus A; mean, median, descriptive percentile 95% bootstrap interval; all pairs reported.',
@@ -44,7 +44,7 @@ def make_plan():
             'observations': 'Processes and service states sampled every two seconds; shorter activity cannot be excluded.'}
 
 
-def agents(processes):
+def ide_processes(processes):
     return [p for p in processes if any(k in p['name'].lower() for k in ('code', 'codium', 'electron'))]
 
 
@@ -52,7 +52,7 @@ def observation_checks(observations, expected, loaded, keep_ide):
     return {
         'observations_nonempty': bool(observations),
         'workload_profile': bool(observations) and all(o['services'] == expected for o in observations),
-        'ide_absent': keep_ide or not any(agents(o['interactive']) for o in observations),
+        'ide_absent': keep_ide or not any(ide_processes(o['interactive']) for o in observations),
         'headless': keep_ide or loaded or not any(o['interactive'] for o in observations),
     }
 
@@ -171,8 +171,8 @@ def main():
         raise RuntimeError('Preregistered plan changed')
     if not a.smoke_test:
         require_smoke(a.study, plan)
-    if not a.keep_ide and agents(interactive()):
-        raise RuntimeError('Close IDE and coding agent before starting')
+    if not a.keep_ide and ide_processes(interactive()):
+        raise RuntimeError('Close the IDE before starting')
     uid = pwd.getpwnam(a.operator_user).pw_uid
 
     def ctl(scope, *args):

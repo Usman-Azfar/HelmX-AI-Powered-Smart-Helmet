@@ -134,7 +134,7 @@ SECTIONS SATISFIED BY PRESERVING EXISTING DATA RATHER THAN RERUNNING
     all consistent in direction across every one of the 3 independent pairs.
     The "max scheduler delay" figure swings wildly (loaded mean 737ms vs
     reduced 17ms) but that's one-off outlier events from a python3 process
-    (almost certainly this desktop/coding-agent stack, matching Round 9's own
+    (almost certainly this desktop/development-tool stack, matching Round 9's own
     disclosed confound) -- per the doc's own instruction ("do not lead with
     single-run maxima"), cite the modest/consistent metrics above, not this.
     See scheduler_repeats/scheduler_repeat_summary.{json,csv}.

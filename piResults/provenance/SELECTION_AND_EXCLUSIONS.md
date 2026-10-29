@@ -20,7 +20,7 @@ clearly identified public summaries.
 
 - Duplicate timestamped releases and repeated copies of identical artifacts.
 - Python environments, caches, temporary files, editor state, logs, and generated build material.
-- Full host process snapshots, agent/session commands, and other workstation diagnostics that do
+- Full host process snapshots, tool/session commands, and other workstation diagnostics that do
   not substantively support the experiment result. Paths required by archived scripts and method
   records are retained where they explain the evaluated deployment.
 - Exact operating-system boot UUIDs. Distinct-boot evidence is represented by sanitized aggregate
@@ -39,9 +39,11 @@ clearly identified public summaries.
 - `summary_public.json` for A1 is a privacy-safe aggregate derived from the preserved identity
   records and closure report.
 
-- In six scheduler-latency traces (`final-validation/scheduler_repeats/run*_sched_latency.txt`), a third-party development tool's process name was replaced with `devtool_proc` (distinct from the browser helper already relabelled `background_proc`); timing values and event counts were unchanged. Product names of that tool were likewise removed from prose in three historical reports, one status note, one experiment-conditions entry and two script comments. The disclosure that a coding-agent process was running during those tests is retained.
+- In six scheduler-latency traces (`final-validation/scheduler_repeats/run*_sched_latency.txt`), a third-party development tool's process name was replaced with `devtool_proc` (distinct from the browser helper already relabelled `background_proc`); timing values and event counts were unchanged. Names of third-party development tools were likewise replaced with neutral wording in historical reports, status notes, protocols, experiment-condition entries, run summaries and script comments, and in one interactive-application process list (`headless_gate.py` and its test). A legacy project folder name was replaced with `crash-legacy`. The disclosure that interactive development tooling was running during the affected tests is retained.
 - `orchestrate_e3.sh`, `orchestrate_e4.sh` and `orchestrate_h2.sh` are the portable versions, which derive the repository root or accept `HELMX_ROOT`, replacing as-run copies that hard-coded the collection device's home path.
 - The I²C diagnostic folders omit two `metadata.json` host snapshots (see the folder's `PUBLICATION_NOTE.md`). The D4/K1 raw captures are retained in the author's private archive; only the review, summary and attestation are published.
+
+- The interrupted boot-2 guided-motion attempt's seven zero-byte placeholder files are replaced by an explanatory `README.txt`.
 
 These transformations affect packaging and privacy only; reported numerical measurements were not
 changed. `FILE_MANIFEST.csv` hashes every published file, while `COPY_AUDIT.csv` records retained

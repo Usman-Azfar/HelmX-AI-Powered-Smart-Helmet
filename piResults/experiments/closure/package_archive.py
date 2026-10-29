@@ -16,7 +16,7 @@ def main():
         if (c.ROOT/name).exists():shutil.copy2(c.ROOT/name,target/name)
     shutil.copy2(c.BASE/'DEPLOYED_POLICY_THRESHOLDS.json',target/'DEPLOYED_POLICY_THRESHOLDS.json')
     legacy=target/'legacy_not_used_in_paper';legacy.mkdir()
-    shutil.copy2(c.ROOT/'crash-gpt/models/thresholds.json',legacy/'crash_gpt_thresholds.json')
+    shutil.copy2(c.ROOT/'crash-legacy/models/thresholds.json',legacy/'crash_legacy_thresholds.json')
     (legacy/'README.txt').write_text('Historical threshold file, not used by the current deployment or new evidence campaign. Retained only to explain archive provenance.\n')
     evidence=target/'piResults/results/final-closure';evidence.mkdir(parents=True)
     for path in c.BASE.iterdir():
@@ -61,14 +61,14 @@ def main():
             except UnicodeError:continue
             new=old.replace(str(c.ROOT)+'/','').replace('/home/helmx/Crash Detection/','')
             if new!=old:path.write_text(new);converted.append(str(path.relative_to(target)))
-    (target/'README_REVIEW.txt').write_text('LOCAL REVIEW CANDIDATE — not deposited or publicly published.\nModel/data binaries retained byte-for-byte; readable paths normalized to portable relative paths.\nNo reviewer correspondence, notebooks, virtual environments, agent checkpoint metadata, process lists, temporary execution logs, or existing manuscript PDFs included.\nDataset license/source-owner confirmation and author/deposit metadata are required before any public upload.\nUnperformed tests remain unperformed; see included evidence summaries.\nReproducibility: copy datasets_used/{carla,road,fall,near-fall,darus} to data/ before using the source loaders.\nThe closure model_cache contains frozen derived inputs needed by L2–L10 and GPIO trace replay. L1 regenerates it.\nHistorical faulty FIFO evidence is retained only as debugging provenance; use the corrected closure evidence for scientific interpretation.\nHost service/process metadata collected in a sandbox is not proof of a headless environment.\n')
+    (target/'README_REVIEW.txt').write_text('LOCAL REVIEW CANDIDATE — not deposited or publicly published.\nModel/data binaries retained byte-for-byte; readable paths normalized to portable relative paths.\nNo reviewer correspondence, notebooks, virtual environments, tool checkpoint metadata, process lists, temporary execution logs, or existing manuscript PDFs included.\nDataset license/source-owner confirmation and author/deposit metadata are required before any public upload.\nUnperformed tests remain unperformed; see included evidence summaries.\nReproducibility: copy datasets_used/{carla,road,fall,near-fall,darus} to data/ before using the source loaders.\nThe closure model_cache contains frozen derived inputs needed by L2–L10 and GPIO trace replay. L1 regenerates it.\nHistorical faulty FIFO evidence is retained only as debugging provenance; use the corrected closure evidence for scientific interpretation.\nHost service/process metadata collected in a sandbox is not proof of a headless environment.\n')
     c.save(target/'INCOMPLETE_METADATA.json', {'empty_metadata_preserved':empty_metadata,
            'scope':'Empty metadata belongs to interrupted/incomplete records, not completed trials. Consult resume interruption audit.'})
     manifest={str(p.relative_to(target)):c.sha(p) for p in target.rglob('*') if p.is_file()}
     c.save(target/'SHA256_MANIFEST.json',manifest)
     result={'directory':str(target.relative_to(c.ROOT)),'files_hashed_before_completion_snapshot':len(manifest),'portable_text_files':converted,
             'status':'Local curated candidate only; not uploaded. License/author/deposit review outstanding.',
-            'original_project':'Untouched. Legacy threshold is segregated in this candidate rather than breaking the historical crash-gpt project.'}
+            'original_project':'Untouched. Legacy threshold is segregated in this candidate rather than breaking the historical crash-legacy project.'}
     c.finish(['Q3'],'Clean local research archive','COMPLETE (REVIEW CANDIDATE; NOT PUBLISHED)',result,c.BASE/'archive_Q3')
     # Capture Q3 completion in the archived checklist, then recompute its hash.
     shutil.copy2(c.BASE/'metadata/checklist.json',evidence/'metadata/checklist.json')

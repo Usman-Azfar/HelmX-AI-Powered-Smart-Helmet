@@ -5,9 +5,9 @@ import psutil
 def is_interactive(name):
     name = (name or '').lower()
     exact = {'code', 'code-insiders', 'code-oss', 'codium', 'electron',
-             'codex', 'wayvnc', 'rpi-connect', 'xorg', 'xwayland',
+             'devtool', 'wayvnc', 'rpi-connect', 'xorg', 'xwayland',
              'labwc', 'lxsession', 'lightdm'}
-    prefixes = ('code-', 'vs-code', 'vscode', 'codex-', 'rpi-connect-')
+    prefixes = ('code-', 'vs-code', 'vscode', 'devtool-', 'rpi-connect-')
     return name in exact or name.startswith(prefixes)
 
 

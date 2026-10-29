@@ -368,5 +368,5 @@ Evidence: piResults/final_pi_review_closure/14_fifo_drdy/stationary_20min_202610
     }
   ],
   "operator_attestation": "Untouched throughout confirmed after capture",
-  "limits": "Historical comparisons are descriptive, not simultaneous/matched-motion equivalence or causal estimates. Raw binary decoding and model replay are verified independently. FIFO batch timestamps are host availability; IIO timestamps may be driver reconstructed. Do not compare their dt as physical jitter. Kernel I2C error counts are unavailable for IIO. Desktop/agent and development activity remained active during current extension captures."
+  "limits": "Historical comparisons are descriptive, not simultaneous/matched-motion equivalence or causal estimates. Raw binary decoding and model replay are verified independently. FIFO batch timestamps are host availability; IIO timestamps may be driver reconstructed. Do not compare their dt as physical jitter. Kernel I2C error counts are unavailable for IIO. Desktop/IDE and development activity remained active during current extension captures."
 }

@@ -10,9 +10,9 @@ class HeadlessGateTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertFalse(is_interactive(name))
 
-    def test_desktop_and_agent_names(self):
-        for name in ('code', 'code-insiders', 'vs-code-server', 'codex',
-                     'codex-code-mode-host', 'Xorg', 'Xwayland', 'labwc',
+    def test_desktop_and_ide_names(self):
+        for name in ('code', 'code-insiders', 'vs-code-server', 'devtool',
+                     'devtool-host', 'Xorg', 'Xwayland', 'labwc',
                      'wayvnc', 'rpi-connect', 'rpi-connect-way', 'lightdm'):
             with self.subTest(name=name):
                 self.assertTrue(is_interactive(name))

@@ -59,8 +59,8 @@ def domains():
 
 def thresholds():
     th=json.loads((c.BASE/'frozen/models/thresholds.json').read_text());cfg=(c.BASE/'frozen/deploy/config.yaml')
-    legacy=c.ROOT/'crash-gpt/models/thresholds.json'
-    if not legacy.exists():legacy=c.ROOT/'legacy_not_used_in_paper/crash_gpt_thresholds.json'
+    legacy=c.ROOT/'crash-legacy/models/thresholds.json'
+    if not legacy.exists():legacy=c.ROOT/'legacy_not_used_in_paper/crash_legacy_thresholds.json'
     result={'classifier_prob':th['classifier_prob_balanced'],'recon_error':th['recon_error'],'operator':'strict >; classifier OR reconstruction',
             'consecutive_windows':3,'cooldown_seconds':60,'current_timing_guard_max_dt_s':.06,'historical_timing_guard_max_dt_s':.03,
             'threshold_sha256':c.sha(c.BASE/'frozen/models/thresholds.json'),'config_sha256':c.sha(cfg),

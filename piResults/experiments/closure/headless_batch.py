@@ -34,7 +34,7 @@ def main():
     if os.geteuid() != 0:
         raise RuntimeError('Run with sudo from a separate console for SCHED_FIFO privileges.')
     if not args.smoke_test and interactive():
-        raise RuntimeError('Close desktop, VNC, IDE and agent first: '+repr(interactive()))
+        raise RuntimeError('Close desktop, VNC and IDE first: '+repr(interactive()))
     for service in ['helmx-crash-monitor.service','helmx-research-boot-capture.service']:
         if c.command(['systemctl','is-active',service]).get('stdout','').strip() != 'inactive':
             raise RuntimeError('Competing service is not inactive: '+service)

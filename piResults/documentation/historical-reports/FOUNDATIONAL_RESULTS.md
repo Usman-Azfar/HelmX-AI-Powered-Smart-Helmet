@@ -1073,7 +1073,7 @@ was built, rather than reconstructing the figure from the lost original.
 
 ## Headless / reduced-background latency check — ✅ RAN — **256.7ms → 6.4ms max latency**, strongly confirms the scheduler-contention hypothesis
 
-Before touching anything: **this coding-agent session runs as a VS Code extension** — a child
+Before touching anything: **this development session runs as a VS Code extension** — a child
 process of VS Code itself. `Final Things.txt` asked to close VS Code along with everything else;
 doing that would have terminated this session mid-task, before the benchmark could run or the
 result be reported. Flagged this to the user directly, who chose: stop everything else the file

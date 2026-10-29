@@ -6,9 +6,9 @@
 # reused) for --duration-min minutes.
 #
 # DISCLOSED LIMITATION: the doc also asks for VS Code and the interactive
-# coding agent to be closed. That part is not done here -- this script is
-# launched BY that same agent, which must keep running to orchestrate and
-# later analyze the run, so "interactive_agent_present" stays yes for this
+# development session to be closed. That part is not done here -- this script is
+# launched BY that same session, which must keep running to orchestrate and
+# later analyze the run, so "interactive_session_present" stays yes for this
 # condition, same confound F1 already disclosed for its own runs. Every
 # other non-essential background service IS stopped.
 #

@@ -19,7 +19,7 @@ was created. No source measurement was overwritten.
 | `exp1_run.log`, `exp2_run.log`, `exp3_run.log` | Console logs duplicate JSON outputs and contain local development paths and framework startup noise. |
 | `unseen_experiment_model.keras` | Generated experimental weight file is misplaced under results, and public redistribution of dataset-derived weights requires a separate licensing decision. |
 | `pi_environment_final.txt` | Contains the device serial number, hostname, full package inventory, and storage details. |
-| `process_snapshot.txt` | Contains usernames, local shell paths, editor/agent commands, process identifiers, and unrelated services. |
+| `process_snapshot.txt` | Contains usernames, local shell paths, editor/tool commands, process identifiers, and unrelated services. |
 | `dmesg.txt` | Raw kernel dump is noisy host-level evidence; relevant conclusions are preserved in the reviewed reports. |
 
 Absolute model paths in the public benchmark JSON files were replaced with repository-relative paths.

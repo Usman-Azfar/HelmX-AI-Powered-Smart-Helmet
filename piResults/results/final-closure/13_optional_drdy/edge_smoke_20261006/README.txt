@@ -91,7 +91,7 @@ Evidence: piResults/final_pi_review_closure/13_optional_drdy/edge_smoke_20261006
     "stderr": ""
   },
   "fifo_timing_note": "FIFO packets retain common host read-completion timestamps per batch. Zero dt within batches is intentional; these are host availability metrics, not direct physical-sample jitter measurements. No invented timestamps or decimation.",
-  "conditions": "Guided operator phase: Stationary helmet confirmed by operator; INT connected to BCM23 physical pin16. User reported readiness; performed motion is not independently verified or amplitude-matched. Desktop/agent active. No alarm countdown or communication blocks; policy events recorded only.",
+  "conditions": "Guided operator phase: Stationary helmet confirmed by operator; INT connected to BCM23 physical pin16. User reported readiness; performed motion is not independently verified or amplitude-matched. Desktop/IDE active. No alarm countdown or communication blocks; policy events recorded only.",
   "memory_scope": "Raw samples stream to disk and are loaded only after capture. RSS still includes score/resource/GC research buffers; do not interpret their growth as a production-monitor leak.",
   "timing_scope": "Processing latency excludes scheduled pacing sleep and raw file write; sensor reads reported separately. Stream dt includes harness logging/resource overhead. CPU temperature from sysfs; sensor temperature preserved RAW because device identity differs from MPU6050.",
   "data_ready": {

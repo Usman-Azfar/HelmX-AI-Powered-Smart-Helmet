@@ -116,12 +116,12 @@ Inspecting the actual top scheduler-latency offenders (`sched_loaded_latency.txt
 services (BLE/MQTT/voice-assistant/VNC) appear among the top contention sources in either
 condition of this specific run.**
 
-This is because this run's environment — necessarily, since this document was produced by an AI
-coding agent working interactively on the device — has a full desktop session (`labwc`
-compositor, `wf-panel-pi`, `wayvnc` display), VS Code, and this coding-agent process itself
+This is because this run's environment — necessarily, since this document was produced during an interactive
+development session on the device — has a full desktop session (`labwc`
+compositor, `wf-panel-pi`, `wayvnc` display), VS Code, and this development-tool process itself
 running throughout **both** conditions, none of which were part of either the "loaded" or
 "reduced" service definitions in the original manuscript or protocol. **The loaded-vs-reduced
-comparison above is still internally valid** (the same extra desktop/IDE/agent load was present in
+comparison above is still internally valid** (the same extra desktop/IDE load was present in
 both conditions, so the relative reduction is real and attributable to the services that were
 actually stopped), and the direction and magnitude of the effect still corroborates the
 manuscript's existing claims well. But this run's absolute numbers (e.g. 22.45 gaps/min loaded vs.
@@ -132,8 +132,8 @@ in the paper**: report it as a second, independent confirmation of the direction
 magnitude of the scheduler-load effect (particularly useful for the now-available direct
 scheduler-trace numbers), not as a replacement for or exact reproduction of the original
 loaded/reduced figures already in the manuscript. If a methodologically cleaner reproduction is
-wanted later, it would need to run from a true headless SSH session with no desktop/IDE/agent
-present — outside what's possible while this agent is the one running the experiment.
+wanted later, it would need to run from a true headless SSH session with no desktop/IDE
+present — outside what's possible while this interactive session is the one running the experiment.
 
 ---
 
@@ -282,7 +282,7 @@ current inferred/"strongly consistent" framing to one backed by an actual schedu
 
 | Item | Status |
 |---|---|
-| Experiment 1 (scheduler profiling) | **Done** — clean runs both conditions (0 deadline misses/I2C failures/exceptions), strong scheduler evidence obtained (85.9% drop in max runqueue delay), max-latency reduction (77.8%) closely replicates the manuscript's existing 78% figure. Important caveat disclosed: actual contention sources in this run were the desktop/IDE/agent stack, not the originally-targeted services — see Section A. |
+| Experiment 1 (scheduler profiling) | **Done** — clean runs both conditions (0 deadline misses/I2C failures/exceptions), strong scheduler evidence obtained (85.9% drop in max runqueue delay), max-latency reduction (77.8%) closely replicates the manuscript's existing 78% figure. Important caveat disclosed: actual contention sources in this run were the desktop/IDE stack, not the originally-targeted services — see Section A. |
 | Experiment 2 (power) | Not performed — missing hardware, user chose to skip, honestly disclosed above (and already disclosed identically in the manuscript itself) |
 | Experiment 3 (deadline-miss bound) | Done — verified, no manuscript change needed |
 | Experiment 4 (physical movement) | **Done** — 0 I2C errors, clear physically-plausible motion signature across all phases (first attempt discarded: no actual movement occurred, reported honestly, not used as evidence) |

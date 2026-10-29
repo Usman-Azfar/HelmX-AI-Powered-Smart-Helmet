@@ -104,7 +104,7 @@ For each campaign record:
 - stopped HelmX services,
 - desktop/session state,
 - VS Code / IDE presence,
-- interactive agent presence,
+- interactive development-tool presence,
 - Rhasspy state,
 - MQTT/Mosquitto state,
 - BLE service state,
@@ -488,7 +488,7 @@ This condition is optional but valuable because it helps separate:
 If possible without reconfiguring the entire OS, run one 20-minute condition with:
 
 - VS Code closed,
-- interactive agent closed,
+- interactive development tools closed,
 - unnecessary desktop apps closed,
 - only services required for HelmX deployment active.
 

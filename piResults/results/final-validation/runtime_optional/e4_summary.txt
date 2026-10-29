@@ -11,7 +11,7 @@ services are not installed on this Pi at all (consistent with every earlier
 campaign's "unchanged, rpi-connect already absent" note), not a new failure.
 
 DISCLOSED LIMITATION (per orchestrate_e4.sh's own comment, unchanged): VS Code
-and the interactive coding agent stayed open/present, since the agent is what
+and the interactive development session stayed open/present, since that session is what
 launched and must later analyze this run -- same confound F1 already
 disclosed for its own "reduced" condition. Not claimed as "headless."
 

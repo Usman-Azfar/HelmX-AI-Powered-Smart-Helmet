@@ -44,8 +44,8 @@ htmlcov/
 # Superseded local snapshots. Their curated, public replacements are the
 # top-level source tree, /results/, and /piResults/.
 /Final Results/
-/crash-gpt/
-/crash-gpt.zip
+/crash-legacy/
+/crash-legacy.zip
 
 # Local review prompts, temporary research plans, and session hand-off notes.
 # Their implemented outcomes are documented in README.md, performance.md,

@@ -40,7 +40,7 @@ if (( helmx_keep_ide )); then
     helmx_flags+=(--keep-ide)
     echo 'IDE/desktop retained. Other configured remote services will stop and restart. Smoke evidence only.'
 else
-    echo 'Keep the IDE/agent closed until both studies finish.'
+    echo 'Keep the IDE closed until both studies finish.'
 fi
 echo 'Keep the helmet untouched throughout the recordings.'
 for helmx_study in D4 K1; do

@@ -120,7 +120,7 @@ def main():
             "3 matched loaded/reduced pairs, 20 min each, run back-to-back (not interleaved -- "
             "single MPU6050, cannot parallelize). 'loaded'=all default HelmX services active "
             "(bluetooth, helmx-ble, mosquitto, rhasspy, helmx_assistant, wayvnc, wayvnc-control); "
-            "'reduced'=those (except bluetooth) stopped. Desktop + VS Code + AI coding agent were "
+            "'reduced'=those (except bluetooth) stopped. Desktop + VS Code + development tooling were "
             "active throughout ALL 6 runs (disclosed confound, consistent with Round 9's own finding "
             "that this stack -- not the targeted BLE/MQTT/voice-assistant services -- was the actual "
             "top scheduler-contention source in that round's single pair too)."

@@ -411,7 +411,7 @@ validity, and tail latency are evaluated separately rather than collapsed into a
 benchmark."
 
 ============================================================
-G. FILES TO SEND BACK TO CHATGPT
+G. FILES TO SEND BACK FOR REVIEW
 ============================================================
 
 Send one ZIP containing:

@@ -159,7 +159,7 @@ def main():
             'p_valid_90_sample_position':sum(max(0,x-89) for x in runs)/max(1,n-89),
             'processing_ms':{str(q):float(np.percentile(processing,q)) for q in [50,95,99,100]} if processing else {},
             'timestamp_scope':'Kernel FIFO timestamp reconstruction, not physical clock measurement. Host availability time is separately preserved.',
-            'conditions':'Operator confirmed untouched on GPIO23 before test; desktop/agent active. No alarm/SMS.',
+            'conditions':'Operator confirmed untouched on GPIO23 before test; desktop/IDE active. No alarm/SMS.',
             'throttled_end':c.command(['vcgencmd','get_throttled'])}
     if n:
         import pandas as pd

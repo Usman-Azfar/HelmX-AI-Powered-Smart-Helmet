@@ -63,7 +63,7 @@ def deferred():
         (['C3'],'USER GUIDED MOTION',
          'Present operator performs all eleven safe high-range helmet scenarios. Do not substitute historical motion or simulated data.'),
         (['D1','D2','D3','D4','K1'],'USER SESSION HANDOFF',
-         'True headless tests require the interactive coding agent/IDE/desktop to exit. Prepare detached capture and restore services afterward; do not label this active session headless. Optional randomized repeats require preregistered pair order.'),
+         'True headless tests require the interactive IDE/desktop session to exit. Prepare detached capture and restore services afterward; do not label this active session headless. Optional randomized repeats require preregistered pair order.'),
         (['J1','J2','J3'],'WIRING / DRIVER PREREQUISITE',
          'Confirm actual IMU INT wiring and GPIO assignment; kernel-buffered acquisition also needs supported device configuration. No pin guessing or unverified device-tree changes.'),
         (['P'],'MODEM HARDWARE / RECEIPT',

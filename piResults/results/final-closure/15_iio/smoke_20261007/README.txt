@@ -27,7 +27,7 @@ Evidence: piResults/final_pi_review_closure/15_iio/smoke_20261007
     "100": 14.350053999805823
   },
   "timestamp_scope": "Kernel FIFO timestamp reconstruction, not physical clock measurement. Host availability time is separately preserved.",
-  "conditions": "Operator confirmed untouched on GPIO23 before test; desktop/agent active. No alarm/SMS.",
+  "conditions": "Operator confirmed untouched on GPIO23 before test; desktop/IDE active. No alarm/SMS.",
   "throttled_end": {
     "command": [
       "vcgencmd",

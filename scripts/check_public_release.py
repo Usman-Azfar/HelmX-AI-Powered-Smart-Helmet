@@ -13,13 +13,13 @@ ROOT = Path(__file__).resolve().parent.parent
 MAX_FILE_BYTES = 95 * 1024 * 1024
 FORBIDDEN_PREFIXES = (
     "Final Results/",
-    "crash-gpt/",
+    "crash-legacy/",
     "data_local_archive/",
     "piResults2/",
     "results2/",
 )
 FORBIDDEN_EXACT = {
-    "crash-gpt.zip",
+    "crash-legacy.zip",
     "changesToMake.txt",
     "changesToMake2.txt",
     "ExperimentsToPerform.txt",

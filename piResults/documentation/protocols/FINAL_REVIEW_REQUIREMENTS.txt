@@ -519,7 +519,7 @@ D. CRITICAL TASK 4 — TRUE DEPLOYMENT-REALISTIC LINUX RUN
 
 PURPOSE
 -------
-Previous "reduced" runs still retained interactive desktop/IDE/agent activity.
+Previous "reduced" runs still retained interactive desktop/IDE activity.
 
 Run a deployment-realistic Linux condition.
 
@@ -532,7 +532,7 @@ Use deployed polling path.
 Close/stop:
 - desktop session if practical,
 - VS Code,
-- interactive coding agent,
+- interactive development session,
 - VNC/Pi Connect if not required,
 - other non-HelmX interactive applications.
 
@@ -1412,7 +1412,7 @@ Remove:
 - duplicate notebooks
 - temporary logs
 - reviewer files
-- AI/tool working files
+- tool working files
 - sandbox paths
 - .aux/.log/.out from LaTeX builds.
 
