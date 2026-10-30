@@ -154,6 +154,8 @@ This repository holds the whole HelmX project. **Each part lives on its own bran
 - Uses one shared parts catalog for the user interface and the server, so a modified browser request can't change the price.
 - Finalises each payment in one step that can only succeed once, so every order sends exactly one receipt email.
 - Loads the 3D configurator only when needed, follows reduced-motion settings and is covered by Vitest tests.
+- Sends security headers on every page, rate-limits the contact form and serves a branded 404 page.
+- Adds link-preview cards, `robots.txt` and a `sitemap.xml` so the store is easy to share and find.
 
 </details>
 
