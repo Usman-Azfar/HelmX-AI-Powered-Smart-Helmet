@@ -1,6 +1,6 @@
 # HelmX Raspberry Pi setup
 
-[← Back to the project overview](../../README.md)
+[← Back to the project overview](../../README.md) · [Bring-up guide](BRING_UP.md)
 
 This is the complete reference for the computer on the HelmX helmet: the hardware fitted to it, how the Pi is configured, and the services it runs.
 

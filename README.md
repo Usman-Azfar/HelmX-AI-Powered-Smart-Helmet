@@ -15,7 +15,7 @@
 ![Android](https://img.shields.io/badge/Android-Kotlin-3DDC84?logo=android&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Web-Next.js%2016-000000?logo=nextdotjs&logoColor=white)
 
-[**🌐 Live web demo**](https://helmx-silk.vercel.app/) · [**⬇ Android APK v1.0.0**](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0) · [**🧭 Branch guide**](#repository-map) · [**🔧 Full Pi setup**](docs/hardware/PI_SETUP.md)
+[**🌐 Live web demo**](https://helmx-silk.vercel.app/) · [**⬇ Android APK v1.0.0**](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/releases/tag/android-v1.0.0) · [**🧭 Branch guide**](#repository-map) · [**🔧 Full Pi setup**](docs/hardware/PI_SETUP.md) · [**🛠 Bring-up guide**](docs/hardware/BRING_UP.md)
 
 <sub>Final Year Project · BS Computer Science · Department of Computer Science, FCIT, University of the Punjab, Lahore · Session 2025–2026</sub>
 
@@ -378,6 +378,8 @@ git clone -b web-app https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helme
 
 Each branch's README explains how to set it up, run it and test it.
 
+To build the helmet computer from scratch, follow the [Raspberry Pi bring-up guide](docs/hardware/BRING_UP.md). It covers flashing, enabling the serial ports, wiring every module, checking each one and installing the HelmX services.
+
 ---
 
 ## Team
@@ -398,6 +400,8 @@ HelmX was built by BS Computer Science students as their Final Year Project at t
 ## Responsible use
 
 > HelmX is a **student research prototype**. It is not a certified automotive, medical or emergency system, and it must not be relied on as the only way to detect a crash, detect drowsiness or contact emergency services. Always wear a certified helmet and ride safely.
+
+To cite HelmX, use the **Cite this repository** button on GitHub or the [`CITATION.cff`](CITATION.cff) file.
 
 The `crash-detection` and `drowsiness-detection-model` branches are released under the MIT licence. Third-party datasets and trained model weights are **not** covered by that licence; see each branch for its data and licence details.
 
