@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use HelmX in your work, please cite it as below."
+type: software
+title: "HelmX: AI-Powered Smart Helmet"
+abstract: >-
+  A smart motorcycle helmet built on a Raspberry Pi 4 that detects crashes and
+  drowsiness, guides the rider with voice and navigation, and senses the air
+  around them, with an Android companion app and a web store.
+authors:
+  - given-names: Usman
+    family-names: Azfar
+  - given-names: Hamza
+    family-names: Ahmad
+  - given-names: Abdul
+    family-names: Hannan
+  - given-names: Awais
+    family-names: Imtiaz
+repository-code: "https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet"
+url: "https://helmx-silk.vercel.app/"
+keywords:
+  - smart helmet
+  - crash detection
+  - drowsiness detection
+  - raspberry pi
+  - tensorflow lite
+  - bluetooth low energy
+date-released: "2026-10-30"
