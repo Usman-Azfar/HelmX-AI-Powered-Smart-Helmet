@@ -52,3 +52,9 @@ byte-identical source copies.
 Maintained Pi runners use `piResults/results/generated/` for new output. The root `results/`
 directory is reserved for model-development and external-validation evidence.
 
+## Additions in v1.1.0
+
+- Published previously omitted evidence: `final-closure/training_config_Q2/`, `final-closure/i2c_diagnostic_20261011/` and `final-closure/i2c_diagnostic_20261011_verification/`. The two `metadata.json` host snapshots are omitted under the exclusions above (see the folder's `PUBLICATION_NOTE.md`); on this branch the I²C diagnostic `README.txt` and `summary.json` also use neutral tool wording. Byte-exact copies are in the Zenodo archive.
+- The D4/K1 raw captures are retained in the author's private evidence archive; only the review, summary and attestation are published. `results/final-closure/randomized_review_20261011/V1.1_PUBLICATION_NOTE.md` records this.
+- New v1.1.0 analyses: `final-closure/model_L11_jerk_isolation/` and `final-validation/ema_sensitivity/README.md`.
+- No numerical result in any historical record was changed for v1.1.0.

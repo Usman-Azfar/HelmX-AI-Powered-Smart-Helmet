@@ -29,6 +29,24 @@ recording from crossing train, validation, and test partitions. Full metrics,
 negative results, external validation, and limitations are reported in
 `performance.md` and the machine-readable `results/` package.
 
+Training data come only from third-party datasets: CARLA simulation, nine
+sessions of the STRIDE car-mounted smartphone dataset, the Boubezoul et al.
+fall and near-fall recordings, and the DaRUS collision/operational
+simulations. No helmet-mounted motorcycle riding recorded by the author was
+used for training. Sources and licences: `DATA_LICENSES.md` and
+`PROVENANCE_AUDIT_v1.1.md`.
+
+The deposited primary model was trained by the maintained `scripts/train.py`
+workflow with model/training seed 42 and the fixed session split seed 42.
+Early stopping selected the epoch with maximum validation classifier ROC-AUC
+(`val_crash_prob_auc`, patience 8, restored best weights). Batch size was 128,
+the maximum was 60 epochs, and the default Adam optimizer settings in
+TensorFlow 2.16.1 were used. Reconstruction/classification loss weights were
+2:1, with the derived reconstruction-error output assigned zero loss weight.
+The five-seed study is the preferred performance estimate; seed 42 identifies
+the frozen deployable instance rather than a claim that it was the best test
+run.
+
 Known limitations include scarce labeled crash sessions, simulated or staged
 crash data, a documented assumed CARLA sample rate, domain-shift sensitivity,
 and no validation on real unstaged motorcycle crashes. See `performance.md`
@@ -37,9 +55,10 @@ before interpreting any headline metric.
 ## Artifact policy
 
 Binary weights (`.keras`, `.tflite`) and fitted normalization state (`.npz`)
-are excluded from the public source release until the redistribution rights of
-all contributing training data are confirmed. This repository does not assign
-a license to those derived artifacts. See `DATA_LICENSES.md`.
+are excluded from this Git branch. The frozen artifacts are distributed in the
+Zenodo reproducibility archive (https://doi.org/10.5281/zenodo.23770989) under
+the research-artifact notice in `LICENSES.md`; the repository MIT license does
+not apply to them. See `DATA_LICENSES.md`.
 
 When publishing an authorized model release, attach these artifacts to a tagged
 GitHub release and record:

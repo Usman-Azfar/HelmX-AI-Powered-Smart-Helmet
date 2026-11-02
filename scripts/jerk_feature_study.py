@@ -31,9 +31,8 @@ decisions bit-for-bit (asserted); the corrected replay changes nothing but
 compute_aux_features' jerk term. The discarded repeated-tilt attempt is
 replayed too but reported separately.
 
-Closure test L11. Outputs, next to the L1-L10 fidelity analyses it extends:
-piResults/results/final-closure/model_L11_jerk_isolation/summary.json and
-benign_replay_windows.csv."""
+Outputs: results/experiments/jerk_feature_study.json and
+results/experiments/jerk_benign_replay_windows.csv."""
 import csv
 import json
 import logging
@@ -53,9 +52,7 @@ import crash_monitor as cm  # noqa: E402
 
 RATE = config.TARGET_RATE_HZ
 JERK_IDX = config.AUX_FEATURE_COLUMNS.index("jerk_peak")
-CLOSURE_DIR = config.ROOT / "piResults" / "results" / "final-closure"
-BENIGN_DIR = CLOSURE_DIR / "07_high_range_benign_motion"
-OUT_DIR = CLOSURE_DIR / "model_L11_jerk_isolation"
+BENIGN_DIR = config.ROOT / "piResults" / "results" / "final-closure" / "07_high_range_benign_motion"
 ORIGINAL_AUX = cm.compute_aux_features
 
 
@@ -311,11 +308,9 @@ def main():
         "part_a_held_out_test": a,
         "part_b_benign_motion_replay": b,
     }
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    path = OUT_DIR / "summary.json"
-    with open(path, "w") as f:
-        json.dump(report, f, indent=2)
-    csv_path = OUT_DIR / "benign_replay_windows.csv"
+    config.EXPERIMENTS_DIR.mkdir(parents=True, exist_ok=True)
+    path = evaluate.save_metrics(report, "jerk_feature_study")
+    csv_path = config.EXPERIMENTS_DIR / "jerk_benign_replay_windows.csv"
     with open(csv_path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()

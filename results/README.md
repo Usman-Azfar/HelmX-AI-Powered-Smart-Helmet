@@ -45,7 +45,7 @@ The project deliberately includes negative results and out-of-distribution tests
 | Supervised-only Model B | In-distribution performance was approximately equal to, and on PR-AUC somewhat stronger than, hybrid variants. |
 | DaRUS entirely unseen during training | Classifier ROC-AUC fell to about 0.35; reconstruction ROC-AUC reached about 0.87. |
 | External scooter dataset | Reconstruction generalized best, but domain-shift false-alert rates were materially higher than on the original split. |
-| Extended normal-road evaluation | One false alert over 0.708 hours, equivalent to 1.41 alerts/hour for that limited evidence set. |
+| Extended normal-road evaluation (STRIDE, held-out within-source) | One false alert over 0.708 hours, equivalent to 1.41 alerts/hour for that limited evidence set. The 14 added sessions come from the same STRIDE car dataset as `data/road/`, so this is not an independent external domain. |
 | Hierarchical four-threshold policy | Improved validation F1 but degraded held-out performance, consistent with overfitting. |
 
 See [`external-validation/`](external-validation/) and [`experiments/`](experiments/) for the
@@ -81,7 +81,11 @@ Artifacts:
 - [`session_bootstrap.json`](experiments/session_bootstrap.json)
 - [`heldout_window_predictions.csv`](experiments/heldout_window_predictions.csv)
 
-The related training/runtime jerk-feature analysis is closure test L11 in
+The training/runtime jerk-feature analysis (closure test L11) is documented in
+[`JERK_FEATURE_STUDY.md`](experiments/JERK_FEATURE_STUDY.md), with outputs
+[`jerk_feature_study.json`](experiments/jerk_feature_study.json) and
+[`jerk_benign_replay_windows.csv`](experiments/jerk_benign_replay_windows.csv). The same outputs
+are also kept, byte-identical, with the closure analyses in
 [`piResults/results/final-closure/model_L11_jerk_isolation/`](../piResults/results/final-closure/model_L11_jerk_isolation/README.md).
 
 ### Raspberry Pi 4 deployment

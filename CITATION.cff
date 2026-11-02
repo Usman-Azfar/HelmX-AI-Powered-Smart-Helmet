@@ -1,16 +1,83 @@
 cff-version: 1.2.0
-message: "If you use HelmX software, please cite this repository and the upstream datasets separately."
+message: "Please cite this release and, separately, the upstream datasets listed under references. Version 1.1.0 is DOI 10.5281/zenodo.23770989; version 1.0.0 is DOI 10.5281/zenodo.23401265."
 type: software
-title: "HelmX: AI-Based Motorcycle Crash Detection"
+title: "HelmX: Reproducibility Package for Deployment-Fidelity Validation of a Helmet-Mounted IMU Event-Detection Policy on Raspberry Pi 4"
+version: "1.1.0"
+date-released: "2026-11-02"
+doi: "10.5281/zenodo.23770989"
 authors:
   - family-names: "Azfar"
     given-names: "Usman"
-    affiliation: "PUCIT, University of the Punjab"
-repository-code: "https://github.com/Usman-Azfar/Crash-Detection"
-license: MIT
-abstract: "Research software and Raspberry Pi measurement harnesses for inertial motorcycle crash detection. Source datasets retain their own licenses; see DATA_LICENSES.md."
+    affiliation: "Department of Computer Science, Faculty of Computing and Information Technology, University of the Punjab, Lahore, Pakistan"
+repository-code: "https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/tree/crash-detection"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23770989"
+    description: "Version 1.1.0 of this reproducibility package"
+  - type: doi
+    value: "10.5281/zenodo.23401265"
+    description: "Version 1.0.0 (previous version of this package)"
+license:
+  - MIT
+  - CC-BY-4.0
+abstract: "Reproducibility and evidence package for deployment-fidelity validation of a helmet-mounted IMU crash-detection policy on Raspberry Pi 4: frozen code, the deployed INT8 detector and thresholds, curated offline and external-validation results, and Raspberry Pi validation evidence. Version 1.1.0 adds offline studies (three simple baseline detectors under the same validation protocol, an isolated analysis of the training/runtime jerk-feature discrepancy, and session-clustered bootstrap intervals) and corrects the dataset provenance: the road training sessions are a subset of the public STRIDE car-smartphone dataset, and the fall and near-fall sessions come from Boubezoul et al. The frozen model was not retrained. Licences are mixed (MIT for software, CC BY 4.0 for Raspberry Pi evidence, a redistribution notice for model artifacts, which are distributed only in the Zenodo archive); see DATA_LICENSES.md. Source datasets retain their own licences and are not included."
 keywords:
   - crash detection
   - inertial sensors
   - Raspberry Pi
   - TensorFlow Lite
+  - deployment validation
+references:
+  - type: data
+    title: "STRIDE (Sensor Technologies for Road Insights and Driving Evaluation) Dataset"
+    authors:
+      - family-names: "Khandakar"
+    year: 2024
+    doi: "10.6084/m9.figshare.25460755"
+    notes: "data/road (9 training-source sessions) and data/extended_normal_road_raw (14 held-out within-source evaluation sessions)"
+  - type: article
+    title: "Dataset on powered two wheelers fall and critical events detection"
+    authors:
+      - family-names: "Boubezoul"
+      - family-names: "Dufour"
+      - family-names: "Bouaziz"
+      - family-names: "Larnaudie"
+      - family-names: "Espié"
+    journal: "Data in Brief"
+    volume: 23
+    year: 2019
+    doi: "10.1016/j.dib.2019.103828"
+    notes: "data/fall and data/near-fall; see also corrigendum doi 10.1016/j.dib.2020.105577"
+  - type: data
+    title: "DaRUS ISO 13232 motorcycle collision and operational simulations"
+    authors:
+      - family-names: "Rodegast"
+    publisher:
+      name: "University of Stuttgart, DaRUS"
+    doi: "10.18419/darus-3301"
+    notes: "data/darus"
+  - type: conference-paper
+    title: "CARLA: An Open Urban Driving Simulator"
+    authors:
+      - family-names: "Dosovitskiy"
+    year: 2017
+    url: "https://proceedings.mlr.press/v78/dosovitskiy17a.html"
+    notes: "data/carla (simulator output)"
+  - type: data
+    title: "Dataset on personal mobility vehicle's regular riding and fall events"
+    authors:
+      - family-names: "Sanchez-Iborra"
+        given-names: "Ramon"
+      - family-names: "Bernal-Escobedo"
+        given-names: "Luis"
+      - family-names: "Santa"
+        given-names: "Jose"
+    year: 2025
+    doi: "10.5281/zenodo.14887437"
+    notes: "data/external_scooter_riding_raw (evaluation only); paper doi 10.1016/j.dib.2025.111681"
+  - type: data
+    title: "SimRa dataset (Berlin_2024_03)"
+    authors:
+      - name: "SimRa project, TU Berlin"
+    url: "https://github.com/simra-project/dataset"
+    notes: "data/external_simra_bicycle_raw (evaluation only; CC BY-NC 4.0)"

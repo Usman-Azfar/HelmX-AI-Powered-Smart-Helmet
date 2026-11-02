@@ -19,7 +19,7 @@ single-run value._
 | Dataset | Purpose | Sessions | Normal / Crash-like |
 |---|---|---|---|
 | CARLA driving-simulator IMU logs (`data/carla/`) | Normal-riding training data across 7 simulated driver sessions | 7 | Normal |
-| Real phone-logged motorcycle rides (`data/road/`) | Normal-riding training data: aggressive/standard/slow riding, bumps, potholes | 9 | Normal |
+| STRIDE car-mounted smartphone recordings (`data/road/`) — [Khandakar et al., STRIDE dataset](https://doi.org/10.6084/m9.figshare.25460755), CC BY 4.0; not author-collected and not motorcycle data (corrected in v1.1.0, see `PROVENANCE_AUDIT_v1.1.md`) | Normal training data: aggressive/standard/slow driving, bumps, potholes (6 train / 1 val / 2 test sessions) | 9 | Normal |
 | Staged fall/near-fall maneuvers (`data/near-fall/`, `data/fall/`) — [Dataset on powered two-wheelers fall and critical events detection](https://www.sciencedirect.com/science/article/pii/S2352340919301799) | Crash-like training/eval data from a stuntman and professional riders performing controlled falls and near-fall maneuvers | 11 | Crash-like, file-level labels |
 | ISO 13232 motorcycle-collision physics simulations (`data/darus/`) — [Rodegast et al., Stuttgart DaRUS](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-3301) | Real per-timestep-labeled crash data (25 collision scenarios) plus non-crash control scenarios (14: curbstone, pothole, speed bump, random-state riding) | 39 | Both, real ground truth |
 
@@ -413,6 +413,10 @@ Supporting artifact: `results/external-validation/extended_false_alarm_evaluatio
 `data/extended_normal_road_raw/` (STRIDE dataset, Khandakar et al. 2024, CC BY 4.0 — 14 genuinely
 new car-recorded pothole/speed-bump sessions after excluding sessions already duplicated in
 `data/road/`). Evaluated with the already-deployed model, no retraining.
+
+> **v1.1.0 provenance note:** `data/road/` is itself a nine-session STRIDE subset, so these 14
+> sessions are a held-out **within-source** evaluation (disjoint sessions, same dataset and car-mounted
+> phone modality), not an independent external domain. See `PROVENANCE_AUDIT_v1.1.md`.
 
 | | New data only (14 sessions) | Existing test-split evidence | **Combined** |
 |---|---|---|---|

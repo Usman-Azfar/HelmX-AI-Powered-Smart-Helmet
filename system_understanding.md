@@ -69,7 +69,9 @@ labeled example resembling.
 ### 3.1 The problem this pipeline solves
 
 Five very different data sources need to end up as directly comparable `(60, 6)` windows:
-CARLA simulation output, real Android-phone sensor logs, staged fall/near-fall recordings from a
+CARLA simulation output, car-mounted Android-phone sensor logs from the public STRIDE dataset
+(`data/road/`; Khandakar et al. 2024 — not author-collected, see `PROVENANCE_AUDIT_v1.1.md`),
+staged fall/near-fall recordings (Boubezoul et al. 2019) from a
 tab-separated export, and physics-simulated collision data from a research dataset. Each has a
 different native sample rate, different units, different gravity conventions, and (for two of
 the sources) file-level rather than per-timestamp crash labels.

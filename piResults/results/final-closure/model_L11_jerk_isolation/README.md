@@ -4,6 +4,8 @@ Status: COMPLETE (OFFLINE ANALYSIS AND REPLAY; NO NEW HARDWARE RUN)
 Date: 2026-10-28
 
 **Script:** `scripts/jerk_feature_study.py`. Run it from the repository root; it is deterministic.
+**v1.1.0 note:** the canonical copies of these outputs are `results/experiments/jerk_feature_study.json` and `results/experiments/jerk_benign_replay_windows.csv` (byte-identical), described in `results/experiments/JERK_FEATURE_STUDY.md`. The archived script now writes there; this folder is the closure record of the first run.
+
 **Outputs (this folder):**
 - `summary.json`
 - `benign_replay_windows.csv`, with per-window original vs corrected scores and decisions for the 12 replayed phases

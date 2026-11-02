@@ -97,7 +97,7 @@ The split has 10 sessions, 5,437 windows (143 positive) and 0.418 h of normal ri
   - **Unstratified version** (all 10 sessions together; 10 of 10,000 resamples had no positives and were skipped): same conclusions. The CIs are [−0.851, −0.049], [−0.950, +0.441] and [−0.732, −0.034].
   - **HelmX's own F1** has a session-clustered 95% CI of [0.19, 0.95].
   - **Fragility:** with only 10 clusters the intervals are approximate. HelmX's advantage over logreg and accel-peak rests mainly on one session: in `near_fall_Acceleration On Curve` HelmX finds 11 TP, both baselines 0. It also rests on HelmX producing no false positives in the 5 all-normal sessions, where logreg_7feat has 57 and accel_peak_rule 171.
-  - The earlier window-level intervals (2,000 resamples) were [−0.292, −0.156], [−0.370, −0.194] and [−0.250, −0.109]. They treated overlapping windows as independent and should no longer be cited.
+  - The earlier window-level intervals (2,000 resamples) were [−0.292, −0.156], [−0.370, −0.194] and [−0.250, −0.109]. They treated windows that overlap by 75% (60-sample windows, 15-sample stride) as independent, so they are unsuitable for primary inference; they are kept only for historical comparison.
 - **At the high-recall (0.90) operating point**, every baseline reaches 5/5 event recall, but with 14–28 false alert events (33.5–67.0 per hour).
 - **The OR rule's ROC/PR are not reported.** It is a binary decision, so its ROC/PR values (0.601/0.205 in the JSON) are not comparable with the score-based rows.
 
@@ -116,7 +116,7 @@ On the 30 DaRUS windows, the simple rules rank windows as well as HelmX or bette
 
 | Set | Detector | ROC-AUC | Event recall | False alert events | False alerts/h | False alerts/km |
 |---|---|---|---|---|---|---|
-| STRIDE (14 normal sessions, 0.290 h, 4.1 km) | HelmX classifier | — | — | 1 | 3.44 | 0.24 |
+| STRIDE (14 normal sessions, 0.290 h, 4.1 km; held-out within-source) | HelmX classifier | — | — | 1 | 3.44 | 0.24 |
 | | accel_peak_rule | — | — | 2 | 6.89 | 0.49 |
 | | gyro_peak_rule | — | — | 26 | 89.6 | 6.35 |
 | | logreg_7feat | — | — | 1 | 3.44 | 0.24 |
@@ -173,3 +173,7 @@ The unweighted session mean for `accel_peak_rule` (in the JSON, about 0.9× thre
 - Outside DaRUS, labels come from the peak-|a| heuristic, which makes `accel_peak_rule` partly circular there.
 - The baselines use the deployed (per-sample) jerk definition consistently, so they do not share HelmX's documented training/runtime jerk-scale mismatch. That mismatch is quantified in closure test L11 (`piResults/results/final-closure/model_L11_jerk_isolation/`).
 - No hardware latency or memory measurements for the baselines. These rules are trivially cheaper than the network, but that is not measured here.
+
+## Source-provenance correction (v1.1.0)
+
+This study's numeric results and file hashes are unchanged. **The 14 additional STRIDE car sessions are not an independent dataset:** `data/road/` in the frozen snapshot already contains nine other STRIDE sessions (6 train / 1 val / 2 test). The evaluation excludes those duplicates, so the STRIDE rows above are a held-out **within-STRIDE** comparison; scooter and SimRa are the independent sources. Normal windows in the 10-session test split are 94.1% CARLA simulation and STRIDE car recordings. See `PROVENANCE_AUDIT_v1.1.md`.

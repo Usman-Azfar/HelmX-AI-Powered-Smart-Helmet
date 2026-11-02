@@ -1,6 +1,7 @@
 # HelmX: Edge Motorcycle Crash Detection
 
-[![CI](https://github.com/Usman-Azfar/Crash-Detection/actions/workflows/ci.yml/badge.svg)](https://github.com/Usman-Azfar/Crash-Detection/actions/workflows/ci.yml)
+[![CI](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/actions/workflows/ci.yml/badge.svg?branch=crash-detection)](https://github.com/Usman-Azfar/HelmX-AI-Powered-Smart-Helmet/actions/workflows/ci.yml?query=branch%3Acrash-detection)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23770989.svg)](https://doi.org/10.5281/zenodo.23770989)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB.svg)](requirements.txt)
 
@@ -14,6 +15,15 @@ splitting, reproducibility manifests, external-domain evaluation, model
 ablation studies, live sensor validation, acquisition-integrity monitoring,
 and a cancellable GPS/GSM emergency-alert workflow.
 
+This branch holds the source code and curated evidence. The versioned
+reproducibility archive supporting the IEEE Sensors Journal manuscript,
+including the frozen model binaries, is on Zenodo: version 1.1.0,
+[doi:10.5281/zenodo.23770989](https://doi.org/10.5281/zenodo.23770989). Version
+1.1.0 adds offline revision analyses (a second detector under the same
+validation protocol, session-clustered uncertainty, and the jerk-feature
+isolation, closure test L11) and corrects the dataset provenance; see
+[Versions](#versions) and [Data provenance](#data-provenance-corrected-in-v110).
+
 > **Safety notice:** HelmX is not a certified medical, automotive, or emergency
 > system. It must not be relied on as the sole way to detect a crash or contact
 > emergency services.
@@ -22,7 +32,7 @@ and a cancellable GPS/GSM emergency-alert workflow.
 
 - A hybrid Conv1D model processes 1.2-second, six-axis IMU windows at 50 Hz.
 - Splits are made at the recording-session level to prevent overlapping windows
-  from the same ride leaking across train, validation, and test sets.
+  from the same recording leaking across train, validation, and test sets.
 - Thresholds are calibrated on validation data and loaded from one artifact by
   both evaluation and deployment code.
 - The deployment policy requires three consecutive anomalous windows, applies a
@@ -72,9 +82,47 @@ methodology and limitations in [performance.md](performance.md).
 
 These numbers have important scope limits: the labeled crash set is small,
 several abnormal recordings are staged or simulated, no real unstaged motorcycle
-crash was collected, and false-alert rates changed materially on an external
+crash was collected, 94.1% of held-out normal windows are CARLA simulation or
+STRIDE car recordings, and false-alert rates changed materially on an external
 vehicle domain. See [performance.md](performance.md) and the
 [complete Pi results](piResults/results/COMPLETE_RESULTS.md) before citing them.
+
+## Versions
+
+| Version | DOI | Contents |
+|---|---|---|
+| 1.0.0 (2026-10-15) | [10.5281/zenodo.23401265](https://doi.org/10.5281/zenodo.23401265) | Original frozen model and Raspberry Pi reproducibility evidence. Unchanged and still available. |
+| 1.1.0 (2026-11-02) | [10.5281/zenodo.23770989](https://doi.org/10.5281/zenodo.23770989) | Additional offline baseline studies, isolated jerk-feature analysis, session-clustered uncertainty, and corrected dataset provenance. The frozen model, thresholds and all v1.0.0 measurements are unchanged. |
+
+See [`ZENODO_V1.1_CHANGELOG.md`](ZENODO_V1.1_CHANGELOG.md) for the full list of
+changes. The Zenodo archive is the citable, byte-exact record. On this branch,
+some historical Raspberry Pi records and scripts use portable paths and neutral
+tool names, and model binaries are not tracked; numerical results are identical.
+
+## Data provenance (corrected in v1.1.0)
+
+All training and evaluation datasets are third-party public datasets; none was
+collected by the author or team.
+
+- `data/road/` is **nine sessions of the STRIDE car-mounted smartphone dataset**
+  (Khandakar et al., 2024, doi:10.6084/m9.figshare.25460755): 6 training,
+  1 validation and 2 held-out test sessions. It is not helmet-mounted
+  motorcycle riding, and earlier wording that called it in-house or
+  author-collected was wrong.
+- `data/fall/` and `data/near-fall/` both come from Boubezoul et al. (2019,
+  doi:10.1016/j.dib.2019.103828). Whether the frozen fall files predate or
+  follow the 2020 corrigendum (doi:10.1016/j.dib.2020.105577) is not
+  established.
+- The 14-session STRIDE false-alert set is a held-out **within-source**
+  evaluation; the scooter and SimRa sets are the independent external sources.
+- The author alone performed the original hardware trials (stationary
+  measurements, helmet donning/removal/rotation, guided handling and controlled
+  drop tests). They produced the Raspberry Pi evidence in `piResults/` only,
+  never training data.
+
+Details: [`PROVENANCE_AUDIT_v1.1.md`](PROVENANCE_AUDIT_v1.1.md),
+[`THIRD_PARTY_SOURCE_MAP.csv`](THIRD_PARTY_SOURCE_MAP.csv),
+[`DATA_LICENSES.md`](DATA_LICENSES.md) and [`LICENSES.md`](LICENSES.md).
 
 ## Repository guide
 
@@ -95,10 +143,10 @@ vehicle domain. See [performance.md](performance.md) and the
 ## Data and artifact policy
 
 The MIT license applies to original HelmX software and documentation. It does
-not relicense third-party datasets, participant recordings, or derived model
-weights.
+not relicense third-party datasets or derived model weights. Author-generated
+Raspberry Pi evidence is CC BY 4.0; see [LICENSES.md](LICENSES.md).
 
-Consequently, this public source release intentionally excludes:
+This public source release intentionally excludes:
 
 - raw training and external-evaluation datasets;
 - fitted `.keras`, `.tflite`, and `.npz` artifacts;
@@ -109,7 +157,9 @@ Dataset sources and redistribution status are documented in
 [DATA_LICENSES.md](DATA_LICENSES.md). The expected local directory layout is in
 [data/README.md](data/README.md). Evaluated model hashes remain public in
 [`models/ARTIFACT_HASHES.sha256`](models/ARTIFACT_HASHES.sha256) so an authorized
-local artifact can be verified without distributing it.
+local artifact can be verified without distributing it. The frozen artifacts
+themselves are distributed in the
+[Zenodo archive](https://doi.org/10.5281/zenodo.23770989).
 
 ## Quick start
 
@@ -211,10 +261,13 @@ evaluation:
 
 - the DaRUS ISO 13232 motorcycle crash-simulation dataset, University of
   Stuttgart (doi:10.18419/darus-3301);
-- Boubezoul et al., the powered two-wheeler fall and critical-events dataset
+- Boubezoul et al., the powered two-wheeler fall and critical-events dataset,
+  the source of both the fall and near-fall sessions
   (doi:10.1016/j.dib.2019.103828);
-- Khandakar et al., the STRIDE road-sensing dataset
-  (doi:10.6084/m9.figshare.25460755);
+- the CARLA open urban driving simulator (Dosovitskiy et al., 2017);
+- Khandakar et al., the STRIDE car-smartphone road-sensing dataset, the
+  source of the `data/road/` training sessions and the extended within-source
+  evaluation (doi:10.6084/m9.figshare.25460755);
 - Sanchez-Iborra, Bernal-Escobedo and Santa, the personal-mobility-vehicle
   riding and fall dataset (doi:10.5281/zenodo.14887437);
 - the SimRa project, TU Berlin (github.com/simra-project/dataset).
@@ -224,14 +277,17 @@ acknowledged people or projects.
 
 ## Citation
 
-Citation metadata is provided in [CITATION.cff](CITATION.cff). GitHub can use
-this file to generate a formatted citation from the repository's **Cite this
-repository** menu. Upstream datasets must be cited separately according to
-their original terms.
+Citation metadata is provided in [CITATION.cff](CITATION.cff). Cite version
+1.1.0 as: Usman Azfar, *HelmX: Reproducibility Package for Deployment-Fidelity
+Validation of a Helmet-Mounted IMU Event-Detection Policy on Raspberry Pi 4*,
+version 1.1.0, Zenodo, 2026, doi:10.5281/zenodo.23770989. Version 1.0.0 is
+doi:10.5281/zenodo.23401265. Upstream datasets must be cited separately
+according to their original terms; their references are listed in
+`CITATION.cff`.
 
 ## License
 
 Original HelmX software and documentation are released under the
-[MIT License](LICENSE). Dataset, model-weight, and derived-artifact rights are
-described separately in [DATA_LICENSES.md](DATA_LICENSES.md) and the
-[model card](models/MODEL_CARD.md).
+[MIT License](LICENSE). Raspberry Pi evidence, dataset, model-weight, and
+derived-artifact rights are described separately in [LICENSES.md](LICENSES.md),
+[DATA_LICENSES.md](DATA_LICENSES.md) and the [model card](models/MODEL_CARD.md).

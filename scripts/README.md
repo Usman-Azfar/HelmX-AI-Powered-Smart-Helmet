@@ -27,9 +27,10 @@ python scripts/session_bootstrap.py          # session-clustered F1-difference C
 python scripts/jerk_feature_study.py         # closure test L11: jerk-formula isolation + benign-motion replay
 ```
 
-The first two write to `results/experiments/`. The third writes to
-`piResults/results/final-closure/model_L11_jerk_isolation/` and reads the saved high-range
-benign-motion captures in `piResults/results/final-closure/07_high_range_benign_motion/`.
+All three write to `results/experiments/`. The third reads the saved high-range benign-motion
+captures in `piResults/results/final-closure/07_high_range_benign_motion/`; its first run's outputs
+are also kept, byte-identical, as closure record
+`piResults/results/final-closure/model_L11_jerk_isolation/`.
 
 `freeze_reproducibility.py` must run last. It hashes the canonical local
 `data/` inputs, records the session split, thresholds, package versions, and

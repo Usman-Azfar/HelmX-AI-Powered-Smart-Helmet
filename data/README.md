@@ -3,8 +3,28 @@
 Raw data is intentionally **not distributed in this source repository**. The
 software expects datasets to be obtained from their original sources and placed
 under this directory for local training or evaluation. This avoids silently
-relicensing third-party data and participant recordings under the repository's
-MIT software license.
+relicensing third-party data under the repository's MIT software license.
+
+## Original providers
+
+All training and evaluation datasets are third-party public datasets. None was
+collected by the HelmX author or team (corrected in v1.1.0; see
+`../PROVENANCE_AUDIT_v1.1.md`).
+
+| Directory | Original provider | Role |
+|---|---|---|
+| `carla/` | CARLA simulator (Dosovitskiy et al., 2017) | training source |
+| `road/` | STRIDE, Khandakar et al. (2024), doi:10.6084/m9.figshare.25460755 — car-mounted smartphone recordings | training source (6/1/2 sessions) |
+| `fall/` | Boubezoul et al. (2019), doi:10.1016/j.dib.2019.103828 | training source |
+| `near-fall/` | Boubezoul et al. (2019), same dataset | training source |
+| `darus/` | Rodegast et al., DaRUS, doi:10.18419/darus-3301 | training source |
+| `extended_normal_road_raw/` | STRIDE (14 further sessions) | evaluation only, within-source |
+| `external_scooter_riding_raw/` | Sanchez-Iborra et al. (2025), doi:10.5281/zenodo.14887437 | evaluation only, independent |
+| `external_simra_bicycle_raw/` | SimRa project, TU Berlin (CC BY-NC 4.0) | evaluation only, independent |
+
+A 2020 corrigendum to the Boubezoul dataset (doi:10.1016/j.dib.2020.105577)
+corrected fall-data lateral acceleration; check which upstream revision you
+download against the hashes in the reproducibility manifest.
 
 Expected training layout:
 
